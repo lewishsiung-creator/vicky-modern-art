@@ -10,6 +10,7 @@ vocabulary.
 |---|---|---|
 | 2 | The Beginning of Modern Art | 53 slides |
 | 3 | Expression and the Inner Self | 61 slides |
+| 4 | From Representation to Expression | 62 slides |
 
 ## Layout
 
@@ -19,6 +20,7 @@ weeks.js        one entry per week; `dir: null` = not built yet
 shared/         deck.js and style.css — every week uses these
 week02/         index.html + content.js + img/
 week03/         index.html + content.js + img/
+week04/         index.html + content.js + img/
 ```
 
 A fix to `shared/` lands on every week at once. Each week owns only its
@@ -26,10 +28,10 @@ A fix to `shared/` lands on every week at once. Each week owns only its
 
 ## Adding a week
 
-1. `cp -r week03 week04 && rm week04/img/* && rm week04/content.js`
-2. Put the new pictures in `week04/img/`.
-3. Write `week04/content.js` — copy the shape from `week03/content.js`.
-4. Change the `<title>` and `<meta name="description">` in `week04/index.html`.
+1. `cp -r week04 week05 && rm week05/img/* && rm week05/content.js`
+2. Put the new pictures in `week05/img/`.
+3. Write `week05/content.js` — copy the shape from `week04/content.js`.
+4. Change the `<title>` and `<meta name="description">` in `week05/index.html`.
 5. Fill in that week's line in `weeks.js`.
 
 Nothing else needs editing.
@@ -38,8 +40,8 @@ Nothing else needs editing.
 
 | Key | What it does |
 |---|---|
-| `→` `Space` or click | Next build step, then next slide |
-| `←` | Back one step |
+| `下一頁` / `→` / `Space` / click | Next build step, then next slide |
+| `上一頁` / `←` | Back one step |
 | `M` | Jump menu, grouped into the five parts |
 | `Backspace` | Return to wherever you jumped from |
 | `N` | Speaker notes on the presenting screen |
@@ -94,12 +96,31 @@ is flagged in that slide's speaker notes so Vicky knows what changed.
 Titles also corrected: *White on White*, *Street, Dresden*,
 *L'Oiseau dans l'Espace*.
 
-## Week 3 — the quiz answer key
+## Quiz answer keys
 
-The source `.pptx` marks no answers. These were derived from the lecture
-content and are stated in each question's speaker notes:
+The source `.pptx` files mark no answers. These were derived from the lecture
+content, and each is stated in that question's speaker notes.
 
-1 · B  ·  2 · A  ·  3 · D  ·  4 · A  ·  5 · A  ·  6 · B
+- **Week 3** — 1 · B  ·  2 · A  ·  3 · D  ·  4 · A  ·  5 · A  ·  6 · B
+- **Week 4** — 1 · D  ·  2 · C  ·  3 · C  ·  4 · B  ·  5 · D  ·  6 · C
+
+## Week 4 — corrections made to the original PowerPoint
+
+- **Quiz Q4's four options were duplicated from Q3** — all four were about
+  de Kooning and none answered the question about Post-Painterly Abstraction.
+  Four new options were written; B is correct.
+- *Mountains and Sea* dated **1952**, not 1959. Her deck gave both dates.
+- *Als mestres **de** Catalunya*, not "da".
+- The photograph on her Pollock title slide is **not Pollock** — it is a modern
+  demonstration from a study of the technique's fluid dynamics. It has been
+  recaptioned honestly and moved to the technique slide; the real Hans Namuth
+  photograph now opens the Pollock section.
+- Frankenthaler is described as pioneering **soak-stain**, which opened the way
+  to the second generation of colour-field painting — rather than as pioneering
+  colour-field painting itself, which was Newman and Rothko.
+- One photograph of a Pollock on the floor was labelled 《第五號，1948》 in her
+  deck; the canvas shown looks like a different one, so it is captioned without
+  a title and flagged in the notes.
 
 ## Images
 

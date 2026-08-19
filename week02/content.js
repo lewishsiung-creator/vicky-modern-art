@@ -171,8 +171,8 @@ const SLIDES = [
   type: 'compare',
   title: 'Same pose, 325 years apart',
   ask: 'They are very similar. Now look again — what is different?',
-  left:  { src: 'img/manet-olympia.jpg',  label: 'Édouard Manet, <i>Olympia</i>, 1863' },
-  right: { src: 'img/titian-venus.jpg',   label: 'Tiziano Vecellio, <i>Venere di Urbino</i>, 1538' },
+  left:  { src: 'img/manet-olympia.jpg',  label: 'Édouard Manet, <i>Olympia</i>, 1863', tag: 'Manet' },
+  right: { src: 'img/titian-venus.jpg',   label: 'Tiziano Vecellio, <i>Venere di Urbino</i>, 1538', tag: 'Titian' },
   reveal: [
     { side: 'right', text: 'Titian’s woman is soft. Her skin has many colours. She looks round, like a real body in a real room.' },
     { side: 'left',  text: 'Manet’s woman is flat. The paint is flat. The edges are hard, like a line drawing.' },

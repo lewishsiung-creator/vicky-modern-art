@@ -144,6 +144,8 @@
   const chipcard = document.getElementById('chipcard');
   const lightbox = document.getElementById('lightbox');
   const counter = document.getElementById('count');
+  const navPrev = document.getElementById('nav-prev');
+  const navNext = document.getElementById('nav-next');
 
   let idx = 0, step = 0, jumpFrom = null, presenterWin = null;
 
@@ -357,8 +359,9 @@
     if (s.type === 'compare') {
       const note = node.querySelector('.compare-note');
       const r = step > 0 ? s.reveal[step - 1] : null;
+      const tag = r ? (r.tag || (r.side === 'left' ? s.left.tag : s.right.tag)) : '';
       note.innerHTML = r
-        ? `<span class="side-tag">${r.side === 'left' ? 'Manet' : 'Titian'}</span>${chips(r.text)}`
+        ? `${tag ? `<span class="side-tag">${tag}</span>` : ''}${chips(r.text)}`
         : '';
       node.querySelectorAll('.compare-pane').forEach(p => {
         p.classList.toggle('dim', !!r && p.dataset.side !== r.side);
@@ -369,6 +372,11 @@
 
     progress.style.width = ((idx + 1) / SLIDES.length * 100) + '%';
     counter.textContent = (idx + 1) + ' / ' + SLIDES.length;
+
+    /* Grey the arrows out at the two ends, so it is obvious there is
+       nothing further in that direction. */
+    navPrev.disabled = (idx === 0 && step === 0);
+    navNext.disabled = (idx === SLIDES.length - 1 && step === stepsFor(s));
     if (peek.classList.contains('on')) drawPeek();
     sync();
   }
@@ -563,7 +571,7 @@
     }
 
     if (menu.classList.contains('on')) return;
-    if (e.target.closest('#hud')) return;
+    if (e.target.closest('#hud') || e.target.closest('#nav')) return;
     if (peek.contains(e.target)) return;
     next();
   });
@@ -593,6 +601,8 @@
     }
   });
 
+  navPrev.onclick = e => { e.stopPropagation(); prev(); };
+  navNext.onclick = e => { e.stopPropagation(); next(); };
   document.getElementById('btn-menu').onclick = e => { e.stopPropagation(); openMenu(); };
   document.getElementById('btn-notes').onclick = e => {
     e.stopPropagation(); peek.classList.toggle('on');

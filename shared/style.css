@@ -41,7 +41,8 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 5vh 7vw;
+  /* Bottom padding reserves the strip the 上一頁 / 下一頁 buttons sit in. */
+  padding: 5vh 7vw 9vh;
   opacity: 0;
   pointer-events: none;
   transition: opacity .28s ease;
@@ -214,10 +215,10 @@ h2 {
 }
 
 /* ---------- Artwork slide ---------- */
-.s-artwork { flex-direction: row; align-items: center; gap: 4vw; padding: 4vh 5vw; }
+.s-artwork { flex-direction: row; align-items: center; gap: 4vw; padding: 4vh 5vw 9vh; }
 .s-artwork .art {
   flex: 1 1 58%;
-  height: 82vh;
+  height: 76vh;
   display: flex; align-items: center; justify-content: center;
 }
 .s-artwork .art img {
@@ -245,7 +246,7 @@ h2 {
 }
 
 /* ---------- Compare slide ---------- */
-.s-compare { padding: 4vh 5vw; }
+.s-compare { padding: 4vh 5vw 9vh; }
 .s-compare h2 { text-align: center; margin-bottom: .6em; }
 .s-compare .ask { margin: 0 auto 1em; }
 .compare-wrap {
@@ -256,7 +257,7 @@ h2 {
 }
 .compare-pane {
   flex: 1 1 50%;
-  height: 58vh;
+  height: 54vh;
   display: flex; flex-direction: column; align-items: center;
   transition: opacity .3s ease, filter .3s ease;
 }
@@ -557,6 +558,31 @@ h2 {
   background: var(--cream); z-index: 50;
   transition: width .28s ease;
 }
+/* ---------- 上一頁 / 下一頁 ----------
+   Always visible and finger-sized: these get used on a lecture-hall
+   touchscreen, not just with a keyboard. */
+#nav {
+  position: fixed; bottom: 1.6vh; left: 2vw; z-index: 55;
+  display: flex; gap: .6em;
+}
+#nav button {
+  font-family: var(--sans); font-size: 15px;
+  display: flex; align-items: center; gap: .4em;
+  background: var(--cream); color: var(--ink);
+  border: none; border-radius: .4em;
+  padding: .7em 1.1em; cursor: pointer;
+  box-shadow: 0 .3em 1em rgba(23,19,18,.22);
+  transition: background .15s ease, opacity .15s ease, transform .1s ease;
+}
+#nav button:hover:not(:disabled) { background: #fffdf6; transform: translateY(-1px); }
+#nav button:active:not(:disabled) { transform: none; }
+#nav button:disabled { opacity: .3; cursor: default; }
+#nav .ar { font-size: 1.35em; line-height: 1; color: var(--deep); }
+
+@media (max-width: 700px) {
+  #nav button { font-size: 14px; padding: .8em 1em; }
+}
+
 #hud {
   position: fixed; bottom: 1.6vh; right: 2vw; z-index: 50;
   display: flex; align-items: center; gap: 1.1em;
@@ -619,6 +645,7 @@ h2 {
 
 /* ---------- Presenter window ---------- */
 body.presenter #hud,
+body.presenter #nav,
 body.presenter #progress,
 body.presenter #stage { display: none; }
 body.presenter {
@@ -736,4 +763,4 @@ body.course { overflow: auto; }
   .compare-pane { height: 32vh; }
 }
 
-@media print { #hud, #menu, #peek, #progress { display: none !important; } }
+@media print { #hud, #nav, #menu, #peek, #progress { display: none !important; } }

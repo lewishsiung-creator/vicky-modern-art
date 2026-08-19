@@ -19,7 +19,12 @@ const WEEKS = [
     q: 'How does art show emotion and the unconscious?',
     meta: '61 slides · Dada to Magritte · the apple ranking activity · 6-question quiz'
   },
-  { n: 4,  dir: null, title: 'Abstract Expressionism', q: 'New York, and what the Americans did with automatism.' },
+  {
+    n: 4, dir: 'week04',
+    title: 'From Representation to Expression',
+    q: 'How did painting lose reality?',
+    meta: '62 slides · Pollock to Tàpies · the genealogy-of-chance activity · 6-question quiz'
+  },
   { n: 5,  dir: null },
   { n: 6,  dir: null },
   { n: 7,  dir: null },
