@@ -13,6 +13,7 @@ vocabulary.
 | 4 | From Representation to Expression | 62 slides |
 | 5 | The Boundary Between Art and Everyday Life | 60 slides |
 | 6 | Art as Action / Event | 58 slides |
+| 7 | From Object to Concept | 61 slides |
 
 ## Layout
 
@@ -25,6 +26,7 @@ week03/         index.html + content.js + img/
 week04/         index.html + content.js + img/
 week05/         index.html + content.js + img/
 week06/         index.html + content.js + img/ + vid/
+week07/         index.html + content.js + img/
 ```
 
 A fix to `shared/` lands on every week at once. Each week owns only its
@@ -32,10 +34,10 @@ A fix to `shared/` lands on every week at once. Each week owns only its
 
 ## Adding a week
 
-1. `cp -r week06 week07 && rm -rf week07/img/* week07/vid week07/content.js`
-2. Put the new pictures in `week07/img/`.
-3. Write `week07/content.js` — copy the shape from `week06/content.js`.
-4. Change the `<title>` and `<meta name="description">` in `week07/index.html`.
+1. `cp -r week07 week08 && rm -rf week08/img/* week08/content.js`
+2. Put the new pictures in `week08/img/`.
+3. Write `week08/content.js` — copy the shape from `week07/content.js`.
+4. Change the `<title>` and `<meta name="description">` in `week08/index.html`.
 5. Fill in that week's line in `weeks.js`.
 
 Nothing else needs editing.
@@ -74,7 +76,8 @@ Write `{{term}}` in any text to turn it into a word chip. The key must exist in
 `GLOSSARY`; if it doesn't, the text degrades to plain words rather than breaking.
 
 Slide types: `title` `word` `section` `bullets` `quote` `compare` `artwork`
-`grid` `twocol` `break` `activity` `rank` `quiz` `end`.
+`video` `grid` `flow` `timeline` `twocol` `break` `activity` `rank` `terms`
+`quiz` `end`.
 
 - `grid` — a 2×2 of concept cards, revealed one at a time. Used for the
   Attitude / Concept / Form / Technique breakdowns in Week 3.
@@ -89,6 +92,11 @@ Slide types: `title` `word` `section` `bullets` `quote` `compare` `artwork`
   The player is a **facade** until clicked: eight players loading at once would
   stall the deck, and nothing should start playing because a slide scrolled by.
   Leaving the slide tears the player down, so sound never follows her onward.
+- `flow` — stages with arrows between them, revealed one at a time. Used for
+  tracing a theory from raw material to finished practice.
+- `timeline` — dated stops across the top, revealed one at a time.
+- `terms` — a mid-deck vocabulary review. Same rendering as the closing `end`
+  slide; give it a `terms` array of GLOSSARY keys.
 
 ## Week 2 — corrections made to the original PowerPoint
 
@@ -114,6 +122,7 @@ content, and each is stated in that question's speaker notes.
 - **Week 4** — 1 · D  ·  2 · C  ·  3 · C  ·  4 · B  ·  5 · D  ·  6 · C
 - **Week 5** — 1 · B  ·  2 · D  ·  3 · C  ·  4 · A  ·  5 · B  ·  6 · D
 - **Week 6** — 1 · B  ·  2 · A  ·  3 · B  ·  4 · B  ·  5 · A  ·  6 · D
+- **Week 7** — 1 · A  ·  2 · B  ·  3 · C  ·  4 · A  ·  5 · B  ·  6 · D
 
 ## Week 6 — videos, and why they are not all hosted
 
@@ -174,6 +183,17 @@ and works offline — keep it on a USB stick as the fallback.
   spreads them through the lecture, each behind its own "Watch for:" prompt
   slide. The deck's order is followed here — it is better teaching, and the
   prompts are hers.
+
+## Week 7 — notes
+
+Her slides were unusually plain this week, so much of her own phrasing is kept.
+No factual corrections were needed. Two things worth knowing:
+
+- Hans Haacke is a learning objective and appears in her lesson plan, but has no
+  slide of his own. *Germania* (1993) is described on the Institutional Critique
+  slide rather than shown.
+- The activity's reveal — Beuys's "Everyone is an artist" — is held back to its
+  own slide **after** the group presentations, exactly as her plan instructs.
 
 ## Images
 

@@ -57,6 +57,8 @@
       case 'section':  return s.ask ? 1 : 0;
       case 'activity': return s.questions ? s.questions.length : 0;
       case 'grid':     return s.cells.length;
+      case 'flow':     return s.stages.length;
+      case 'timeline': return s.stops.length;
       case 'rank':     return s.questions ? s.questions.length : 0;
       case 'video':    return s.points ? s.points.length : 0;
       default:         return 0;
@@ -303,6 +305,29 @@
                    : '<div class="zoom-hint">Plays from this site — no internet needed</div>'}
           </div>`;
 
+      /* Four stages with arrows between them — a theory traced from raw
+         material to finished practice. Revealed one stage at a time. */
+      case 'flow':
+        return `${s.kicker ? `<div class="kicker">${s.kicker}</div>` : ''}
+          <h2>${chips(s.title)}</h2>
+          ${s.zh ? `<div class="zh-title">${s.zh}</div>` : ''}
+          <div class="stages">${s.stages.map((st, k) => `
+            <div class="stage step" data-step="${k}">
+              <div class="stage-head">${chips(st.head)}</div>
+              <div class="stage-body">${chips(st.body)}</div>
+            </div>${k < s.stages.length - 1 ? '<i class="stage-arrow">→</i>' : ''}`).join('')}</div>
+          ${s.foot ? `<div class="stage-foot">${chips(s.foot)}</div>` : ''}`;
+
+      /* A story told in dated stops. */
+      case 'timeline':
+        return `<h2>${chips(s.title)}</h2>
+          ${s.zh ? `<div class="zh-title">${s.zh}</div>` : ''}
+          <ol class="stops">${s.stops.map((st, k) => `
+            <li class="stop step" data-step="${k}">
+              <div class="stop-when">${st.when}</div>
+              <div class="stop-what">${chips(st.what)}</div>
+            </li>`).join('')}</ol>`;
+
       case 'grid':
         return `${s.kicker ? `<div class="kicker">${s.kicker}</div>` : ''}
           <h2>${chips(s.title)}</h2>
@@ -352,6 +377,7 @@
           <div class="why">${chips(s.why)}</div>
           <div class="reveal-hint">Click when the class has answered</div>`;
 
+      case 'terms':
       case 'end':
         return `<h2>${chips(s.title)}</h2>
           ${s.zh ? `<div class="zh-title">${s.zh}</div>` : ''}

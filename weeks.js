@@ -37,7 +37,12 @@ const WEEKS = [
     q: 'If an artwork destroys itself, what are we left with?',
     meta: '58 slides · Klein to Beuys · eight films with “watch for” prompts · 6-question quiz'
   },
-  { n: 7,  dir: null },
+  {
+    n: 7, dir: 'week07',
+    title: 'From Object to Concept',
+    q: 'Does art still need to exist?',
+    meta: '61 slides · Beuys to Haacke · the “where is the line?” activity · 6-question quiz'
+  },
   { n: 8,  dir: null },
   { n: 9,  dir: null },
   { n: 10, dir: null },
