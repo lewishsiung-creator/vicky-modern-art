@@ -25,7 +25,12 @@ const WEEKS = [
     q: 'How did painting lose reality?',
     meta: '62 slides · Pollock to Tàpies · the genealogy-of-chance activity · 6-question quiz'
   },
-  { n: 5,  dir: null },
+  {
+    n: 5, dir: 'week05',
+    title: 'The Boundary Between Art and Everyday Life',
+    q: 'Can anything be art?',
+    meta: '60 slides · Pop Art to Mei Dean-E · the “is this art?” object activity · 6-question quiz'
+  },
   { n: 6,  dir: null },
   { n: 7,  dir: null },
   { n: 8,  dir: null },

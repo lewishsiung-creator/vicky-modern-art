@@ -11,6 +11,7 @@ vocabulary.
 | 2 | The Beginning of Modern Art | 53 slides |
 | 3 | Expression and the Inner Self | 61 slides |
 | 4 | From Representation to Expression | 62 slides |
+| 5 | The Boundary Between Art and Everyday Life | 60 slides |
 
 ## Layout
 
@@ -21,6 +22,7 @@ shared/         deck.js and style.css — every week uses these
 week02/         index.html + content.js + img/
 week03/         index.html + content.js + img/
 week04/         index.html + content.js + img/
+week05/         index.html + content.js + img/
 ```
 
 A fix to `shared/` lands on every week at once. Each week owns only its
@@ -28,10 +30,10 @@ A fix to `shared/` lands on every week at once. Each week owns only its
 
 ## Adding a week
 
-1. `cp -r week04 week05 && rm week05/img/* && rm week05/content.js`
-2. Put the new pictures in `week05/img/`.
-3. Write `week05/content.js` — copy the shape from `week04/content.js`.
-4. Change the `<title>` and `<meta name="description">` in `week05/index.html`.
+1. `cp -r week05 week06 && rm week06/img/* && rm week06/content.js`
+2. Put the new pictures in `week06/img/`.
+3. Write `week06/content.js` — copy the shape from `week05/content.js`.
+4. Change the `<title>` and `<meta name="description">` in `week06/index.html`.
 5. Fill in that week's line in `weeks.js`.
 
 Nothing else needs editing.
@@ -103,6 +105,7 @@ content, and each is stated in that question's speaker notes.
 
 - **Week 3** — 1 · B  ·  2 · A  ·  3 · D  ·  4 · A  ·  5 · A  ·  6 · B
 - **Week 4** — 1 · D  ·  2 · C  ·  3 · C  ·  4 · B  ·  5 · D  ·  6 · C
+- **Week 5** — 1 · B  ·  2 · D  ·  3 · C  ·  4 · A  ·  5 · B  ·  6 · D
 
 ## Week 4 — corrections made to the original PowerPoint
 
@@ -121,6 +124,24 @@ content, and each is stated in that question's speaker notes.
 - One photograph of a Pollock on the floor was labelled 《第五號，1948》 in her
   deck; the canvas shown looks like a different one, so it is captioned without
   a title and flagged in the notes.
+
+## Week 5 — corrections and open questions
+
+- Pop Art dated to the **1950s in Britain**, spreading to America in the 1960s.
+  Her slide said "began in Britain in the 1960s", which contradicted her own
+  Independent Group (1952) and *This Is Tomorrow* (1956) slides.
+- Paolozzi's collage is *__I__ Was a Rich Man's Plaything* — the first word was
+  missing.
+- "Assemblage", not "Assemblege".
+- The large Oldenburg soft sculpture in the Guggenheim rotunda carries **no
+  title** in her deck. It is captioned generically; it is very likely
+  *Soft Shuttlecock*, 1995, but that is not confirmed.
+- The lesson plan's Chinese characters for Mei Dean-E's *Ai-Dun-Di-Ti* series
+  appear garbled. The commonly published form is 《哀敦砥悌》. It is **left off
+  the slide** and flagged in the notes — Vicky should confirm it.
+- **Timing conflict:** the schedule allots 20 minutes to the documentary
+  segment, but the plan describes ~20 min of screening *plus* ~10 min of
+  discussion. Flagged in the notes; she must choose before class.
 
 ## Images
 
