@@ -58,6 +58,7 @@
       case 'activity': return s.questions ? s.questions.length : 0;
       case 'grid':     return s.cells.length;
       case 'flow':     return s.stages.length;
+      case 'match':    return 1;
       case 'timeline': return s.stops.length;
       case 'rank':     return s.questions ? s.questions.length : 0;
       case 'video':    return s.points ? s.points.length : 0;
@@ -305,6 +306,34 @@
                    : '<div class="zoom-hint">Plays from this site — no internet needed</div>'}
           </div>`;
 
+      /* Cards to pair up. Students argue on paper; one group then comes to
+         the screen and proposes their pairing for the share-out. Clicking
+         forms pairs freely — nothing is judged until she reveals. */
+      case 'match': {
+        /* A fixed shuffle, so the right column is stable across reloads and
+           identical on the presenter screen. */
+        const order = s.pairs.map((_, k) => k);
+        for (let k = order.length - 1; k > 0; k--) {
+          const j = (k * 7 + 3) % (k + 1);
+          [order[k], order[j]] = [order[j], order[k]];
+        }
+        return `<h2>${chips(s.title)}</h2>
+          ${s.zh ? `<div class="zh-title">${s.zh}</div>` : ''}
+          ${s.instructions ? `<div class="match-task">${chips(s.instructions)}</div>` : ''}
+          <div class="match-cols">
+            <ul class="match-side" data-side="a">${s.pairs.map((pr, k) =>
+              `<li><button class="match-card" data-side="a" data-pair="${k}">
+                 <span class="match-badge"></span>${chips(pr.a)}</button></li>`).join('')}</ul>
+            <ul class="match-side" data-side="b">${order.map(k =>
+              `<li><button class="match-card" data-side="b" data-pair="${k}">
+                 <span class="match-badge"></span>${chips(s.pairs[k].b)}</button></li>`).join('')}</ul>
+          </div>
+          <div class="match-tools">
+            <button data-match="clear">Clear</button>
+            <span class="match-hint">Click one from each side to pair them · click a paired card to take it out</span>
+          </div>`;
+      }
+
       /* Four stages with arrows between them — a theory traced from raw
          material to finished practice. Revealed one stage at a time. */
       case 'flow':
@@ -332,7 +361,7 @@
         return `${s.kicker ? `<div class="kicker">${s.kicker}</div>` : ''}
           <h2>${chips(s.title)}</h2>
           ${s.zh ? `<div class="zh-title">${s.zh}</div>` : ''}
-          <div class="cells">${s.cells.map((c, k) => `
+          <div class="cells" style="grid-template-columns:repeat(${s.cols || 2},1fr)">${s.cells.map((c, k) => `
             <div class="cell step" data-step="${k}">
               <div class="cell-label">${c.label}</div>
               <div class="cell-head">${chips(c.head)}</div>
@@ -426,6 +455,7 @@
     }
     if (s.type === 'break') node.classList.toggle('broken', step >= 1);
     if (s.type === 'quiz')  node.classList.toggle('revealed', step >= 1);
+    if (s.type === 'match') node.classList.toggle('revealed', step >= 1);
 
     progress.style.width = ((idx + 1) / SLIDES.length * 100) + '%';
     counter.textContent = (idx + 1) + ' / ' + SLIDES.length;
@@ -542,6 +572,42 @@
   }
   setInterval(() => document.querySelectorAll('.timer').forEach(tick), 250);
 
+  /* ---------- matching board ----------
+     Pairs live only in the DOM. Nothing is stored, and a reload clears it:
+     this is one group's proposal during a share-out, not a record. */
+  function matchClick(card) {
+    const board = card.closest('.match-cols');
+    if (card.classList.contains('paired')) {
+      const n = card.dataset.n;
+      board.querySelectorAll(`.match-card[data-n="${n}"]`).forEach(c => {
+        c.classList.remove('paired');
+        delete c.dataset.n;
+        c.querySelector('.match-badge').textContent = '';
+      });
+      return;
+    }
+    const picked = board.querySelector('.match-card.picked');
+    if (!picked) { card.classList.add('picked'); return; }
+    if (picked === card) { card.classList.remove('picked'); return; }
+    if (picked.dataset.side === card.dataset.side) {
+      picked.classList.remove('picked');
+      card.classList.add('picked');
+      return;
+    }
+    const n = String((+board.dataset.next || 0) + 1);
+    board.dataset.next = n;
+    [picked, card].forEach(c => {
+      c.classList.remove('picked');
+      c.classList.add('paired');
+      c.dataset.n = n;
+      c.querySelector('.match-badge').textContent = n;
+    });
+    /* A pair is "together" when both halves came from the same row of
+       s.pairs. Marked only when she reveals, never as you go. */
+    const together = picked.dataset.pair === card.dataset.pair;
+    [picked, card].forEach(c => c.classList.toggle('together', together));
+  }
+
   /* ---------- ranking board ----------
      Order lives only in the DOM. Nothing is stored, and a reload clears it —
      these are one group's opinion during a share-out, not a record. */
@@ -618,6 +684,20 @@
       return;
     }
     if (e.target.closest('.vid')) return;
+
+    const mc = e.target.closest('.match-card');
+    if (mc) { matchClick(mc); return; }
+    const mclear = e.target.closest('[data-match="clear"]');
+    if (mclear) {
+      const board = mclear.closest('.slide').querySelector('.match-cols');
+      board.dataset.next = 0;
+      board.querySelectorAll('.match-card').forEach(c => {
+        c.classList.remove('paired', 'picked', 'together');
+        delete c.dataset.n;
+        c.querySelector('.match-badge').textContent = '';
+      });
+      return;
+    }
 
     const card = e.target.closest('.rank-card');
     if (card) { rankClick(card); return; }

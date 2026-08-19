@@ -463,6 +463,57 @@ h2 {
 .s-grid .cell .chip::after { color: var(--deep); }
 .s-grid .cell .chip:hover { background: rgba(43,107,69,.16); }
 
+/* ---------- Matching board ---------- */
+.s-match .match-task {
+  font-size: 1.15em; line-height: 1.45; color: var(--ink-dim);
+  margin-bottom: 1.1em; max-width: 44em;
+}
+.match-cols {
+  display: flex; gap: 2.5vw; align-items: flex-start;
+  max-width: 62em;
+}
+.match-side { list-style: none; flex: 1 1 0; min-width: 0; }
+.match-side li { margin-bottom: .45em; }
+.match-card {
+  position: relative;
+  width: 100%; text-align: left;
+  font: inherit; font-size: 1.02em; line-height: 1.35;
+  background: var(--cream); color: var(--ink);
+  border: 2px solid transparent; border-radius: .4em;
+  padding: .6em 1em .6em 2.6em;
+  cursor: pointer;
+  box-shadow: 0 .3em 1em rgba(23,19,18,.14);
+  transition: border-color .15s ease, opacity .3s ease, transform .1s ease;
+}
+.match-card:hover { transform: translateY(-1px); }
+.match-card.picked { border-color: var(--deeper); }
+.match-badge {
+  position: absolute; left: .6em; top: 50%; transform: translateY(-50%);
+  width: 1.55em; height: 1.55em; border-radius: 50%;
+  background: var(--deeper); color: var(--cream);
+  font-size: .92em; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity .2s ease;
+}
+.match-card.paired .match-badge { opacity: 1; }
+
+/* Nothing is judged until she reveals. Then the pairs that belong
+   together are marked — and the rest simply fade, never marked wrong. */
+.s-match.revealed .match-card { opacity: .42; }
+.s-match.revealed .match-card.together {
+  opacity: 1; border-color: var(--deeper);
+  box-shadow: 0 .5em 1.4em rgba(23,19,18,.24);
+}
+.match-tools { margin-top: 1.2em; display: flex; align-items: center; gap: 1em; }
+.match-tools button {
+  font: inherit; font-size: .95em;
+  background: transparent; color: var(--ink-dim);
+  border: 1px solid var(--rule); border-radius: .35em;
+  padding: .45em .9em; cursor: pointer;
+}
+.match-tools button:hover { background: var(--cream); border-color: var(--cream); }
+.match-hint { font-size: .88em; color: var(--deeper); }
+
 /* ---------- Flow diagram ---------- */
 .s-flow .stages {
   display: flex; align-items: stretch; flex-wrap: wrap;
@@ -864,7 +915,8 @@ body.course { overflow: auto; }
   .s-artwork .art { height: 44vh; }
   .s-artwork .side { max-width: none; }
   .s-twocol .cols, .s-activity, .s-rank, .s-video { flex-direction: column; gap: 2vh; }
-  .s-flow .stages, .s-timeline .stops { flex-direction: column; }
+  .s-flow .stages, .s-timeline .stops, .match-cols { flex-direction: column; }
+  .s-match .match-card { font-size: .95em; }
   .s-flow .stage-arrow { align-self: flex-start; transform: rotate(90deg); }
   .s-grid .cells { grid-template-columns: 1fr; }
   .rank-card { width: 7.5em; }

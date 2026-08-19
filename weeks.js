@@ -43,7 +43,12 @@ const WEEKS = [
     q: 'Does art still need to exist?',
     meta: '61 slides · Beuys to Haacke · the “where is the line?” activity · 6-question quiz'
   },
-  { n: 8,  dir: null },
+  {
+    n: 8, dir: 'week08',
+    title: 'Anti-Form',
+    q: 'When process replaces the finished work.',
+    meta: '49 slides · Morris to Estes · the concept-matching board · 6-question quiz'
+  },
   { n: 9,  dir: null },
   { n: 10, dir: null },
   { n: 11, dir: null },
