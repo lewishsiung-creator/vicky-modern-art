@@ -31,7 +31,12 @@ const WEEKS = [
     q: 'Can anything be art?',
     meta: '60 slides · Pop Art to Mei Dean-E · the “is this art?” object activity · 6-question quiz'
   },
-  { n: 6,  dir: null },
+  {
+    n: 6, dir: 'week06',
+    title: 'Art as Action / Event',
+    q: 'If an artwork destroys itself, what are we left with?',
+    meta: '58 slides · Klein to Beuys · eight films with “watch for” prompts · 6-question quiz'
+  },
   { n: 7,  dir: null },
   { n: 8,  dir: null },
   { n: 9,  dir: null },

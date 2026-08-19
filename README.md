@@ -12,6 +12,7 @@ vocabulary.
 | 3 | Expression and the Inner Self | 61 slides |
 | 4 | From Representation to Expression | 62 slides |
 | 5 | The Boundary Between Art and Everyday Life | 60 slides |
+| 6 | Art as Action / Event | 58 slides |
 
 ## Layout
 
@@ -23,6 +24,7 @@ week02/         index.html + content.js + img/
 week03/         index.html + content.js + img/
 week04/         index.html + content.js + img/
 week05/         index.html + content.js + img/
+week06/         index.html + content.js + img/ + vid/
 ```
 
 A fix to `shared/` lands on every week at once. Each week owns only its
@@ -30,10 +32,10 @@ A fix to `shared/` lands on every week at once. Each week owns only its
 
 ## Adding a week
 
-1. `cp -r week05 week06 && rm week06/img/* && rm week06/content.js`
-2. Put the new pictures in `week06/img/`.
-3. Write `week06/content.js` — copy the shape from `week05/content.js`.
-4. Change the `<title>` and `<meta name="description">` in `week06/index.html`.
+1. `cp -r week06 week07 && rm -rf week07/img/* week07/vid week07/content.js`
+2. Put the new pictures in `week07/img/`.
+3. Write `week07/content.js` — copy the shape from `week06/content.js`.
+4. Change the `<title>` and `<meta name="description">` in `week07/index.html`.
 5. Fill in that week's line in `weeks.js`.
 
 Nothing else needs editing.
@@ -82,6 +84,11 @@ Slide types: `title` `word` `section` `bullets` `quote` `compare` `artwork`
   record.
 - `quote` takes an optional `src` — a photograph of the source document,
   shown beside the quotation.
+- `video` — a film with a "watch for" prompt. Pass either `yt` (a YouTube id,
+  embedded via youtube-nocookie) or `src` (a file in that week's `vid/`).
+  The player is a **facade** until clicked: eight players loading at once would
+  stall the deck, and nothing should start playing because a slide scrolled by.
+  Leaving the slide tears the player down, so sound never follows her onward.
 
 ## Week 2 — corrections made to the original PowerPoint
 
@@ -106,6 +113,23 @@ content, and each is stated in that question's speaker notes.
 - **Week 3** — 1 · B  ·  2 · A  ·  3 · D  ·  4 · A  ·  5 · A  ·  6 · B
 - **Week 4** — 1 · D  ·  2 · C  ·  3 · C  ·  4 · B  ·  5 · D  ·  6 · C
 - **Week 5** — 1 · B  ·  2 · D  ·  3 · C  ·  4 · A  ·  5 · B  ·  6 · D
+- **Week 6** — 1 · B  ·  2 · A  ·  3 · B  ·  4 · B  ·  5 · A  ·  6 · D
+
+## Week 6 — videos, and why they are not all hosted
+
+Her `.pptx` embeds eight film files totalling about 270 MB — 76 minutes of
+footage. Three of them are over Cloudflare Pages' 25 MB per-file limit, and
+there is no `ffmpeg` on this machine to re-encode them.
+
+Seven of the eight slides already carried a **YouTube source URL**, so those are
+embedded from YouTube. The Anthropométries film carried no link, so it is hosted
+in `week06/vid/` (8.4 MB) and plays with no internet.
+
+**This means the classroom needs a working connection for seven of the eight
+films.** If that is a risk, her original `.pptx` still has every file embedded
+and works offline — keep it on a USB stick as the fallback.
+
+## Week 5 — corrections and open questions
 
 ## Week 4 — corrections made to the original PowerPoint
 
@@ -142,6 +166,14 @@ content, and each is stated in that question's speaker notes.
 - **Timing conflict:** the schedule allots 20 minutes to the documentary
   segment, but the plan describes ~20 min of screening *plus* ~10 min of
   discussion. Flagged in the notes; she must choose before class.
+
+## Week 6 — corrections
+
+- "Cut Piece", not "Cut piese".
+- Her lesson plan batches all the films into one 15-minute block, but her deck
+  spreads them through the lecture, each behind its own "Watch for:" prompt
+  slide. The deck's order is followed here — it is better teaching, and the
+  prompts are hers.
 
 ## Images
 

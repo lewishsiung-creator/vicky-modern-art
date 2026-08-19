@@ -58,6 +58,7 @@
       case 'activity': return s.questions ? s.questions.length : 0;
       case 'grid':     return s.cells.length;
       case 'rank':     return s.questions ? s.questions.length : 0;
+      case 'video':    return s.points ? s.points.length : 0;
       default:         return 0;
     }
   }
@@ -282,6 +283,26 @@
           <div class="right">${s.timeline ? `<ul class="tl">${s.timeline.map(([y, m]) =>
             `<li><span class="yr">${y}</span><span>${m}</span></li>`).join('')}</ul>` : ''}</div>`;
 
+      /* A video sits behind a facade until she clicks it: seven YouTube
+         players loading at once would stall the whole deck, and nothing
+         should start playing because a slide scrolled past. */
+      case 'video':
+        return `<div class="vid">
+            <div class="vid-frame" data-yt="${s.yt || ''}" data-src="${s.src || ''}"
+                 ${s.poster ? `style="background-image:url(${s.poster})"` : ''}>
+              <button class="vid-play" aria-label="Play"><span>▶</span></button>
+            </div>
+            ${s.watchFor ? `<div class="vid-watch"><span class="tag">WATCH FOR</span>${chips(s.watchFor)}</div>` : ''}
+          </div>
+          <div class="side">
+            <h2>${chips(s.title)}</h2>
+            <div class="cap">${s.caption}</div>
+            <ul class="points">${(s.points || []).map((p, k) =>
+              `<li class="step" data-step="${k}">${chips(p)}</li>`).join('')}</ul>
+            ${s.yt ? `<div class="zoom-hint">Needs internet · <a href="https://www.youtube.com/watch?v=${s.yt}" target="_blank" rel="noopener">open on YouTube</a></div>`
+                   : '<div class="zoom-hint">Plays from this site — no internet needed</div>'}
+          </div>`;
+
       case 'grid':
         return `${s.kicker ? `<div class="kicker">${s.kicker}</div>` : ''}
           <h2>${chips(s.title)}</h2>
@@ -350,6 +371,16 @@
 
     nodes.forEach((n, i) => n.classList.toggle('active', i === idx));
     const node = nodes[idx];
+
+    /* Tear any player down on the way out, so sound never follows her
+       to the next slide. */
+    nodes.forEach((n, i) => {
+      if (i === idx) return;
+      n.querySelectorAll('.vid-frame.loaded').forEach(f => {
+        f.classList.remove('loaded');
+        f.innerHTML = '<button class="vid-play" aria-label="Play"><span>\u25B6</span></button>';
+      });
+    });
 
     /* Build steps: reveal in order. */
     node.querySelectorAll('.step').forEach((n, order) => {
@@ -544,6 +575,23 @@
 
     const img = e.target.closest('.s-artwork img, .compare-pane img, .q-doc img');
     if (img) { openZoom(img); return; }
+
+    /* Load a video player on demand, and swallow every click inside one —
+       otherwise pressing pause would also advance the slide. */
+    const frame = e.target.closest('.vid-frame');
+    if (frame) {
+      if (!frame.classList.contains('loaded')) {
+        frame.classList.add('loaded');
+        const yt = frame.dataset.yt, src = frame.dataset.src;
+        frame.innerHTML = yt
+          ? `<iframe src="https://www.youtube-nocookie.com/embed/${yt}?autoplay=1&rel=0"
+               allow="accelerometer; autoplay; encrypted-media; picture-in-picture"
+               allowfullscreen title="video"></iframe>`
+          : `<video src="${src}" controls autoplay playsinline></video>`;
+      }
+      return;
+    }
+    if (e.target.closest('.vid')) return;
 
     const card = e.target.closest('.rank-card');
     if (card) { rankClick(card); return; }
