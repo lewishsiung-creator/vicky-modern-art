@@ -177,6 +177,23 @@ h2 {
 .plain .chip::after { color: var(--deep); }
 .plain .chip:hover { background: rgba(43,107,69,.16); }
 
+/* A quote slide carrying a photo of its source document */
+.s-quote:has(.q-doc) { flex-direction: row; align-items: center; gap: 4vw; }
+.s-quote .q-body { flex: 1 1 60%; }
+.s-quote .q-doc {
+  flex: 1 1 40%; max-width: 22em;
+  display: flex; flex-direction: column; align-items: center;
+}
+.s-quote .q-doc img {
+  max-width: 100%; max-height: 62vh; object-fit: contain;
+  cursor: zoom-in; border-radius: 2px;
+  box-shadow: 0 1.2em 3em rgba(23,19,18,.42);
+}
+.s-quote .q-doc .doc-lbl {
+  font-size: .88em; color: var(--deeper);
+  margin-top: .8em; text-align: center; line-height: 1.4;
+}
+
 /* ---------- ASK banner ---------- */
 .ask {
   margin-top: 1.5em;
@@ -324,8 +341,10 @@ h2 {
 .s-activity .right { flex: 1 1 45%; max-width: 24em; }
 .s-activity ol, .s-activity ul { margin: 1.2em 0 0 1.1em; }
 .s-activity li { font-size: 1.24em; line-height: 1.5; margin-bottom: .6em; }
-.s-activity .q-list { list-style: none; margin-left: 0; }
-.s-activity .q-list li {
+/* Shared by activity and ranking slides. */
+.q-list { list-style: none; margin: 1.2em 0 0; }
+.q-list li {
+  font-size: 1.18em; line-height: 1.45;
   padding-left: 1em; border-left: 2px solid var(--deeper);
   color: var(--deeper); font-weight: 500; margin-bottom: 1em;
 }
@@ -355,6 +374,77 @@ h2 {
   padding: .5em .95em; cursor: pointer;
 }
 .timer button:hover { background: var(--cream); border-color: var(--cream); }
+
+/* ---------- Concept grid (Attitude / Concept / Form / Technique) ---------- */
+.s-grid .cells {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1.1em; margin-top: 1.5em; max-width: 52em;
+}
+.s-grid .cell {
+  background: var(--cream); border-radius: .5em;
+  padding: 1.1em 1.3em;
+  box-shadow: 0 .5em 1.5em rgba(23,19,18,.16);
+}
+.s-grid .cell-label {
+  font-size: .78em; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--deep); font-weight: 700; margin-bottom: .5em;
+}
+.s-grid .cell-head { font-size: 1.24em; line-height: 1.35; font-weight: 500; }
+.s-grid .cell-body {
+  font-size: 1.02em; line-height: 1.5; color: #45524a; margin-top: .35em;
+}
+.s-grid .cell .chip { border-bottom-color: var(--deep); }
+.s-grid .cell .chip::after { color: var(--deep); }
+.s-grid .cell .chip:hover { background: rgba(43,107,69,.16); }
+
+/* ---------- Ranking board ---------- */
+.s-rank { flex-direction: row; gap: 3vw; align-items: center; }
+.s-rank .left { flex: 1 1 68%; min-width: 0; }
+.s-rank .right { flex: 1 1 32%; min-width: 0; max-width: 20em; }
+.s-rank .rank-task {
+  font-size: 1.3em; line-height: 1.4; margin-bottom: 1.1em; max-width: 26em;
+}
+/* align-items: flex-start, or every card stretches to the tallest one. */
+.rank-cards { display: flex; gap: 1em; flex-wrap: wrap; align-items: flex-start; }
+.rank-card {
+  position: relative;
+  font: inherit; cursor: pointer;
+  background: var(--cream); border: 2px solid transparent; border-radius: .5em;
+  padding: .9em .9em .7em;
+  width: 9.4em;
+  display: flex; flex-direction: column; align-items: center; gap: .6em;
+  box-shadow: 0 .5em 1.5em rgba(23,19,18,.16);
+  transition: border-color .2s ease, transform .2s ease;
+}
+.rank-card:hover { transform: translateY(-.15em); }
+/* The image box and the emoji box must be the same height, so the four
+   cards line up. The emoji is sized on an inner span — sizing it on the
+   box itself would make its own `height: em` compound with its font-size. */
+.rank-card img,
+.rank-glyph { width: 100%; height: 6.6em; object-fit: contain; }
+.rank-glyph { display: flex; align-items: center; justify-content: center; }
+.rank-glyph .g { font-size: 5.2em; line-height: 1; }
+.rank-lbl { font-size: .95em; color: var(--ink); text-align: center; line-height: 1.3; }
+.rank-card.ranked { border-color: var(--deeper); }
+.rank-badge {
+  position: absolute; top: -.6em; left: -.6em;
+  width: 1.9em; height: 1.9em; border-radius: 50%;
+  background: var(--deeper); color: var(--cream);
+  font-size: 1.05em; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transform: scale(.6);
+  transition: opacity .2s ease, transform .2s ease;
+}
+.rank-card.ranked .rank-badge { opacity: 1; transform: none; }
+.rank-tools { margin-top: 1.2em; display: flex; align-items: center; gap: 1em; }
+.rank-tools button {
+  font: inherit; font-size: .95em;
+  background: transparent; color: var(--ink-dim);
+  border: 1px solid var(--rule); border-radius: .35em;
+  padding: .45em .9em; cursor: pointer;
+}
+.rank-tools button:hover { background: var(--cream); border-color: var(--cream); }
+.rank-hint { font-size: .88em; color: var(--deeper); }
 
 /* ---------- Quiz ---------- */
 .s-quiz .qnum {
@@ -569,12 +659,79 @@ body.presenter {
 .pv .chip { border-bottom-color: var(--deep); }
 .pv .chip::after { color: var(--deep); }
 
+/* ---------- Course index ---------- */
+body.course { overflow: auto; }
+.course-page {
+  max-width: 46em; margin: 0 auto; padding: 10vh 6vw 8vh;
+  font-size: 17px;
+}
+.course-kicker {
+  font-size: .82em; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--deeper); font-weight: 700; margin-bottom: 1.4em;
+}
+.course-page h1 { font-size: 3em; line-height: 1.1; }
+.course-sub {
+  font-size: 1.1em; line-height: 1.6; color: var(--ink-dim);
+  margin-top: 1em; max-width: 30em;
+}
+.weeks { list-style: none; margin-top: 3em; }
+.weeks li { margin-bottom: 1.1em; }
+.weeks a, .weeks .card {
+  display: block; text-decoration: none; color: var(--ink);
+  background: var(--cream); border-radius: .6em;
+  padding: 1.5em 1.7em;
+  box-shadow: 0 .5em 1.6em rgba(23,19,18,.16);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.weeks a:hover {
+  transform: translateY(-.15em);
+  box-shadow: 0 .9em 2.4em rgba(23,19,18,.26);
+}
+.weeks .wk {
+  display: block; font-size: .78em; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--deep); font-weight: 700;
+}
+.weeks .wk-title {
+  display: block; font-family: var(--serif); font-size: 1.9em;
+  line-height: 1.15; margin: .25em 0 .1em;
+}
+.weeks .wk-q { display: block; font-size: 1.05em; color: var(--deep); }
+.weeks .wk-meta {
+  display: block; font-size: .9em; color: #5a6a5f; margin-top: .8em;
+}
+/* Weeks not built yet: present, but plainly not ready. */
+.weeks li.soon { margin-bottom: .5em; }
+.weeks li.soon .card {
+  background: transparent;
+  border: 1px dashed rgba(23,19,18,.28);
+  box-shadow: none;
+  padding: .9em 1.7em;
+  color: var(--deeper);
+}
+.weeks li.soon .wk-title {
+  font-size: 1.1em; font-family: var(--sans); margin: 0;
+  display: inline; color: var(--deeper);
+}
+.weeks li.soon .wk { display: inline; margin-right: .8em; }
+.weeks li.soon .wk-q { font-size: .95em; margin-top: .3em; }
+
+.course-foot {
+  margin-top: 3em; font-size: .9em; color: var(--deeper);
+}
+
+/* The "weeks" link in a deck's HUD */
+#hud a { color: inherit; text-decoration: none; }
+#hud a:hover { color: var(--ink); }
+
 /* ---------- Smaller screens / preview ---------- */
 @media (max-width: 900px) {
   .s-artwork { flex-direction: column; gap: 2vh; }
   .s-artwork .art { height: 44vh; }
   .s-artwork .side { max-width: none; }
-  .s-twocol .cols, .s-activity { flex-direction: column; gap: 2vh; }
+  .s-twocol .cols, .s-activity, .s-rank { flex-direction: column; gap: 2vh; }
+  .s-grid .cells { grid-template-columns: 1fr; }
+  .rank-card { width: 7.5em; }
+  .rank-card img, .rank-glyph { height: 5em; }
   .compare-wrap { flex-direction: column; }
   .compare-pane { height: 32vh; }
 }

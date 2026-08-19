@@ -912,18 +912,19 @@ const SLIDES = [
   zh: '討論',
   minutes: 10,
   instructions: [
-    'Talk in small groups. Then one person reports back.'
+    'Talk in small groups. Then one person reports back.',
+    'Useful starters: “I think… because…” · “For me, …” · “I disagree, because…”'
   ],
   questions: [
-    'A machine can copy the world. So what is a painter for, today?',
-    'Benjamin says the {{aura}} disappears when we copy art. Have you ever seen a famous artwork in real life? Was it different?',
-    'The Futurists loved speed and machines — and they also praised war, and later supported Fascism. Can we like the art and not the politics?'
+    'Greenberg said {{modernism}} is art using its own methods to question itself. Is that still true of art made today — or has {{contemporary}} moved past this kind of self-questioning?',
+    'Hegel, Belting and Danto each announced an “end”. But artists obviously kept working. What did each of them really mean — and is “ending” the right word for it?',
+    'Futurism and Constructivism tied their new forms to politics: nationalism on one side, socialism on the other. Can an {{abstract}} shape ever be politically neutral — or does new form always carry ideology?'
   ],
-  placeholder: true,
   notes: [
-    'Ten minutes of discussion. The script says to use the questions from the lesson plan.',
-    'TEACHER / LEWIS: these three are placeholders, written from today’s material. Swap them for the real lesson-plan questions when you have them. The third one is the art-and-politics question the script refers back to from the Futurism slide.',
-    'A2 support: give them the sentence starters "I think… because…" and "For me, …".'
+    'Ten minutes. These are the three discussion questions from the lesson plan, simplified for A2 — the full wording is in the plan if you want it.',
+    'Question 2 is revision: it is Quiz Question 6 in conversational form. If the room is quiet, start there, because they can already answer it.',
+    'Question 3 is the hardest and the best. It reaches back to the Futurism slide and forward to next week.',
+    'A2 support: the sentence starters are on screen. Give ten seconds of silence after each question before you call on anyone.'
   ]
 },
 

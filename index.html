@@ -3,31 +3,42 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Beginning of Modern Art — Week 2</title>
-<meta name="description" content="How did art start to change? An interactive lecture deck, CEFR A2.">
-<link rel="stylesheet" href="style.css">
+<title>Modern and Contemporary Art — lecture decks</title>
+<meta name="description" content="Interactive lecture decks for a college art-history course. English at CEFR A2, with Chinese glosses.">
+<link rel="stylesheet" href="shared/style.css">
 </head>
-<body>
+<body class="course">
 
-<div id="progress"></div>
-<div id="stage"></div>
+<main class="course-page">
+  <header>
+    <div class="course-kicker">Lecture decks</div>
+    <h1>Modern and Contemporary Art</h1>
+    <p class="course-sub">
+      English at CEFR A2, with Chinese on the key vocabulary.
+      Open a week, then press <b>P</b> for the presenter window and
+      <b>M</b> to jump to a section.
+    </p>
+  </header>
 
-<div id="chipcard"></div>
+  <ul class="weeks" id="weeks"></ul>
 
-<div id="lightbox"><img src="" alt=""><div class="lb-note"></div></div>
+  <footer class="course-foot">
+    Built from Vicky’s slides and lesson plans.
+  </footer>
+</main>
 
-<div id="menu"></div>
-
-<div id="peek"></div>
-
-<div id="hud">
-  <button id="btn-menu" title="Jump to a section (M)">menu</button>
-  <button id="btn-notes" title="Speaker notes on this screen (N)">notes</button>
-  <button id="btn-presenter" title="Presenter window on a second screen (P)">presenter</button>
-  <span class="count" id="count">1 / 53</span>
-</div>
-
-<script src="content.js"></script>
-<script src="deck.js"></script>
+<script src="weeks.js"></script>
+<script>
+document.getElementById('weeks').innerHTML = WEEKS.map(w => {
+  const inner = `
+    <span class="wk">Week ${w.n}</span>
+    <span class="wk-title">${w.title || 'Not built yet'}</span>
+    ${w.q ? `<span class="wk-q">${w.q}</span>` : ''}
+    ${w.meta ? `<span class="wk-meta">${w.meta}</span>` : ''}`;
+  return w.dir
+    ? `<li><a href="${w.dir}/">${inner}</a></li>`
+    : `<li class="soon"><span class="card">${inner}</span></li>`;
+}).join('');
+</script>
 </body>
 </html>

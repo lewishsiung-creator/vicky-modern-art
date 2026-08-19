@@ -56,6 +56,8 @@
       case 'quiz':     return 1;
       case 'section':  return s.ask ? 1 : 0;
       case 'activity': return s.questions ? s.questions.length : 0;
+      case 'grid':     return s.cells.length;
+      case 'rank':     return s.questions ? s.questions.length : 0;
       default:         return 0;
     }
   }
@@ -193,8 +195,10 @@
             </li>`).join('')}</ul>
           ${s.ask ? askBlock(s.ask, true) : ''}`;
 
-      case 'quote':
-        return `${s.kicker ? `<div class="kicker">${s.kicker}</div>` : ''}
+      /* `src` is optional — a photograph of the document the quote comes
+         from. With one, the slide splits into two columns. */
+      case 'quote': {
+        const body = `${s.kicker ? `<div class="kicker">${s.kicker}</div>` : ''}
           <h2>${chips(s.title)}</h2>
           ${s.zh ? `<div class="zh-title">${s.zh}</div>` : ''}
           ${s.lead ? `<div class="lead">${chips(s.lead)}</div>` : ''}
@@ -204,6 +208,11 @@
             <div class="plain-label">In simple words</div>
             ${s.plain.map(p => `<p>${chips(p)}</p>`).join('')}</div>` : ''}
           ${s.ask ? askBlock(s.ask, true) : ''}`;
+        if (!s.src) return body;
+        return `<div class="q-body">${body}</div>
+          <div class="q-doc"><img src="${s.src}" alt="">
+            ${s.srcLabel ? `<div class="doc-lbl">${s.srcLabel}</div>` : ''}</div>`;
+      }
 
       case 'compare':
         return `<h2>${chips(s.title)}</h2>
@@ -271,8 +280,48 @@
           <div class="right">${s.timeline ? `<ul class="tl">${s.timeline.map(([y, m]) =>
             `<li><span class="yr">${y}</span><span>${m}</span></li>`).join('')}</ul>` : ''}</div>`;
 
+      case 'grid':
+        return `${s.kicker ? `<div class="kicker">${s.kicker}</div>` : ''}
+          <h2>${chips(s.title)}</h2>
+          ${s.zh ? `<div class="zh-title">${s.zh}</div>` : ''}
+          <div class="cells">${s.cells.map((c, k) => `
+            <div class="cell step" data-step="${k}">
+              <div class="cell-label">${c.label}</div>
+              <div class="cell-head">${chips(c.head)}</div>
+              ${c.body ? `<div class="cell-body">${chips(c.body)}</div>` : ''}
+            </div>`).join('')}</div>`;
+
+      /* Ranking board. Groups argue on paper; one group then comes to the
+         screen and puts the cards in their order for the share-out. */
+      case 'rank':
+        return `<div class="left">
+            <h2>${chips(s.title)}</h2>
+            ${s.zh ? `<div class="zh-title">${s.zh}</div>` : ''}
+            <div class="rank-task">${chips(s.task)}</div>
+            <div class="rank-cards">${s.items.map((it, k) => `
+              <button class="rank-card" data-card="${k}">
+                <span class="rank-badge"></span>
+                ${it.src ? `<img src="${it.src}" alt="">`
+                         : `<span class="rank-glyph"><span class="g">${it.glyph}</span></span>`}
+                <span class="rank-lbl">${it.label}</span>
+              </button>`).join('')}</div>
+            <div class="rank-tools">
+              <button data-rank="reset">Clear the order</button>
+              <span class="rank-hint">Click the cards in order · click a numbered card to take it out</span>
+            </div>
+          </div>
+          <div class="right">
+            <ul class="q-list">${s.questions.map((q, k) =>
+              `<li class="step" data-step="${k}">${chips(q)}</li>`).join('')}</ul>
+            <div class="timer" data-mins="${s.minutes}">
+              <div class="clock">${String(s.minutes).padStart(2, '0')}:00</div>
+              <button data-timer="start">Start</button>
+              <button data-timer="reset">Reset</button>
+            </div>
+          </div>`;
+
       case 'quiz':
-        return `<div class="qnum">Question ${s.n} of 6</div>
+        return `<div class="qnum">Question ${s.n} of ${s.of || 6}</div>
           <div class="qtext">${chips(s.q)}</div>
           <ul class="opts">${s.options.map((o, k) =>
             `<li class="${k === s.answer ? 'right' : ''}">
@@ -428,6 +477,27 @@
   }
   setInterval(() => document.querySelectorAll('.timer').forEach(tick), 250);
 
+  /* ---------- ranking board ----------
+     Order lives only in the DOM. Nothing is stored, and a reload clears it —
+     these are one group's opinion during a share-out, not a record. */
+  function paintRank(board) {
+    const order = board.dataset.order ? board.dataset.order.split(',') : [];
+    board.querySelectorAll('.rank-card').forEach(c => {
+      const pos = order.indexOf(c.dataset.card);
+      c.classList.toggle('ranked', pos >= 0);
+      c.querySelector('.rank-badge').textContent = pos >= 0 ? pos + 1 : '';
+    });
+  }
+  function rankClick(card) {
+    const board = card.closest('.rank-cards');
+    const order = board.dataset.order ? board.dataset.order.split(',') : [];
+    const at = order.indexOf(card.dataset.card);
+    if (at >= 0) order.splice(at, 1);
+    else order.push(card.dataset.card);
+    board.dataset.order = order.join(',');
+    paintRank(board);
+  }
+
   /* ---------- presenter sync ---------- */
   const bc = ('BroadcastChannel' in window) ? new BroadcastChannel(CH) : null;
   function sync() {
@@ -464,8 +534,18 @@
 
     if (lightbox.classList.contains('on')) { closeZoom(); return; }
 
-    const img = e.target.closest('.s-artwork img, .compare-pane img');
+    const img = e.target.closest('.s-artwork img, .compare-pane img, .q-doc img');
     if (img) { openZoom(img); return; }
+
+    const card = e.target.closest('.rank-card');
+    if (card) { rankClick(card); return; }
+    const rr = e.target.closest('[data-rank="reset"]');
+    if (rr) {
+      const board = rr.closest('.slide').querySelector('.rank-cards');
+      board.dataset.order = '';
+      paintRank(board);
+      return;
+    }
 
     const tb = e.target.closest('[data-timer]');
     if (tb) {
