@@ -8,13 +8,14 @@ vocabulary.
 
 | Week | Deck | |
 |---|---|---|
-| 2 | The Beginning of Modern Art | 53 slides |
+| 2 | Contemporary Art History | 53 slides |
 | 3 | Expression and the Inner Self | 61 slides |
 | 4 | From Representation to Expression | 62 slides |
 | 5 | The Boundary Between Art and Everyday Life | 60 slides |
 | 6 | Art as Action / Event | 58 slides |
 | 7 | From Object to Concept | 61 slides |
 | 8 | Anti-Form | 49 slides |
+| 9 | Leaving the Museum | 54 slides |
 
 ## Layout
 
@@ -29,6 +30,7 @@ week05/         index.html + content.js + img/
 week06/         index.html + content.js + img/ + vid/
 week07/         index.html + content.js + img/
 week08/         index.html + content.js + img/
+week09/         index.html + content.js + img/
 ```
 
 A fix to `shared/` lands on every week at once. Each week owns only its
@@ -36,10 +38,10 @@ A fix to `shared/` lands on every week at once. Each week owns only its
 
 ## Adding a week
 
-1. `cp -r week08 week09 && rm -rf week09/img/* week09/content.js`
-2. Put the new pictures in `week09/img/`.
-3. Write `week09/content.js` — copy the shape from `week08/content.js`.
-4. Change the `<title>` and `<meta name="description">` in `week09/index.html`.
+1. `cp -r week09 week10 && rm -rf week10/img/* week10/content.js`
+2. Put the new pictures in `week10/img/`.
+3. Write `week10/content.js` — copy the shape from `week09/content.js`.
+4. Change the `<title>` and `<meta name="description">` in `week10/index.html`.
 5. Fill in that week's line in `weeks.js`.
 
 Nothing else needs editing.
@@ -133,6 +135,7 @@ content, and each is stated in that question's speaker notes.
 - **Week 6** — 1 · B  ·  2 · A  ·  3 · B  ·  4 · B  ·  5 · A  ·  6 · D
 - **Week 7** — 1 · A  ·  2 · B  ·  3 · C  ·  4 · A  ·  5 · B  ·  6 · D
 - **Week 8** — 1 · D  ·  2 · A  ·  3 · C  ·  4 · B  ·  5 · D  ·  6 · A
+- **Week 9** — 1 · A  ·  2 · C  ·  3 · A  ·  4 · D  ·  5 · A  ·  6 · C
 
 ## Week 6 — videos, and why they are not all hosted
 
@@ -220,6 +223,23 @@ No factual corrections were needed. Two things worth knowing:
   the head-and-shoulders detail she supplied; the full 1974 advertisement is
   explicit, and the notes tell her to describe rather than show it. Bridget
   Riley's *Current* can trigger migraine or nausea — the notes say so.
+
+## Week 9 — corrections and gaps
+
+- **Pistoletto's dates.** Her slide read "Michelangelo Pistoletto (1967~)" — that
+  is the date of *Venus of the Rags*. He was born in 1933.
+- **Christo's surname** is spelled Javacheff.
+- **Nancy Holt is a learning objective but has no slide.** *Sun Tunnels* (1976)
+  is described on a slide about the artists usually left out of Land Art's
+  story, but there is no image of it in her deck. Worth finding one.
+- **The lesson plan's "Group Discussion Activity Design" section is empty** —
+  just the heading. The 100-minute schedule has no activity segment either, so
+  the deck has none. But the Arte Povera segment description twice refers back
+  to "the opening activity", which does not exist. Flagged in the notes.
+- **Rivers and Tides** is embedded from the YouTube link on her own slide. Her
+  `.pptx` embeds the entire 291 MB film — more than ten times Cloudflare Pages'
+  25 MB per-file limit, so it cannot be hosted. As in Week 6: the room needs
+  internet, and her original `.pptx` is the offline fallback.
 
 ## Images
 

@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------
-   Week 2 — The Beginning of Modern Art
+   Week 2 — Contemporary Art History
    Slide content, speaker notes, glossary and quiz.
 
    Text on screen is written at CEFR A1–A2. Original quotations are
@@ -99,7 +99,7 @@ const SLIDES = [
 /* ===== PART 1 — FRAMING ===== */
 {
   type: 'title',
-  title: 'The Beginning of Modern Art',
+  title: 'Contemporary Art History',
   sub: 'How did art start to change?',
   meta: 'Week 2',
   notes: [

@@ -9,7 +9,7 @@
 const WEEKS = [
   {
     n: 2, dir: 'week02',
-    title: 'The Beginning of Modern Art',
+    title: 'Contemporary Art History',
     q: 'How did art start to change?',
     meta: '53 slides · Manet to Gehry · timeline activity · 6-question quiz'
   },
@@ -49,7 +49,12 @@ const WEEKS = [
     q: 'When process replaces the finished work.',
     meta: '49 slides · Morris to Estes · the concept-matching board · 6-question quiz'
   },
-  { n: 9,  dir: null },
+  {
+    n: 9, dir: 'week09',
+    title: 'Leaving the Museum',
+    q: 'Art enters the world.',
+    meta: '54 slides · Smithson to Marisa Merz · Rivers and Tides · 6-question quiz'
+  },
   { n: 10, dir: null },
   { n: 11, dir: null },
   { n: 12, dir: null }
