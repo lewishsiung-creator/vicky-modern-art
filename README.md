@@ -1,7 +1,7 @@
 # Contemporary Art History — lecture decks
 
 Interactive lecture decks for Vicky's college art-history course.
-Eleven weeks in all; English at CEFR A1–A2, with Chinese glosses on the key
+Ten weeks in all (weeks 2–11); English at CEFR A1–A2, with Chinese glosses on the key
 vocabulary.
 
 **Live:** https://vicky-art.pages.dev

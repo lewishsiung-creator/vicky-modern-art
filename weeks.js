@@ -56,6 +56,5 @@ const WEEKS = [
     meta: '54 slides · Smithson to Marisa Merz · Rivers and Tides · 6-question quiz'
   },
   { n: 10, dir: null },
-  { n: 11, dir: null },
-  { n: 12, dir: null }
+  { n: 11, dir: null }
 ];
