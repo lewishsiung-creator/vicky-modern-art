@@ -1,4 +1,4 @@
-# Modern and Contemporary Art — lecture decks
+# Contemporary Art History — lecture decks
 
 Interactive lecture decks for Vicky's college art-history course.
 Eleven weeks in all; English at CEFR A1–A2, with Chinese glosses on the key
@@ -8,7 +8,7 @@ vocabulary.
 
 | Week | Deck | |
 |---|---|---|
-| 2 | Contemporary Art History | 53 slides |
+| 2 | The Beginning of Modern Art | 53 slides |
 | 3 | Expression and the Inner Self | 61 slides |
 | 4 | From Representation to Expression | 62 slides |
 | 5 | The Boundary Between Art and Everyday Life | 60 slides |

@@ -9,7 +9,7 @@
 const WEEKS = [
   {
     n: 2, dir: 'week02',
-    title: 'Contemporary Art History',
+    title: 'The Beginning of Modern Art',
     q: 'How did art start to change?',
     meta: '53 slides · Manet to Gehry · timeline activity · 6-question quiz'
   },
