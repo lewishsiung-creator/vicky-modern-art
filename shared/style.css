@@ -463,6 +463,67 @@ h2 {
 .s-grid .cell .chip::after { color: var(--deep); }
 .s-grid .cell .chip:hover { background: rgba(43,107,69,.16); }
 
+/* ---------- Vote board ---------- */
+.s-vote .vote-q {
+  font-size: 1.3em; line-height: 1.4; margin-bottom: 1.2em;
+  max-width: 40em; color: var(--ink-dim);
+}
+.vote-opts { display: flex; gap: 1em; flex-wrap: wrap; max-width: 56em; }
+.vote-opt {
+  position: relative;
+  flex: 1 1 0; min-width: 11em;
+  font: inherit; text-align: left; cursor: pointer;
+  background: var(--cream); color: var(--ink);
+  border: 2px solid transparent; border-radius: .5em;
+  padding: 1.1em 1.2em 1.2em;
+  box-shadow: 0 .4em 1.3em rgba(23,19,18,.16);
+  transition: transform .12s ease, border-color .15s ease;
+}
+.vote-opt:hover { transform: translateY(-.15em); border-color: var(--deeper); }
+.vote-letter {
+  display: block; font-size: .78em; letter-spacing: .18em;
+  font-weight: 700; color: var(--deep);
+}
+.vote-label { display: block; font-size: 1.2em; line-height: 1.3; margin: .3em 0 .5em; }
+.vote-count {
+  display: block; font-family: var(--serif);
+  font-size: 2.8em; line-height: 1; color: var(--deeper);
+  font-variant-numeric: tabular-nums;
+}
+.vote-minus {
+  position: absolute; right: .5em; bottom: .45em;
+  width: 1.7em; height: 1.7em; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1em; color: var(--deep);
+  background: rgba(23,19,18,.07);
+  opacity: 0; transition: opacity .15s ease;
+}
+.vote-opt:hover .vote-minus { opacity: 1; }
+.vote-minus:hover { background: rgba(23,19,18,.16); }
+
+.vote-rounds { margin-top: 1.2em; max-width: 56em; }
+.vote-round {
+  display: flex; gap: 1.4em; align-items: baseline;
+  font-size: 1.05em; padding: .45em 0;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink-dim);
+}
+.vote-round .vr-label {
+  flex: none; width: 6em; font-weight: 600; color: var(--deeper);
+}
+.vote-round .vr-cell { font-variant-numeric: tabular-nums; }
+.vote-round .vr-cell b { color: var(--deep); }
+
+.vote-tools { margin-top: 1.2em; display: flex; align-items: center; gap: .8em; flex-wrap: wrap; }
+.vote-tools button {
+  font: inherit; font-size: .95em;
+  background: transparent; color: var(--ink-dim);
+  border: 1px solid var(--rule); border-radius: .35em;
+  padding: .45em .9em; cursor: pointer;
+}
+.vote-tools button:hover { background: var(--cream); border-color: var(--cream); }
+.vote-hint { font-size: .88em; color: var(--deeper); }
+
 /* ---------- Matching board ---------- */
 .s-match .match-task {
   font-size: 1.15em; line-height: 1.45; color: var(--ink-dim);
@@ -915,7 +976,7 @@ body.course { overflow: auto; }
   .s-artwork .art { height: 44vh; }
   .s-artwork .side { max-width: none; }
   .s-twocol .cols, .s-activity, .s-rank, .s-video { flex-direction: column; gap: 2vh; }
-  .s-flow .stages, .s-timeline .stops, .match-cols { flex-direction: column; }
+  .s-flow .stages, .s-timeline .stops, .match-cols, .vote-opts { flex-direction: column; }
   .s-match .match-card { font-size: .95em; }
   .s-flow .stage-arrow { align-self: flex-start; transform: rotate(90deg); }
   .s-grid .cells { grid-template-columns: 1fr; }

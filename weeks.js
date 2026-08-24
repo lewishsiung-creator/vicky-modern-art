@@ -61,5 +61,10 @@ const WEEKS = [
     q: 'Video and body.',
     meta: '51 slides · Paik to Adrian Piper · four films · the documentation loop · 6-question quiz'
   },
-  { n: 11, dir: null }
+  {
+    n: 11, dir: 'week11',
+    title: 'Borrowed Images',
+    q: 'The end of originality, and the politics of representation.',
+    meta: '60 slides · Baselitz to Koons · the Art Court vote · 6-question quiz'
+  }
 ];

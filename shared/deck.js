@@ -59,6 +59,7 @@
       case 'grid':     return s.cells.length;
       case 'flow':     return s.stages.length;
       case 'match':    return 1;
+      case 'vote':     return 0;
       case 'timeline': return s.stops.length;
       case 'rank':     return s.questions ? s.questions.length : 0;
       case 'video':    return s.points ? s.points.length : 0;
@@ -305,6 +306,28 @@
             ${s.yt ? `<div class="zoom-hint">Needs internet · <a href="https://www.youtube.com/watch?v=${s.yt}" target="_blank" rel="noopener">open on YouTube</a></div>`
                    : s.dm ? `<div class="zoom-hint">Needs internet · <a href="https://www.dailymotion.com/video/${s.dm}" target="_blank" rel="noopener">open on Dailymotion</a></div>`
                    : '<div class="zoom-hint">Plays from this site — no internet needed</div>'}
+          </div>`;
+
+      /* A show of hands, tallied on screen. Groups vote, she records the
+         round, and a later round can be compared with the first — which is
+         the whole point of her activity. Nothing is stored: a reload clears
+         it, because this is a class discussion, not a result. */
+      case 'vote':
+        return `<h2>${chips(s.title)}</h2>
+          ${s.zh ? `<div class="zh-title">${s.zh}</div>` : ''}
+          ${s.question ? `<div class="vote-q">${chips(s.question)}</div>` : ''}
+          <div class="vote-opts">${s.options.map((o, k) => `
+            <button class="vote-opt" data-opt="${k}" data-n="0">
+              <span class="vote-letter">${'ABCDEF'[k]}</span>
+              <span class="vote-label">${chips(o)}</span>
+              <span class="vote-count">0</span>
+              <span class="vote-minus" data-vote="minus" title="one fewer">−</span>
+            </button>`).join('')}</div>
+          <div class="vote-rounds"></div>
+          <div class="vote-tools">
+            <button data-vote="record">Record this round</button>
+            <button data-vote="reset">Reset counts</button>
+            <span class="vote-hint">Click an option to add a vote · the small − takes one away</span>
           </div>`;
 
       /* Cards to pair up. Students argue on paper; one group then comes to
@@ -689,6 +712,50 @@
       return;
     }
     if (e.target.closest('.vid')) return;
+
+    const vmin = e.target.closest('[data-vote="minus"]');
+    if (vmin) {
+      const opt = vmin.closest('.vote-opt');
+      const n = Math.max(0, (+opt.dataset.n || 0) - 1);
+      opt.dataset.n = n;
+      opt.querySelector('.vote-count').textContent = n;
+      return;
+    }
+    const vopt = e.target.closest('.vote-opt');
+    if (vopt) {
+      const n = (+vopt.dataset.n || 0) + 1;
+      vopt.dataset.n = n;
+      vopt.querySelector('.vote-count').textContent = n;
+      return;
+    }
+    const vrec = e.target.closest('[data-vote="record"]');
+    if (vrec) {
+      const slide = vrec.closest('.slide');
+      const opts = [...slide.querySelectorAll('.vote-opt')];
+      const rounds = slide.querySelector('.vote-rounds');
+      const n = rounds.children.length + 1;
+      const row = el('div', 'vote-round');
+      row.innerHTML = `<span class="vr-label">Round ${n}</span>` +
+        opts.map(o => `<span class="vr-cell"><b>${'ABCDEF'[o.dataset.opt]}</b> ${o.dataset.n}</span>`).join('');
+      rounds.appendChild(row);
+      /* Zero the counts straight away. Otherwise the next round quietly
+         accumulates on top of this one, and nobody notices until the
+         numbers are wrong. */
+      opts.forEach(o => {
+        o.dataset.n = 0;
+        o.querySelector('.vote-count').textContent = '0';
+      });
+      return;
+    }
+    const vres = e.target.closest('[data-vote="reset"]');
+    if (vres) {
+      vres.closest('.slide').querySelectorAll('.vote-opt').forEach(o => {
+        o.dataset.n = 0;
+        o.querySelector('.vote-count').textContent = '0';
+      });
+      return;
+    }
+
 
     const mc = e.target.closest('.match-card');
     if (mc) { matchClick(mc); return; }

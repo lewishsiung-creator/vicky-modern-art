@@ -17,6 +17,7 @@ vocabulary.
 | 8 | Anti-Form | 49 slides |
 | 9 | Leaving the Museum | 54 slides |
 | 10 | Expanding Media | 51 slides |
+| 11 | Borrowed Images | 60 slides |
 
 ## Layout
 
@@ -33,6 +34,7 @@ week07/         index.html + content.js + img/
 week08/         index.html + content.js + img/
 week09/         index.html + content.js + img/
 week10/         index.html + content.js + img/
+week11/         index.html + content.js + img/
 ```
 
 A fix to `shared/` lands on every week at once. Each week owns only its
@@ -40,11 +42,13 @@ A fix to `shared/` lands on every week at once. Each week owns only its
 
 ## Adding a week
 
-1. `cp -r week10 week11 && rm -rf week11/img/* week11/content.js`
-2. Put the new pictures in `week11/img/`.
-3. Write `week11/content.js` — copy the shape from `week10/content.js`.
-4. Change the `<title>` and `<meta name="description">` in `week11/index.html`.
-5. Fill in that week's line in `weeks.js`.
+All eleven weeks (2–11) are built. If another is ever added:
+
+1. `cp -r week11 week12 && rm -rf week12/img/* week12/content.js`
+2. Put the new pictures in `week12/img/`.
+3. Write `week12/content.js` — copy the shape from `week11/content.js`.
+4. Change the `<title>` and `<meta name="description">` in `week12/index.html`.
+5. Add a line for it in `weeks.js`.
 
 Nothing else needs editing.
 
@@ -108,6 +112,12 @@ Slide types: `title` `word` `section` `bullets` `quote` `compare` `artwork`
   **Nothing is judged while they work.** One arrow press reveals: pairs that
   belong together stay bright, everything else simply fades — never marked wrong.
 - `grid` takes an optional `cols` (default 2). Week 8's review uses `cols: 3`.
+- `vote` — a tally board for a group vote. Give it `question` and `options`.
+  Click an option to add a vote, the small − to take one away, then **Record
+  this round**, which files the numbers and zeroes the counters so the next
+  round starts clean. Rounds stack up beneath, so a before-and-after vote sits
+  side by side. Nothing is stored and a reload clears it. Week 11's Art Court
+  uses one slide twice — she returns to it via the menu for the final vote.
 - `terms` — a mid-deck vocabulary review. Same rendering as the closing `end`
   slide; give it a `terms` array of GLOSSARY keys.
 
@@ -139,6 +149,7 @@ content, and each is stated in that question's speaker notes.
 - **Week 8** — 1 · D  ·  2 · A  ·  3 · C  ·  4 · B  ·  5 · D  ·  6 · A
 - **Week 9** — 1 · A  ·  2 · C  ·  3 · A  ·  4 · D  ·  5 · A  ·  6 · C
 - **Week 10** — 1 · D  ·  2 · D  ·  3 · D  ·  4 · B  ·  5 · A  ·  6 · C
+- **Week 11** — 1 · C  ·  2 · D  ·  3 · B  ·  4 · A  ·  5 · A  ·  6 · C
 
 ## Week 6 — videos, and why they are not all hosted
 
@@ -272,6 +283,21 @@ one slide comes out.
   over Cloudflare Pages' 25 MB per-file limit. All four films are embedded from
   the sources printed on her own slides — three YouTube, one Dailymotion. The
   room needs internet; her `.pptx` is the offline fallback.
+
+## Week 11 — corrections and one thing to check
+
+- **Georg Baselitz's dates.** Her slide reads "1938–2026". As far as I could
+  establish he is living, so the deck says **"b. 1938"** and the speaker note
+  asks Vicky to correct it if he has died since. Declaring a living artist dead
+  on a public page is the worse of the two possible errors — but please confirm.
+- **"Jean-Michel Basquiat"**, not "Jean-Micheal".
+- **De Beauvoir's *The Second Sex* is 1949**, not 1960 as her slide has it.
+- **Two errors in the lesson plan's schedule**, both harmless once seen: the
+  group activity's title is blank (`"" activity`), and the Appropriation
+  mini-lecture is timed `1:10–1:10` — it should be 1:00–1:10.
+- **Barbara Kruger has no slot in the schedule** despite being a learning
+  objective and the whole basis of the activity. Her deck has three Kruger
+  slides; the schedule does not account for them.
 
 ## Images
 
