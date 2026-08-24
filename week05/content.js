@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------
-   Week 5 — The Boundary Between Art and Everyday Life
+   Unit 4 — The Boundary Between Art and Everyday Life
    Can anything be art?
 
    Text on screen is written at CEFR A1–A2, simplified from her slides
@@ -89,7 +89,7 @@ const GLOSSARY = {
   },
   readymade: {
     en: 'readymade', zh: '現成物',
-    def: 'Duchamp’s idea from 1917 — an everyday object chosen by an artist and shown as art. You met it in Week 3.',
+    def: 'Duchamp’s idea from 1917 — an everyday object chosen by an artist and shown as art. You met it in Unit 2.',
     zhDef: '杜象 1917 年提出：由藝術家選定並展出的日常物件。第三週已學過。'
   }
 };
@@ -113,7 +113,7 @@ const SLIDES = [
   type: 'title',
   title: 'The Boundary Between Art and Everyday Life',
   sub: 'Can anything be art?',
-  meta: 'Week 5',
+  meta: 'Unit 4',
   notes: [
     'Five minutes for review and framing.',
     'This week’s question, and write it on the board: where is the line between art and everyday life?',
@@ -160,7 +160,7 @@ const SLIDES = [
   notes: [
     'Pop means popular. Say it plainly, then complicate it.',
     'The reaction against Abstract Expressionism matters: last week’s artists were serious, heroic, and about deep inner feeling. Pop is flat, cheap, and about surfaces.',
-    'Greenberg is the same critic from Weeks 2 and 4. He said high art on one side, kitsch on the other, and never mix them. Pop Art is the answer to that.',
+    'Greenberg is the same critic from Units 1 and 3. He said high art on one side, kitsch on the other, and never mix them. Pop Art is the answer to that.',
     'This is Quiz Question 1 territory — Alloway, 1958.'
   ]
 },
@@ -418,7 +418,7 @@ const SLIDES = [
   title: 'Where this comes from',
   zh: '源頭',
   items: [
-    { head: 'Pop Art’s collage and {{appropriation}} go back to Dada', body: 'The cut-and-paste tradition you met in Week 3.' },
+    { head: 'Pop Art’s collage and {{appropriation}} go back to Dada', body: 'The cut-and-paste tradition you met in Unit 2.' },
     { head: 'And to Duchamp’s {{readymade}}', body: 'Choose an object. Show it. It becomes art.' },
     { head: 'This same thread runs on', body: 'Into {{neodada}} and {{assemblage}}, later today.' }
   ],
@@ -468,13 +468,13 @@ const SLIDES = [
   zh: '丹托的「藝術終結」',
   kicker: '02 of 06',
   items: [
-    { head: 'You met Arthur Danto in Week 2', body: 'And here is the object that made him say it.' },
+    { head: 'You met Arthur Danto in Unit 1', body: 'And here is the object that made him say it.' },
     { head: 'Art history had been a story of progress', body: 'Realism → Impressionism → Cubism → abstraction. Each step led somewhere.' },
     { head: 'Once anything can be art, there is no necessary next step', body: 'The direction disappears.' },
-    { head: 'So art becomes “post-historical”', body: 'Plural, with no single story. Exactly what you learned in Week 2 — this is where it came from.' }
+    { head: 'So art becomes “post-historical”', body: 'Plural, with no single story. Exactly what you learned in Unit 1 — this is where it came from.' }
   ],
   notes: [
-    'Say the Week 2 link out loud. They already know Danto’s conclusion; now they see the object that produced it.',
+    'Say the Unit 1 link out loud. They already know Danto’s conclusion; now they see the object that produced it.',
     'Remind them: the end of ART HISTORY, not the end of art. Same careful distinction as Belting.',
     'Danto saw the Brillo Boxes at the Stable Gallery in 1964 and wrote “The Artworld” the same year.'
   ]
@@ -527,7 +527,7 @@ const SLIDES = [
   ask: 'Is there still a clear line between art and commodity today?',
   notes: [
     'ASK the question on screen and take two or three answers only — the long version is the wrap-up discussion.',
-    'You can point back to Week 4: Newman’s blue canvas selling for forty-three million dollars. Same question, one week earlier.'
+    'You can point back to Unit 3: Newman’s blue canvas selling for forty-three million dollars. Same question, one week earlier.'
   ]
 },
 {
@@ -543,7 +543,7 @@ const SLIDES = [
   ],
   notes: [
     'Short slide. It is a signpost forward — Conceptual Art is coming in a later week.',
-    'Link it back to Duchamp in Week 3: anti-retinal, art for the mind. The line runs 1917 → 1964 → 1968.'
+    'Link it back to Duchamp in Unit 2: anti-retinal, art for the mind. The line runs 1917 → 1964 → 1968.'
   ]
 },
 {
@@ -557,7 +557,7 @@ const SLIDES = [
     { head: 'Which is uncomfortable', body: 'It means art is partly decided by who has authority.' }
   ],
   notes: [
-    'This is Week 4’s “Who gets to write art history?” discussion, arriving as formal theory.',
+    'This is Unit 3’s “Who gets to write art history?” discussion, arriving as formal theory.',
     'Say that link — they argued this out loud last week without the vocabulary. Now they have it.',
     'Do not resolve the discomfort. It is a real objection to the theory, not a flaw in your teaching.'
   ]
@@ -598,7 +598,7 @@ const SLIDES = [
     'And of course: Duchamp put a urinal in a gallery in 1917.'
   ],
   notes: [
-    'ASK — they should get Fountain immediately. If they do, that is Week 3 doing its job.',
+    'ASK — they should get Fountain immediately. If they do, that is Unit 2 doing its job.',
     'The difference is the point: Duchamp took a real one. Oldenburg makes a fake one, in the wrong material.',
     'Soft sculpture is Quiz Question 3.'
   ]
@@ -634,7 +634,7 @@ const SLIDES = [
   notes: [
     'The gravity link to Pollock is worth making — Oldenburg said Pollock’s treatment of paint as material inspired his treatment of objects.',
     'Identified since: it is Soft Shuttlecock, 1995, made specifically for Frank Lloyd Wright’s rotunda for Oldenburg’s Guggenheim retrospective. Her slide gave no title.',
-    'And it is co-authored with Coosje van Bruggen (1942–2009), his wife and collaborator on every large project from 1976 onward. She is routinely left off these credits, which is worth one sentence in a course that spends Week 11 on exactly that problem.'
+    'And it is co-authored with Coosje van Bruggen (1942–2009), his wife and collaborator on every large project from 1976 onward. She is routinely left off these credits, which is worth one sentence in a course that spends Unit 10 on exactly that problem.'
   ]
 },
 {
@@ -697,7 +697,7 @@ const SLIDES = [
   ],
   notes: [
     'The Picasso link is Quiz Question 6: the 1912 Guitar is named as the primary root.',
-    'Note the pattern again — a word coined by an artist, then made famous by a museum exhibition. Week 4’s discussion, still running.',
+    'Note the pattern again — a word coined by an artist, then made famous by a museum exhibition. Unit 3’s discussion, still running.',
     'NOTE: low-resolution scan; zoom is limited.'
   ]
 },
@@ -712,7 +712,7 @@ const SLIDES = [
     { head: 'The core idea', body: 'Assemblage is a <b>technique</b>, not a style. Anyone can use it, for any purpose.' }
   ],
   notes: [
-    'Schwitters and his Merzbau were Week 3. Duchamp and Man Ray too. Say so — this is the same thread, forty years on.',
+    'Schwitters and his Merzbau were Unit 2. Duchamp and Man Ray too. Say so — this is the same thread, forty years on.',
     'The technique-not-a-style point is the learning objective. Test it: ask what the difference is between Assemblage and Neo-Dada. Answer coming in a few slides.'
   ]
 },
@@ -843,7 +843,7 @@ const SLIDES = [
   notes: [
     'The chain is worth drawing on the board as five words with arrows.',
     'The point of saying every stage matters equally: he refuses to say the idea is more important than the paint, or the other way round.',
-    'Compare with Magritte in Week 3 — “this is not a pipe”. Johns is asking the same question with a flag: is it a flag, or a painting of a flag? He never answers.'
+    'Compare with Magritte in Unit 2 — “this is not a pipe”. Johns is asking the same question with a flag: is it a flag, or a painting of a flag? He never answers.'
   ]
 },
 {

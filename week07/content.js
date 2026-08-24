@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------
-   Week 7 — From Object to Concept
+   Unit 6 — From Object to Concept
    Does art still need to exist?
 
    Text on screen is written at CEFR A1–A2, simplified from her slides
@@ -97,7 +97,7 @@ const GLOSSARY = {
   },
   readymade: {
     en: 'readymade', zh: '現成物',
-    def: 'Duchamp’s idea from 1917 — an everyday object chosen by an artist and shown as art. Week 3.',
+    def: 'Duchamp’s idea from 1917 — an everyday object chosen by an artist and shown as art. Unit 2.',
     zhDef: '杜象 1917 年提出：由藝術家選定並展出的日常物件。第三週學過。'
   },
   ontology: {
@@ -129,7 +129,7 @@ const SLIDES = [
   type: 'title',
   title: 'From Object to Concept',
   sub: 'Does art still need to exist?',
-  meta: 'Week 7',
+  meta: 'Unit 6',
   notes: [
     'Five minutes for the bridge and the hook.',
     'Start with last week’s last slide: Beuys living in a room with a coyote for three days.',
@@ -391,7 +391,7 @@ const SLIDES = [
     'ASK and let them list what is gone: feeling, the artist’s hand, drama, meaning.',
     'He was 23 when he made these. That is worth saying.',
     'This is an early example of {{deaesth}} — the term comes up properly in two slides.',
-    'Compare directly with de Kooning and Pollock in Week 4. Same city, eight years later, everything stripped out.'
+    'Compare directly with de Kooning and Pollock in Unit 3. Same city, eight years later, everything stripped out.'
   ]
 },
 {
@@ -438,7 +438,7 @@ const SLIDES = [
   items: [
     { head: '{{reduction}}', body: 'Art should show only its own true nature. It becomes very pure, and very simple.' },
     { head: '{{deaesth}}', body: 'The artist hides personal feeling. What is left is the object, the viewer, and the room — together.' },
-    { head: 'Where this comes from: Clement Greenberg', body: 'The critic from Week 2 and Week 4 (1909–1994).' },
+    { head: 'Where this comes from: Clement Greenberg', body: 'The critic from Unit 1 and Unit 3 (1909–1994).' },
     { head: 'His argument', body: 'Painting should show only what makes painting <i>painting</i> — flat, colour, shape. Not stories. Not feelings.' },
     { head: 'And Minimalism took that further than he wanted', body: 'So far that it broke his own rules. That comes back at the end of this section.' }
   ],
@@ -457,8 +457,8 @@ const SLIDES = [
     { head: 'You cannot see any hand marks', body: 'It looks like a machine made it, because one did.' }
   ],
   notes: [
-    'Compare with Pollock in Week 4: his whole value was the trace of his body. Here, the trace is removed deliberately.',
-    'And compare with Duchamp in Week 3: the artist as a chooser rather than a maker. Same move, forty years later, done in a factory.',
+    'Compare with Pollock in Unit 3: his whole value was the trace of his body. Here, the trace is removed deliberately.',
+    'And compare with Duchamp in Unit 2: the artist as a chooser rather than a maker. Same move, forty years later, done in a factory.',
     'This also sets up LeWitt: if a factory can make it from your plan, then the plan is the artwork.'
   ]
 },
@@ -491,7 +491,7 @@ const SLIDES = [
   ],
   notes: [
     'The third point is a genuinely radical lowering of the bar, and students should notice that.',
-    'It also answers the whole tradition of beauty and craft that ran from Week 2 to Week 4.',
+    'It also answers the whole tradition of beauty and craft that ran from Unit 1 to Unit 3.',
     'Say the through-line: Danto said looking cannot tell you what art is; Judd says the only test left is whether it holds your attention.'
   ]
 },
@@ -612,8 +612,8 @@ const SLIDES = [
     'So the artist’s job is to choose and arrange — not to build.'
   ],
   notes: [
-    'ASK and let them answer: he chose. That is all. Straight back to Duchamp in Week 3.',
-    'The dedication is to Brancusi, whom they met in Week 2 — the Endless Column, a diagonal reaching upward.',
+    'ASK and let them answer: he chose. That is all. Straight back to Duchamp in Unit 2.',
+    'The dedication is to Brancusi, whom they met in Unit 1 — the Endless Column, a diagonal reaching upward.',
     'This is where his light work began, and he said so himself.',
     'NOTE: low-resolution scan; zoom is limited.'
   ]
@@ -625,13 +625,13 @@ const SLIDES = [
   caption: 'Dan Flavin, <i>“Monument” for V. Tatlin</i>, 1964 — white fluorescent tubes',
   smallSource: true,
   points: [
-    'Tatlin, from Week 2 — the tower for the Third International that was never built.',
+    'Tatlin, from Unit 1 — the tower for the Third International that was never built.',
     'Flavin made more than thirty of these “monuments”, all in cheap white light.',
     'He gave almost every work a dedication: friends, critics, his dead twin brother.',
     'Which is strange — the material has no personal touch at all, but the title does.'
   ],
   notes: [
-    'The Tatlin link is a real gift: Week 2’s unbuildable tower, remade in shop-bought light tubes, and called a “monument” in quotation marks.',
+    'The Tatlin link is a real gift: Unit 1’s unbuildable tower, remade in shop-bought light tubes, and called a “monument” in quotation marks.',
     'The dedications point is on her slide and is worth making. It is the one place feeling is allowed back in — in the title, never in the object.',
     'His twin brother David died in 1962.',
     'NOTE: low-resolution scan; zoom is limited.'
@@ -667,7 +667,7 @@ const SLIDES = [
   notes: [
     'The third point is the surprising one: a Minimalist work that requires your body to move.',
     'That is exactly what Michael Fried attacked as “theatrical” in 1967, which is two slides away.',
-    'Link back to Newman in Week 4 — a canvas wider than your field of vision. Same instinct: the work happens where you are standing.'
+    'Link back to Newman in Unit 3 — a canvas wider than your field of vision. Same instinct: the work happens where you are standing.'
   ]
 },
 {
@@ -680,7 +680,7 @@ const SLIDES = [
     { head: '1986 — Hal Foster, “The Crux of Minimalism”', body: 'Twenty years later, a critic argues that Minimalism is a historical turning point.' }
   ],
   notes: [
-    'Once again a museum exhibition converts scattered artists into a movement — the Week 5 discussion, still running.',
+    'Once again a museum exhibition converts scattered artists into a movement — the Unit 4 discussion, still running.',
     'Foster is on the next slide. His argument is hard, so use the plain version.'
   ]
 },
@@ -700,7 +700,7 @@ const SLIDES = [
   notes: [
     'Read the plain version, not the quotation. It is genuinely difficult English.',
     'The paradox in one line: they followed the rule so completely that the rule collapsed.',
-    'This is the Week 2 story arriving at its end. Modernism used art’s own methods on art. Here that project finishes itself off.'
+    'This is the Unit 1 story arriving at its end. Modernism used art’s own methods on art. Here that project finishes itself off.'
   ]
 },
 {
@@ -822,7 +822,7 @@ const SLIDES = [
     { head: 'Wittgenstein asked: what <i>is</i> something?', body: 'That is {{ontology}}. For art: what is art?' },
     { head: 'And: how do we know, or show, things?', body: 'That is {{epistemology}}.' },
     { head: '{{familyresemblance}}', body: 'His idea that some words have no single fixed meaning — only overlapping similarities. Perhaps “art” is one of them.' },
-    { head: 'And Duchamp’s {{readymade}}', body: 'The artist’s idea matters more than the material. Week 3.' },
+    { head: 'And Duchamp’s {{readymade}}', body: 'The artist’s idea matters more than the material. Unit 2.' },
     { head: 'Kosuth’s claim', body: '“All art after Duchamp is conceptual, because art only exists conceptually.”' }
   ],
   notes: [
@@ -1077,7 +1077,7 @@ const SLIDES = [
   why: 'Priced by weight in gold, sealed so nobody can check. What is sold is the name.',
   notes: [
     'Answer: D.',
-    'Close by linking to the last discussion question — and to Week 4’s forty-three-million-dollar Newman.'
+    'Close by linking to the last discussion question — and to Unit 3’s forty-three-million-dollar Newman.'
   ]
 },
 {

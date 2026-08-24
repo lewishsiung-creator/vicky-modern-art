@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------
-   Week 8 — Anti-Form
+   Unit 7 — Anti-Form
    When process replaces the finished work
 
    Text on screen is written at CEFR A1–A2, simplified from her slides
@@ -37,7 +37,7 @@ const GLOSSARY = {
   },
   institutional: {
     en: 'institutional critique', zh: '機構批判',
-    def: 'Art that turns its questions onto the museum, the gallery or the market itself. Week 7.',
+    def: 'Art that turns its questions onto the museum, the gallery or the market itself. Unit 6.',
     zhDef: '將提問轉向美術館、畫廊或市場本身的藝術。第七週學過。'
   },
 
@@ -78,12 +78,12 @@ const GLOSSARY = {
   /* --- carried forward --- */
   minimalism: {
     en: 'Minimalism', zh: '極簡主義',
-    def: 'Week 7. The fewest possible materials and forms, industrially made, with the artist’s hand removed.',
+    def: 'Unit 6. The fewest possible materials and forms, industrially made, with the artist’s hand removed.',
     zhDef: '第七週學過。使用最少的材料與形式，以工業方式製作，抹除藝術家的手。'
   },
   specificobject: {
     en: 'specific object', zh: '特定物件',
-    def: 'Judd’s term: neither painting nor sculpture, but a literal thing in real space. Week 7.',
+    def: 'Judd’s term: neither painting nor sculpture, but a literal thing in real space. Unit 6.',
     zhDef: '賈德的用語：既非繪畫也非雕塑，而是真實空間中的物件。第七週學過。'
   }
 };
@@ -105,7 +105,7 @@ const SLIDES = [
   type: 'title',
   title: 'Anti-Form',
   sub: 'When process replaces the finished work.',
-  meta: 'Week 8',
+  meta: 'Unit 7',
   notes: [
     'The first THIRTY minutes are review and the group activity. Do not start lecturing.',
     'HOOK, optional but good: the next slide shows a picture and asks whether it is a photograph. Do not answer. It pays off at 1:00, in the Photorealism section — her lesson plan calls this “the mystery image”.',
@@ -133,7 +133,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
-  title: 'Nine turns, in nine weeks',
+  title: 'Nine turns so far',
   zh: '九次轉向',
   items: [
     { head: 'Cubist Collage', body: 'Everyday materials enter the picture. It asks: how do we know what we know?' },
@@ -309,7 +309,7 @@ const SLIDES = [
   ],
   notes: [
     'Six words. Put them on the board — they are the spine of the whole first half.',
-    'Notice how many of these they have met before: chance in Week 3 and Week 6, gravity in Week 4, time in Week 6.',
+    'Notice how many of these they have met before: chance in Unit 2 and Unit 5, gravity in Unit 3, time in Unit 5.',
     'What is new is that all six are now the SUBJECT, not the method.'
   ]
 },
@@ -350,7 +350,7 @@ const SLIDES = [
   left: {
     head: '{{minimalism}}',
     zh: '極簡主義',
-    lead: 'Week 7.',
+    lead: 'Unit 6.',
     items: [
       'Fixed. Planned in advance.',
       'A geometric {{specificobject}}.',
@@ -441,11 +441,11 @@ const SLIDES = [
   points: [
     'Latex, poured straight onto the floor. She called these her “{{pours}}”.',
     'Painting has become sculpture — it is on the floor, and it has thickness.',
-    'The title answers Helen Frankenthaler, from Week 4, who poured thinned paint into canvas.',
+    'The title answers Helen Frankenthaler, from Unit 3, who poured thinned paint into canvas.',
     'And “odalisque” is the old name for a reclining nude — a subject men painted for centuries.'
   ],
   notes: [
-    'ASK — the title is a direct address to another artist. Frankenthaler was Week 4’s soak-stain painter.',
+    'ASK — the title is a direct address to another artist. Frankenthaler was Unit 3’s soak-stain painter.',
     'Benglis said: “It all comes from my body.” The work asks whether it is a picture, an object, or a feeling.',
     'The feminist argument in the material itself: soft, flowing, poured shapes answering the hard geometric art being made almost entirely by men.',
     'The lesson plan names Morris Louis in one place and Frankenthaler in another as the pouring precursor. Both poured; Frankenthaler is the one this title is aimed at.'
@@ -466,7 +466,7 @@ const SLIDES = [
     'CONTENT NOTE: this slide shows only the head-and-shoulders detail. The full 1974 advertisement is explicit — Benglis nude, holding a dildo. Describe it rather than showing it, unless you have decided otherwise for your class.',
     'Why it matters here: she was making the point that a woman artist could only get attention by becoming the image. She took the strategy the art world used on women and turned it back on it.',
     'It ran in the same issue as a review of her work, which was part of the plan.',
-    'Connect back to Klein’s ANT 82 in Week 6: women used as brushes by a man, versus a woman using herself, on purpose, and taking the consequences.'
+    'Connect back to Klein’s ANT 82 in Unit 5: women used as brushes by a man, versus a woman using herself, on purpose, and taking the consequences.'
   ]
 },
 
@@ -604,7 +604,7 @@ const SLIDES = [
     { head: 'The breakthrough: {{responsiveeye}}, 1965', body: 'At MoMA, curated by William C. Seitz. Over 180,000 people came, and Op Art reached fashion and design.' }
   ],
   notes: [
-    'The exhibition is the making of the movement, again — as with Primary Structures last week and The Art of Assemblage in Week 5.',
+    'The exhibition is the making of the movement, again — as with Primary Structures last week and The Art of Assemblage in Unit 4.',
     'The fashion detail is worth one line: within months the patterns were on dresses and shop windows. Artists were not consulted and mostly hated it.',
     'This is Quiz Question 5: it works on the physiology of the eye.'
   ]
@@ -689,7 +689,7 @@ const SLIDES = [
   notes: [
     'The last point is Quiz Question 4 and the whole reason this sits in today’s session.',
     'Minimalism removed the artist’s hand with a factory. Photorealism removes it with a camera. Opposite appearances, same disappearance.',
-    'Say that clearly — it is the thread that ties this to Week 7.'
+    'Say that clearly — it is the thread that ties this to Unit 6.'
   ]
 },
 {
@@ -706,7 +706,7 @@ const SLIDES = [
   ],
   notes: [
     'Points 4 and 5 are strange, and students should notice: they are not about the art at all. They are membership rules, written by a dealer.',
-    'Ask them who benefits from a definition that closes the list in 1972. It is the same question as Week 5’s “who gets to write art history?”.',
+    'Ask them who benefits from a definition that closes the list in 1972. It is the same question as Unit 4’s “who gets to write art history?”.',
     'This is Quiz Question 6 — point 2, the mechanical transfer.'
   ]
 },
@@ -743,7 +743,7 @@ const SLIDES = [
   notes: [
     'ASK, then click through. This is the best demonstration in the section.',
     'In his later work he stopped hiding the grid entirely, and made each cell a visible little painting.',
-    'Compare with Lichtenstein in Week 5, hand-painting Ben-Day dots: both expose the mechanics of a printed image while using it.'
+    'Compare with Lichtenstein in Unit 4, hand-painting Ben-Day dots: both expose the mechanics of a printed image while using it.'
   ]
 },
 {

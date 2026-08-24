@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------
-   Week 10 — Expanding Media
+   Unit 9 — Expanding Media
    Video and Body
 
    Text on screen is written at CEFR A1–A2, simplified from her slides
@@ -83,12 +83,12 @@ const GLOSSARY = {
   /* --- carried forward --- */
   fluxus: {
     en: 'Fluxus', zh: '激浪派',
-    def: 'Week 6. A loose international network from the early 1960s. Paik was part of it.',
+    def: 'Unit 5. A loose international network from the early 1960s. Paik was part of it.',
     zhDef: '第六週學過。1960 年代初期形成的鬆散國際網絡，白南準亦為成員。'
   },
   landart: {
     en: 'Land Art', zh: '地景藝術',
-    def: 'Week 9. Art built in the landscape — which most of us know only from photographs.',
+    def: 'Unit 8. Art built in the landscape — which most of us know only from photographs.',
     zhDef: '第九週學過。於地景中建造的藝術，而我們多半只能透過照片得知。'
   }
 };
@@ -111,7 +111,7 @@ const SLIDES = [
   type: 'title',
   title: 'Expanding Media',
   sub: 'Video and body.',
-  meta: 'Week 10',
+  meta: 'Unit 9',
   notes: [
     'Five minutes for framing.',
     'The guiding question, and write it on the board: if an artwork is no longer a permanent object but a video loop, a recorded gesture, or a live body — is it still a “work”?',
@@ -124,10 +124,10 @@ const SLIDES = [
   zh: '影像作為紀錄',
   cols: 2,
   cells: [
-    { label: 'Week 9', head: '{{landart}}', body: 'Far away in nature. Almost nobody goes.' },
-    { label: 'Week 9', head: 'Arte Povera', body: 'Everyday, fragile materials that fall apart.' },
-    { label: 'Week 6', head: 'Happenings', body: 'It ends, and then it is gone.' },
-    { label: 'Week 8', head: 'Process Art', body: 'The material keeps changing after you leave.' }
+    { label: 'Unit 8', head: '{{landart}}', body: 'Far away in nature. Almost nobody goes.' },
+    { label: 'Unit 8', head: 'Arte Povera', body: 'Everyday, fragile materials that fall apart.' },
+    { label: 'Unit 5', head: 'Happenings', body: 'It ends, and then it is gone.' },
+    { label: 'Unit 7', head: 'Process Art', body: 'The material keeps changing after you leave.' }
   ],
   foot: 'Four movements, one shared problem: <b>the artwork may disappear, but the image remains.</b>',
   notes: [
@@ -181,7 +181,7 @@ const SLIDES = [
   title: 'Can art really escape the museum?',
   ask: 'Last week they walked out. This week they take the camera with them. Is that escaping — or just moving?',
   notes: [
-    'A bridge from Week 9. Thirty seconds.',
+    'A bridge from Unit 8. Thirty seconds.',
     'Then into Video Art.'
   ]
 },
@@ -249,7 +249,7 @@ const SLIDES = [
   notes: [
     'Two or three minutes is plenty.',
     'The title is the joke and the point: an object for contemplation, made from the least contemplative device ever invented.',
-    'Compare with Malevich’s Black Square in Week 3 — reduce until nothing is left, and see what that does.',
+    'Compare with Malevich’s Black Square in Unit 2 — reduce until nothing is left, and see what that does.',
     'This film is embedded from the YouTube link on her own slide. It needs internet.'
   ]
 },
@@ -301,7 +301,7 @@ const SLIDES = [
   ],
   notes: [
     'The trick they are all performing: attacking a medium from inside it.',
-    'Compare with Greenberg in Week 2 — a discipline using its own methods on itself. Same move, new machine.',
+    'Compare with Greenberg in Unit 1 — a discipline using its own methods on itself. Same move, new machine.',
     'NOTE: <i>Electronic Superhighway</i> is a learning objective in her lesson plan, but there is no slide for it in her deck. It is described in these notes instead: from the 1990s, Paik built walls of many screens playing at once — one for each American state in the 1995 version — predicting a world saturated with channels. He coined the phrase “electronic superhighway” in 1974, twenty years before the internet arrived.',
     'Also missing from the deck: TV Cello and his long collaboration with the cellist Charlotte Moorman, who performed wearing television sets. Worth a sentence if you have time.'
   ]
@@ -411,7 +411,7 @@ const SLIDES = [
   notes: [
     'The first quotation is his own and it is Quiz Question 3. Put it on the board.',
     'Point 4 is Case A and Case B from the start of class, arriving in one artist. He never resolves it either.',
-    'Point 2 is the sentence that connects him back to Beuys in Week 7 — art as something you do, not something you make.'
+    'Point 2 is the sentence that connects him back to Beuys in Unit 6 — art as something you do, not something you make.'
   ]
 },
 {
@@ -420,7 +420,7 @@ const SLIDES = [
   left:  { src: 'img/nauman-self-portrait-as-fountain.jpg', label: 'Bruce Nauman, <i>Self-Portrait as a Fountain</i>, 1966', tag: 'Photograph' },
   right: { src: 'img/nauman-double-poke.jpg', label: '<i>Double Poke in the Eye II</i>, 1985 — neon', tag: 'Neon' },
   reveal: [
-    { side: 'left',  text: 'He photographs himself spouting water, and calls it a fountain — Duchamp’s <i>Fountain</i>, from Week 3, answered with a body.' },
+    { side: 'left',  text: 'He photographs himself spouting water, and calls it a fountain — Duchamp’s <i>Fountain</i>, from Unit 2, answered with a body.' },
     { side: 'right', text: 'And in neon, two faces poke each other in the eye, over and over, forever.' },
     { side: 'right', text: 'Same idea in a different material: an ordinary action, repeated until it becomes unbearable.' }
   ],
@@ -769,7 +769,7 @@ const SLIDES = [
   ],
   notes: [
     'The middle one is the mechanism: she breaks an unwritten rule of public behaviour, and everyone’s reaction reveals that the rule was there.',
-    'The third is why she matters in a course that has been overwhelmingly white and male since Week 2. Say that.',
+    'The third is why she matters in a course that has been overwhelmingly white and male since Unit 1. Say that.',
     'Then to the Documentation Loop, which closes the session.'
   ]
 },

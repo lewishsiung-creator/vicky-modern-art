@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------
-   Week 9 — Leaving the Museum
+   Unit 8 — Leaving the Museum
    Art enters the world
 
    Text on screen is written at CEFR A1–A2, simplified from her slides
@@ -41,7 +41,7 @@ const GLOSSARY = {
   },
   sitespecific: {
     en: 'site-specific', zh: '場域特定',
-    def: 'Made for one particular place, and meaningless anywhere else. Week 3, and now at the scale of a desert.',
+    def: 'Made for one particular place, and meaningless anywhere else. Unit 2, and now at the scale of a desert.',
     zhDef: '為特定地點而作，離開該地便失去意義。第三週學過，如今擴及沙漠的尺度。'
   },
 
@@ -70,12 +70,12 @@ const GLOSSARY = {
   /* --- carried forward --- */
   processart: {
     en: 'Process Art', zh: '過程藝術',
-    def: 'Week 8. The making is the work, and material, gravity and time decide the shape.',
+    def: 'Unit 7. The making is the work, and material, gravity and time decide the shape.',
     zhDef: '第八週學過。製作過程即作品，材料、重力與時間決定其形狀。'
   },
   institutional: {
     en: 'institutional critique', zh: '機構批判',
-    def: 'Art that turns its questions onto the museum, the gallery or the market itself. Weeks 7 and 8.',
+    def: 'Art that turns its questions onto the museum, the gallery or the market itself. Units 6 and 7.',
     zhDef: '將提問轉向美術館、畫廊或市場本身的藝術。第七、八週學過。'
   }
 };
@@ -98,7 +98,7 @@ const SLIDES = [
   type: 'title',
   title: 'Leaving the Museum',
   sub: 'Art enters the world.',
-  meta: 'Week 9',
+  meta: 'Unit 8',
   notes: [
     'Five minutes for review and framing.',
     'The guiding question, and write it on the board: if a museum is what makes something count as art, what happens when the artist simply leaves?',
@@ -128,7 +128,7 @@ const SLIDES = [
   ask: 'And if it is — what happens when the artist just leaves the building?',
   notes: [
     'This is the question of the whole session. It comes back three times, word for word.',
-    'They have circled it since Week 5 — Danto, the Artworld, institutional theory. Say so.',
+    'They have circled it since Unit 4 — Danto, the Artworld, institutional theory. Say so.',
     'Take a few answers and do not resolve it.'
   ]
 },
@@ -234,7 +234,7 @@ const SLIDES = [
   ],
   notes: [
     'ASK before explaining. Some students will say “evidence” — that is a very good answer.',
-    'The bins echo Minimalist boxes from Week 7. He knew exactly what he was quoting.',
+    'The bins echo Minimalist boxes from Unit 6. He knew exactly what he was quoting.',
     'The map is the key part. It tells you the real work is somewhere else, and you are not there.',
     'NOTE: low-resolution scan; zoom is limited.'
   ]
@@ -633,7 +633,7 @@ const SLIDES = [
   notes: [
     'ASK and let the room argue. All three answers are defensible, and that is Quiz Question 5.',
     'The gallery was a converted underground car park, which is how the horses got in.',
-    'Compare with Beuys and the coyote in Week 6 — a living animal as material, two years earlier here.',
+    'Compare with Beuys and the coyote in Unit 5 — a living animal as material, two years earlier here.',
     'A student may raise the ethics of using live animals. That is a fair question; let it be asked, and note it was restaged in 2015 with veterinary oversight.'
   ]
 },
@@ -737,7 +737,7 @@ const SLIDES = [
   notes: [
     'Knitting copper wire is the detail that lands: a domestic technique applied to a hard industrial material.',
     'Unfired clay means it can crumble. Nothing here is trying to survive.',
-    'Compare with Judd’s factory-made boxes in Week 7 — the exact opposite of industrial fabrication.'
+    'Compare with Judd’s factory-made boxes in Unit 6 — the exact opposite of industrial fabrication.'
   ]
 },
 {

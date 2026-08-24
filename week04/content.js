@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------
-   Week 4 — From Representation to Expression
+   Unit 3 — From Representation to Expression
    How did painting lose reality?
 
    Text on screen is written at CEFR A1–A2, simplified from her slides
@@ -130,7 +130,7 @@ const SLIDES = [
   type: 'title',
   title: 'From Representation to Expression',
   sub: 'How did painting lose reality?',
-  meta: 'Week 4',
+  meta: 'Unit 3',
   notes: [
     'Five minutes for review and framing.',
     'Last week ended with a question hanging in the air. Today we answer it.',
@@ -232,7 +232,7 @@ const SLIDES = [
     'Say it plainly: the war moved the artists, and the artists moved the idea.',
     'Peggy Guggenheim is the hinge of the whole story. She showed the exiles and she gave Pollock his first solo show, in 1943.',
     'This is Quiz Question 1: the exile of the European Surrealists is what shifted the centre.',
-    'Point out that MoMA existed since 1929 — the building came first, the art came later. Same pattern as the American slide in Week 2.'
+    'Point out that MoMA existed since 1929 — the building came first, the art came later. Same pattern as the American slide in Unit 1.'
   ]
 },
 {
@@ -363,7 +363,7 @@ const SLIDES = [
   notes: [
     'The quotation is Pollock’s own, from 1947.',
     'The flatness point is Greenberg’s, and it is worth one sentence: if the paint sits on the surface and never pretends to be a window, the painting is finally honest about being flat.',
-    'That is exactly Greenberg’s argument from Week 2 — Modernism using its own methods on itself. Link it back.'
+    'That is exactly Greenberg’s argument from Unit 1 — Modernism using its own methods on itself. Link it back.'
   ]
 },
 {
@@ -414,7 +414,7 @@ const SLIDES = [
     'Feeling, not illustration.'
   ],
   notes: [
-    'This answers a question from Week 2 — if a machine can copy the world, what is the painter for? Here is Pollock’s answer, thirty years later.',
+    'This answers a question from Unit 1 — if a machine can copy the world, what is the painter for? Here is Pollock’s answer, thirty years later.',
     'Read the simple version aloud, not the full quotation.',
     '“Expressing his feelings rather than illustrating” is the sentence of the day. Write it on the board.'
   ]
@@ -675,7 +675,7 @@ const SLIDES = [
   notes: [
     'This is the most useful quotation of the day for the second discussion question.',
     'Chance is not the absence of control. It is a material you learn to handle. Say that.',
-    'Compare with Arp in Week 3 — who said chance was a piece of an order beyond our grasp. Same problem, different answer.'
+    'Compare with Arp in Unit 2 — who said chance was a piece of an order beyond our grasp. Same problem, different answer.'
   ]
 },
 {
@@ -891,7 +891,7 @@ const SLIDES = [
   notes: [
     'The political context is not decoration — it is the reason the work looks the way it does.',
     'Catalan was suppressed under Franco. Making marks that look like graffiti on a wall, in a language of scratches, is a real position.',
-    'This connects back to the Futurism slide in Week 3, and forward to the last discussion: art and power.'
+    'This connects back to the Futurism slide in Unit 2, and forward to the last discussion: art and power.'
   ]
 },
 {
@@ -909,7 +909,7 @@ const SLIDES = [
   notes: [
     'CORRECTED: her slide read “Als mestres da Catalunya”. In Catalan it is “de Catalunya”.',
     'Say what the title means, and say when it was made. Both matter.',
-    'This is the strongest counter-argument to the idea that abstraction is politically neutral — which is Week 2’s third discussion question, coming back.',
+    'This is the strongest counter-argument to the idea that abstraction is politically neutral — which is Unit 1’s third discussion question, coming back.',
     'NOTE: low-resolution scan; zoom is limited.'
   ]
 },

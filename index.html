@@ -15,7 +15,7 @@
     <h1>Contemporary Art History</h1>
     <p class="course-sub">
       English at CEFR A2, with Chinese on the key vocabulary.
-      Open a week, then press <b>P</b> for the presenter window and
+      Open a unit, then press <b>P</b> for the presenter window and
       <b>M</b> to jump to a section.
     </p>
   </header>
@@ -31,7 +31,7 @@
 <script>
 document.getElementById('weeks').innerHTML = WEEKS.map(w => {
   const inner = `
-    <span class="wk">Week ${w.n}</span>
+    <span class="wk">Unit ${w.n}</span>
     <span class="wk-title">${w.title || 'Not built yet'}</span>
     ${w.q ? `<span class="wk-q">${w.q}</span>` : ''}
     ${w.meta ? `<span class="wk-meta">${w.meta}</span>` : ''}`;

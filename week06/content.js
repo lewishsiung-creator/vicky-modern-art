@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------
-   Week 6 — Art as Action / Event
+   Unit 5 — Art as Action / Event
    Nouveau Réalisme, Happening, and Fluxus
 
    Text on screen is written at CEFR A1–A2, simplified from her slides
@@ -83,7 +83,7 @@ const GLOSSARY = {
   },
   neodada: {
     en: 'Neo-Dada', zh: '新達達',
-    def: 'Rauschenberg and Johns, from Week 5. Nouveau Réalisme is often read as Europe’s answer to it.',
+    def: 'Rauschenberg and Johns, from Unit 4. Nouveau Réalisme is often read as Europe’s answer to it.',
     zhDef: '第五週學過的勞森伯格與瓊斯。新寫實主義常被視為歐洲對其的回應。'
   }
 };
@@ -105,7 +105,7 @@ const SLIDES = [
   type: 'title',
   title: 'Art as Action / Event',
   sub: 'Nouveau Réalisme · Happening · Fluxus',
-  meta: 'Week 6',
+  meta: 'Unit 5',
   notes: [
     'Five minutes for review and framing.',
     'HOOK: the next slide puts Klein’s Leap into the Void beside Tinguely’s self-destroying machine. Use it.',
@@ -123,7 +123,7 @@ const SLIDES = [
     { head: 'And then what?', body: 'A photograph. A burnt canvas. A pile of scrap. Are those the artwork — or only the receipt?' }
   ],
   notes: [
-    'Recap Week 5 in one line: the boundary between art and everyday life came down, but the artwork was still an object.',
+    'Recap Unit 4 in one line: the boundary between art and everyday life came down, but the artwork was still an object.',
     'Now the object goes too. Say it plainly.',
     'The last point is the guiding question and the first discussion question at the end. Plant it now.'
   ]
@@ -165,7 +165,7 @@ const SLIDES = [
   ],
   notes: [
     'The one sentence they must keep: art no longer represents reality, it takes reality directly.',
-    'Compare with Week 5: Warhol rebuilt a Brillo box. These artists would simply use the real one.',
+    'Compare with Unit 4: Warhol rebuilt a Brillo box. These artists would simply use the real one.',
     'Note the pattern again — a critic names the group and writes the manifesto. Restany here; Alloway, Rosenberg and Greenberg before him.'
   ]
 },
@@ -191,8 +191,8 @@ const SLIDES = [
   zh: '難以劃定的邊界',
   cells: [
     { label: 'France', head: '{{nouveaurealisme}}', body: 'Real objects, taken from the street and the rubbish, in Paris.' },
-    { label: 'United States', head: '{{neodada}} and Assemblage', body: 'Rauschenberg and Johns — real objects put into painting. Week 5.' },
-    { label: 'United States', head: 'Pop Art', body: 'Warhol and Lichtenstein — the images of consumer culture. Also Week 5.' },
+    { label: 'United States', head: '{{neodada}} and Assemblage', body: 'Rauschenberg and Johns — real objects put into painting. Unit 4.' },
+    { label: 'United States', head: 'Pop Art', body: 'Warhol and Lichtenstein — the images of consumer culture. Also Unit 4.' },
     { label: 'Shared', head: 'All three use real things directly', body: 'They differ in what they take, and in how much irony they bring to it.' }
   ],
   notes: [
@@ -215,7 +215,7 @@ const SLIDES = [
   notes: [
     'It is a famously short manifesto — that brevity is deliberate.',
     'Read the plain version aloud.',
-    'Contrast with the Futurist manifesto in Week 3, which was pages of shouting. This is one line.'
+    'Contrast with the Futurist manifesto in Unit 2, which was pages of shouting. This is one line.'
   ]
 },
 
@@ -520,7 +520,7 @@ const SLIDES = [
   ],
   notes: [
     'The last point is the reading the lesson plan asks for: a comment on industrial and mechanical civilisation.',
-    'Connect back to Week 3 Futurism — they loved machines for their speed and power. Forty years later Tinguely builds one that does nothing and then dies.',
+    'Connect back to Unit 2 Futurism — they loved machines for their speed and power. Forty years later Tinguely builds one that does nothing and then dies.',
     'MoMA kept the surviving fragments. So the museum owns the wreckage of a work whose whole point was that it would not survive. Say that.'
   ]
 },
@@ -645,7 +645,7 @@ const SLIDES = [
     'The original happened once, in 1959, and cannot be repeated.',
     'So this is a reconstruction, from Kaprow’s scores and instructions.',
     'Which raises the obvious problem: if a Happening cannot repeat, is this one?',
-    'Note the Tàpies foundation — you met Tàpies in Week 4.'
+    'Note the Tàpies foundation — you met Tàpies in Unit 3.'
   ],
   notes: [
     'The paradox is worth naming out loud: Kaprow said a Happening happens once, and here are students performing it fifty years later.',
@@ -720,7 +720,7 @@ const SLIDES = [
   notes: [
     'Formally launched at George Maciunas’s festival in Wiesbaden, Germany, in 1962.',
     'The refusal to be defined is the learning objective — say why it matters: a movement with a fixed style can be collected, taught and sold. One that keeps moving is harder to capture.',
-    'That is the same instinct as Tzara’s “Dada means nothing” in Week 3.'
+    'That is the same instinct as Tzara’s “Dada means nothing” in Unit 2.'
   ]
 },
 {

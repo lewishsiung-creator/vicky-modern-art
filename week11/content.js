@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------
-   Week 11 — Borrowed Images
+   Unit 10 — Borrowed Images
    The end of originality and the politics of representation
 
    The last week of the course. The closing slide looks back over the
@@ -113,7 +113,7 @@ const SLIDES = [
   type: 'title',
   title: 'Borrowed Images',
   sub: 'The end of originality, and the politics of representation.',
-  meta: 'Week 11 · the last one',
+  meta: 'Unit 10 · the last one',
   notes: [
     'Five minutes for framing.',
     'The guiding question, and write it on the board: <b>whose originality? whose image?</b>',
@@ -132,7 +132,7 @@ const SLIDES = [
     { head: 'So the last question of the course', body: 'Whose originality? Whose image?' }
   ],
   notes: [
-    'Recap Week 10 in one line, then set up today’s double meaning.',
+    'Recap Unit 9 in one line, then set up today’s double meaning.',
     'The two halves of today: the first is aesthetic appropriation (Koons, Neo-Expressionism, graffiti), the second is political appropriation (feminist art, the Guerrilla Girls, Kruger).',
     'Say that split out loud now. It is the architecture of the session.'
   ]
@@ -143,12 +143,12 @@ const SLIDES = [
   zh: '真理的根據如何移動',
   stops: [
     { when: 'Premodern　前現代', what: 'Truth comes from <b>God and tradition</b>. You do not argue with it; you inherit it.' },
-    { when: 'Modernity　現代性', what: 'Truth comes from <b>reason, science and progress</b>. The Enlightenment. Week 2 began here.' },
+    { when: 'Modernity　現代性', what: 'Truth comes from <b>reason, science and progress</b>. The Enlightenment. Unit 1 began here.' },
     { when: 'Postmodernity　後現代性', what: '<b>Plurality, difference, scepticism.</b> Not one truth — many, and each with someone’s interest behind it.' }
   ],
   notes: [
     'Three stops. Click through them.',
-    'This is the whole course in three cards: they started in the middle column in Week 2 and have been sliding right ever since.',
+    'This is the whole course in three cards: they started in the middle column in Unit 1 and have been sliding right ever since.',
     'Do not spend more than two minutes. The next slide does the work.'
   ]
 },
@@ -167,7 +167,7 @@ const SLIDES = [
   type: 'bullets',
   title: 'Quick review: Modernism',
   zh: '快速複習：現代主義',
-  kicker: 'Week 2, ten weeks ago',
+  kicker: 'Unit 1, at the start of the course',
   items: [
     { head: 'The subject', body: '{{subjectphilosophy}} — people are the centre of knowledge and value. Descartes: “I think, so I am.”' },
     { head: 'Rationalisation', body: 'Rules control activity. Science, art and social norms become separate and professional.' },
@@ -176,7 +176,7 @@ const SLIDES = [
   ],
   notes: [
     'Ten minutes for this whole modern-to-postmodern section.',
-    'This is Week 2 in four lines. Do not re-teach it — remind them.',
+    'This is Unit 1 in four lines. Do not re-teach it — remind them.',
     'The word to underline is <b>objective</b>. That is what the next slide attacks.'
   ]
 },
@@ -194,7 +194,7 @@ const SLIDES = [
   notes: [
     'A grand narrative is a story that claims to explain everything and to be heading somewhere: progress, revolution, salvation.',
     'Lyotard’s claim is not that those stories are false — it is that people stopped believing them.',
-    'They met a version of this in Week 2 with Belting and Danto: no single story that includes everything. Say so; it lands better as a return than as news.',
+    'They met a version of this in Unit 1 with Belting and Danto: no single story that includes everything. Say so; it lands better as a return than as news.',
     'This is Quiz Question 1.'
   ]
 },
@@ -249,7 +249,7 @@ const SLIDES = [
   type: 'section',
   title: 'If there is no longer one truth, one history, one standard of beauty —',
   sub: 'can there still be only one definition of art?',
-  ask: 'You have spent ten weeks watching that definition come apart. What is left of it?',
+  ask: 'You have spent ten units watching that definition come apart. What is left of it?',
   notes: [
     'Take three or four answers. They have a lot to draw on by now.',
     'Do not resolve it. The closing slide comes back to exactly this.'
@@ -301,11 +301,11 @@ const SLIDES = [
     { head: 'Popular in the United States, Italy and Germany', body: 'Late 1970s to the mid-1980s.' },
     { head: 'Rough texture, strong feeling', body: 'Shapes twisted. Brushstrokes wild.' },
     { head: 'The paintings feel violent and unfinished', body: 'And they do not tell a clear story.' },
-    { head: 'It is a reaction', body: 'Against Minimalism and Conceptual Art — Week 7. Against art that had become an idea on a wall label.' }
+    { head: 'It is a reaction', body: 'Against Minimalism and Conceptual Art — Unit 6. Against art that had become an idea on a wall label.' }
   ],
   notes: [
     'The reaction is the point: after a decade of cool, planned, dematerialised work, a generation picks up brushes and makes a mess on purpose.',
-    'Compare with Week 4: Abstract Expressionism also made a mess, but it believed the mess was sincere. This generation knows it is quoting.',
+    'Compare with Unit 3: Abstract Expressionism also made a mess, but it believed the mess was sincere. This generation knows it is quoting.',
     'This is Quiz Question 3.'
   ]
 },
@@ -374,7 +374,7 @@ const SLIDES = [
   ],
   notes: [
     'The German-identity thread runs through all three German painters today. Say it once here and it explains Kiefer and Immendorff too.',
-    'On the last point: do not skip it and do not sanitise it. The relationship between European modernism and African art has been a live argument since Week 3.'
+    'On the last point: do not skip it and do not sanitise it. The relationship between European modernism and African art has been a live argument since Unit 2.'
   ]
 },
 {
@@ -390,7 +390,7 @@ const SLIDES = [
   notes: [
     'Kiefer was born in March 1945, in the last weeks of the war, in a cellar during a bombing raid. That fact is not decoration — it is his subject.',
     'The materials matter: lead for alchemy and weight, ash for what is burned, straw for harvest and for burning.',
-    'Link back to Week 4’s Tàpies and Week 9’s Arte Povera — real matter carrying history. Kiefer is the German version of that argument.'
+    'Link back to Unit 3’s Tàpies and Unit 8’s Arte Povera — real matter carrying history. Kiefer is the German version of that argument.'
   ]
 },
 {
@@ -432,7 +432,7 @@ const SLIDES = [
   ],
   notes: [
     'Three or four minutes.',
-    'The connection to make afterwards: this is Week 8’s Process Art and Week 9’s entropy, arriving inside a painting.',
+    'The connection to make afterwards: this is Unit 7’s Process Art and Unit 8’s entropy, arriving inside a painting.',
     'Embedded from the YouTube link on her own slide — it needs internet.'
   ]
 },
@@ -465,7 +465,7 @@ const SLIDES = [
   notes: [
     'ASK — most classes get to the Wall quickly once they look.',
     'The Penck collaboration is the fact that makes the series serious rather than symbolic. They met in secret and exchanged work.',
-    'Immendorff was a student of Beuys — Week 7 — and made political actions before he made paintings.',
+    'Immendorff was a student of Beuys — Unit 6 — and made political actions before he made paintings.',
     'Her slide’s last point is worth repeating: central in the West, and largely overlooked in Asia. Say that plainly to a class in Taiwan.'
   ]
 },
@@ -523,7 +523,7 @@ const SLIDES = [
   ],
   notes: [
     'The Pop Shop is the interesting move, and it divided people: he was accused of selling out, and he answered that keeping the images expensive would have been the betrayal.',
-    'Compare with Week 6’s Maciunas — art anyone can have. Same instinct, twenty years later, in a shop.',
+    'Compare with Unit 5’s Maciunas — art anyone can have. Same instinct, twenty years later, in a shop.',
     'He died of AIDS-related illness in 1990, at 31, having spent his last years making work about the epidemic.'
   ]
 },
@@ -564,7 +564,7 @@ const SLIDES = [
   title: 'What {{neoconceptualism}} is',
   zh: '新觀念主義是什麼',
   items: [
-    { head: 'Diverse 1980s and 90s practices, continuing Conceptual Art’s spirit', body: 'Week 7, twenty years on.' },
+    { head: 'Diverse 1980s and 90s practices, continuing Conceptual Art’s spirit', body: 'Unit 6, twenty years on.' },
     { head: 'Shaped by postmodern theory', body: 'Which questions “progress” and the idea of individual genius.' },
     { head: 'Social critique, and resistance to being turned into a commodity' },
     { head: '{{appropriation}} as a strategy' },
@@ -587,7 +587,7 @@ const SLIDES = [
   ],
   notes: [
     'Nochlin’s essay is the hinge, and her answer is the thing to make land: she refuses the question’s premise. She does not go hunting for forgotten geniuses. She asks what the word “great” was built on.',
-    'That is exactly the institutional argument from Weeks 5 and 7, arriving from a different direction.',
+    'That is exactly the institutional argument from Units 4 and 6, arriving from a different direction.',
     'The de Beauvoir date on her slide is 1960; the book is 1949. Minor, and corrected here.'
   ]
 },
@@ -604,7 +604,7 @@ const SLIDES = [
   foot: 'And since the 1990s the field has widened to include race, sexuality and class.',
   notes: [
     'Four aims, one click each.',
-    'Point back across the course: Marisa Merz in Week 9, Eva Hesse and Lynda Benglis in Week 8, Niki de Saint Phalle in Week 6, Agnes Denes and Nancy Holt in Week 9. All of them arrived in the story because of this work.',
+    'Point back across the course: Marisa Merz in Unit 8, Eva Hesse and Lynda Benglis in Unit 7, Niki de Saint Phalle in Unit 5, Agnes Denes and Nancy Holt in Unit 8. All of them arrived in the story because of this work.',
     'That is worth saying out loud in the last week. The reason those artists were in this course at all is that somebody did the recovering.'
   ]
 },
@@ -817,7 +817,7 @@ const SLIDES = [
   ],
   notes: [
     'The collage distinction is Quiz Question 6 and a learning objective. Say it twice.',
-    'Collage: Week 3, Dada. Appropriation: this. The difference is physical versus conceptual borrowing.',
+    'Collage: Unit 2, Dada. Appropriation: this. The difference is physical versus conceptual borrowing.',
     'Crimp’s sentence is the one to leave with them. Every picture sits on top of another picture.',
     'NOTE ON ORDER: her lesson plan schedules this mini-lecture <i>after</i> the activity, and her deck does the same, so it stays here. It works because the activity makes them need the vocabulary before it is given.'
   ]
@@ -834,7 +834,7 @@ const SLIDES = [
     { head: 'He appropriates taste itself', body: 'Not only images.' }
   ],
   notes: [
-    'The distinction from Pop matters and it is on her slide: Week 5’s Warhol still had a critical distance. Koons does not claim one.',
+    'The distinction from Pop matters and it is on her slide: Unit 4’s Warhol still had a critical distance. Koons does not claim one.',
     'He was a commodities broker on Wall Street before he was a full-time artist, and he funded his early work that way. That is not trivia — it is the same fluency Kruger has with advertising.',
     'Students often dislike Koons intensely. That reaction is a legitimate response to work that is about taste, and worth naming rather than correcting.'
   ]
@@ -852,8 +852,8 @@ const SLIDES = [
   ],
   notes: [
     'ASK and let the room split. Both readings are seriously defended in the literature.',
-    'The fabrication link: like Judd in Week 7, he does not make them. Unlike Judd, he does not conceal the polish.',
-    'One Balloon Dog sold for 58.4 million dollars in 2013. If you want the Newman comparison from Week 4, this is the place.',
+    'The fabrication link: like Judd in Unit 6, he does not make them. Unlike Judd, he does not conceal the polish.',
+    'One Balloon Dog sold for 58.4 million dollars in 2013. If you want the Newman comparison from Unit 3, this is the place.',
     'This is the first discussion question: does borrowing mass culture’s tools risk being swallowed by the system you meant to criticise?'
   ]
 },
@@ -865,7 +865,7 @@ const SLIDES = [
   zh: '從信念到鬆解',
   kicker: 'Closing the course',
   items: [
-    { head: 'Modernism believed in objective truth, pure order, and originality as the highest virtue', body: 'That is where Week 2 began.' },
+    { head: 'Modernism believed in objective truth, pure order, and originality as the highest virtue', body: 'That is where Unit 1 began.' },
     { head: 'This semester has unravelled that belief, one week at a time', body: 'The object, the artist’s hand, the museum, the permanent thing, the live moment — each one questioned in turn.' },
     { head: 'And today, appropriation pushes it further', body: 'Even the image was borrowed.' },
     { head: 'This course will not tell you whether originality still matters', body: 'That question is not closed, and nobody in it agrees.' },
@@ -874,7 +874,7 @@ const SLIDES = [
   notes: [
     'Ten minutes for the wrap-up. This is the last teaching slide of the whole course — give it room.',
     'Click through slowly. The last two points are the ones to land.',
-    'It is worth naming the arc out loud: Week 2 asked how art started to change. Week 11 asks whether anything can be original. Everything in between is the working-out.',
+    'It is worth naming the arc out loud: Unit 1 asked how art started to change. Unit 10 asks whether anything can be original. Everything in between is the working-out.',
     'Then the discussion, the presentations, and the quiz.'
   ]
 },
@@ -1012,7 +1012,7 @@ const SLIDES = [
   terms: ['postmodernism', 'grandnarrative', 'deconstruction', 'reconstruction', 'neoexpressionism', 'graffitiart', 'neoconceptualism', 'appropriation', 'highlow', 'deathoftheauthor', 'feminism', 'feministarthistory', 'guerrillagirls', 'weeniecount'],
   notes: [
     'Tap any term to show it large, with the Chinese.',
-    'The last slide of the course. If you have a minute left, ask them which single term from the whole eleven weeks they will actually keep.'
+    'The last slide of the course. If you have a minute left, ask them which single term from the whole ten units they will actually keep.'
   ]
 }
 ];

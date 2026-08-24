@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------
-   Week 2 — The Beginning of Modern Art
+   Unit 1 — The Beginning of Modern Art
    Slide content, speaker notes, glossary and quiz.
 
    Text on screen is written at CEFR A1–A2. Original quotations are
@@ -101,7 +101,7 @@ const SLIDES = [
   type: 'title',
   title: 'The Beginning of Modern Art',
   sub: 'How did art start to change?',
-  meta: 'Week 2',
+  meta: 'Unit 1',
   notes: [
     'Good morning. Today we ask one question. How did art start to change?',
     'For hundreds of years, artists painted the world as it looks. A tree looked like a tree. A face looked like a face. Then, about one hundred and fifty years ago, this changed. Art started to look very different.',

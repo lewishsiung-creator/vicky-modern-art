@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------
-   Week 3 — Expression and the Inner Self
+   Unit 2 — Expression and the Inner Self
    How does art show emotion and the unconscious?
 
    Text on screen is written at CEFR A1–A2. The lesson plan's own prose
@@ -154,7 +154,7 @@ const SLIDES = [
   type: 'title',
   title: 'Expression and the Inner Self',
   sub: 'How does art show emotion and the unconscious?',
-  meta: 'Week 3',
+  meta: 'Unit 2',
   notes: [
     'Good morning. Last week we asked one question. This week we ask another.',
     'Last week: how did art start to change? This week: how does art move from looking outward, to looking inward?',
