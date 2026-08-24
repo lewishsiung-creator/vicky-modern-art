@@ -182,8 +182,12 @@ and works offline — keep it on a USB stick as the fallback.
   to the second generation of colour-field painting — rather than as pioneering
   colour-field painting itself, which was Newman and Rothko.
 - One photograph of a Pollock on the floor was labelled 《第五號，1948》 in her
-  deck; the canvas shown looks like a different one, so it is captioned without
-  a title and flagged in the notes.
+  deck. *Number 5, 1948* is yellow and brown and privately owned; the
+  black-and-silver canvas in the photograph is almost certainly
+  ***One: Number 31, 1950***, during MoMA's 2013 conservation of it — when
+  curators laid it flat deliberately, to see it as Pollock did while painting.
+  The caption stays descriptive, because the slide is about scale rather than
+  about which painting it is.
 
 ## Week 5 — corrections and open questions
 
@@ -193,12 +197,13 @@ and works offline — keep it on a USB stick as the fallback.
 - Paolozzi's collage is *__I__ Was a Rich Man's Plaything* — the first word was
   missing.
 - "Assemblage", not "Assemblege".
-- The large Oldenburg soft sculpture in the Guggenheim rotunda carries **no
-  title** in her deck. It is captioned generically; it is very likely
-  *Soft Shuttlecock*, 1995, but that is not confirmed.
-- The lesson plan's Chinese characters for Mei Dean-E's *Ai-Dun-Di-Ti* series
-  appear garbled. The commonly published form is 《哀敦砥悌》. It is **left off
-  the slide** and flagged in the notes — Vicky should confirm it.
+- **The Guggenheim soft sculpture is *Soft Shuttlecock*, 1995** — her deck gave
+  it no title. Verified, and credited to **Claes Oldenburg and Coosje van
+  Bruggen**, who co-authored every large project from 1976 and is usually left
+  off the label.
+- **Mei Dean-E's series is 《哀敦砥悌》** — the lesson plan had 哀敦砍惓, which is
+  garbled. Verified and now on the slide: a phonetic transliteration of
+  "identity", first shown in 1994, in the Taipei Fine Arts Museum collection.
 - **Timing conflict:** the schedule allots 20 minutes to the documentary
   segment, but the plan describes ~20 min of screening *plus* ~10 min of
   discussion. Flagged in the notes; she must choose before class.
@@ -286,10 +291,10 @@ one slide comes out.
 
 ## Week 11 — corrections and one thing to check
 
-- **Georg Baselitz's dates.** Her slide reads "1938–2026". As far as I could
-  establish he is living, so the deck says **"b. 1938"** and the speaker note
-  asks Vicky to correct it if he has died since. Declaring a living artist dead
-  on a public page is the worse of the two possible errors — but please confirm.
+- **Georg Baselitz's dates: her slide was right.** He died on 30 April 2026 in
+  Salzburg, aged 88. The deck briefly said "b. 1938" while that was unverified;
+  it now reads **1938–2026**, and the speaker note points out he was still
+  working four months before this class.
 - **"Jean-Michel Basquiat"**, not "Jean-Micheal".
 - **De Beauvoir's *The Second Sex* is 1949**, not 1960 as her slide has it.
 - **Two errors in the lesson plan's schedule**, both harmless once seen: the

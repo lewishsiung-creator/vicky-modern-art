@@ -623,8 +623,8 @@ const SLIDES = [
 {
   type: 'artwork',
   src: 'img/oldenburg-soft-sculpture-guggenheim.jpg',
-  title: 'Soft sculpture, full size',
-  caption: 'A large Oldenburg soft sculpture hanging in the rotunda of the Guggenheim Museum, New York',
+  title: 'Soft Shuttlecock',
+  caption: 'Claes Oldenburg and Coosje van Bruggen, <i>Soft Shuttlecock</i>, 1995 — made for the rotunda of the Guggenheim Museum, New York. Nine feathers, each about eight metres long',
   points: [
     'Look at the people at the bottom for scale.',
     'It hangs. It has no plinth and no fixed shape.',
@@ -633,7 +633,8 @@ const SLIDES = [
   ],
   notes: [
     'The gravity link to Pollock is worth making — Oldenburg said Pollock’s treatment of paint as material inspired his treatment of objects.',
-    'NOTE: this is very likely Soft Shuttlecock, 1995, from his Guggenheim retrospective, but the source slide gives no title — so it is captioned generically. Confirm the title if you want it on screen.'
+    'Identified since: it is Soft Shuttlecock, 1995, made specifically for Frank Lloyd Wright’s rotunda for Oldenburg’s Guggenheim retrospective. Her slide gave no title.',
+    'And it is co-authored with Coosje van Bruggen (1942–2009), his wife and collaborator on every large project from 1976 onward. She is routinely left off these credits, which is worth one sentence in a course that spends Week 11 on exactly that problem.'
   ]
 },
 {
@@ -901,7 +902,8 @@ const SLIDES = [
   minutes: 20,
   instructions: [
     'Excerpts from Huang Ming-Chuan’s documentary',
-    '《梅丁衍—辣辣國族》 “Mei Dean-E: Hot and Spicy Nationality”'
+    '《梅丁衍—辣辣國族》 “Mei Dean-E: Hot and Spicy Nationality”',
+    'Watch for his ongoing series 《哀敦砥悌》 — the characters are a phonetic transliteration of the English word <b>identity</b>.'
   ],
   questions: [
     'How does Mei use {{foundobject}}s and appropriated flat images — the strategies of Rauschenberg and Johns?',
@@ -911,8 +913,9 @@ const SLIDES = [
   notes: [
     'TIMING WARNING: the schedule gives this segment twenty minutes total, but the plan describes about twenty minutes of screening PLUS about ten minutes of discussion. That is thirty. Either cut the excerpts to ten minutes, or accept that the session runs ten minutes over. Decide before class.',
     'The timer on screen is set to twenty minutes for the screening. Reset it for the discussion.',
-    'Mei’s ongoing series responding to Taiwan’s lost diplomatic allies is romanised in the lesson plan as “Ai-Dun-Di-Ti” — a phonetic play on the English word “identity”.',
-    'NOTE: the Chinese characters given in the lesson plan for that title appear garbled. The commonly published form is 《哀敦砥悌》. Please confirm before putting it on screen — it is deliberately left out of the slide.',
+    'CORRECTED: the lesson plan gave the characters as 哀敦砍惓, which is garbled. The work is 《哀敦砥悌》 — Ai-Dun-Di-Ti, a phonetic transliteration of “identity”. It is on the slide.',
+    'First shown in 1994, and now in the Taipei Fine Arts Museum collection. Countries that established or severed relations with the ROC get gilded plates and brocade banners carrying phrases like 患難與共 — official-looking, and entirely ironic.',
+    'In 2020 an exhibition of it was cancelled amid a political row, and Mei’s reply is worth quoting: cancelling the show will not restore anybody’s diplomatic relations.',
     'The three questions on screen are for the discussion after the film.'
   ]
 },

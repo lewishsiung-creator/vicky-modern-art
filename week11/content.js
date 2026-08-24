@@ -329,7 +329,7 @@ const SLIDES = [
   type: 'compare',
   title: 'Georg Baselitz',
   ask: 'One of these is the right way up. Which one — and how would you know?',
-  left:  { src: 'img/baselitz-portrait.jpg', label: 'Georg Baselitz (b. 1938)', tag: 'The artist' },
+  left:  { src: 'img/baselitz-portrait.jpg', label: 'Georg Baselitz (1938–2026)', tag: 'The artist' },
   right: { src: 'img/baselitz-grosse-nacht.jpg', label: '<i>Die große Nacht im Eimer</i> (The Big Night Down the Drain), 1963', tag: '1963' },
   reveal: [
     { side: 'right', text: 'This 1963 painting was seized by the public prosecutor in Berlin for obscenity. He was 25.' },
@@ -338,7 +338,7 @@ const SLIDES = [
   ],
   notes: [
     'ASK before you click. The inversion is the next slide, so let the question sit.',
-    'CHECK BEFORE CLASS: her slide gives his dates as “1938–2026”. As far as I know he is living, so this deck says “b. 1938”. If he has died since, correct it — I could not confirm either way.',
+    'He died on 30 April 2026, in Salzburg, aged 88 — four months before this class. Her slide had the dates right. Worth saying out loud: this is not a historical figure, it is someone who was still working this year.',
     'The 1963 seizure is worth one sentence: this is a painter who was prosecuted at 25 and knighted by the art world at 50.'
   ]
 },
@@ -369,7 +369,7 @@ const SLIDES = [
     { head: 'Inversion, and a new way of seeing', body: 'Turn the figure over and the picture stops being a window.' },
     { head: 'Raw style, high emotional intensity' },
     { head: 'The figure, heroes, and the pure image', body: 'He keeps the human body when almost nobody else does.' },
-    { head: 'War trauma and German identity', body: 'Born 1938. He was seven when the war ended, and he grew up in the ruins.' },
+    { head: 'War trauma and German identity', body: 'Born 1938, in Saxony. He was seven when the war ended, and he grew up in the ruins.' },
     { head: 'Primitivism and his African art collection', body: 'Which is worth naming honestly — a European artist collecting African objects carries its own history.' }
   ],
   notes: [

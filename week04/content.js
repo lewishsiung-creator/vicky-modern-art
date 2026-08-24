@@ -396,7 +396,7 @@ const SLIDES = [
   ],
   notes: [
     'The scale is the point of this slide. Use the people for measurement.',
-    'Her slide labelled this 《第五號，1948》 — Number 5, 1948. The painting in the photograph looks black-and-silver rather than yellow-brown, so the label may belong to a different canvas. It has been captioned without a title here. Correct it if you know which one it is.',
+    'CORRECTED: her slide labelled this 《第五號，1948》 — Number 5, 1948, which is yellow and brown and privately owned. The black-and-silver canvas in the photograph is almost certainly One: Number 31, 1950, during MoMA’s 2013 conservation of it — when curators deliberately laid it flat to see it as Pollock did while making it. The caption here stays descriptive, because the slide is about scale and horizontality rather than about which painting it is.',
     'Connect to Rothko later: both want the painting to be bigger than your field of vision, for opposite reasons.'
   ]
 },
