@@ -16,6 +16,7 @@ vocabulary.
 | 7 | From Object to Concept | 61 slides |
 | 8 | Anti-Form | 49 slides |
 | 9 | Leaving the Museum | 54 slides |
+| 10 | Expanding Media | 51 slides |
 
 ## Layout
 
@@ -31,6 +32,7 @@ week06/         index.html + content.js + img/ + vid/
 week07/         index.html + content.js + img/
 week08/         index.html + content.js + img/
 week09/         index.html + content.js + img/
+week10/         index.html + content.js + img/
 ```
 
 A fix to `shared/` lands on every week at once. Each week owns only its
@@ -38,10 +40,10 @@ A fix to `shared/` lands on every week at once. Each week owns only its
 
 ## Adding a week
 
-1. `cp -r week09 week10 && rm -rf week10/img/* week10/content.js`
-2. Put the new pictures in `week10/img/`.
-3. Write `week10/content.js` — copy the shape from `week09/content.js`.
-4. Change the `<title>` and `<meta name="description">` in `week10/index.html`.
+1. `cp -r week10 week11 && rm -rf week11/img/* week11/content.js`
+2. Put the new pictures in `week11/img/`.
+3. Write `week11/content.js` — copy the shape from `week10/content.js`.
+4. Change the `<title>` and `<meta name="description">` in `week11/index.html`.
 5. Fill in that week's line in `weeks.js`.
 
 Nothing else needs editing.
@@ -136,6 +138,7 @@ content, and each is stated in that question's speaker notes.
 - **Week 7** — 1 · A  ·  2 · B  ·  3 · C  ·  4 · A  ·  5 · B  ·  6 · D
 - **Week 8** — 1 · D  ·  2 · A  ·  3 · C  ·  4 · B  ·  5 · D  ·  6 · A
 - **Week 9** — 1 · A  ·  2 · C  ·  3 · A  ·  4 · D  ·  5 · A  ·  6 · C
+- **Week 10** — 1 · D  ·  2 · D  ·  3 · D  ·  4 · B  ·  5 · A  ·  6 · C
 
 ## Week 6 — videos, and why they are not all hosted
 
@@ -240,6 +243,35 @@ No factual corrections were needed. Two things worth knowing:
   `.pptx` embeds the entire 291 MB film — more than ten times Cloudflare Pages'
   25 MB per-file limit, so it cannot be hosted. As in Week 6: the room needs
   internet, and her original `.pptx` is the offline fallback.
+
+## Week 10 — content notes, and one decision for Lewis
+
+**Six slides carry content notes**, marked CONTENT NOTE or CONTENT WARNING in
+the speaker notes and listed on the title slide: 32 (Acconci, *Trademarks* —
+self-inflicted biting), 34 and 35 (*Seedbed*), 36 and 37 (Abramović,
+*Rhythm 0* — the audience cut her, and one person held a loaded gun to her
+neck), and 39 (Piper, *Catalysis*).
+
+**The decision:** slide 35 embeds documentary footage of *Seedbed* from the
+Dailymotion link on her own slide. The picture is only a ramp and people's feet,
+but the **audio is sexually explicit**. Nothing plays until it is clicked, and
+the slide before it already carries the whole argument. Say the word and that
+one slide comes out.
+
+## Week 10 — gaps in the source
+
+- ***Electronic Superhighway*** is a learning objective but has no slide. It is
+  described in the speaker notes instead.
+- **TV Cello and Charlotte Moorman** are in the lesson plan's segment
+  description but have no slide either. Also in the notes.
+- **Abramović and Piper have slides but no time in the schedule.** The
+  100-minute plan runs Acconci to 1:10 and then goes to Wrap-Up, yet both
+  artists are learning objectives and both are in the Documentation Loop recap.
+  As written, the session overruns.
+- **Video:** her `.pptx` embeds about 319 MB across four files, two of them far
+  over Cloudflare Pages' 25 MB per-file limit. All four films are embedded from
+  the sources printed on her own slides — three YouTube, one Dailymotion. The
+  room needs internet; her `.pptx` is the offline fallback.
 
 ## Images
 

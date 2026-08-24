@@ -291,7 +291,7 @@
          should start playing because a slide scrolled past. */
       case 'video':
         return `<div class="vid">
-            <div class="vid-frame" data-yt="${s.yt || ''}" data-src="${s.src || ''}"
+            <div class="vid-frame" data-yt="${s.yt || ''}" data-dm="${s.dm || ''}" data-src="${s.src || ''}"
                  ${s.poster ? `style="background-image:url(${s.poster})"` : ''}>
               <button class="vid-play" aria-label="Play"><span>▶</span></button>
             </div>
@@ -303,6 +303,7 @@
             <ul class="points">${(s.points || []).map((p, k) =>
               `<li class="step" data-step="${k}">${chips(p)}</li>`).join('')}</ul>
             ${s.yt ? `<div class="zoom-hint">Needs internet · <a href="https://www.youtube.com/watch?v=${s.yt}" target="_blank" rel="noopener">open on YouTube</a></div>`
+                   : s.dm ? `<div class="zoom-hint">Needs internet · <a href="https://www.dailymotion.com/video/${s.dm}" target="_blank" rel="noopener">open on Dailymotion</a></div>`
                    : '<div class="zoom-hint">Plays from this site — no internet needed</div>'}
           </div>`;
 
@@ -674,10 +675,14 @@
     if (frame) {
       if (!frame.classList.contains('loaded')) {
         frame.classList.add('loaded');
-        const yt = frame.dataset.yt, src = frame.dataset.src;
+        const yt = frame.dataset.yt, dm = frame.dataset.dm, src = frame.dataset.src;
         frame.innerHTML = yt
           ? `<iframe src="https://www.youtube-nocookie.com/embed/${yt}?autoplay=1&rel=0"
                allow="accelerometer; autoplay; encrypted-media; picture-in-picture"
+               allowfullscreen title="video"></iframe>`
+          : dm
+          ? `<iframe src="https://www.dailymotion.com/embed/video/${dm}?autoplay=1"
+               allow="autoplay; fullscreen; picture-in-picture"
                allowfullscreen title="video"></iframe>`
           : `<video src="${src}" controls autoplay playsinline></video>`;
       }

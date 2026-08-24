@@ -55,6 +55,11 @@ const WEEKS = [
     q: 'Art enters the world.',
     meta: '54 slides · Smithson to Marisa Merz · Rivers and Tides · 6-question quiz'
   },
-  { n: 10, dir: null },
+  {
+    n: 10, dir: 'week10',
+    title: 'Expanding Media',
+    q: 'Video and body.',
+    meta: '51 slides · Paik to Adrian Piper · four films · the documentation loop · 6-question quiz'
+  },
   { n: 11, dir: null }
 ];
