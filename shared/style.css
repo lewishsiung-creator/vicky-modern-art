@@ -966,6 +966,102 @@ body.course { overflow: auto; }
   margin-top: 3em; font-size: .9em; color: var(--deeper);
 }
 
+/* The vocabulary card at the foot of the course index */
+.vocab-link {
+  display: block; margin-top: 2.2em; text-decoration: none; color: var(--ink);
+  border: 1px solid rgba(23,19,18,.28); border-radius: .6em;
+  padding: 1.2em 1.7em;
+  transition: background .18s ease, border-color .18s ease;
+}
+.vocab-link:hover { background: var(--cream); border-color: transparent; }
+.vl-t { display: block; font-family: var(--serif); font-size: 1.5em; }
+.vl-zh { font-family: var(--sans); font-size: .6em; color: var(--deeper); margin-left: .4em; }
+.vl-m { display: block; font-size: .9em; color: var(--ink-dim); margin-top: .3em; }
+
+/* ---------- Key vocabulary page ---------- */
+/* 139 term cards make this page about 30,000px tall, and past roughly
+   20,000px the browser starts reporting a phantom horizontal overflow —
+   every element still measures inside the viewport, but the page drifts
+   sideways on a phone. Nothing here is ever wider than its column, so
+   clamping the axis clips nothing. */
+body.vocab { overflow-x: hidden; overflow-y: auto; }
+.vocab-page { max-width: 54em; }
+.course-kicker a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--rule); }
+.course-kicker a:hover { border-bottom-color: currentColor; }
+.h1-zh {
+  font-family: var(--sans); font-size: .34em; letter-spacing: .1em;
+  color: var(--deeper); vertical-align: .9em; margin-left: .5em; font-weight: 400;
+}
+
+.v-tools { margin-top: 2.4em; }
+#q {
+  width: 100%; font: inherit; font-size: 1.05em;
+  padding: .85em 1.1em; border: none; border-radius: .5em;
+  background: var(--cream); color: var(--ink);
+  box-shadow: 0 .4em 1.2em rgba(23,19,18,.14);
+  -webkit-appearance: none;
+}
+#q::placeholder { color: #8a9a8f; }
+#q:focus { outline: 2px solid var(--deeper); outline-offset: 2px; }
+.v-count {
+  margin-top: .7em; font-size: .85em; letter-spacing: .04em; color: var(--deeper);
+}
+
+/* The unit numbers, as a row of stops across the top. */
+.v-jump { margin-top: 1.6em; display: flex; flex-wrap: wrap; gap: .4em; }
+.v-jump a {
+  display: block; min-width: 2.2em; text-align: center;
+  padding: .4em 0; border-radius: .35em;
+  background: rgba(247,240,223,.28); color: var(--ink);
+  text-decoration: none; font-size: .9em; font-weight: 700;
+}
+.v-jump a:hover { background: var(--cream); }
+
+.v-unit { margin-top: 3.4em; scroll-margin-top: 1.5em; }
+.v-unit h2 { font-weight: 400; line-height: 1.2; }
+.v-n {
+  display: block; font-size: .72em; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--deeper); font-weight: 700;
+  font-family: var(--sans);
+}
+.v-t { display: block; font-family: var(--serif); font-size: 1.55em; margin: .12em 0; }
+.v-zh { display: block; font-size: .78em; color: var(--ink-dim); }
+.v-deck {
+  display: inline-block; margin-top: .7em; font-size: .88em;
+  color: var(--deeper); text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+}
+.v-deck:hover { color: var(--ink); border-bottom-color: currentColor; }
+
+.v-unit dl { margin-top: 1.6em; }
+.v-term {
+  background: var(--cream); border-radius: .55em;
+  padding: 1.2em 1.5em; margin-bottom: .8em;
+  box-shadow: 0 .35em 1.1em rgba(23,19,18,.13);
+}
+.v-term dt {
+  font-family: var(--serif); font-size: 1.25em; line-height: 1.25;
+}
+.t-zh {
+  font-family: var(--sans); font-size: .68em; color: var(--deep);
+  margin-left: .7em; white-space: nowrap;
+}
+.v-term dd { margin-top: .55em; font-size: .95em; line-height: 1.6; }
+.d-en { color: var(--ink); }
+.d-zh { color: #4a5a50; }
+
+.v-empty {
+  margin-top: 3em; font-size: 1.1em; color: var(--cream); opacity: .8;
+}
+
+@media (max-width: 700px) {
+  .v-term { padding: 1em 1.15em; }
+  .t-zh { display: block; margin-left: 0; margin-top: .2em; white-space: normal; }
+  /* Beside a wrapping h1 this span sat past the right edge and gave the
+     whole page a horizontal scroll. On its own line it cannot. */
+  .h1-zh { display: block; margin-left: 0; vertical-align: baseline; font-size: .42em; }
+}
+
 /* The "units" link in a deck’s HUD */
 #hud a { color: inherit; text-decoration: none; }
 #hud a:hover { color: var(--ink); }

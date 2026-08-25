@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Key Vocabulary · Contemporary Art History</title>
+<meta name="description" content="Every key term in the course, by unit, in English and Chinese.">
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body class="course vocab">
+
+<main class="course-page vocab-page">
+  <header>
+    <div class="course-kicker"><a href="../">Contemporary Art History</a></div>
+    <h1>Key Vocabulary <span class="h1-zh">關鍵詞彙</span></h1>
+    <p class="course-sub">
+      Every term in the course, by unit. These go further than the word
+      chips in the decks — those are for reading off the screen mid-lesson;
+      these are for afterwards.
+    </p>
+
+    <div class="v-tools">
+      <input id="q" type="search" placeholder="Search a term, or a name — Greenberg, 靈光, entropy…"
+             autocomplete="off" spellcheck="false">
+      <div class="v-count" id="count"></div>
+    </div>
+
+    <nav class="v-jump" id="jump"></nav>
+  </header>
+
+  <div id="list"></div>
+
+  <p class="v-empty" id="empty" hidden>Nothing matches that.</p>
+
+  <footer class="course-foot">
+    Compiled from Vicky’s <i>Key Vocabulary</i>, alongside the lecture decks.
+  </footer>
+</main>
+
+<script src="terms.js"></script>
+<script>
+const list  = document.getElementById('list');
+const jump  = document.getElementById('jump');
+const q     = document.getElementById('q');
+const count = document.getElementById('count');
+const empty = document.getElementById('empty');
+
+const TOTAL = VOCAB.reduce((n, u) => n + u.terms.length, 0);
+
+/* Escaping matters here: several definitions carry quotation marks and
+   ampersands straight out of her document. */
+const esc = s => s.replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+
+list.innerHTML = VOCAB.map(u => `
+  <section class="v-unit" id="u${u.n}">
+    <h2>
+      <span class="v-n">Unit ${u.n}</span>
+      <span class="v-t">${esc(u.title)}</span>
+      <span class="v-zh">${esc(u.zh)}</span>
+    </h2>
+    <a class="v-deck" href="../${u.dir}/">Open the deck →</a>
+    <dl>
+      ${u.terms.map(t => `
+        <div class="v-term">
+          <dt>${esc(t.en)}<span class="t-zh">${esc(t.zh)}</span></dt>
+          <dd class="d-en">${esc(t.def)}</dd>
+          <dd class="d-zh">${esc(t.zhDef)}</dd>
+        </div>`).join('')}
+    </dl>
+  </section>`).join('');
+
+jump.innerHTML = VOCAB.map(u =>
+  `<a href="#u${u.n}">${u.n}</a>`).join('');
+
+/* ---- search ------------------------------------------------------
+   Matches across all four fields, so "Greenberg" finds Formalism and
+   "靈光" finds The Aura. Units with no surviving term hide themselves,
+   otherwise the page is mostly empty headings.                     */
+function filter() {
+  const s = q.value.trim().toLowerCase();
+  let shown = 0;
+
+  VOCAB.forEach(u => {
+    const sec = document.getElementById('u' + u.n);
+    let live = 0;
+    sec.querySelectorAll('.v-term').forEach((el, i) => {
+      const t = u.terms[i];
+      const hit = !s || (t.en + ' ' + t.def + ' ' + t.zh + ' ' + t.zhDef)
+                          .toLowerCase().includes(s);
+      el.hidden = !hit;
+      if (hit) live++;
+    });
+    sec.hidden = live === 0;
+    shown += live;
+  });
+
+  empty.hidden = shown > 0;
+  count.textContent = s
+    ? `${shown} of ${TOTAL} terms`
+    : `${TOTAL} terms across ${VOCAB.length} units`;
+}
+
+q.addEventListener('input', filter);
+/* Escape clears rather than closing the page, which is what a search
+   box on a phone keyboard suggests it will do. */
+q.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { q.value = ''; filter(); }
+});
+filter();
+</script>
+</body>
+</html>

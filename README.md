@@ -35,6 +35,7 @@ week08/         Unit 7  — index.html + content.js + img/
 week09/         Unit 8  — index.html + content.js + img/
 week10/         Unit 9  — index.html + content.js + img/
 week11/         Unit 10 — index.html + content.js + img/
+vocab/          the key-vocabulary reference — index.html + terms.js
 ```
 
 The folder names are the semester week the class falls in; the units are
@@ -56,6 +57,32 @@ All ten units (1–10) are built. If another is ever added:
 5. Add a line for it in `weeks.js`.
 
 Nothing else needs editing.
+
+## Key vocabulary
+
+`vocab/` is a reference page holding all 139 terms in the course, grouped by
+unit, English and 中文 side by side. It is linked from the course index and
+from every deck's HUD.
+
+These definitions are **not** the word chips. The chips inside the decks are
+A1–A2, written to be read off a projector during the lesson. These are pitched
+higher, and name the critics and the works — they are for revision afterwards.
+The two are kept separate on purpose.
+
+The data comes from Vicky's `Key_Vocabulary.docx`, in `vocab/terms.js`. Two
+things were repaired on the way in, and will come back if that file is ever
+re-imported without checking:
+
+- Unit 9 defined **Closed-Circuit Video twice**. The fuller entry — the one
+  naming *TV Buddha* and the *Corridor* series — is the one kept.
+- Unit 2's **"Grattage,"** carried a stray comma inside the headword.
+
+Ten of her terms are not yet word chips in the decks: *The End of Art*,
+*Post-historical Art*, *Armory Show* (Unit 1), *Émigré / exile artist*
+(Unit 3), *Avant-Garde* (Unit 4), *The Idea Becomes a Machine* (Unit 6),
+*Process / Time* (Unit 7), *Ephemeral / Process-Based Art* (Unit 8),
+*Presence & Duration* and *Surveillance & Pursuit* (Unit 9). They are on the
+vocabulary page, just not tappable mid-slide.
 
 ## Presenting
 
