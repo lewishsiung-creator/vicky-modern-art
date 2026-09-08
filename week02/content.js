@@ -312,7 +312,7 @@ const SLIDES = [
   type: 'activity',
   title: 'Timeline Mapping Activity',
   zh: '時間軸活動',
-  minutes: 15,
+  minutes: 10,
   instructions: [
     'Work in groups.',
     'Put these movements on a timeline, in order.',
@@ -330,7 +330,7 @@ const SLIDES = [
     'Now you work in groups. Here is your list of movements and dates.',
     'Put them on a timeline, in order. Then find the First World War on your timeline. Mark it.',
     'ASK: What happens to art before the war? What happens after? Is it different?',
-    'Fifteen minutes. Start the timer on screen. Then each group presents one movement — about one minute each.',
+    'Ten minutes. Start the timer on screen. Then each group presents one movement — about one minute each.',
     'The three period names should still be on the board from the start of class.'
   ]
 },
