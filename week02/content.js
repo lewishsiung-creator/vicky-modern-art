@@ -147,27 +147,6 @@ const SLIDES = [
 
 /* ===== PART 2 — MODERNISM AND TWO EXPLANATIONS ===== */
 {
-  type: 'quote',
-  title: '{{modernism}}',
-  zh: '現代主義',
-  lead: 'Modernism is a major turning point in art history.',
-  quote: '“The essence of Modernism lies, as I see it, in the use of the characteristic methods of a discipline to criticize the discipline itself — not in order to subvert it but in order to entrench it more firmly in its area of competence.”',
-  cite: 'Clement Greenberg, <i>Modernist Painting</i>, 1960',
-  plain: [
-    'Every subject has its own methods — its own way of working.',
-    'Modernist art uses the methods of art to ask questions about art itself.',
-    'Painting asks: what is painting? A painting is flat. A painting is paint on a surface. So Modernist painters showed us the flatness. They showed us the paint.',
-    'This does not destroy art. It makes art stronger.'
-  ],
-  notes: [
-    'Clement Greenberg was an American art critic. A critic is a person who writes about art and judges it. Write "critic" on the board.',
-    'His English is difficult, so click to open the simple version and read that instead.',
-    'Every subject has its own methods — its own way of working. Greenberg said that Modernist art uses the methods of art to ask questions about art itself.',
-    'Painting asks: what is painting? What can only painting do? A painting is flat. A painting is made of paint on a surface. So Modernist painters showed us the flatness. They showed us the paint.',
-    'And Greenberg says this is not destroying art. It makes art stronger. Art finds the thing that is truly its own.'
-  ]
-},
-{
   type: 'compare',
   title: 'Same pose, 325 years apart',
   ask: 'They are very similar. Now look again — what is different?',
@@ -183,8 +162,30 @@ const SLIDES = [
     'They are very similar. Same pose. A woman lies down. She looks at us. There is a servant, and there is an animal.',
     'ASK: Now look again. What is different? — wait for answers before you click.',
     'Then click through the three points one at a time.',
-    'People in 1865 hated this painting. They were angry. But for Greenberg, this is where modern painting starts. Manet stopped hiding the paint.',
+    'People in 1865 hated this painting. They were angry. But this is where modern painting starts — Manet stopped hiding the paint. The critic on the next slide is the one who says so.',
     'TEACHER: this comparison is the strongest moment in the first half. Give it three or four minutes. Let students come to the screen and point. Use the slider and the zoom.'
+  ]
+},
+{
+  type: 'quote',
+  title: '{{modernism}}',
+  zh: '現代主義',
+  lead: 'Modernism is a major turning point in art history.',
+  quote: '“The essence of Modernism lies, as I see it, in the use of the characteristic methods of a discipline to criticize the discipline itself — not in order to subvert it but in order to entrench it more firmly in its area of competence.”',
+  cite: 'Clement Greenberg, <i>Modernist Painting</i>, 1960',
+  plain: [
+    'Every subject has its own methods — its own way of working.',
+    'Modernist art uses the methods of art to ask questions about art itself.',
+    'Painting asks: what is painting? A painting is flat. A painting is paint on a surface. So Modernist painters showed us the flatness. They showed us the paint.',
+    'This does not destroy art. It makes art stronger.'
+  ],
+  notes: [
+    'They have just seen it happen, with Manet and Titian. This slide is the theory for what they already noticed — so point back to it.',
+    'Clement Greenberg was an American art critic. A critic is a person who writes about art and judges it. Write "critic" on the board.',
+    'His English is difficult, so click to open the simple version and read that instead.',
+    'Every subject has its own methods — its own way of working. Greenberg said that Modernist art uses the methods of art to ask questions about art itself.',
+    'Painting asks: what is painting? What can only painting do? A painting is flat. A painting is made of paint on a surface. So Modernist painters showed us the flatness. They showed us the paint.',
+    'And Greenberg says this is not destroying art. It makes art stronger. Art finds the thing that is truly its own.'
   ]
 },
 {
@@ -596,7 +597,7 @@ const SLIDES = [
     'ASK: Are the coloured shapes the same size? — wait, then reveal.',
     'No. One is large, others are small. But the picture still feels calm and even.',
     'Mondrian moved the lines many times before he finished. This looks simple, but it is slow, careful work.',
-    'Remember this slide. You will compare it with Frank Gehry near the end of class.'
+    'Remember this slide. You will compare it with Dandadan near the end of class.'
   ]
 },
 
@@ -851,24 +852,32 @@ const SLIDES = [
   ]
 },
 {
-  type: 'artwork',
-  src: 'img/gehry-disney-hall.jpg',
-  title: 'Frank Gehry',
-  caption: 'Frank Gehry, Walt Disney Concert Hall, Los Angeles',
-  ask: 'Where are the straight lines?',
+  type: 'gallery',
+  title: 'Dandadan',
+  zh: '膽大黨',
+  images: [
+    { src: 'img/dandadan-classroom.jpg' },
+    { src: 'img/dandadan-chase.jpg' },
+    { src: 'img/dandadan-aliens.jpg' },
+    { src: 'img/dandadan-ghost.jpg' }
+  ],
+  caption: 'Yukinobu Tatsu, <i>Dandadan</i> 《膽大黨》 — comic from 2021, animated series from 2024',
+  ask: 'How many different kinds of story can you see on this screen?',
   points: [
-    'There are almost none. The walls curve and bend. The metal moves like cloth.',
-    'Compare it with Mondrian, earlier today.',
-    'Mondrian wanted order, balance, rules. Gehry breaks all of that.',
-    'That is the difference between modern thinking and postmodern thinking, in one building.'
+    'Four pictures, and four kinds of story. Two students in a classroom. A chase. Aliens. A ghost.',
+    'A love story, a horror story, a science-fiction story and a comedy — all inside one work.',
+    'Compare it with Mondrian, earlier today. Mondrian wanted order, balance, rules. He wanted painting to be pure.',
+    'This is the opposite, and it does not apologise. No single style, no single story — that is postmodern thinking.'
   ],
   notes: [
-    'This is a concert hall in Los Angeles, by Frank Gehry.',
-    'ASK: Where are the straight lines? — let them look.',
-    'There are almost none. The walls curve and bend. The metal moves like cloth.',
+    'This is Dandadan — a Japanese comic by Yukinobu Tatsu, running since 2021, and an animated series since 2024. Many students will already know it, so let them tell you what it is.',
+    'ASK: How many different kinds of story can you see on this screen? — let them look before you click.',
+    'Four pictures, four kinds of story. Quiet classroom romance. A chase. Aliens. A ghost.',
+    'Nobody chose between them. It is a love story AND horror AND science fiction AND comedy, at the same time.',
     'Compare it with Mondrian, earlier today. Press M and jump back to the Mondrian slide if you want them side by side — Backspace brings you straight back here.',
-    'Mondrian wanted order, balance, rules. Gehry breaks all of that.',
-    'That is the difference between modern thinking and postmodern thinking, in one building.'
+    'Mondrian wanted order, balance, rules, purity. Modern thinking wants one pure thing. This mixes everything, on purpose.',
+    'That is the difference between modern thinking and postmodern thinking, in four pictures.',
+    'TEACHER: this is the slide where the room usually wakes up. It is worth letting the conversation run a little.'
   ]
 },
 {

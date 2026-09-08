@@ -119,7 +119,7 @@ Write `{{term}}` in any text to turn it into a word chip. The key must exist in
 
 Slide types: `title` `word` `section` `bullets` `quote` `compare` `artwork`
 `video` `grid` `flow` `timeline` `twocol` `break` `activity` `rank` `match`
-`terms` `quiz` `end`.
+`gallery` `terms` `quiz` `end`.
 
 - `grid` — a 2×2 of concept cards, revealed one at a time. Used for the
   Attitude / Concept / Form / Technique breakdowns in Unit 2.
@@ -150,6 +150,10 @@ Slide types: `title` `word` `section` `bullets` `quote` `compare` `artwork`
   round starts clean. Rounds stack up beneath, so a before-and-after vote sits
   side by side. Nothing is stored and a reload clears it. Unit 10's Art Court
   uses one slide twice — she returns to it via the menu for the final vote.
+- `gallery` — the same two-column shape as `artwork`, but the picture side
+  is a 2×2 of stills. For an example that is not one object but a run of
+  images: a film, a series, a comic. Give it `images: [{src}, …]`; every
+  picture zooms on click, and none is cropped.
 - `terms` — a mid-deck vocabulary review. Same rendering as the closing `end`
   slide; give it a `terms` array of GLOSSARY keys.
 
@@ -167,6 +171,22 @@ is flagged in that slide's speaker notes so Vicky knows what changed.
 
 Titles also corrected: *White on White*, *Street, Dresden*,
 *L'Oiseau dans l'Espace*.
+
+## Unit 1 — changes Vicky asked for
+
+Sent 8 September 2026, after the deck was built:
+
+- **Slides 5 and 6 swapped.** The Manet/Titian comparison now comes before
+  the Greenberg definition, so the class sees it happen and then gets the
+  word for it. Two speaker notes moved with it — the comparison used to
+  name Greenberg before he had been introduced.
+- **Slide 42: Frank Gehry replaced by four stills from _Dandadan_**, in the
+  2×2 she laid out. The teaching point survives the swap intact: Mondrian
+  wanted one pure thing, this mixes four genres at once, and that is the
+  gap between modern and postmodern thinking. The Mondrian slide's note
+  still points forward to it, and the jump-back-to-Mondrian move still works.
+  `img/gehry-disney-hall.jpg` was deleted; it is in the git history if the
+  building is ever wanted back.
 
 ## Quiz answer keys
 

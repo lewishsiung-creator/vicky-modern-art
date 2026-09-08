@@ -51,6 +51,7 @@
       case 'quote':    return (s.plain ? 1 : 0) + (s.ask ? 1 : 0);
       case 'compare':  return s.reveal ? s.reveal.length : 0;
       case 'artwork':  return s.points ? s.points.length : 0;
+      case 'gallery':  return s.points ? s.points.length : 0;
       case 'twocol':   return 2;
       case 'break':    return 2;
       case 'quiz':     return 1;
@@ -243,6 +244,23 @@
             <ul class="points">${(s.points || []).map((p, k) =>
               `<li class="step" data-step="${k}">${chips(p)}</li>`).join('')}</ul>
             <div class="zoom-hint">Click the picture to zoom${s.smallSource ? ' (small source — stays modest on purpose)' : ''}</div>
+          </div>`;
+
+      /* Same two-column shape as an artwork slide, but the picture side
+         holds a 2×2 of stills rather than one work. For a thing that is
+         made of many images at once — a film, a series, a comic. */
+      case 'gallery':
+        return `<div class="gal">${s.images.map(im =>
+            `<figure><img src="${im.src}" alt="">${
+              im.cap ? `<figcaption>${chips(im.cap)}</figcaption>` : ''}</figure>`).join('')}</div>
+          <div class="side">
+            <h2>${chips(s.title)}</h2>
+            ${s.zh ? `<div class="zh-title">${s.zh}</div>` : ''}
+            <div class="cap">${s.caption}</div>
+            ${s.ask ? askBlock(s.ask, false) : ''}
+            <ul class="points">${(s.points || []).map((p, k) =>
+              `<li class="step" data-step="${k}">${chips(p)}</li>`).join('')}</ul>
+            <div class="zoom-hint">Click any picture to zoom</div>
           </div>`;
 
       case 'twocol':
@@ -689,7 +707,7 @@
 
     if (lightbox.classList.contains('on')) { closeZoom(); return; }
 
-    const img = e.target.closest('.s-artwork img, .compare-pane img, .q-doc img');
+    const img = e.target.closest('.s-artwork img, .s-gallery img, .compare-pane img, .q-doc img');
     if (img) { openZoom(img); return; }
 
     /* Load a video player on demand, and swallow every click inside one —
