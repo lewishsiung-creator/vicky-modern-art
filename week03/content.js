@@ -144,7 +144,8 @@ const SECTIONS = [
   { title: '4 · Surrealism',           zh: '超現實主義',        start: 32 },
   { title: '5 · The Apple & Magritte', zh: '蘋果與馬格利特',    start: 45 },
   { title: '6 · Wrap-Up',              zh: '總結',              start: 50 },
-  { title: '7 · Quiz',                 zh: '測驗',              start: 53 }
+  { title: '7 · Quiz',                 zh: '測驗',              start: 52 },
+  { title: '8 · Short Presentations',  zh: '學生報告',          start: 60 }
 ];
 
 const SLIDES = [
@@ -966,7 +967,7 @@ const SLIDES = [
   title: 'Which one is the apple?',
   zh: '哪一個才是蘋果？',
   task: 'In your group, put all four in order. Which one <b>best</b> represents “an apple”?',
-  minutes: 8,
+  minutes: 20,
   items: [
     { src: 'img/apple-photo.jpg',            label: 'A photograph' },
     { src: 'img/magritte-listening-room.jpg', label: 'An oil painting' },
@@ -980,7 +981,7 @@ const SLIDES = [
     'Why doesn’t the Apple logo need to look like a real apple any more?'
   ],
   notes: [
-    'Groups of five or six. Two minutes to rank, four minutes on the questions, one or two minutes to share out.',
+    'Groups of five or six. Twenty minutes in all: rank the four first, then work through the questions, and keep a few minutes at the end to share out.',
     'IMPORTANT: after ranking, each group must explain their reasoning — especially where the group disagreed with itself. The real learning is in the negotiation, not in the final order.',
     'Then one press of the arrow key puts up all the guiding questions; take them in order.',
     'Students will start using the words symbol, culture, convention and brand on their own. When you hear those words, they have already arrived at Magritte’s question without you explaining it.',
@@ -1094,28 +1095,6 @@ const SLIDES = [
     'The answer to 3, if they need it: both are saying that the object and its meaning are separate things. Duchamp adds meaning to an object; Magritte takes it away from one.'
   ]
 },
-{
-  type: 'activity',
-  oneClick: true,
-  title: 'Short presentations',
-  zh: '學生報告',
-  minutes: 6,
-  instructions: [
-    'Three students today. Six minutes each, TED-style.',
-    'One artist from the course list of 120.'
-  ],
-  questions: [
-    'Who was the artist? Where and when did they work?',
-    'One or two key artworks.',
-    'What concept, and what media?',
-    'Why does it matter today?'
-  ],
-  notes: [
-    'Twenty minutes: three students, six minutes each, plus changeover.',
-    'The timer on screen is set to six minutes. Press Reset between speakers.',
-    'The four questions on screen are the required structure — reveal them at the start so the speaker and the room both know the shape.'
-  ]
-},
 
 /* ===== PART 7 — QUIZ ===== */
 {
@@ -1215,6 +1194,28 @@ const SLIDES = [
   title: 'Key terms',
   zh: '關鍵詞彙',
   terms: ['dada', 'antiart', 'readymade', 'manifesto', 'automatism', 'unconscious', 'surrealism', 'biomorphic', 'veristic', 'ecoledeparis', 'americanscene', 'mural', 'interwar'],
-  notes: ['Tap any term to show it large, with the Chinese. Good for the last two minutes of class.']
-}
+  notes: ['Tap any term to show it large, with the Chinese. Good for two minutes before the short presentations, which are the last slide.']
+},
+{
+  type: 'activity',
+  oneClick: true,
+  title: 'Short presentations',
+  zh: '學生報告',
+  minutes: 6,
+  instructions: [
+    'Three students today. Six minutes each, TED-style.',
+    'One artist from the course list of 120.'
+  ],
+  questions: [
+    'Who was the artist? Where and when did they work?',
+    'One or two key artworks.',
+    'What concept, and what media?',
+    'Why does it matter today?'
+  ],
+  notes: [
+    'Twenty minutes: three students, six minutes each, plus changeover.',
+    'The timer on screen is set to six minutes. Press Reset between speakers.',
+    'The four questions on screen are the required structure — reveal them at the start so the speaker and the room both know the shape.'
+  ]
+},
 ];
