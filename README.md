@@ -114,6 +114,11 @@ All of a unit's content is in its own `content.js` — nothing else needs touchi
 - `SLIDES` — the deck, in order. Each slide has a `type` and its own fields,
   plus `notes` (what to say, shown in the presenter window).
 
+Add `oneClick: true` to any slide and its whole build appears on the first
+click instead of one item per click. Unit 2 uses it on 40 slides, at
+Vicky's request (15 September 2026): 2, 4, 6–11, 16, 18–32, 34, 36, 38–45,
+47–50, 52 and 53.
+
 Write `{{term}}` in any text to turn it into a word chip. The key must exist in
 `GLOSSARY`; if it doesn't, the text degrades to plain words rather than breaking.
 

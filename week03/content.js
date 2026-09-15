@@ -163,6 +163,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Where we were, and where we go now',
   zh: '上週與本週',
   items: [
@@ -192,6 +193,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'How did {{dada}} begin?',
   zh: '達達如何開始？',
   items: [
@@ -232,6 +234,7 @@ const SLIDES = [
 },
 {
   type: 'grid',
+  oneClick: true,
   title: 'What {{dada}} actually was',
   zh: '達達的四個面向',
   cells: [
@@ -251,6 +254,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'The spread of {{dada}}',
   zh: '達達的擴散',
   items: [
@@ -267,6 +271,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/arp-laws-of-chance.jpg',
   title: 'The laws of {{chance}}',
   caption: 'Jean Arp, <i>Collage Arranged According to the Laws of Chance</i>, 1916–1917',
@@ -288,6 +293,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/schwitters-merzbau.jpg',
   title: 'Merzbau',
   caption: 'Kurt Schwitters, <i>Merzbau</i>, begun 1919 — his own house in Hanover',
@@ -308,6 +314,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/duchamp-fountain.jpg',
   title: 'Fountain',
   caption: 'Marcel Duchamp, <i>Fountain</i>, 1917',
@@ -329,6 +336,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'What the {{readymade}} changed',
   zh: '現成物改變了什麼',
   items: [
@@ -381,6 +389,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'The answer, in five steps',
   zh: '五個步驟',
   items: [
@@ -411,6 +420,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'France after the war: expressive figures',
   zh: '戰後的法國',
   kicker: 'France',
@@ -428,6 +438,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/modigliani-nude.png',
   title: 'Nude',
   caption: 'Amedeo Modigliani (1884–1920), <i>Nude</i>, 1917',
@@ -444,6 +455,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/soutine-woman-in-red.jpg',
   title: 'Woman in Red',
   caption: 'Chaïm Soutine (1893–1943), <i>Woman in Red</i>, 1923',
@@ -461,6 +473,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/leger-three-women.jpg',
   title: 'Three Women',
   caption: 'Fernand Léger (1881–1955), <i>Three Women</i>, 1921',
@@ -477,6 +490,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'America before the war: finding an American identity',
   zh: '戰前的美國',
   kicker: 'The United States',
@@ -495,6 +509,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/wood-american-gothic.jpg',
   title: 'American Gothic',
   caption: 'Grant Wood (1891–1942), <i>American Gothic</i>, 1930',
@@ -513,6 +528,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/hopper-nighthawks.jpg',
   title: 'Nighthawks',
   caption: 'Edward Hopper (1882–1967), <i>Nighthawks</i>, 1942',
@@ -531,6 +547,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/bearden-folk-musicians.jpg',
   title: 'Folk Musicians',
   caption: 'Romare Bearden (1911–1988), <i>Folk Musicians</i>, 1941',
@@ -548,6 +565,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'American photography between the wars',
   zh: '兩戰之間的美國攝影',
   kicker: 'The United States',
@@ -566,6 +584,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/lange-migrant-mother.jpg',
   title: 'Migrant Mother',
   caption: 'Dorothea Lange (1895–1965), <i>Migrant Mother</i>, 1936',
@@ -584,6 +603,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/evans-miners-house.jpg',
   title: 'Miner’s House',
   caption: 'Walker Evans (1903–1975), <i>Miner’s House</i>, 1935',
@@ -601,6 +621,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/eisenstaedt-kiss.jpg',
   title: 'V-J Day in Times Square',
   caption: 'Alfred Eisenstaedt (1898–1995), <i>V-J Day in Times Square</i>, 1945',
@@ -618,6 +639,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Mexico between the wars: struggle and personal pain',
   zh: '兩戰之間的墨西哥',
   kicker: 'Mexico',
@@ -637,6 +659,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/rivera-detroit-industry.jpg',
   title: 'Detroit Industry',
   caption: 'Diego Rivera (1886–1957), <i>Detroit Industry</i>, 1932–1933 — Detroit Institute of Arts',
@@ -654,6 +677,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/kahlo-borderline.jpg',
   title: 'Self-Portrait on the Borderline',
   caption: 'Frida Kahlo (1907–1954), <i>Self-Portrait on the Borderline between Mexico and the United States</i>, 1932',
@@ -684,6 +708,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Where {{surrealism}} came from',
   zh: '超現實主義的起點',
   items: [
@@ -725,6 +750,7 @@ const SLIDES = [
 },
 {
   type: 'grid',
+  oneClick: true,
   title: 'What {{surrealism}} was',
   zh: '超現實主義的四個面向',
   cells: [
@@ -772,6 +798,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/ernst-two-children.jpg',
   title: 'Two Children Threatened by a Nightingale',
   caption: 'Max Ernst (1891–1976), <i>Two Children Threatened by a Nightingale</i>, 1924',
@@ -791,6 +818,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Max Ernst’s methods',
   zh: '恩斯特的方法',
   items: [
@@ -808,6 +836,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/miro-harlequins-carnival.jpg',
   title: 'Harlequin’s Carnival',
   caption: 'Joan Miró (1893–1983), <i>Harlequin’s Carnival</i>, 1924–1925',
@@ -826,6 +855,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Joan Miró: from {{automatism}} to a private language',
   zh: '米羅：從自動性到私人語彙',
   items: [
@@ -842,6 +872,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/masson-fish-in-sand.jpg',
   title: 'The Fish Drawn in the Sand',
   caption: 'André Masson (1896–1987), <i>The Fish Drawn in the Sand</i>, 1927',
@@ -862,6 +893,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/dali-persistence-of-memory.png',
   title: 'The Persistence of Memory',
   caption: 'Salvador Dalí (1904–1989), <i>The Persistence of Memory</i>, 1931',
@@ -881,6 +913,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Salvador Dalí’s method',
   zh: '達利的方法',
   items: [
@@ -898,6 +931,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/un-chien-andalou.jpg',
   title: 'Un Chien Andalou',
   caption: 'Luis Buñuel and Salvador Dalí, <i>Un Chien Andalou</i>, 1928',
@@ -928,6 +962,7 @@ const SLIDES = [
 },
 {
   type: 'rank',
+  oneClick: true,
   title: 'Which one is the apple?',
   zh: '哪一個才是蘋果？',
   task: 'In your group, put all four in order. Which one <b>best</b> represents “an apple”?',
@@ -957,6 +992,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/magritte-time-transfixed.png',
   title: 'Time Transfixed',
   caption: 'René Magritte (1898–1967), <i>Time Transfixed</i>, 1938',
@@ -976,6 +1012,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'René Magritte',
   zh: '馬格利特',
   items: [
@@ -991,6 +1028,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/magritte-treachery-of-images.jpg',
   title: 'The Treachery of Images',
   caption: 'René Magritte, <i>The Treachery of Images</i>, 1928–1929. The words read: “This is not a pipe.”',
@@ -1037,6 +1075,7 @@ const SLIDES = [
 },
 {
   type: 'activity',
+  oneClick: true,
   title: 'Discussion',
   zh: '討論',
   minutes: 10,
@@ -1057,6 +1096,7 @@ const SLIDES = [
 },
 {
   type: 'activity',
+  oneClick: true,
   title: 'Short presentations',
   zh: '學生報告',
   minutes: 6,

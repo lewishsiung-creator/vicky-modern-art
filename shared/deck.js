@@ -45,7 +45,13 @@
   }
 
   /* ---------- how many click-steps each slide has ---------- */
+  /* A slide marked `oneClick` keeps its build, but one click shows all of
+     it — for slides she would rather put up in one go than item by item. */
   function stepsFor(s) {
+    const n = rawSteps(s);
+    return s.oneClick ? Math.min(n, 1) : n;
+  }
+  function rawSteps(s) {
     switch (s.type) {
       case 'bullets':  return s.items.length + (s.ask ? 1 : 0);
       case 'quote':    return (s.plain ? 1 : 0) + (s.ask ? 1 : 0);
@@ -481,7 +487,7 @@
 
     /* Build steps: reveal in order. */
     node.querySelectorAll('.step').forEach((n, order) => {
-      n.classList.toggle('shown', order < step);
+      n.classList.toggle('shown', s.oneClick ? step >= 1 : order < step);
     });
 
     if (s.type === 'compare') {
