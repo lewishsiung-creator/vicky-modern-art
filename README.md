@@ -115,9 +115,19 @@ All of a unit's content is in its own `content.js` — nothing else needs touchi
   plus `notes` (what to say, shown in the presenter window).
 
 Add `oneClick: true` to any slide and its whole build appears on the first
-click instead of one item per click. Unit 2 uses it on 40 slides, at
-Vicky's request (15 September 2026): 2, 4, 6–11, 16, 18–32, 34, 36, 38–45,
-47–50, 52 and 53.
+click instead of one item per click. Vicky asked for this on 15 September
+2026 — first for 40 hand-picked slides in Unit 2 (2, 4, 6–11, 16, 18–32, 34,
+36, 38–45, 47–50, 52, 53), then "the same for all the other units".
+
+Her Unit 2 list followed one rule, and the other units were flagged by it:
+every slide that builds a list one item per click — `bullets`, `artwork`
+points, `grid`, `rank`, `activity`, plus the list-shaped types Unit 2 lacks
+(`flow`, `timeline`, `video`, `gallery`). 313 slides across the ten units.
+Deliberately **not** flagged: `twocol` and `break` (two-part reveals she kept
+in Unit 2), `quote` (the plain-English gloss opens on its own click), and
+`compare` (each click shows a different caption, so it cannot collapse).
+Speaker notes that said "click through" or "one at a time" were reworded to
+match.
 
 Write `{{term}}` in any text to turn it into a word chip. The key must exist in
 `GLOSSARY`; if it doesn't, the text degrades to plain words rather than breaking.

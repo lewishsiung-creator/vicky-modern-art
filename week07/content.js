@@ -139,6 +139,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Where we were, and where we go now',
   zh: '上週與本週',
   items: [
@@ -156,6 +157,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Joseph Beuys (1921–1986)',
   zh: '波依斯',
   items: [
@@ -190,6 +192,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'What the Honey Pump actually was',
   zh: '蜂蜜幫浦是什麼',
   items: [
@@ -241,6 +244,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Three things 7000 Oaks does',
   zh: '七千棵橡樹做了三件事',
   items: [
@@ -256,6 +260,7 @@ const SLIDES = [
 },
 {
   type: 'timeline',
+  oneClick: true,
   title: '7000 Oaks: a living timeline',
   zh: '七千棵橡樹：時間軸',
   stops: [
@@ -265,13 +270,14 @@ const SLIDES = [
     { when: 'June 1987', what: 'Documenta 8 opens. His son Wenzel plants the final tree, completing the sculpture.' }
   ],
   notes: [
-    'Click through the four stops.',
+    'One click puts up all four stops; walk through them in order.',
     'The last one is the moment worth pausing on: the artist died with the work unfinished, and it was completed by someone else, five years after it began.',
     'ASK, if you have time: if his son planted the last tree, whose artwork is it? That is a genuine question and it points straight at LeWitt later today.'
   ]
 },
 {
   type: 'flow',
+  oneClick: true,
   title: 'From materials to social sculpture',
   zh: '從材料到社會雕塑',
   stages: [
@@ -282,7 +288,7 @@ const SLIDES = [
   ],
   foot: 'Beuys’s theory, traced from raw material to a city-wide social practice.',
   notes: [
-    'Four steps, one click each. This is the summary of the Beuys section.',
+    'Four steps, all up with one click — walk through them in order. This is the summary of the Beuys section.',
     'Then straight into the activity — do not add anything after this slide.'
   ]
 },
@@ -299,6 +305,7 @@ const SLIDES = [
 },
 {
   type: 'activity',
+  oneClick: true,
   title: 'Your own action',
   zh: '你自己的行動',
   minutes: 15,
@@ -313,7 +320,7 @@ const SLIDES = [
     '<b>Q3 · The line.</b> If <i>every</i> action that changes society can be called art, is there still a line between art and an ordinary action? — Give this one the most time. There is no fixed answer.'
   ],
   notes: [
-    'Reveal the three questions one at a time. Q3 should get about four of the five minutes.',
+    'One click puts all three questions up. Take them in order. Q3 should get about four of the five minutes.',
     'Step 5, six minutes: each group presents its example and its one-sentence position, in under a minute each.',
     'ONLY AFTER every group has spoken, go to the next slide and reveal Beuys’s claim. Then ask them to reconsider.',
     'The timer is set to fifteen minutes for the whole activity.'
@@ -361,6 +368,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'What is {{minimalism}}?',
   zh: '什麼是極簡主義？',
   items: [
@@ -377,6 +385,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/stella-black-painting.jpg',
   title: 'The Black Paintings',
   caption: 'Frank Stella, from the <i>Black Paintings</i>, 1958–60',
@@ -396,6 +405,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/stella-empress-of-india.jpg',
   title: 'Empress of India',
   caption: 'Frank Stella, <i>Empress of India</i>, 1965 — metallic powder in polymer emulsion on canvas',
@@ -433,6 +443,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: '{{reduction}} and {{deaesth}}',
   zh: '還原與去美學化',
   items: [
@@ -449,6 +460,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'The artist’s hand disappears',
   zh: '藝術家的手消失了',
   items: [
@@ -464,6 +476,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/judd-untitled-stack.jpg',
   title: 'Untitled (Stack)',
   caption: 'Donald Judd, <i>Untitled</i>, 1968–69 — galvanised iron, ten units',
@@ -482,6 +495,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Judd’s three arguments',
   zh: '賈德的三個論點',
   items: [
@@ -515,6 +529,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: '{{seriality}}',
   zh: '序列性',
   items: [
@@ -565,6 +580,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/lewitt-incomplete-open-cubes.jpg',
   title: 'Variations of Incomplete Open Cubes',
   caption: 'Sol LeWitt, <i>All Variations of Incomplete Open Cubes</i>, 1974',
@@ -600,6 +616,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/flavin-diagonal-may-25.jpg',
   title: 'The Diagonal of May 25',
   caption: 'Dan Flavin, <i>The Diagonal of May 25 (to Constantin Brancusi)</i>, 1963 — one fluorescent tube',
@@ -620,6 +637,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/flavin-monument-for-tatlin.jpg',
   title: 'Monument for V. Tatlin',
   caption: 'Dan Flavin, <i>“Monument” for V. Tatlin</i>, 1964 — white fluorescent tubes',
@@ -639,6 +657,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/flavin-to-heiner.jpg',
   title: 'Ten colours, five shapes',
   caption: 'Dan Flavin, <i>untitled (to you, Heiner, with admiration and affection)</i>, 1973',
@@ -657,6 +676,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Flavin and space',
   zh: '弗萊文與空間',
   items: [
@@ -672,6 +692,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'The moment it became a movement',
   zh: '成為運動的時刻',
   items: [
@@ -705,6 +726,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'How the break happened, 1965–67',
   zh: '斷裂如何發生',
   items: [
@@ -720,6 +742,7 @@ const SLIDES = [
 },
 {
   type: 'flow',
+  oneClick: true,
   title: 'From materials to specific object',
   zh: '從材料到特定物件',
   stages: [
@@ -730,7 +753,7 @@ const SLIDES = [
   ],
   foot: 'The same four-step shape as Beuys — but arriving at the opposite answer.',
   notes: [
-    'Click through, then point at the Beuys flow from earlier if it is still on the board.',
+    'Put them up with one click, then point at the Beuys flow from earlier if it is still on the board.',
     'Beuys: material → any action → society → a city. Minimalism: material → strip everything → follow a rule → one object.',
     'Two theories, both rigorous, pointing in opposite directions. That is the second discussion question at the end.'
   ]
@@ -764,6 +787,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'What is {{conceptualart}}?',
   zh: '什麼是觀念藝術？',
   items: [
@@ -780,6 +804,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Kosuth: Art After Philosophy',
   zh: '科舒斯：哲學之後的藝術',
   items: [
@@ -797,6 +822,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/kosuth-one-and-three-chairs.jpg',
   title: 'One and Three Chairs',
   caption: 'Joseph Kosuth, <i>One and Three Chairs</i>, 1965 — a wooden chair, a photograph of it, and a dictionary definition of “chair”',
@@ -816,6 +842,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Philosophical roots',
   zh: '哲學根源',
   items: [
@@ -871,6 +898,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Art & Language',
   zh: '藝術與語言團體',
   items: [
@@ -889,6 +917,7 @@ const SLIDES = [
 /* ===== PART 6 — INSTITUTIONAL CRITIQUE ===== */
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/manzoni-merda-dartista.jpg',
   title: 'Merda d’artista',
   caption: 'Piero Manzoni, <i>Merda d’artista</i> (Artist’s Shit), 1961 — ninety sealed tins, 30 g each',
@@ -910,6 +939,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: '{{institutional}}',
   zh: '機構批判',
   items: [
@@ -939,6 +969,7 @@ const SLIDES = [
 /* ===== PART 7 — WRAP-UP AND QUIZ ===== */
 {
   type: 'flow',
+  oneClick: true,
   title: 'Four answers, one afternoon',
   zh: '一堂課，四個答案',
   stages: [
@@ -950,13 +981,14 @@ const SLIDES = [
   foot: 'They cannot all be right — and they were all argued in the same fifteen years.',
   notes: [
     'Ten minutes for wrap-up and preview.',
-    'Click through the four. This is the session in four words, and it is the cleanest arc in the course so far.',
+    'One click puts up all four. This is the session in four words, and it is the cleanest arc in the course so far.',
     'The honest closing point: this is not a story of progress. These are four rival answers, made at the same time, by people who read each other.',
     'Preview next week and stop.'
   ]
 },
 {
   type: 'activity',
+  oneClick: true,
   title: 'Discussion',
   zh: '討論',
   minutes: 10,
@@ -977,6 +1009,7 @@ const SLIDES = [
 },
 {
   type: 'activity',
+  oneClick: true,
   title: 'Short presentations',
   zh: '學生報告',
   minutes: 6,

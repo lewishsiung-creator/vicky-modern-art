@@ -107,6 +107,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Where we were, and where we go now',
   zh: '上週與本週',
   items: [
@@ -148,6 +149,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'What {{landart}} is',
   zh: '地景藝術是什麼',
   items: [
@@ -167,6 +169,7 @@ const SLIDES = [
 /* ===== PART 3 — SMITHSON ===== */
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Robert Smithson (1938–1973)',
   zh: '羅伯・史密森',
   items: [
@@ -183,6 +186,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/smithson-spiral-jetty.jpg',
   title: 'Spiral Jetty',
   caption: 'Robert Smithson, <i>Spiral Jetty</i>, 1970 — Great Salt Lake, Utah. Mud, basalt rock, salt crystals and water, gathered on site',
@@ -202,6 +206,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/smithson-spiral-jetty-aerial.jpg',
   title: 'And then it disappeared',
   caption: '<i>Spiral Jetty</i> from the air',
@@ -221,6 +226,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/smithson-nonsite-pine-barrens.jpg',
   title: 'A Nonsite, Pine Barrens',
   caption: 'Robert Smithson, <i>A Nonsite (Pine Barrens, New Jersey)</i>, 1968 — metal bins of sand, with a map',
@@ -275,6 +281,7 @@ const SLIDES = [
 /* ===== PART 4 — CHRISTO TO LONG ===== */
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Christo (1935–2020) and Jeanne-Claude (1935–2009)',
   zh: '克里斯多與珍克勞德',
   items: [
@@ -292,6 +299,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/christo-surrounded-islands.jpg',
   title: 'Surrounded Islands',
   caption: 'Christo and Jeanne-Claude, <i>Surrounded Islands</i>, 1983 — Biscayne Bay, Miami. 603,850 square metres of pink fabric',
@@ -327,6 +335,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/christo-wrapped-coast.jpg',
   title: 'Wrapped Coast',
   caption: 'Christo and Jeanne-Claude, <i>Wrapped Coast — One Million Square Feet</i>, Little Bay, Sydney, 1969',
@@ -344,6 +353,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/heizer-double-negative.jpg',
   title: 'Double Negative',
   caption: 'Michael Heizer (b. 1944), <i>Double Negative</i>, 1969–70 — Mormon Mesa, Nevada. Two cuts, 457 metres end to end',
@@ -363,6 +373,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/demaria-lightning-field.jpg',
   title: 'The Lightning Field',
   caption: 'Walter De Maria (1935–2013), <i>The Lightning Field</i>, 1977 — western New Mexico. 400 stainless steel poles over one mile by one kilometre',
@@ -382,6 +393,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'And the artists usually left out',
   zh: '常被略過的藝術家',
   items: [
@@ -398,6 +410,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/denes-wheatfield.jpg',
   title: 'Wheatfield — A Confrontation',
   caption: 'Agnes Denes (b. 1931), <i>Wheatfield — A Confrontation</i>, 1982 — two acres of wheat on the Battery Park landfill, Manhattan',
@@ -417,6 +430,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/long-line-made-by-walking.jpg',
   title: 'A Line Made by Walking',
   caption: 'Richard Long (b. 1945), <i>A Line Made by Walking</i>, 1967 — photograph of a line worn into grass',
@@ -519,6 +533,7 @@ const SLIDES = [
 },
 {
   type: 'video',
+  oneClick: true,
   title: 'Rivers and Tides',
   caption: '<i>Rivers and Tides: Andy Goldsworthy Working with Time</i>, directed by Thomas Riedelsheimer, 2001',
   yt: 'FHSDv9c4Lu0',
@@ -550,6 +565,7 @@ const SLIDES = [
 /* ===== PART 6 — ARTE POVERA ===== */
 {
   type: 'bullets',
+  oneClick: true,
   title: '{{artepovera}}',
   zh: '貧窮藝術',
   items: [
@@ -567,6 +583,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/pistoletto-venus-of-the-rags.jpg',
   title: 'Venus of the Rags',
   caption: 'Michelangelo Pistoletto (b. 1933), <i>Venus of the Rags</i>, 1967 — a plaster copy of a classical Venus, and a mound of discarded clothing',
@@ -586,6 +603,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/kounellis-portrait.jpg',
   title: 'Jannis Kounellis (1936–2017)',
   caption: 'Greek-born, and working in Italy from 1956',
@@ -620,6 +638,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/kounellis-12-horses.jpg',
   title: 'Untitled (12 Horses)',
   caption: 'Jannis Kounellis, <i>Untitled (12 Horses)</i>, 1969 — Galleria L’Attico, Rome',
@@ -641,6 +660,7 @@ const SLIDES = [
 /* ===== PART 7 — THE MERZ ROOMS ===== */
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/merz-giaps-igloo.jpg',
   title: 'Giap’s Igloo',
   caption: 'Mario Merz (1925–2003), <i>Giap’s Igloo</i>, 1968 — metal frame, plastic bags of clay, neon',
@@ -676,6 +696,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/merz-fibonacci-neon.jpg',
   title: 'Fibonacci in neon',
   caption: 'Mario Merz — numbers from the {{fibonacci}} in neon light',
@@ -694,6 +715,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Mario Merz',
   zh: '馬里歐・梅茲',
   items: [
@@ -758,6 +780,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/marisa-knitted-shoes.jpg',
   title: 'The little shoes',
   caption: 'Marisa Merz — knitted nylon and copper-wire <i>scarpette</i> (little shoes)',
@@ -776,6 +799,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Marisa Merz (1926–2019)',
   zh: '瑪麗莎・梅茲',
   items: [
@@ -854,6 +878,7 @@ const SLIDES = [
 },
 {
   type: 'activity',
+  oneClick: true,
   title: 'Discussion',
   zh: '討論',
   minutes: 10,
@@ -874,6 +899,7 @@ const SLIDES = [
 },
 {
   type: 'activity',
+  oneClick: true,
   title: 'Short presentations',
   zh: '學生報告',
   minutes: 6,

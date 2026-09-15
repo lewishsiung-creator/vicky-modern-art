@@ -140,6 +140,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Where we were, and where we go now',
   zh: '上週與本週',
   items: [
@@ -186,6 +187,7 @@ const SLIDES = [
 },
 {
   type: 'activity',
+  oneClick: true,
   title: 'In your groups',
   zh: '分組討論',
   minutes: 6,
@@ -199,7 +201,7 @@ const SLIDES = [
     '<b>Predict.</b> Imagine an American painter in the 1940s who loved Masson’s work. He wants to give up control one step further — so far that the brush never even touches the canvas. What does he do? Draw it, or describe it.'
   ],
   notes: [
-    'STEP 2, six minutes. Reveal the three questions one at a time.',
+    'STEP 2, six minutes. One click puts all three questions up. Take them in order.',
     'The third one is the whole point — the prediction task. Let them sketch. Wrong guesses are fine and often useful.',
     'STEP 3, three or four minutes: each group gives ONE sentence for the prediction. Respond with “interesting” or “you’re close” and do NOT confirm. Keep the suspense.',
     'STEP 4: do not announce the answer. Say “let’s see what actually happened” and go straight on to the Bridge slides. Those are the reveal.',
@@ -219,6 +221,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'How {{automatism}} crossed the Atlantic',
   zh: '自動性技法如何橫渡大西洋',
   items: [
@@ -273,6 +276,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'The years around it',
   zh: '前後的年表',
   items: [
@@ -290,6 +294,7 @@ const SLIDES = [
 },
 {
   type: 'grid',
+  oneClick: true,
   title: 'What {{abex}} was',
   zh: '抽象表現主義的四個面向',
   cells: [
@@ -314,6 +319,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: '{{actionpainting}}',
   zh: '行動繪畫',
   kicker: '1943–1955 · the most important phase',
@@ -332,6 +338,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/pollock-at-work.jpg',
   title: 'Jackson Pollock',
   caption: 'Jackson Pollock (1912–1956) at work in his studio, 1950 — photographed by Hans Namuth',
@@ -351,6 +358,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Pollock — attitude and concept',
   zh: '帕洛克：態度與觀念',
   items: [
@@ -368,6 +376,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/drip-method-demo.jpg',
   title: 'Drip, pour, spatter',
   caption: 'A modern demonstration of the drip method, from a study of its fluid dynamics',
@@ -385,6 +394,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/pollock-on-the-floor.jpg',
   title: 'The size of it',
   caption: 'A large Pollock laid flat for examination — the same position in which it was made',
@@ -421,6 +431,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/dekooning-abstraction.jpg',
   title: 'Abstraction',
   caption: 'Willem de Kooning (1904–1997), <i>Abstraction</i>, 1949–1950',
@@ -437,6 +448,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/dekooning-in-studio.jpg',
   title: 'De Kooning in the studio',
   caption: 'Willem de Kooning in his studio, with the <i>Woman</i> drawings',
@@ -454,6 +466,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/dekooning-woman-iii.jpg',
   title: 'Woman III',
   caption: 'Willem de Kooning, <i>Woman III</i>, 1953',
@@ -501,6 +514,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Three later directions',
   zh: '後期的三個方向',
   items: [
@@ -517,6 +531,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/newman-onement-vi-studio.jpg',
   title: 'Onement VI',
   caption: 'Barnett Newman (1905–1970), <i>Onement VI</i>, 1953 — in the artist’s studio, New York, 1961',
@@ -553,6 +568,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/newman-onement-vi.jpg',
   title: 'And what it is worth',
   caption: '<i>Onement VI</i> sold at Sotheby’s in 2013 for 43.8 million US dollars',
@@ -571,6 +587,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/rothko-orange-and-yellow.jpg',
   title: 'Orange and Yellow',
   caption: 'Mark Rothko (1903–1970), <i>Orange and Yellow</i>, 1956',
@@ -607,6 +624,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/frankenthaler-in-studio.jpg',
   title: 'Helen Frankenthaler',
   caption: 'Helen Frankenthaler (1928–2011) in her studio',
@@ -623,6 +641,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Frankenthaler — {{soakstain}}',
   zh: '法蘭肯瑟勒：浸染技法',
   items: [
@@ -643,6 +662,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/frankenthaler-mountains-and-sea.jpg',
   title: 'Mountains and Sea',
   caption: 'Helen Frankenthaler, <i>Mountains and Sea</i>, 1952',
@@ -680,6 +700,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/kelly-painting-for-a-white-wall.png',
   title: 'Painting for a White Wall',
   caption: 'Ellsworth Kelly (1923–2015), <i>Painting for a White Wall</i>, 1952',
@@ -698,6 +719,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Ellsworth Kelly — {{hardedge}}',
   zh: '凱利：硬邊繪畫',
   items: [
@@ -715,6 +737,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/kelly-panels.jpg',
   title: 'Panels',
   caption: 'Ellsworth Kelly, colour panels',
@@ -732,6 +755,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'The New American Painting, 1958–59',
   zh: '「新美國繪畫」巡迴展',
   items: [
@@ -758,6 +782,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: '{{artinformel}}',
   zh: '非形式藝術',
   kicker: 'Europe, from about 1945',
@@ -776,6 +801,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/dubuffet-site-inhabited.jpg',
   title: 'Site Inhabited by Objects',
   caption: 'Jean Dubuffet (1901–1985), <i>Site Inhabited by Objects</i>, 1965',
@@ -793,6 +819,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Dubuffet — {{hautespates}}',
   zh: '杜布菲：厚塗法',
   items: [
@@ -809,6 +836,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/fontana-cutting.jpg',
   title: 'The cut',
   caption: 'Lucio Fontana (1899–1968) cutting a canvas, photographed in sequence',
@@ -827,6 +855,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Fontana — the canvas as an object',
   zh: '封塔納：畫布作為物件',
   items: [
@@ -844,6 +873,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/fontana-concetto-spaziale.jpg',
   title: 'Concetto Spaziale, Attese',
   caption: 'Lucio Fontana, <i>Concetto Spaziale, Attese</i> — “Spatial Concept, Expectations”',
@@ -860,6 +890,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/tapies-installation.png',
   title: 'Antoni Tàpies',
   caption: 'Antoni Tàpies (1923–2012), installation view — with a real bed frame and sheet on the canvas',
@@ -879,6 +910,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Tàpies — matter, and politics',
   zh: '塔皮埃斯：物質與政治',
   items: [
@@ -896,6 +928,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/tapies-als-mestres.jpg',
   title: 'Als mestres de Catalunya',
   caption: 'Antoni Tàpies, <i>Als mestres de Catalunya</i> (“To the teachers of Catalonia”), 1974',
@@ -956,6 +989,7 @@ const SLIDES = [
 },
 {
   type: 'activity',
+  oneClick: true,
   title: 'Exhibitions',
   zh: '展覽',
   minutes: 4,
@@ -1008,6 +1042,7 @@ const SLIDES = [
 },
 {
   type: 'activity',
+  oneClick: true,
   title: 'Discussion',
   zh: '討論',
   minutes: 10,
@@ -1029,6 +1064,7 @@ const SLIDES = [
 },
 {
   type: 'activity',
+  oneClick: true,
   title: 'Short presentations',
   zh: '學生報告',
   minutes: 6,

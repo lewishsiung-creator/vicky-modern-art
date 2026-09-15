@@ -244,7 +244,7 @@ const SLIDES = [
     { label: 'Technique', head: 'Anything, and in public', body: 'Unlimited mixed media — plus gatherings, demonstrations and printed journals.' }
   ],
   notes: [
-    'Four ways to describe Dada. Click through them one at a time.',
+    'Four ways to describe Dada. One click puts all four up; take them in order.',
     'Attitude: provoking the public — not a studio maker of objects.',
     'Concept: conceptual, focused on the idea rather than form or style.',
     'Form: no fixed form; destroying traditional authority. Shared elements are noise, simultaneity and chance.',
@@ -347,7 +347,7 @@ const SLIDES = [
     { head: 'This begins {{conceptual}} and appropriation art', body: 'Everything after 1917 has to answer it.' }
   ],
   notes: [
-    'Go through these one at a time. Each one is a separate blow to the old definition.',
+    'Talk through these one at a time. Each one is a separate blow to the old definition.',
     'The last point is the one to leave hanging: the object is gone, the idea is not. So which one was the artwork?',
     'That question is what the next three slides are for.'
   ]
@@ -400,7 +400,7 @@ const SLIDES = [
     { head: '5 · A loop with no outside', body: 'Identity and purpose arise together. The viewer keeps re-reading it — through society, politics, money, history.' }
   ],
   notes: [
-    'This is the densest slide of the first half. Take it slowly, one click per step.',
+    'This is the densest slide of the first half. One click puts all five steps up — take them slowly, in order.',
     'Step 2 is the mechanism and the one they must be able to repeat: new title, new viewpoint, art context.',
     'Step 5: Duchamp called this kind of structure a Möbius loop — you cannot get outside it to check. The work’s identity and its purpose come into being at the same time.',
     'If you are short of time, steps 1, 2 and 4 are enough.'
@@ -982,7 +982,7 @@ const SLIDES = [
   notes: [
     'Groups of five or six. Two minutes to rank, four minutes on the questions, one or two minutes to share out.',
     'IMPORTANT: after ranking, each group must explain their reasoning — especially where the group disagreed with itself. The real learning is in the negotiation, not in the final order.',
-    'Then reveal the guiding questions one at a time with the arrow key.',
+    'Then one press of the arrow key puts up all the guiding questions; take them in order.',
     'Students will start using the words symbol, culture, convention and brand on their own. When you hear those words, they have already arrived at Magritte’s question without you explaining it.',
     'Share-out: call on one or two groups at random. Consensus is not required. Use the board on screen — let a group come up and click the cards into their order.',
     'OPTIONAL fifth item, if you have time: the plain written word “APPLE”. It puts a linguistic sign next to the visual ones, which is exactly Magritte’s device. Skip it if you are short — it does not affect the core value.',

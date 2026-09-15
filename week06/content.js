@@ -114,6 +114,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Where we were, and where we go now',
   zh: '上週與本週',
   items: [
@@ -155,6 +156,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Art takes reality directly',
   zh: '藝術直接取用現實',
   items: [
@@ -171,6 +173,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'What they rejected, and what they wanted',
   zh: '反對什麼，主張什麼',
   items: [
@@ -187,6 +190,7 @@ const SLIDES = [
 },
 {
   type: 'grid',
+  oneClick: true,
   title: 'A boundary that is hard to draw',
   zh: '難以劃定的邊界',
   cells: [
@@ -222,6 +226,7 @@ const SLIDES = [
 /* ===== PART 3 — YVES KLEIN ===== */
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Yves Klein (1928–1962)',
   zh: '伊夫・克萊因',
   items: [
@@ -238,6 +243,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/klein-blue-sponge-relief.jpg',
   title: 'Blue Sponge Relief',
   caption: 'Yves Klein, <i>Blue Sponge Relief</i>, 1958 — dry pigment in synthetic resin, sponges, on board',
@@ -294,6 +300,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/klein-the-void-3.jpg',
   title: 'Inside the empty room',
   caption: 'Visitors at <i>The Void</i>, Galerie Iris Clert, Paris, 1958',
@@ -311,6 +318,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: '{{anthropometry}}',
   zh: '人體測量',
   items: [
@@ -336,6 +344,7 @@ const SLIDES = [
 },
 {
   type: 'video',
+  oneClick: true,
   title: 'Anthropométries',
   caption: 'Yves Klein, <i>Anthropométries of the Blue Period</i> — Galerie Internationale d’Art Contemporain, Paris, 9 March 1960',
   src: 'vid/klein-anthropometries.mp4',
@@ -367,6 +376,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/klein-anthropometry-3.jpg',
   title: 'And this is what hangs on the wall',
   caption: 'An <i>Anthropométrie</i>, as exhibited',
@@ -385,6 +395,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/klein-ant82.jpg',
   title: 'ANT 82',
   caption: 'Yves Klein, <i>ANT 82</i>, 1960',
@@ -409,6 +420,7 @@ const SLIDES = [
 },
 {
   type: 'video',
+  oneClick: true,
   title: 'Fire Painting',
   caption: 'Yves Klein, <i>Fire Paintings</i>, 1960 — flame on treated board',
   yt: '1mJCVM3d7jw',
@@ -428,6 +440,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/klein-leap-into-the-void.jpg',
   title: 'Leap into the Void',
   caption: 'Yves Klein, <i>Leap into the Void</i>, October 1960 — photomontage by Harry Shunk and János Kender',
@@ -449,6 +462,7 @@ const SLIDES = [
 /* ===== PART 4 — ARMAN, TINGUELY, NIKI ===== */
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/arman-the-full.jpg',
   title: 'Le Plein — The Full',
   caption: 'Arman (1928–2005), <i>Le Plein</i>, 1960 — Galerie Iris Clert, Paris',
@@ -467,6 +481,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/arman-long-term-parking.jpg',
   title: 'Long Term Parking',
   caption: 'Arman, <i>Long Term Parking</i>, 1982 — sixty cars in concrete, eighteen metres tall, Jouy-en-Josas, France',
@@ -490,6 +505,7 @@ const SLIDES = [
 },
 {
   type: 'video',
+  oneClick: true,
   title: 'Homage to New York',
   caption: 'Jean Tinguely (1925–1991), <i>Homage to New York</i>, 17 March 1960 — the sculpture garden of the Museum of Modern Art',
   yt: '6dgGu2w3Qvo',
@@ -510,6 +526,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Let machines live and die',
   zh: '讓機器誕生與死亡',
   items: [
@@ -526,6 +543,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/niki-tirs.jpg',
   title: 'Tirs — Shooting Paintings',
   caption: 'Niki de Saint Phalle (1930–2002), <i>Tirs</i>, from 1961',
@@ -545,6 +563,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/niki-she.jpg',
   title: 'Hon — She',
   caption: 'Niki de Saint Phalle, with Jean Tinguely and Per Olof Ultvedt, <i>Hon — en katedral</i> (“She — a cathedral”), 1966, Moderna Museet, Stockholm',
@@ -572,6 +591,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'It started in a music class',
   zh: '始於一堂音樂課',
   items: [
@@ -594,6 +614,7 @@ const SLIDES = [
 },
 {
   type: 'video',
+  oneClick: true,
   title: '4′33″',
   caption: 'John Cage (1912–1992), <i>4′33″</i>, 1952 — three movements, no intentional sound',
   yt: 'gN2zcLBr_VM',
@@ -613,6 +634,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/kaprow-18-happenings.png',
   title: '18 Happenings in 6 Parts',
   caption: 'Allan Kaprow (1927–2006), <i>18 Happenings in 6 Parts</i>, Reuben Gallery, New York, 1959',
@@ -636,6 +658,7 @@ const SLIDES = [
 },
 {
   type: 'video',
+  oneClick: true,
   title: '18 Happenings, restaged',
   caption: 'A restaging of Kaprow’s <i>18 Happenings in 6 Parts</i> at the Fundació Antoni Tàpies, Barcelona, by students of HEAD, Geneva',
   yt: 'O_m2Y0zN_TE',
@@ -655,6 +678,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'What a {{happening}} is',
   zh: '偶發藝術是什麼',
   items: [
@@ -681,6 +705,7 @@ const SLIDES = [
 },
 {
   type: 'video',
+  oneClick: true,
   title: 'Cut Piece',
   caption: 'Yoko Ono (b. 1933), <i>Cut Piece</i>, first performed 1964 — Sogetsu Art Center, Tokyo; New York, 1965',
   yt: '8Sc47KfJjcI',
@@ -709,6 +734,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'What {{fluxus}} was — and was not',
   zh: '激浪派是什麼、不是什麼',
   items: [
@@ -731,6 +757,7 @@ const SLIDES = [
 },
 {
   type: 'video',
+  oneClick: true,
   title: 'Piano Activities',
   caption: 'George Maciunas (1931–1978), <i>Piano Activities</i>, performed at the Fluxus festival, Wiesbaden, 1962',
   yt: 'YibFHWZ66GQ',
@@ -770,6 +797,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Joseph Beuys (1921–1986)',
   zh: '波依斯',
   items: [
@@ -792,6 +820,7 @@ const SLIDES = [
 },
 {
   type: 'video',
+  oneClick: true,
   title: 'I Like America and America Likes Me',
   caption: 'Joseph Beuys, <i>I Like America and America Likes Me</i>, May 1974 — René Block Gallery, New York',
   yt: 'IjI3_w9ZbX0',
@@ -836,6 +865,7 @@ const SLIDES = [
 },
 {
   type: 'activity',
+  oneClick: true,
   title: 'Discussion',
   zh: '討論',
   minutes: 10,
@@ -856,6 +886,7 @@ const SLIDES = [
 },
 {
   type: 'activity',
+  oneClick: true,
   title: 'Short presentations',
   zh: '學生報告',
   minutes: 6,

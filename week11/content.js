@@ -123,6 +123,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Where we were, and where we finish',
   zh: '上週與本週',
   items: [
@@ -139,6 +140,7 @@ const SLIDES = [
 },
 {
   type: 'timeline',
+  oneClick: true,
   title: 'How the ground of truth kept moving',
   zh: '真理的根據如何移動',
   stops: [
@@ -147,7 +149,7 @@ const SLIDES = [
     { when: 'Postmodernity　後現代性', what: '<b>Plurality, difference, scepticism.</b> Not one truth — many, and each with someone’s interest behind it.' }
   ],
   notes: [
-    'Three stops. Click through them.',
+    'Three stops, all up with one click.',
     'This is the whole course in three cards: they started in the middle column in Unit 1 and have been sliding right ever since.',
     'Do not spend more than two minutes. The next slide does the work.'
   ]
@@ -165,6 +167,7 @@ const SLIDES = [
 /* ===== PART 2 — MODERN TO POSTMODERN ===== */
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Quick review: Modernism',
   zh: '快速複習：現代主義',
   kicker: 'Unit 1, at the start of the course',
@@ -182,6 +185,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'The postmodern critique',
   zh: '後現代的批判',
   items: [
@@ -232,6 +236,7 @@ const SLIDES = [
 },
 {
   type: 'grid',
+  oneClick: true,
   title: 'Three ways of standing in the world',
   zh: '三種世界觀',
   cols: 3,
@@ -241,7 +246,7 @@ const SLIDES = [
     { label: 'Postmodern', head: 'Position', body: 'Culture and power shape what counts as true. Meaning depends on where you stand.' }
   ],
   notes: [
-    'A compact comparison. One click each.',
+    'A compact comparison. One click puts it all up.',
     'The third card is the whole of today: if meaning depends on where you stand, then who gets to stand there matters — which is the feminist half of the session.'
   ]
 },
@@ -257,6 +262,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'What artists did with that',
   zh: '藝術家的回應',
   items: [
@@ -272,6 +278,7 @@ const SLIDES = [
 },
 {
   type: 'flow',
+  oneClick: true,
   title: 'Three directions out',
   zh: '三個方向',
   stages: [
@@ -281,7 +288,7 @@ const SLIDES = [
   ],
   foot: 'Art becomes open. Many directions at once, and no obligation to pick one.',
   notes: [
-    'Click through the three. This is the map of the rest of the session.',
+    'One click puts up all three. This is the map of the rest of the session.',
     'Note that these are simultaneous, not sequential. That is the point of pluralism.'
   ]
 },
@@ -295,6 +302,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Return to painting',
   zh: '回歸繪畫',
   items: [
@@ -311,6 +319,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'One movement, five names',
   zh: '一個運動，五個名字',
   items: [
@@ -344,6 +353,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/baselitz-orangenesser.jpg',
   title: 'Orangenesser (IX)',
   caption: 'Georg Baselitz, <i>Orangenesser (IX)</i> — “Orange Eater”, 1981',
@@ -363,6 +373,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Baselitz — five threads',
   zh: '巴塞利茲：五條線索',
   items: [
@@ -395,6 +406,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/kiefer-white-cube-3.jpg',
   title: 'Starting over, in 1945',
   caption: 'Anselm Kiefer — installation view',
@@ -419,6 +431,7 @@ const SLIDES = [
 },
 {
   type: 'video',
+  oneClick: true,
   title: 'Anselm Kiefer',
   caption: 'Kiefer in the studio',
   yt: 'fsRIXZr6l7s',
@@ -438,6 +451,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Kiefer — five threads',
   zh: '基弗：五條線索',
   items: [
@@ -479,6 +493,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'From the street to the gallery',
   zh: '從街頭到畫廊',
   items: [
@@ -535,6 +550,7 @@ const SLIDES = [
 },
 {
   type: 'video',
+  oneClick: true,
   title: 'Keith Haring',
   caption: 'Haring drawing',
   yt: 'W04j0Je01wQ',
@@ -561,6 +577,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'What {{neoconceptualism}} is',
   zh: '新觀念主義是什麼',
   items: [
@@ -577,6 +594,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: '{{feminism}}',
   zh: '女性主義',
   items: [
@@ -593,6 +611,7 @@ const SLIDES = [
 },
 {
   type: 'grid',
+  oneClick: true,
   title: 'What {{feministarthistory}} set out to do',
   zh: '女性主義藝術史的任務',
   cells: [
@@ -603,13 +622,14 @@ const SLIDES = [
   ],
   foot: 'And since the 1990s the field has widened to include race, sexuality and class.',
   notes: [
-    'Four aims, one click each.',
+    'Four aims, all up with one click.',
     'Point back across the course: Marisa Merz in Unit 8, Eva Hesse and Lynda Benglis in Unit 7, Niki de Saint Phalle in Unit 5, Agnes Denes and Nancy Holt in Unit 8. All of them arrived in the story because of this work.',
     'That is worth saying out loud in the last week. The reason those artists were in this course at all is that somebody did the recovering.'
   ]
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: '{{guerrillagirls}}',
   zh: '游擊隊女孩',
   kicker: 'Founded 1985',
@@ -629,6 +649,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/guerrilla-girls-poster.jpg',
   title: 'The poster',
   caption: 'Guerrilla Girls, <i>Do women have to be naked to get into the Met. Museum?</i>, 1989',
@@ -655,6 +676,7 @@ const SLIDES = [
 },
 {
   type: 'video',
+  oneClick: true,
   title: 'Guerrilla Girls',
   caption: 'The Guerrilla Girls',
   yt: '98mv3qqvGnw',
@@ -674,6 +696,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Barbara Kruger (b. 1945)',
   zh: '芭芭拉・克魯格',
   items: [
@@ -720,6 +743,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/kruger-vs-supreme.jpg',
   title: 'Step 1 — look first',
   caption: 'Barbara Kruger, <i>I shop therefore I am</i>, 1987　·　the Supreme box logo, 1994',
@@ -763,6 +787,7 @@ const SLIDES = [
 },
 {
   type: 'grid',
+  oneClick: true,
   title: 'Step 3 — Art Court: four criteria',
   zh: '步驟三：藝術法庭的四項判準',
   cells: [
@@ -773,7 +798,7 @@ const SLIDES = [
   ],
   foot: 'Judge the case. Appropriation, homage, or plagiarism? <b>Give two reasons.</b>',
   notes: [
-    'Eight minutes. Reveal the criteria one at a time.',
+    'Eight minutes. One click puts up all the criteria; take them one at a time.',
     'The criteria exist so nobody can stop at “it looks similar, so it is plagiarism”.',
     'Criterion 2 is the deep one, and the extension question for strong groups: Supreme moved the visual language from feminist critical art to streetwear branding. Is a change of context a transformation?',
     'Criterion 4 is the honest one: Kruger critiques consumer culture, and Supreme sells things. Follow the money.'
@@ -806,6 +831,7 @@ const SLIDES = [
 /* ===== PART 7 — APPROPRIATION ===== */
 {
   type: 'bullets',
+  oneClick: true,
   title: '{{appropriation}}',
   zh: '挪用',
   items: [
@@ -824,6 +850,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Jeff Koons (b. 1955)',
   zh: '傑夫・昆斯',
   items: [
@@ -861,6 +888,7 @@ const SLIDES = [
 /* ===== PART 8 — CLOSING AND QUIZ ===== */
 {
   type: 'bullets',
+  oneClick: true,
   title: 'From belief to unravelling',
   zh: '從信念到鬆解',
   kicker: 'Closing the course',
@@ -873,13 +901,14 @@ const SLIDES = [
   ],
   notes: [
     'Ten minutes for the wrap-up. This is the last teaching slide of the whole course — give it room.',
-    'Click through slowly. The last two points are the ones to land.',
+    'One click puts them all up. Take them slowly — the last two points are the ones to land.',
     'It is worth naming the arc out loud: Unit 1 asked how art started to change. Unit 10 asks whether anything can be original. Everything in between is the working-out.',
     'Then the discussion, the presentations, and the quiz.'
   ]
 },
 {
   type: 'activity',
+  oneClick: true,
   title: 'Discussion',
   zh: '討論',
   minutes: 10,
@@ -900,6 +929,7 @@ const SLIDES = [
 },
 {
   type: 'activity',
+  oneClick: true,
   title: 'Short presentations',
   zh: '學生報告',
   minutes: 6,

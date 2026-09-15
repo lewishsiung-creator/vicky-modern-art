@@ -118,6 +118,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Three Periods of Western Art',
   zh: '西洋藝術的三大時期',
   items: [
@@ -222,6 +223,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: '1839 — the {{daguerreotype}}',
   zh: '一八三九年，銀版攝影法',
   kicker: 'Answer 2 · from technology',
@@ -273,6 +275,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Early twentieth-century European art',
   zh: '二十世紀初的歐洲藝術',
   items: [
@@ -292,6 +295,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/barr-diagram.jpg',
   title: '“Cubism and Abstract Art”, 1936',
   caption: 'Alfred H. Barr Jr., cover diagram for the exhibition <i>Cubism and Abstract Art</i>, Museum of Modern Art, New York, 1936',
@@ -338,6 +342,7 @@ const SLIDES = [
 /* --- Fauvism --- */
 {
   type: 'bullets',
+  oneClick: true,
   title: '{{fauvism}}',
   zh: '野獸派',
   kicker: '1904–1908 · France',
@@ -357,6 +362,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/matisse-harmony-in-red.jpg',
   title: 'Harmony in Red',
   caption: 'Henri Matisse, <i>Harmony in Red</i>, 1908',
@@ -378,6 +384,7 @@ const SLIDES = [
 /* --- Cubism --- */
 {
   type: 'bullets',
+  oneClick: true,
   title: '{{cubism}}',
   zh: '立體主義',
   kicker: '1907–1918 · France',
@@ -397,6 +404,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/picasso-bread-and-fruit.jpg',
   title: 'Bread and Fruit Dish on a Table',
   caption: 'Pablo Ruiz Picasso, <i>Bread and Fruit Dish on a Table</i>, 1909',
@@ -417,6 +425,7 @@ const SLIDES = [
 /* --- Expressionism --- */
 {
   type: 'bullets',
+  oneClick: true,
   title: '{{expressionism}}',
   zh: '表現主義',
   kicker: 'Germany, from 1910',
@@ -437,6 +446,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/kirchner-street-dresden.jpg',
   title: 'Street, Dresden',
   caption: 'Ernst Ludwig Kirchner, <i>Street, Dresden</i>, 1908',
@@ -459,6 +469,7 @@ const SLIDES = [
 /* --- Suprematism --- */
 {
   type: 'bullets',
+  oneClick: true,
   title: '{{suprematism}}',
   zh: '至上主義',
   kicker: 'Russia · The development of abstract form',
@@ -479,6 +490,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/malevich-black-square.jpg',
   title: 'Black Square',
   caption: 'Kazimir Malevich, <i>Black Square</i>, 1915',
@@ -499,6 +511,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/malevich-white-on-white.jpg',
   title: 'White on White',
   caption: 'Kazimir Malevich, <i>White on White</i>, 1918',
@@ -520,6 +533,7 @@ const SLIDES = [
 /* --- Constructivism --- */
 {
   type: 'bullets',
+  oneClick: true,
   title: '{{constructivism}}',
   zh: '構成主義',
   kicker: 'Russia · The development of abstract form',
@@ -540,6 +554,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/tatlin-monument.jpg',
   title: 'Monument to the Third International',
   caption: 'Vladimir Tatlin, <i>Monument to the Third International</i>, 1919–1920 (model, photographed)',
@@ -563,6 +578,7 @@ const SLIDES = [
 /* --- De Stijl --- */
 {
   type: 'bullets',
+  oneClick: true,
   title: '{{destijl}}',
   zh: '風格派',
   kicker: 'The Netherlands · The development of abstract form',
@@ -582,6 +598,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/mondrian.jpg',
   title: 'Composition',
   caption: 'Piet Cornelis Mondrian',
@@ -604,6 +621,7 @@ const SLIDES = [
 /* --- Futurism --- */
 {
   type: 'bullets',
+  oneClick: true,
   title: '{{futurism}}',
   zh: '未來主義',
   kicker: 'Italy · The development of abstract form',
@@ -623,6 +641,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/boccioni-city-rises.jpg',
   title: 'La Città Che Sale',
   caption: 'Umberto Boccioni, <i>La Città Che Sale</i> (The City Rises), 1910',
@@ -643,6 +662,7 @@ const SLIDES = [
 /* --- Brancusi --- */
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Constantin Brancusi’s sculpture',
   zh: '布朗庫西的雕塑',
   kicker: 'The development of abstract form',
@@ -661,6 +681,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/brancusi-bird-in-space.jpg',
   title: 'L’Oiseau dans l’Espace',
   caption: 'Constantin Brancusi, <i>Bird in Space</i>, 1926 — photographed by Brancusi in his own studio',
@@ -684,6 +705,7 @@ const SLIDES = [
 /* --- Klee --- */
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Paul Klee’s painting',
   zh: '克利的繪畫',
   kicker: 'The development of abstract form',
@@ -702,6 +724,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/klee-highway-and-byways.jpg',
   title: 'Highway and Byways',
   caption: 'Paul Klee, <i>Highway and Byways</i>, 1929',
@@ -731,6 +754,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Early twentieth-century American art',
   zh: '二十世紀初的美國藝術',
   items: [
@@ -820,6 +844,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: '{{contemporary}}',
   zh: '當代藝術',
   items: [
@@ -836,6 +861,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'From Contemporary Art to {{postmodernism}}',
   zh: '從當代藝術到後現代主義',
   items: [
@@ -853,6 +879,7 @@ const SLIDES = [
 },
 {
   type: 'gallery',
+  oneClick: true,
   title: 'Dandadan',
   zh: '膽大黨',
   images: [
@@ -917,6 +944,7 @@ const SLIDES = [
 },
 {
   type: 'activity',
+  oneClick: true,
   title: 'Discussion',
   zh: '討論',
   minutes: 10,

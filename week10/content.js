@@ -120,6 +120,7 @@ const SLIDES = [
 },
 {
   type: 'grid',
+  oneClick: true,
   title: 'Image as documentation',
   zh: '影像作為紀錄',
   cols: 2,
@@ -131,7 +132,7 @@ const SLIDES = [
   ],
   foot: 'Four movements, one shared problem: <b>the artwork may disappear, but the image remains.</b>',
   notes: [
-    'A fast recap. Click through the four, then say the line at the bottom.',
+    'A fast recap. One click puts up all four, then say the line at the bottom.',
     'The point: for four weeks now, photographs and film have been doing the surviving.',
     'Today the camera stops being the witness and becomes the material. That is the whole session.'
   ]
@@ -195,6 +196,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Television enters the house',
   zh: '電視進入家庭',
   items: [
@@ -235,6 +237,7 @@ const SLIDES = [
 },
 {
   type: 'video',
+  oneClick: true,
   title: 'Zen for TV',
   caption: 'Nam June Paik (1932–2006), <i>Zen for TV</i>, 1963 — a television reduced to a single vertical line',
   yt: '-_EGwhZ64LQ',
@@ -255,6 +258,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/sony-portapak.gif',
   title: 'The {{portapak}}, 1965',
   caption: 'Sony’s first portable video recorder',
@@ -290,6 +294,7 @@ const SLIDES = [
 /* ===== PART 3 — NAM JUNE PAIK ===== */
 {
   type: 'bullets',
+  oneClick: true,
   title: 'The 1970s and 80s: a new medium bites',
   zh: '新媒材的衝擊',
   items: [
@@ -308,6 +313,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/paik-tv-buddha.jpg',
   title: 'TV Buddha',
   caption: 'Nam June Paik, <i>TV Buddha</i>, 1974 — an antique Buddha, a closed-circuit camera, and a monitor',
@@ -369,6 +375,7 @@ const SLIDES = [
 },
 {
   type: 'video',
+  oneClick: true,
   title: 'Wall–Floor Positions',
   caption: 'Bruce Nauman (b. 1941), <i>Wall–Floor Positions</i>, 1968 — one unedited take, about an hour',
   yt: 'IMSyhyvr0mw',
@@ -399,6 +406,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Nauman’s five ideas',
   zh: '瑙曼的五個想法',
   items: [
@@ -447,6 +455,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/nauman-corridor-1.jpg',
   title: 'Live-Taped Video Corridor',
   caption: 'Bruce Nauman, <i>Live-Taped Video Corridor</i>, 1970 — a narrow corridor, a camera, and two monitors',
@@ -511,6 +520,7 @@ const SLIDES = [
 },
 {
   type: 'activity',
+  oneClick: true,
   title: 'Step 2 — change one thing',
   zh: '步驟二',
   minutes: 5,
@@ -523,13 +533,14 @@ const SLIDES = [
     '<b>C</b> — The artist asks visitors to interact with their body.'
   ],
   notes: [
-    'Reveal A, B and C one at a time, and take answers between each.',
+    'One click puts A, B and C up together — take them in order, and take answers between each.',
     'This step exists to surface the words <b>action, repetition, time, audience, intention</b> — from their own reasoning, not from a definition.',
     'Write every one of those words on the board as you hear it. You need them in a minute.'
   ]
 },
 {
   type: 'activity',
+  oneClick: true,
   title: 'Step 3 — the twist',
   zh: '步驟三',
   minutes: 3,
@@ -586,6 +597,7 @@ const SLIDES = [
 },
 {
   type: 'grid',
+  oneClick: true,
   title: 'Four things that define it',
   zh: '四個構成要素',
   cells: [
@@ -602,6 +614,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/acconci-trademarks.jpg',
   title: 'Trademarks',
   caption: 'Vito Acconci (1940–2017), <i>Trademarks</i>, 1970',
@@ -622,6 +635,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/acconci-following-piece.jpg',
   title: 'Following Piece',
   caption: 'Vito Acconci, <i>Following Piece</i>, 1969 — New York, over about three weeks',
@@ -642,6 +656,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/acconci-seedbed.jpg',
   title: 'Seedbed',
   caption: 'Vito Acconci, <i>Seedbed</i>, 1972 — Sonnabend Gallery, New York. The artist hidden beneath a ramp, audible to visitors above',
@@ -662,6 +677,7 @@ const SLIDES = [
 },
 {
   type: 'video',
+  oneClick: true,
   title: 'Seedbed, documented',
   caption: 'Documentary footage of <i>Seedbed</i>, 1972',
   dm: 'x7ygpc',
@@ -684,6 +700,7 @@ const SLIDES = [
 /* ===== PART 7 — ABRAMOVIĆ AND PIPER ===== */
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/abramovic-rhythm-0.jpg',
   title: 'Rhythm 0',
   caption: 'Marina Abramović (b. 1946), <i>Rhythm 0</i>, 1974 — Studio Morra, Naples. Six hours, seventy-two objects',
@@ -704,6 +721,7 @@ const SLIDES = [
 },
 {
   type: 'video',
+  oneClick: true,
   title: 'Rhythm 0, documented',
   caption: 'Documentary footage and photographs of <i>Rhythm 0</i>, 1974',
   yt: 'xTBkbseXfOQ',
@@ -724,6 +742,7 @@ const SLIDES = [
 },
 {
   type: 'grid',
+  oneClick: true,
   title: 'What Rhythm 0 tests',
   zh: '《節奏 0》所測試的事',
   cols: 3,
@@ -759,6 +778,7 @@ const SLIDES = [
 },
 {
   type: 'grid',
+  oneClick: true,
   title: 'What Piper adds',
   zh: '派柏帶來的三件事',
   cols: 3,
@@ -777,6 +797,7 @@ const SLIDES = [
 /* ===== PART 8 — THE LOOP AND QUIZ ===== */
 {
   type: 'flow',
+  oneClick: true,
   title: '{{documentationloop}}',
   zh: '紀錄的迴圈',
   stages: [
@@ -787,7 +808,7 @@ const SLIDES = [
   ],
   foot: 'And that is how we accessed every single work today — which puts us back at the first question.',
   notes: [
-    'Ten minutes for the wrap-up. Click through the four stages.',
+    'Ten minutes for the wrap-up. One click puts up all four stages.',
     'Then close the loop out loud: we began by asking whether a recording device can itself be the artwork. We end holding nothing but recordings.',
     'And answer the question you left hanging in the activity: “If the body is the artwork, what happens when the artist stops performing?” The answer: the work exists again through documentation — but what remains is the record, not the live moment.',
     'The closing statement, which is hers: video art and performance art use completely different media — one a machine, one a body — but they point at the same question. When the artwork is no longer a permanent object, what exactly do we possess when we say we “have” the work?'
@@ -795,6 +816,7 @@ const SLIDES = [
 },
 {
   type: 'activity',
+  oneClick: true,
   title: 'Discussion',
   zh: '討論',
   minutes: 10,
@@ -815,6 +837,7 @@ const SLIDES = [
 },
 {
   type: 'activity',
+  oneClick: true,
   title: 'Short presentations',
   zh: '學生報告',
   minutes: 6,

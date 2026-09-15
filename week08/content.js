@@ -114,6 +114,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/estes-telephone-booths.jpg',
   title: 'Before we start',
   caption: 'What is this?',
@@ -133,6 +134,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Nine turns so far',
   zh: '九次轉向',
   items: [
@@ -150,6 +152,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: '…and the last four',
   zh: '……以及最後四次',
   items: [
@@ -166,6 +169,7 @@ const SLIDES = [
 },
 {
   type: 'grid',
+  oneClick: true,
   title: 'Nine conceptual turns',
   zh: '九次觀念轉向',
   cols: 3,
@@ -181,7 +185,7 @@ const SLIDES = [
     { label: '09', head: 'Dematerialisation', body: 'Conceptual Art' }
   ],
   notes: [
-    'The whole course so far, in nine words. Click through, or reveal them all at once.',
+    'The whole course so far, in nine words. One click puts all nine up at once.',
     'Leave it on screen during the activity if you can — it is the raw material for the timeline in Step 3.'
   ]
 },
@@ -219,6 +223,7 @@ const SLIDES = [
 },
 {
   type: 'activity',
+  oneClick: true,
   title: 'Steps 2 and 3',
   zh: '步驟二與三',
   minutes: 11,
@@ -280,6 +285,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'How {{processart}} appeared',
   zh: '過程藝術的出現',
   items: [
@@ -297,6 +303,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Six core ideas',
   zh: '六個核心概念',
   items: [
@@ -378,6 +385,7 @@ const SLIDES = [
 /* ===== PART 3 — MORRIS AND BENGLIS ===== */
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/morris-l-beams.jpg',
   title: 'Untitled (L-Beams)',
   caption: 'Robert Morris (1931–2018), <i>Untitled (L-Beams)</i>, 1965',
@@ -398,6 +406,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/morris-brown-felt.jpg',
   title: 'Untitled (Brown Felt)',
   caption: 'Robert Morris, <i>Untitled (Brown Felt)</i>, 1973 — cut felt, hung from the wall',
@@ -434,6 +443,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/benglis-odalisque.jpg',
   title: 'Odalisque (Hey, Hey Frankenthaler)',
   caption: 'Lynda Benglis (b. 1941), <i>Odalisque (Hey, Hey Frankenthaler)</i>, 1969 — poured pigmented latex',
@@ -453,6 +463,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/benglis-artforum-ad-detail.jpg',
   title: 'The 1974 advertisement',
   caption: 'Lynda Benglis, <i>Artforum</i> advertisement (detail), published in <i>Artforum</i>, November 1974, pp. 4–5. Photo: Arthur Gordon. © 2024 Lynda Benglis / Licensed by VAGA at ARS, NY',
@@ -473,6 +484,7 @@ const SLIDES = [
 /* ===== PART 4 — HESSE AND HAACKE ===== */
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/hesse-repetition-nineteen.jpg',
   title: 'Repetition Nineteen III',
   caption: 'Eva Hesse (1936–1970), <i>Repetition Nineteen III</i>, 1968 — fibreglass and polyester resin, nineteen units',
@@ -491,6 +503,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/hesse-contingent.jpg',
   title: 'Contingent',
   caption: 'Eva Hesse, <i>Contingent</i>, 1969 — cheesecloth, latex and fibreglass, eight hanging panels',
@@ -511,6 +524,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/haacke-condensation-cube.jpg',
   title: 'Condensation Cube',
   caption: 'Hans Haacke (b. 1936), <i>Condensation Cube</i>, 1963–65 — acrylic box, water, air',
@@ -530,6 +544,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/haacke-rhine-water.jpg',
   title: 'Rhine Water Purification Plant',
   caption: 'Hans Haacke, <i>Rhine Water Purification Plant</i>, 1972 — Museum Haus Lange, Krefeld',
@@ -566,6 +581,7 @@ const SLIDES = [
 },
 {
   type: 'flow',
+  oneClick: true,
   title: 'From natural systems to {{institutional}}',
   zh: '從自然系統到機構批判',
   stages: [
@@ -576,7 +592,7 @@ const SLIDES = [
   ],
   foot: 'The same method throughout — set up a system, let it run. Only the system changes.',
   notes: [
-    'Four steps, one click each. This is the summary of Haacke.',
+    'Four steps, all up with one click — walk through them in order. This is the summary of Haacke.',
     'The point of the flow: he never changes his method. He only points it at bigger and less comfortable systems.',
     'And the last one made the institution angry enough to cancel him.'
   ]
@@ -594,6 +610,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: '{{opart}}',
   zh: '歐普藝術',
   items: [
@@ -611,6 +628,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/vasarely-zebra.jpg',
   title: 'Zebra',
   caption: 'Victor Vasarely (1906–1997), <i>Zebra</i>, 1937',
@@ -629,6 +647,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/vasarely-vega-200.jpg',
   title: 'Vega 200',
   caption: 'Victor Vasarely, <i>Vega 200</i>, 1968',
@@ -647,6 +666,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/riley-current.jpg',
   title: 'Current',
   caption: 'Bridget Riley (b. 1931), <i>Current</i>, 1964 — synthetic polymer paint on board',
@@ -677,6 +697,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: '{{photorealism}}',
   zh: '照相寫實主義',
   items: [
@@ -694,6 +715,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Meisel’s five-point definition',
   zh: '邁澤爾的五點定義',
   items: [
@@ -712,6 +734,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/close-phil.jpg',
   title: 'Phil',
   caption: 'Chuck Close (1940–2021), <i>Phil</i>, 1969 — acrylic on canvas, over two metres tall',
@@ -748,6 +771,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/estes-telephone-booths.jpg',
   title: 'Telephone Booths',
   caption: 'Richard Estes (b. 1932), <i>Telephone Booths</i>, 1967',
@@ -769,6 +793,7 @@ const SLIDES = [
 /* ===== PART 7 — WRAP-UP AND QUIZ ===== */
 {
   type: 'flow',
+  oneClick: true,
   title: 'Three answers to one inheritance',
   zh: '面對同一遺產的三種回答',
   stages: [
@@ -787,6 +812,7 @@ const SLIDES = [
 },
 {
   type: 'activity',
+  oneClick: true,
   title: 'Discussion',
   zh: '討論',
   minutes: 10,
@@ -808,6 +834,7 @@ const SLIDES = [
 },
 {
   type: 'activity',
+  oneClick: true,
   title: 'Short presentations',
   zh: '學生報告',
   minutes: 6,

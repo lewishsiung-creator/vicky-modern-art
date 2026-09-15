@@ -123,6 +123,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Where we were, and where we go now',
   zh: '上週與本週',
   items: [
@@ -149,6 +150,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'What is {{popart}}?',
   zh: '什麼是普普藝術？',
   items: [
@@ -166,6 +168,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'The cradle: {{independentgroup}}',
   zh: '搖籃：獨立團體',
   items: [
@@ -182,6 +185,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'The picture came before the name',
   zh: '影像早於名稱',
   items: [
@@ -197,6 +201,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/paolozzi-rich-mans-plaything.jpg',
   title: 'I Was a Rich Man’s Plaything',
   caption: 'Eduardo Paolozzi, <i>I Was a Rich Man’s Plaything</i>, 1947',
@@ -217,6 +222,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'This Is Tomorrow, 1956',
   zh: '一九五六年，「這就是明天」展',
   items: [
@@ -244,6 +250,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/this-is-tomorrow-installation.jpg',
   title: 'Inside the exhibition',
   caption: 'Installation view — <i>This Is Tomorrow</i>, Whitechapel Gallery, London, 1956 (reconstruction)',
@@ -260,6 +267,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/hamilton-just-what-is-it.jpg',
   title: 'Just what is it that makes today’s homes so different, so appealing?',
   caption: 'Richard Hamilton, 1956',
@@ -280,6 +288,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Why it happened when it did',
   zh: '為何發生於此時',
   items: [
@@ -326,6 +335,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'What Pop Art looks like',
   zh: '普普藝術的視覺特徵',
   items: [
@@ -342,6 +352,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/warhol-marilyn-diptych.jpg',
   title: 'Marilyn Diptych',
   caption: 'Andy Warhol, <i>Marilyn Diptych</i>, 1962',
@@ -361,6 +372,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/lichtenstein-masterpiece.jpg',
   title: 'Masterpiece',
   caption: 'Roy Lichtenstein, <i>Masterpiece</i>, 1962',
@@ -391,6 +403,7 @@ const SLIDES = [
 },
 {
   type: 'activity',
+  oneClick: true,
   title: 'Is this art?',
   zh: '這是藝術嗎？',
   minutes: 6,
@@ -404,7 +417,7 @@ const SLIDES = [
     '<b>Predict.</b> Imagine an artist in 1962 who wants to make a point about exactly this. What do they <i>do</i> with an object like yours — and where do they show it? Draw it, or describe it.'
   ],
   notes: [
-    'Reveal the three questions one at a time.',
+    'One click puts all three questions up. Take them in order.',
     'The third is the prediction task and the heart of it. Let them sketch.',
     'STEP 3, four minutes: one sentence per group. Respond “interesting” or “you’re close” and do NOT confirm. Keep the suspense.',
     'STEP 4: do not announce the answer. Say “let’s see what one artist actually did” and go straight to the Brillo Box.',
@@ -415,6 +428,7 @@ const SLIDES = [
 /* ===== PART 4 — THE BRILLO BOX ===== */
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Where this comes from',
   zh: '源頭',
   items: [
@@ -429,6 +443,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/warhol-brillo-box.jpg',
   title: 'Brillo Box',
   caption: 'Andy Warhol, <i>Brillo Box</i>, 1964 — plywood boxes, silkscreened',
@@ -448,6 +463,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Beauty is no longer the test',
   zh: '美不再是判準',
   kicker: '01 of 06',
@@ -464,6 +480,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Danto’s “end of art”',
   zh: '丹托的「藝術終結」',
   kicker: '02 of 06',
@@ -500,6 +517,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: '{{appropriation}} — and who the author is',
   zh: '挪用與作者身分',
   kicker: '03 of 06',
@@ -516,6 +534,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Artwork, or product?',
   zh: '作品，還是商品？',
   kicker: '04 of 06',
@@ -532,6 +551,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'A door into {{conceptual}}',
   zh: '通往觀念藝術',
   kicker: '05 of 06',
@@ -548,6 +568,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: '{{institutional}}',
   zh: '藝術的體制理論',
   kicker: '06 of 06',
@@ -572,6 +593,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Oldenburg’s three ideas',
   zh: '歐登伯格的三個主張',
   items: [
@@ -587,6 +609,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/oldenburg-soft-toilet.jpg',
   title: 'Soft Toilet',
   caption: 'Claes Oldenburg, <i>Soft Toilet</i>, 1966 — vinyl, kapok and plexiglass',
@@ -605,6 +628,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/oldenburg-shoestring-potatoes.jpg',
   title: 'Shoestring Potatoes Spilling from a Bag',
   caption: 'Claes Oldenburg, 1966 — canvas, kapok, glue and paint',
@@ -622,6 +646,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/oldenburg-soft-sculpture-guggenheim.jpg',
   title: 'Soft Shuttlecock',
   caption: 'Claes Oldenburg and Coosje van Bruggen, <i>Soft Shuttlecock</i>, 1995 — made for the rotunda of the Guggenheim Museum, New York. Nine feathers, each about eight metres long',
@@ -657,6 +682,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/oldenburg-the-store.jpg',
   title: 'Inside The Store',
   caption: 'Claes Oldenburg, <i>The Store</i>, 1961 — installation view',
@@ -684,6 +710,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/dubuffet-portrait-dhomme.jpg',
   title: 'Where the word comes from',
   caption: 'Jean Dubuffet, <i>Portrait d’Homme</i>, 1957',
@@ -703,6 +730,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'What {{assemblage}} is',
   zh: '集合藝術是什麼',
   items: [
@@ -718,6 +746,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/rauschenberg-roci-chile.jpg',
   title: 'Robert Rauschenberg',
   caption: 'Robert Rauschenberg, <i>Caryatid Cavalcade I / ROCI CHILE</i>, 1985',
@@ -734,6 +763,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Rauschenberg — the {{combine}}',
   zh: '勞森伯格：複合繪畫',
   items: [
@@ -750,6 +780,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/rauschenberg-canyon.jpg',
   title: 'Canyon',
   caption: 'Robert Rauschenberg, <i>Canyon</i>, 1959 — oil, paper, metal, photographs, and a stuffed bald eagle',
@@ -768,6 +799,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/rauschenberg-monogram.jpg',
   title: 'Monogram',
   caption: 'Robert Rauschenberg, <i>Monogram</i>, 1955–59 — a stuffed angora goat with a car tyre, on a painted horizontal canvas',
@@ -797,6 +829,7 @@ const SLIDES = [
 /* ===== PART 7 — NEO-DADA ===== */
 {
   type: 'bullets',
+  oneClick: true,
   title: '{{neodada}}',
   zh: '新達達',
   items: [
@@ -832,6 +865,7 @@ const SLIDES = [
 },
 {
   type: 'bullets',
+  oneClick: true,
   title: 'Johns’s strategy',
   zh: '瓊斯的策略',
   items: [
@@ -848,6 +882,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/johns-three-flags.jpg',
   title: 'Three Flags',
   caption: 'Jasper Johns, <i>Three Flags</i>, 1958 — encaustic on canvas',
@@ -877,6 +912,7 @@ const SLIDES = [
 },
 {
   type: 'artwork',
+  oneClick: true,
   src: 'img/mei-dean-e-god-bless-china.jpg',
   title: '天佑中華',
   caption: '梅丁衍 Mei Dean-E, <i>天佑中華</i> (God Bless China), 2018',
@@ -897,6 +933,7 @@ const SLIDES = [
 },
 {
   type: 'activity',
+  oneClick: true,
   title: 'Documentary',
   zh: '紀錄片',
   minutes: 20,
@@ -945,6 +982,7 @@ const SLIDES = [
 },
 {
   type: 'activity',
+  oneClick: true,
   title: 'Discussion',
   zh: '討論',
   minutes: 10,
@@ -965,6 +1003,7 @@ const SLIDES = [
 },
 {
   type: 'activity',
+  oneClick: true,
   title: 'Short presentations',
   zh: '學生報告',
   minutes: 6,
