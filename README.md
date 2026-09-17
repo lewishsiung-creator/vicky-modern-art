@@ -9,7 +9,7 @@ vocabulary.
 | Unit | Deck | |
 |---|---|---|
 | 1 | The Beginning of Modern Art | 53 slides |
-| 2 | Expression and the Inner Self | 61 slides |
+| 2 | Expression and the Inner Self | 62 slides |
 | 3 | From Representation to Expression | 62 slides |
 | 4 | The Boundary Between Art and Everyday Life | 60 slides |
 | 5 | Art as Action / Event | 58 slides |
@@ -122,7 +122,10 @@ click instead of one item per click. Vicky asked for this on 15 September
 Her Unit 2 list followed one rule, and the other units were flagged by it:
 every slide that builds a list one item per click — `bullets`, `artwork`
 points, `grid`, `rank`, `activity`, plus the list-shaped types Unit 2 lacks
-(`flow`, `timeline`, `video`, `gallery`). 313 slides across the ten units.
+(`flow`, `timeline`, `video`, `gallery`). 314 slides across the ten units.
+Unit 2's page numbers above are as they were on 15 September; on 17 September
+a missing slide, *André Masson’s Method*, went in as page 43, so everything
+from her old page 43 onward is now one page later.
 Deliberately **not** flagged: `twocol` and `break` (two-part reveals she kept
 in Unit 2), `quote` (the plain-English gloss opens on its own click), and
 `compare` (each click shows a different caption, so it cannot collapse).

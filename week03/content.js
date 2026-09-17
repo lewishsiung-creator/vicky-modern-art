@@ -142,10 +142,10 @@ const SECTIONS = [
   { title: '2 · Dada',                 zh: '達達主義',          start: 2 },
   { title: '3 · War and Trauma',       zh: '戰爭與創傷',        start: 16 },
   { title: '4 · Surrealism',           zh: '超現實主義',        start: 32 },
-  { title: '5 · The Apple & Magritte', zh: '蘋果與馬格利特',    start: 45 },
-  { title: '6 · Wrap-Up',              zh: '總結',              start: 50 },
-  { title: '7 · Quiz',                 zh: '測驗',              start: 52 },
-  { title: '8 · Short Presentations',  zh: '學生報告',          start: 60 }
+  { title: '5 · The Apple & Magritte', zh: '蘋果與馬格利特',    start: 46 },
+  { title: '6 · Wrap-Up',              zh: '總結',              start: 51 },
+  { title: '7 · Quiz',                 zh: '測驗',              start: 53 },
+  { title: '8 · Short Presentations',  zh: '學生報告',          start: 61 }
 ];
 
 const SLIDES = [
@@ -885,11 +885,30 @@ const SLIDES = [
     'Tangled lines, violence, desire. He had fought in the war and been badly wounded.'
   ],
   notes: [
-    'Sand paintings — tableaux de sable. Glue plus scattered sand: chance and automatism combined in one method.',
-    'Automatic drawing from 1924: rapid movement, an unbroken line, the speed of thought. Breton said Masson’s hand seemed to have grown wings.',
     'ASK the question — the honest answer is that you cannot tell, and that is the point.',
     'His style is tangled, violent, erotic — the trauma of the trenches is in it. He was wounded at the Chemin des Dames.',
     'IMPORTANT for next week: this is Quiz Question 6. Masson poured and threw material onto a canvas on the floor. Jackson Pollock saw Masson’s work in New York. Say this now and say it again in the wrap-up.'
+  ]
+},
+{
+  type: 'bullets',
+  oneClick: true,
+  title: 'André Masson’s Method',
+  zh: '馬松的方法',
+  items: [
+    { head: 'Automatic drawing (from 1924)', body: 'Rapid movement, unbroken line, “speed of thought”' },
+    { head: 'Sand paintings (Tableaux de Sable)', body: 'Glue + scattered sand → {{chance}} + {{automatism}} combined' },
+    { head: 'Breton: his hand seemed to have “grown wings”', body: 'As cited in the 2009 <i>Journal of Plastic Arts</i>, p. 12.' },
+    { head: 'Core idea', body: '{{chance}} + rapid motion — control given up entirely' },
+    { head: 'Style', body: 'Tangled lines, violence, eroticism — echoes of war trauma' }
+  ],
+  notes: [
+    'This is the method behind the sand painting they just saw. Go back one slide if they want to look again.',
+    'Automatic drawing first, from 1924: the hand moves fast, the line does not stop, and there is no time to think.',
+    'Then the sand paintings: glue first, then sand thrown at it. Chance decides where the sand sticks. Automatism decides what he draws into it.',
+    'The core idea in one sentence: he gives up control completely.',
+    'And the style is not calm. Tangled lines, violence, desire — Masson was badly wounded in the First World War, and that is in the work.',
+    'LEWIS / TEACHER: the Breton “grown wings” line and its citation — the 2009 Journal of Plastic Arts, p. 12 — are as Vicky wrote them. The quotation and that journal could not be found online in English; it may be a Chinese-language journal (for example 造形藝術學刊). Worth confirming the reference before class.'
   ]
 },
 {

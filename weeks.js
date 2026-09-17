@@ -17,7 +17,7 @@ const WEEKS = [
     n: 2, dir: 'week03',
     title: 'Expression and the Inner Self',
     q: 'How does art show emotion and the unconscious?',
-    meta: '61 slides · Dada to Magritte · the apple ranking activity · 6-question quiz'
+    meta: '62 slides · Dada to Magritte · the apple ranking activity · 6-question quiz'
   },
   {
     n: 3, dir: 'week04',
