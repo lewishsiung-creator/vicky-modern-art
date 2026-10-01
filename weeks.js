@@ -23,7 +23,7 @@ const WEEKS = [
     n: 3, dir: 'week04',
     title: 'From Representation to Expression',
     q: 'How did painting lose reality?',
-    meta: '62 slides · Pollock to Tàpies · the genealogy-of-chance activity · 6-question quiz'
+    meta: '60 slides · Pollock to Tàpies · the genealogy-of-chance activity · 6-question quiz'
   },
   {
     n: 4, dir: 'week05',

@@ -117,10 +117,11 @@ const SECTIONS = [
   { title: '2 · The Genealogy of Chance', zh: '機遇的系譜',    start: 2 },
   { title: '3 · Bridge to New York',     zh: '通往紐約',       start: 5 },
   { title: '4 · Action Painting',        zh: '行動繪畫',       start: 11 },
-  { title: '5 · Late Abstract Expressionism', zh: '晚期抽象表現主義', start: 22 },
-  { title: '6 · Art Informel',           zh: '非形式藝術',     start: 37 },
-  { title: '7 · Who Writes Art History?', zh: '誰在書寫藝術史', start: 47 },
-  { title: '8 · Wrap-Up & Quiz',         zh: '總結與測驗',     start: 51 }
+  { title: '5 · Late Abstract Expressionism', zh: '晚期抽象表現主義', start: 21 },
+  { title: '6 · Art Informel',           zh: '非形式藝術',     start: 36 },
+  { title: '7 · Who Writes Art History?', zh: '誰在書寫藝術史', start: 46 },
+  { title: '8 · Wrap-Up & Quiz',         zh: '總結與測驗',     start: 49 },
+  { title: '9 · Short Presentations',   zh: '學生報告',     start: 59 }
 ];
 
 const SLIDES = [
@@ -190,9 +191,9 @@ const SLIDES = [
   oneClick: true,
   title: 'In your groups',
   zh: '分組討論',
-  minutes: 6,
+  minutes: 5,
   instructions: [
-    'Groups of five or six. Six minutes.',
+    'Groups of five or six. Five minutes.',
     'Then one sentence each, back to the class.'
   ],
   questions: [
@@ -201,7 +202,7 @@ const SLIDES = [
     '<b>Predict.</b> Imagine an American painter in the 1940s who loved Masson’s work. He wants to give up control one step further — so far that the brush never even touches the canvas. What does he do? Draw it, or describe it.'
   ],
   notes: [
-    'STEP 2, six minutes. One click puts all three questions up. Take them in order.',
+    'STEP 2, five minutes. One click puts all three questions up. Take them in order.',
     'The third one is the whole point — the prediction task. Let them sketch. Wrong guesses are fine and often useful.',
     'STEP 3, three or four minutes: each group gives ONE sentence for the prediction. Respond with “interesting” or “you’re close” and do NOT confirm. Keep the suspense.',
     'STEP 4: do not announce the answer. Say “let’s see what actually happened” and go straight on to the Bridge slides. Those are the reveal.',
@@ -339,19 +340,19 @@ const SLIDES = [
 {
   type: 'artwork',
   oneClick: true,
-  src: 'img/pollock-at-work.jpg',
+  src: 'img/drip-method-demo.jpg',
   title: 'Jackson Pollock',
-  caption: 'Jackson Pollock (1912–1956) at work in his studio, 1950 — photographed by Hans Namuth',
+  caption: 'A modern demonstration of the drip method, from a study of its fluid dynamics',
   ask: 'Where is the canvas? Where is the brush?',
   points: [
     'The canvas is on the floor, not on an easel.',
-    'There is no brush. He is pouring from a can, using a stick.',
-    'He walks all the way around it, and into it.',
+    'There is no brush. The paint is poured from a can, with a stick.',
+    'You can walk all the way around it, and into it.',
     'The whole body paints — not just the hand.'
   ],
   notes: [
     'ASK first and let them find it: the canvas is on the floor and there is no brush.',
-    'Namuth’s photographs made Pollock famous — and Pollock hated what they did to him. The film they made together is partly why he started drinking again.',
+    'NOTE: this photograph is NOT Pollock. It is a modern demonstration, from research into the fluid dynamics of his technique. It shows the movement clearly, which is why it is here.',
     'Point out that he can reach every part of the canvas, from every side. That is what makes the all-over composition possible.',
     'This is also the reveal for the activity: the brush never touches the canvas. Say it now if they have not got there yet.'
   ]
@@ -377,9 +378,9 @@ const SLIDES = [
 {
   type: 'artwork',
   oneClick: true,
-  src: 'img/drip-method-demo.jpg',
+  src: 'img/pollock-at-work.jpg',
   title: 'Drip, pour, spatter',
-  caption: 'A modern demonstration of the drip method, from a study of its fluid dynamics',
+  caption: 'Jackson Pollock (1912–1956) at work in his studio, 1950 — photographed by Hans Namuth',
   points: [
     'No easel. No brush.',
     'Wrist and body movement + gravity + the canvas soaking it up — all part of the making.',
@@ -387,8 +388,7 @@ const SLIDES = [
     'Also called {{actionpainting}} — the body is directly involved, and nothing is planned first.'
   ],
   notes: [
-    'NOTE: this photograph is NOT Pollock. It is a modern demonstration, from research into the fluid dynamics of his technique — her slide had it under a “Jackson Pollock” heading, and it has been recaptioned here.',
-    'It is still useful: it shows the movement clearly, and it makes the point that the technique can be described physically.',
+    'This is Hans Namuth’s photograph of Pollock at work, 1950. It made Pollock famous — and he hated what it did to him. The film they made together is partly why he started drinking again.',
     'All-over technique is Quiz Question 2. Say it clearly: evenly spread, no single area of emphasis.'
   ]
 },
@@ -444,24 +444,6 @@ const SLIDES = [
   notes: [
     'ASK and wait. The answer is in the marks: Pollock is continuous, de Kooning is interrupted.',
     'De Kooning worked with a brush, standing at a canvas. He never gave up the tool.'
-  ]
-},
-{
-  type: 'artwork',
-  oneClick: true,
-  src: 'img/dekooning-in-studio.jpg',
-  title: 'De Kooning in the studio',
-  caption: 'Willem de Kooning in his studio, with the <i>Woman</i> drawings',
-  points: [
-    'Look at what is on the walls around him.',
-    'They are figures. Bodies. Faces.',
-    'Every other major artist in this movement had left the figure behind.',
-    'He brought it back — and was attacked for it.'
-  ],
-  notes: [
-    'Set this up before the Woman III slide. The room is full of figures.',
-    'Rothko, Motherwell, Pollock and Kline went fully non-representational. De Kooning did not.',
-    'Critics at the time treated this as a betrayal of abstraction. Greenberg in particular.'
   ]
 },
 {
@@ -959,49 +941,19 @@ const SLIDES = [
   ]
 },
 {
-  type: 'twocol',
-  title: 'Two of the three',
-  left: {
-    head: 'Museums',
-    zh: '美術館',
-    lead: 'Your question:',
-    items: [
-      'If Peggy Guggenheim had never opened {{aotc}}…',
-      '…and MoMA had never given Pollock a solo show…',
-      '…would {{abex}} still be famous today?',
-      'Why, or why not?'
-    ]
-  },
-  right: {
-    head: 'Critics',
-    zh: '評論家',
-    lead: 'Your question:',
-    items: [
-      'Greenberg and Rosenberg described the same paintings very differently.',
-      'One looked at flatness and form. The other at the artist’s gesture and action.',
-      'Does it matter which description won?'
-    ]
-  },
-  notes: [
-    'Give these two groups their questions and start the clock.',
-    'The Critics group has the hardest one. Nudge them: the word we use for these paintings today is Action Painting, not all-over painting. Rosenberg won the popular name; Greenberg won the theory.'
-  ]
-},
-{
-  type: 'activity',
+  type: 'bullets',
   oneClick: true,
-  title: 'Exhibitions',
-  zh: '展覽',
-  minutes: 4,
-  instructions: [
-    'The third group. Four minutes, then one spokesperson.'
-  ],
-  questions: [
-    'A touring exhibition like <i>The New American Painting</i> doesn’t just show art — it makes an argument about which art matters. What is that argument, and who benefits from it?',
-    'Michel Tapié curated exhibitions that presented these European artists together as a movement. What is the difference between an artist making paintings, and a critic-curator grouping them into a named movement?',
-    'Does the exhibition <b>create</b> the movement — or just reveal one that was already there?'
+  title: 'Three groups, three questions',
+  zh: '三組，三個提問',
+  items: [
+    { head: 'Museums　美術館', body: 'If Peggy Guggenheim had never opened {{aotc}}, and MoMA had never given Pollock a solo show — would {{abex}} still be famous today? Why, or why not?' },
+    { head: 'Critics　評論家', body: 'Greenberg and Rosenberg described the same paintings very differently. One looked at flatness and form, the other at the artist’s gesture and action. Does it matter which description won?' },
+    { head: 'Exhibitions　展覽', body: 'A touring show like <i>The New American Painting</i> makes an argument about which art matters — what is that argument, and who benefits? And does an exhibition <b>create</b> a movement, or only reveal one that was there?' }
   ],
   notes: [
+    'All three groups are on one page now, and there is no timer here — keep the time yourself.',
+    'Assign one topic per group. More than one group can take the same topic; different answers are useful later.',
+    'The Critics group has the hardest one. Nudge them: the word we use for these paintings today is Action Painting, not all-over painting. Rosenberg won the popular name; Greenberg won the theory.',
     'STEP 3, rapid-fire sharing, three minutes: go Museums → Critics → Exhibitions. About a minute each. Your job is to keep the pace, not to comment yet.',
     'STEP 4, synthesis, two minutes. Connect the three: museums gave the work space and legitimacy; critics gave it a vocabulary and a theory; exhibitions exported the whole package to the world. Together, those three turned a local New York scene into “art history”.',
     'Then close with the question below and do NOT resolve it. Let them leave holding it.'
@@ -1060,28 +1012,6 @@ const SLIDES = [
     'Question 1 is the best opener — everyone has an opinion about whether process counts.',
     'Question 3 is the hardest and the most rewarding. If you only have time for one, use it: it makes them compare America and Europe directly.',
     'A2 support: sentence starters are on screen. Ten seconds of silence after each question before you call on anyone.'
-  ]
-},
-{
-  type: 'activity',
-  oneClick: true,
-  title: 'Short presentations',
-  zh: '學生報告',
-  minutes: 6,
-  instructions: [
-    'Three students today. Six minutes each, TED-style.',
-    'One artist from the course list of 120.'
-  ],
-  questions: [
-    'Who was the artist? Where and when did they work?',
-    'One or two key artworks.',
-    'What concept, and what media?',
-    'Why does it matter today?'
-  ],
-  notes: [
-    'Twenty minutes: three students, six minutes each, plus changeover.',
-    'The timer is set to six minutes. Press Reset between speakers.',
-    'Reveal the four questions at the start so the speaker and the room both know the shape.'
   ]
 },
 {
@@ -1182,6 +1112,28 @@ const SLIDES = [
   title: 'Key terms',
   zh: '關鍵詞彙',
   terms: ['figurative', 'abstraction', 'abex', 'automatism', 'allover', 'artbrut', 'emigre', 'aotc', 'actionpainting', 'nyschool', 'colorfield', 'postpainterly', 'hardedge', 'soakstain', 'artinformel'],
-  notes: ['Tap any term to show it large, with the Chinese. Good for the last two minutes of class.']
+  notes: ['Tap any term to show it large, with the Chinese. Good for two minutes before the short presentations, which are the last slide.']
+},
+{
+  type: 'activity',
+  oneClick: true,
+  title: 'Short presentations',
+  zh: '學生報告',
+  minutes: 6,
+  instructions: [
+    'Three students today. Six minutes each, TED-style.',
+    'One artist from the course list of 120.'
+  ],
+  questions: [
+    'Who was the artist? Where and when did they work?',
+    'One or two key artworks.',
+    'What concept, and what media?',
+    'Why does it matter today?'
+  ],
+  notes: [
+    'Twenty minutes: three students, six minutes each, plus changeover.',
+    'The timer is set to six minutes. Press Reset between speakers.',
+    'Reveal the four questions at the start so the speaker and the room both know the shape.'
+  ]
 }
 ];
