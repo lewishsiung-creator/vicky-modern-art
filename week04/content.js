@@ -683,7 +683,7 @@ const SLIDES = [
 {
   type: 'artwork',
   oneClick: true,
-  src: 'img/kelly-painting-for-a-white-wall.png',
+  src: 'img/kelly-painting-for-a-white-wall.jpg',
   title: 'Painting for a White Wall',
   caption: 'Ellsworth Kelly (1923–2015), <i>Painting for a White Wall</i>, 1952',
   ask: 'Where is the artist in this painting?',
@@ -873,7 +873,7 @@ const SLIDES = [
 {
   type: 'artwork',
   oneClick: true,
-  src: 'img/tapies-installation.png',
+  src: 'img/tapies-installation.jpg',
   title: 'Antoni Tàpies',
   caption: 'Antoni Tàpies (1923–2012), installation view — with a real bed frame and sheet on the canvas',
   ask: 'Where does the painting stop and the furniture start?',

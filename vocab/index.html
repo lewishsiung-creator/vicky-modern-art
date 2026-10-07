@@ -12,7 +12,7 @@
 <main class="course-page vocab-page">
   <header>
     <div class="course-kicker"><a href="../">Contemporary Art History</a></div>
-    <h1>Key Vocabulary <span class="h1-zh">關鍵詞彙</span></h1>
+    <h1>Key Vocabulary <span class="h1-zh" lang="zh-Hant">關鍵詞彙</span></h1>
     <p class="course-sub">
       Every term in the course, by unit. These go further than the word
       chips in the decks — those are for reading off the screen mid-lesson;
@@ -56,15 +56,15 @@ list.innerHTML = VOCAB.map(u => `
     <h2>
       <span class="v-n">Unit ${u.n}</span>
       <span class="v-t">${esc(u.title)}</span>
-      <span class="v-zh">${esc(u.zh)}</span>
+      <span class="v-zh" lang="zh-Hant">${esc(u.zh)}</span>
     </h2>
     <a class="v-deck" href="../${u.dir}/">Open the deck →</a>
     <dl>
       ${u.terms.map(t => `
         <div class="v-term">
-          <dt>${esc(t.en)}<span class="t-zh">${esc(t.zh)}</span></dt>
+          <dt>${esc(t.en)}<span class="t-zh" lang="zh-Hant">${esc(t.zh)}</span></dt>
           <dd class="d-en">${esc(t.def)}</dd>
-          <dd class="d-zh">${esc(t.zhDef)}</dd>
+          <dd class="d-zh" lang="zh-Hant">${esc(t.zhDef)}</dd>
         </div>`).join('')}
     </dl>
   </section>`).join('');

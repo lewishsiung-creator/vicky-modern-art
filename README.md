@@ -84,6 +84,32 @@ Ten of her terms are not yet word chips in the decks: *The End of Art*,
 *Presence & Duration* and *Surveillance & Pursuit* (Unit 9). They are on the
 vocabulary page, just not tappable mid-slide.
 
+## Accessibility and performance
+
+A UI/UX pass on 7 October 2026 fixed these:
+
+- **Phones could not leave a deck.** The 上一頁/下一頁 buttons sat on top of the
+  HUD and covered `units`, `vocab` and `menu` completely — none of the three
+  was tappable at 375px. They have a row each now, with 44px touch targets.
+  The override has to live at the **end** of `style.css`: a media query adds no
+  specificity, so an earlier copy of it lost to the plain `#hud` rule.
+- **Keyboard focus was invisible** (`outline: none` everywhere). There is a
+  `:focus-visible` ring now, cream inside the dark jump menu.
+- **Word chips were mouse-only** `<span>`s. They are `role="button"`,
+  `tabindex="0"`, and Enter/Space opens the card instead of advancing.
+- **Every picture had `alt=""`.** Alt text now comes from the caption.
+- **Contrast.** The accent greens failed WCAG AA on her slide green:
+  `--deep` 2.32, `--ink-faint` 1.90, `--deeper` 3.69. They are 4.52, 4.52 and
+  5.65 now, darkened along the same hue so the hierarchy survives. The HUD also
+  sat at 45% opacity, which a touch screen can never hover to full; now 75%.
+- **Weight.** Unit 2 loaded 7.72 MB of images at once. Six oversized PNGs are
+  JPEG now (6.3 MB → 1.34 MB), so that deck opens on 3.71 MB.
+- Chinese runs are tagged `lang="zh-Hant"`, and an open word card closes when
+  the slide changes instead of hanging over the next one.
+
+Still open, deliberately: `prefers-reduced-motion`, `width`/`height` on images,
+and `theme-color` / `apple-touch-icon`.
+
 ## Presenting
 
 | Key | What it does |

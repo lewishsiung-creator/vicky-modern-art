@@ -440,7 +440,7 @@ const SLIDES = [
 {
   type: 'artwork',
   oneClick: true,
-  src: 'img/modigliani-nude.png',
+  src: 'img/modigliani-nude.jpg',
   title: 'Nude',
   caption: 'Amedeo Modigliani (1884–1920), <i>Nude</i>, 1917',
   points: [
@@ -914,7 +914,7 @@ const SLIDES = [
 {
   type: 'artwork',
   oneClick: true,
-  src: 'img/dali-persistence-of-memory.png',
+  src: 'img/dali-persistence-of-memory.jpg',
   title: 'The Persistence of Memory',
   caption: 'Salvador Dalí (1904–1989), <i>The Persistence of Memory</i>, 1931',
   ask: 'Everything here is painted perfectly. So why does it feel wrong?',
@@ -1013,7 +1013,7 @@ const SLIDES = [
 {
   type: 'artwork',
   oneClick: true,
-  src: 'img/magritte-time-transfixed.png',
+  src: 'img/magritte-time-transfixed.jpg',
   title: 'Time Transfixed',
   caption: 'René Magritte (1898–1967), <i>Time Transfixed</i>, 1938',
   ask: 'Everything in this room is ordinary. So what is wrong?',

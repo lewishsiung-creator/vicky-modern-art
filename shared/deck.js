@@ -33,7 +33,7 @@
     return String(s).replace(/\{\{(\w+)\}\}/g, (m, key) => {
       const g = GLOSSARY[key];
       if (!g) return m.replace(/[{}]/g, '');
-      return `<span class="chip" data-term="${key}">${g.en}</span>`;
+      return `<span class="chip" data-term="${key}" role="button" tabindex="0">${g.en}</span>`;
     });
   }
   /* Same, but strips the markup — for the presenter window and menu. */
@@ -201,7 +201,7 @@
       case 'bullets':
         return `${s.kicker ? `<div class="kicker">${s.kicker}</div>` : ''}
           <h2>${chips(s.title)}</h2>
-          ${s.zh ? `<div class="zh-title">${s.zh}</div>` : ''}
+          ${s.zh ? `<div class="zh-title" lang="zh-Hant">${s.zh}</div>` : ''}
           <ul>${s.items.map((it, k) => `
             <li class="step" data-step="${k}">
               <div class="head">${chips(it.head)}</div>
@@ -214,7 +214,7 @@
       case 'quote': {
         const body = `${s.kicker ? `<div class="kicker">${s.kicker}</div>` : ''}
           <h2>${chips(s.title)}</h2>
-          ${s.zh ? `<div class="zh-title">${s.zh}</div>` : ''}
+          ${s.zh ? `<div class="zh-title" lang="zh-Hant">${s.zh}</div>` : ''}
           ${s.lead ? `<div class="lead">${chips(s.lead)}</div>` : ''}
           <blockquote>${chips(s.quote)}</blockquote>
           <cite>${s.cite}</cite>
@@ -224,7 +224,7 @@
           ${s.ask ? askBlock(s.ask, true) : ''}`;
         if (!s.src) return body;
         return `<div class="q-body">${body}</div>
-          <div class="q-doc"><img src="${s.src}" alt="">
+          <div class="q-doc"><img src="${s.src}" alt="${plainText(s.caption || s.title || '')}">
             ${s.srcLabel ? `<div class="doc-lbl">${s.srcLabel}</div>` : ''}</div>`;
       }
 
@@ -233,16 +233,16 @@
           ${s.ask ? askBlock(s.ask, false) : ''}
           <div class="compare-wrap">
             <div class="compare-pane" data-side="left">
-              <img src="${s.left.src}" alt="">
+              <img src="${s.left.src}" alt="${plainText(s.left.label || '')}">
               <div class="lbl">${s.left.label}</div></div>
             <div class="compare-pane" data-side="right">
-              <img src="${s.right.src}" alt="">
+              <img src="${s.right.src}" alt="${plainText(s.right.label || '')}">
               <div class="lbl">${s.right.label}</div></div>
           </div>
           <div class="compare-note"></div>`;
 
       case 'artwork':
-        return `<div class="art"><img src="${s.src}" alt="" data-soft="${!!s.smallSource}"></div>
+        return `<div class="art"><img src="${s.src}" alt="${plainText(s.caption || s.title || '')}" data-soft="${!!s.smallSource}"></div>
           <div class="side">
             <h2>${chips(s.title)}</h2>
             <div class="cap">${s.caption}</div>
@@ -257,11 +257,11 @@
          made of many images at once — a film, a series, a comic. */
       case 'gallery':
         return `<div class="gal">${s.images.map(im =>
-            `<figure><img src="${im.src}" alt="">${
+            `<figure><img src="${im.src}" alt="${plainText(im.cap || s.title || '')}">${
               im.cap ? `<figcaption>${chips(im.cap)}</figcaption>` : ''}</figure>`).join('')}</div>
           <div class="side">
             <h2>${chips(s.title)}</h2>
-            ${s.zh ? `<div class="zh-title">${s.zh}</div>` : ''}
+            ${s.zh ? `<div class="zh-title" lang="zh-Hant">${s.zh}</div>` : ''}
             <div class="cap">${s.caption}</div>
             ${s.ask ? askBlock(s.ask, false) : ''}
             <ul class="points">${(s.points || []).map((p, k) =>
@@ -276,7 +276,7 @@
               const c = s[side];
               return `<div class="col step" data-step="${k}">
                 <h3>${chips(c.head)}</h3>
-                <div class="zh">${c.zh}</div>
+                <div class="zh" lang="zh-Hant">${c.zh}</div>
                 <div class="lead">${chips(c.lead)}</div>
                 <ul>${c.items.map(x => `<li>${chips(x)}</li>`).join('')}</ul>
               </div>`;
@@ -285,7 +285,7 @@
 
       case 'break':
         return `<h2>${chips(s.title)}</h2>
-          ${s.zh ? `<div class="zh-title">${s.zh}</div>` : ''}
+          ${s.zh ? `<div class="zh-title" lang="zh-Hant">${s.zh}</div>` : ''}
           <div class="chain-label">${s.chainLabel}</div>
           <div class="chain">${s.chain.map((c, k) =>
             `<span>${c}</span>${k < s.chain.length - 1 ? '<i>→</i>' : ''}`).join('')}</div>
@@ -297,7 +297,7 @@
       case 'activity':
         return `<div class="left">
             <h2>${chips(s.title)}</h2>
-            ${s.zh ? `<div class="zh-title">${s.zh}</div>` : ''}
+            ${s.zh ? `<div class="zh-title" lang="zh-Hant">${s.zh}</div>` : ''}
             <ul>${s.instructions.map(x => `<li>${chips(x)}</li>`).join('')}</ul>
             ${s.questions ? `<ul class="q-list">${s.questions.map((q, k) =>
               `<li class="step" data-step="${k}">${chips(q)}</li>`).join('')}</ul>` : ''}
@@ -338,7 +338,7 @@
          it, because this is a class discussion, not a result. */
       case 'vote':
         return `<h2>${chips(s.title)}</h2>
-          ${s.zh ? `<div class="zh-title">${s.zh}</div>` : ''}
+          ${s.zh ? `<div class="zh-title" lang="zh-Hant">${s.zh}</div>` : ''}
           ${s.question ? `<div class="vote-q">${chips(s.question)}</div>` : ''}
           <div class="vote-opts">${s.options.map((o, k) => `
             <button class="vote-opt" data-opt="${k}" data-n="0">
@@ -366,7 +366,7 @@
           [order[k], order[j]] = [order[j], order[k]];
         }
         return `<h2>${chips(s.title)}</h2>
-          ${s.zh ? `<div class="zh-title">${s.zh}</div>` : ''}
+          ${s.zh ? `<div class="zh-title" lang="zh-Hant">${s.zh}</div>` : ''}
           ${s.instructions ? `<div class="match-task">${chips(s.instructions)}</div>` : ''}
           <div class="match-cols">
             <ul class="match-side" data-side="a">${s.pairs.map((pr, k) =>
@@ -387,7 +387,7 @@
       case 'flow':
         return `${s.kicker ? `<div class="kicker">${s.kicker}</div>` : ''}
           <h2>${chips(s.title)}</h2>
-          ${s.zh ? `<div class="zh-title">${s.zh}</div>` : ''}
+          ${s.zh ? `<div class="zh-title" lang="zh-Hant">${s.zh}</div>` : ''}
           <div class="stages">${s.stages.map((st, k) => `
             <div class="stage step" data-step="${k}">
               <div class="stage-head">${chips(st.head)}</div>
@@ -398,7 +398,7 @@
       /* A story told in dated stops. */
       case 'timeline':
         return `<h2>${chips(s.title)}</h2>
-          ${s.zh ? `<div class="zh-title">${s.zh}</div>` : ''}
+          ${s.zh ? `<div class="zh-title" lang="zh-Hant">${s.zh}</div>` : ''}
           <ol class="stops">${s.stops.map((st, k) => `
             <li class="stop step" data-step="${k}">
               <div class="stop-when">${st.when}</div>
@@ -408,7 +408,7 @@
       case 'grid':
         return `${s.kicker ? `<div class="kicker">${s.kicker}</div>` : ''}
           <h2>${chips(s.title)}</h2>
-          ${s.zh ? `<div class="zh-title">${s.zh}</div>` : ''}
+          ${s.zh ? `<div class="zh-title" lang="zh-Hant">${s.zh}</div>` : ''}
           <div class="cells" style="grid-template-columns:repeat(${s.cols || 2},1fr)">${s.cells.map((c, k) => `
             <div class="cell step" data-step="${k}">
               <div class="cell-label">${c.label}</div>
@@ -421,12 +421,12 @@
       case 'rank':
         return `<div class="left">
             <h2>${chips(s.title)}</h2>
-            ${s.zh ? `<div class="zh-title">${s.zh}</div>` : ''}
+            ${s.zh ? `<div class="zh-title" lang="zh-Hant">${s.zh}</div>` : ''}
             <div class="rank-task">${chips(s.task)}</div>
             <div class="rank-cards">${s.items.map((it, k) => `
               <button class="rank-card" data-card="${k}">
                 <span class="rank-badge"></span>
-                ${it.src ? `<img src="${it.src}" alt="">`
+                ${it.src ? `<img src="${it.src}" alt="${plainText(it.label || it.head || '')}">`
                          : `<span class="rank-glyph"><span class="g">${it.glyph}</span></span>`}
                 <span class="rank-lbl">${it.label}</span>
               </button>`).join('')}</div>
@@ -457,7 +457,7 @@
       case 'terms':
       case 'end':
         return `<h2>${chips(s.title)}</h2>
-          ${s.zh ? `<div class="zh-title">${s.zh}</div>` : ''}
+          ${s.zh ? `<div class="zh-title" lang="zh-Hant">${s.zh}</div>` : ''}
           <div class="termgrid">${s.terms.map(t =>
             `<span class="chip" data-term="${t}">${GLOSSARY[t].en}</span>`).join('')}</div>`;
 
@@ -484,6 +484,10 @@
         f.innerHTML = '<button class="vid-play" aria-label="Play"><span>\u25B6</span></button>';
       });
     });
+
+    /* A word card left open would hang over the next slide, because
+       only a click used to close it. Changing slide closes it. */
+    closeChip();
 
     /* Build steps: reveal in order. */
     node.querySelectorAll('.step').forEach((n, order) => {
@@ -593,6 +597,7 @@
   /* ---------- zoom ---------- */
   function openZoom(img) {
     lightbox.querySelector('img').src = img.src;
+    lightbox.querySelector('img').alt = img.alt || '';
     lightbox.classList.toggle('soft', img.dataset.soft === 'true');
     lightbox.querySelector('.lb-note').textContent =
       img.dataset.soft === 'true'
@@ -827,6 +832,14 @@
   });
 
   document.addEventListener('keydown', e => {
+    /* A chip is reachable by keyboard now, so Enter/Space on one opens
+       the word card instead of advancing the slide. */
+    if (e.target && e.target.classList && e.target.classList.contains('chip')
+        && (e.key === 'Enter' || e.key === ' ')) {
+      e.preventDefault();
+      openChip(e.target, e.target.dataset.term);
+      return;
+    }
     const k = e.key;
     if (k === 'Escape') {
       closeMenu(); closeChip(); closeZoom(); peek.classList.remove('on'); return;

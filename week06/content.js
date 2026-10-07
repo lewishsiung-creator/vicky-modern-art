@@ -134,7 +134,7 @@ const SLIDES = [
   title: 'Two things that happened in 1960',
   ask: 'One man jumps out of a window. One machine destroys itself. What is left of either?',
   left:  { src: 'img/klein-leap-into-the-void.jpg', label: 'Yves Klein, <i>Leap into the Void</i>, 1960', tag: 'Klein' },
-  right: { src: 'img/tinguely-homage-to-new-york.png', label: 'Jean Tinguely, <i>Homage to New York</i>, 1960 — in the garden of MoMA', tag: 'Tinguely' },
+  right: { src: 'img/tinguely-homage-to-new-york.jpg', label: 'Jean Tinguely, <i>Homage to New York</i>, 1960 — in the garden of MoMA', tag: 'Tinguely' },
   reveal: [
     { side: 'left',  text: 'Klein really jumped. But the photograph is a darkroom fake — the people who caught him were edited out.' },
     { side: 'right', text: 'Tinguely’s machine ran for twenty-seven minutes, set itself on fire, and was put out by the fire brigade.' },
@@ -509,7 +509,7 @@ const SLIDES = [
   title: 'Homage to New York',
   caption: 'Jean Tinguely (1925–1991), <i>Homage to New York</i>, 17 March 1960 — the sculpture garden of the Museum of Modern Art',
   yt: '6dgGu2w3Qvo',
-  poster: 'img/tinguely-homage-to-new-york.png',
+  poster: 'img/tinguely-homage-to-new-york.jpg',
   watchFor: 'Does the machine’s self-destruction feel more like death, or like release?',
   points: [
     'A machine built from bicycle wheels, bath tubs, a piano and scrap metal.',
