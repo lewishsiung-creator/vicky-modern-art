@@ -97,13 +97,14 @@ const GLOSSARY = {
 const SECTIONS = [
   { title: '1 · Review & the Question', zh: '複習與提問',   start: 0 },
   { title: '2 · Pop Art',              zh: '普普藝術',      start: 2 },
-  { title: '3 · Is This Art?',         zh: '這是藝術嗎？',  start: 16 },
-  { title: '4 · The Brillo Box',       zh: '布瑞洛盒',      start: 18 },
-  { title: '5 · Oldenburg',            zh: '歐登伯格',      start: 27 },
-  { title: '6 · Assemblage',           zh: '集合藝術',      start: 34 },
-  { title: '7 · Neo-Dada',             zh: '新達達',        start: 42 },
-  { title: '8 · Taiwan Neo-Dada',      zh: '台灣新達達',    start: 46 },
-  { title: '9 · Wrap-Up & Quiz',       zh: '總結與測驗',    start: 49 }
+  { title: '3 · Is This Art?',         zh: '這是藝術嗎？',  start: 14 },
+  { title: '4 · The Brillo Box',       zh: '布瑞洛盒',      start: 16 },
+  { title: '5 · Oldenburg',            zh: '歐登伯格',      start: 25 },
+  { title: '6 · Assemblage',           zh: '集合藝術',      start: 30 },
+  { title: '7 · Neo-Dada',             zh: '新達達',        start: 38 },
+  { title: '8 · Taiwan Neo-Dada',      zh: '台灣新達達',    start: 42 },
+  { title: '9 · Wrap-Up & Quiz',       zh: '總結與測驗',    start: 45 },
+  { title: '10 · Short Presentations', zh: '學生報告',      start: 55 }
 ];
 
 const SLIDES = [
@@ -184,38 +185,21 @@ const SLIDES = [
   ]
 },
 {
-  type: 'bullets',
-  oneClick: true,
-  title: 'The picture came before the name',
-  zh: '影像早於名稱',
-  items: [
-    { head: 'Eduardo Paolozzi’s collage <i>I Was a Rich Man’s Plaything</i>, 1947' },
-    { head: 'In it, a toy gun fires the word “POP!”' },
-    { head: 'The first time the word appears in an artwork', body: 'More than ten years before Alloway coined the term.' },
-    { head: 'But nobody saw it until 1952', body: 'It was first shown as a slide, at the Independent Group’s first meeting.' }
-  ],
-  notes: [
-    'A nice detail: the word is in the picture in 1947, but the movement is not named until 1958.',
-    'And the picture was not exhibited — it was projected at a meeting. Pop Art starts as a slide in a seminar room.'
-  ]
-},
-{
   type: 'artwork',
   oneClick: true,
   src: 'img/paolozzi-rich-mans-plaything.jpg',
   title: 'I Was a Rich Man’s Plaything',
   caption: 'Eduardo Paolozzi, <i>I Was a Rich Man’s Plaything</i>, 1947',
   smallSource: true,
-  ask: 'Where did every single piece of this picture come from?',
   points: [
     'Nothing here was drawn. It is all cut out and glued.',
-    'A pulp magazine cover, an advertisement, a Coca-Cola logo, a военный aircraft.',
-    'And a toy gun firing the word “POP!”',
-    'The artist chose and arranged. He did not draw.'
+    'A pulp magazine cover, an advertisement, a Coca-Cola logo, a military aircraft.',
+    'A toy gun fires the word “POP!” — the first time the word appears in an artwork.',
+    'Made in 1947, more than ten years before Alloway named the movement. And nobody saw it until 1952, projected as a slide at the Independent Group’s first meeting.'
   ],
   notes: [
-    'ASK and let them look. Answer: magazines and advertisements — all of it already printed.',
-    'That is the method the whole movement is built on: cut, choose, arrange.',
+    'The method the whole movement is built on: cut, choose, arrange. Nothing is drawn — it is all magazines and advertisements, already printed.',
+    'The nice detail: the word is in the picture in 1947, but the movement is not named until 1958. And the picture was not exhibited — it was projected at a meeting. Pop Art starts as a slide in a seminar room.',
     'CORRECTED: her slide title dropped the first word. The title is “I Was a Rich Man’s Plaything”.',
     'NOTE: low-resolution scan; zoom is limited.'
   ]
@@ -237,23 +221,15 @@ const SLIDES = [
   ]
 },
 {
-  type: 'compare',
-  title: 'Fun House, 1956',
-  left:  { src: 'img/fun-house-view1.jpg', label: 'Richard Hamilton, John McHale and John Voelcker, <i>Fun House</i>, 1956', tag: 'Fun House' },
-  right: { src: 'img/fun-house-view2.jpg', label: 'Another view of the same installation', tag: 'Fun House' },
-  reveal: [],
-  notes: [
-    'Two views of the installation. Let them look for a moment.',
-    'Patterned floors, optical illusions, a jukebox, film posters, blown-up advertising. You walked through it.',
-    'This is closer to a funfair than to a gallery — which was exactly the point.'
-  ]
-},
-{
-  type: 'artwork',
+  type: 'gallery',
   oneClick: true,
-  src: 'img/this-is-tomorrow-installation.jpg',
-  title: 'Inside the exhibition',
-  caption: 'Installation view — <i>This Is Tomorrow</i>, Whitechapel Gallery, London, 1956 (reconstruction)',
+  title: 'Fun House, 1956',
+  images: [
+    { src: 'img/fun-house-view1.jpg' },
+    { src: 'img/fun-house-view2.jpg' },
+    { src: 'img/this-is-tomorrow-installation.jpg' }
+  ],
+  caption: 'Richard Hamilton, John McHale and John Voelcker, <i>Fun House</i>, in <i>This Is Tomorrow</i>, Whitechapel Gallery, London, 1956',
   points: [
     'A jukebox. Optical patterns. A wall of film and advertising images.',
     'No frames, no plinths, no quiet white room.',
@@ -261,6 +237,8 @@ const SLIDES = [
     'Compare it with the Rothko room from last week — as different as two rooms can be.'
   ],
   notes: [
+    'Two views of the Fun House, and one of the exhibition around it. Let them look for a moment.',
+    'Patterned floors, optical illusions, a jukebox, film posters, blown-up advertising. You walked through it — closer to a funfair than to a gallery, which was exactly the point.',
     'Use the comparison with Rothko: he wanted you standing close in silence. This wants you moving, distracted, entertained.',
     'Both are 1950s. Both are serious art. That contrast is worth a moment.'
   ]
@@ -396,7 +374,7 @@ const SLIDES = [
   title: 'Group discussion',
   sub: 'Is this art?',
   notes: [
-    'Fifteen minutes. Groups of five or six.',
+    'Groups of five or six. The discussion itself is five minutes.',
     'STEP 1, two minutes: give each group one ordinary object — a soup can, a comic-book page, a soap box, a flattened cardboard carton. Ask “is this, right now, a work of art?” and take a quick show of hands.',
     'IMPORTANT: do not mention Warhol or the Brillo Box. The reveal comes two slides later.'
   ]
@@ -406,20 +384,18 @@ const SLIDES = [
   oneClick: true,
   title: 'Is this art?',
   zh: '這是藝術嗎？',
-  minutes: 6,
+  minutes: 5,
   instructions: [
     'You have one ordinary object. Groups of five or six.',
-    'Six minutes, then one sentence back to the class.'
+    'Five minutes, then one sentence back to the class.'
   ],
   questions: [
     '<b>Baseline.</b> What makes your group say yes or no? Is it how it looks, what it is made of, who made it — or something else?',
     '<b>Change the conditions.</b> What is the <i>smallest</i> change that would make you change your answer? A label? A gallery? A famous name? Is putting it in a museum enough on its own?',
-    '<b>Predict.</b> Imagine an artist in 1962 who wants to make a point about exactly this. What do they <i>do</i> with an object like yours — and where do they show it? Draw it, or describe it.'
   ],
   notes: [
     'One click puts all three questions up. Take them in order.',
-    'The third is the prediction task and the heart of it. Let them sketch.',
-    'STEP 3, four minutes: one sentence per group. Respond “interesting” or “you’re close” and do NOT confirm. Keep the suspense.',
+    'STEP 3, four minutes: one sentence per group on what would change their answer. Do NOT confirm anything — keep the suspense.',
     'STEP 4: do not announce the answer. Say “let’s see what one artist actually did” and go straight to the Brillo Box.',
     'NOTE: the lesson plan’s activity design says to run this before the Pop Art lecture, but her slide deck places it here, after it. The deck order works — students now have Warhol’s and Lichtenstein’s methods in mind, and the Brillo Box still lands as the reveal.'
   ]
@@ -608,58 +584,21 @@ const SLIDES = [
   ]
 },
 {
-  type: 'artwork',
-  oneClick: true,
-  src: 'img/oldenburg-soft-toilet.jpg',
-  title: 'Soft Toilet',
-  caption: 'Claes Oldenburg, <i>Soft Toilet</i>, 1966 — vinyl, kapok and plexiglass',
-  ask: 'A toilet in a gallery. Where have you seen that before?',
-  points: [
-    'Vinyl and stuffing, not porcelain.',
-    'It cannot stand up properly. It slumps.',
-    'A hard, cold, functional object made soft and helpless.',
-    'And of course: Duchamp put a urinal in a gallery in 1917.'
+  type: 'gallery',
+  title: 'Claes Oldenburg',
+  images: [
+    { src: 'img/oldenburg-soft-toilet.jpg', cap: '<i>Soft Toilet</i>, 1966' },
+    { src: 'img/oldenburg-shoestring-potatoes.jpg', cap: '<i>Shoestring Potatoes Spilling from a Bag</i>, 1966' },
+    { src: 'img/oldenburg-soft-sculpture-guggenheim.jpg', cap: '<i>Soft Shuttlecock</i>, 1995' }
   ],
+  caption: '',
   notes: [
-    'ASK — they should get Fountain immediately. If they do, that is Unit 2 doing its job.',
-    'The difference is the point: Duchamp took a real one. Oldenburg makes a fake one, in the wrong material.',
-    'Soft sculpture is Quiz Question 3.'
-  ]
-},
-{
-  type: 'artwork',
-  oneClick: true,
-  src: 'img/oldenburg-shoestring-potatoes.jpg',
-  title: 'Shoestring Potatoes Spilling from a Bag',
-  caption: 'Claes Oldenburg, 1966 — canvas, kapok, glue and paint',
-  smallSource: true,
-  points: [
-    'Chips falling out of a paper bag — three metres tall.',
-    'A moment that lasts half a second, frozen and made monumental.',
-    'Sculpture is supposed to be heroes and gods on plinths.',
-    'This is fast food, falling on the floor.'
-  ],
-  notes: [
-    'Scale is the joke. Traditional sculpture makes small important things big. He makes trivial things big and leaves them trivial.',
-    'NOTE: low-resolution scan; zoom is limited.'
-  ]
-},
-{
-  type: 'artwork',
-  oneClick: true,
-  src: 'img/oldenburg-soft-sculpture-guggenheim.jpg',
-  title: 'Soft Shuttlecock',
-  caption: 'Claes Oldenburg and Coosje van Bruggen, <i>Soft Shuttlecock</i>, 1995 — made for the rotunda of the Guggenheim Museum, New York. Nine feathers, each about eight metres long',
-  points: [
-    'Look at the people at the bottom for scale.',
-    'It hangs. It has no plinth and no fixed shape.',
-    'Gravity is doing part of the work — as it did for Pollock.',
-    'Sculpture that cannot hold itself up.'
-  ],
-  notes: [
-    'The gravity link to Pollock is worth making — Oldenburg said Pollock’s treatment of paint as material inspired his treatment of objects.',
-    'Identified since: it is Soft Shuttlecock, 1995, made specifically for Frank Lloyd Wright’s rotunda for Oldenburg’s Guggenheim retrospective. Her slide gave no title.',
-    'And it is co-authored with Coosje van Bruggen (1942–2009), his wife and collaborator on every large project from 1976 onward. She is routinely left off these credits, which is worth one sentence in a course that spends Unit 10 on exactly that problem.'
+    'Three works on one screen now — the titles are on the pictures, everything else is yours to say.',
+    'Soft Toilet: vinyl and stuffing, not porcelain. It slumps. ASK where they have seen a toilet in a gallery before — Duchamp, 1917. The difference is that Duchamp took a real one and Oldenburg makes a fake one in the wrong material.',
+    'Soft sculpture is Quiz Question 3.',
+    'Shoestring Potatoes is three metres tall: traditional sculpture makes important things big, he makes trivial things big and leaves them trivial.',
+    'Soft Shuttlecock hangs, with no plinth and no fixed shape — gravity does part of the work, as it did for Pollock. Oldenburg said Pollock’s treatment of paint as material inspired his treatment of objects.',
+    'Credit worth saying out loud, since the caption no longer carries it: Soft Shuttlecock is co-authored with Coosje van Bruggen (1942–2009), his collaborator on every large project from 1976 on. She is routinely left off these credits — and Unit 10 is about exactly that.'
   ]
 },
 {
@@ -1002,27 +941,6 @@ const SLIDES = [
   ]
 },
 {
-  type: 'activity',
-  oneClick: true,
-  title: 'Short presentations',
-  zh: '學生報告',
-  minutes: 6,
-  instructions: [
-    'Three students today. Six minutes each, TED-style.',
-    'One artist from the course list of 120.'
-  ],
-  questions: [
-    'Who was the artist? Where and when did they work?',
-    'One or two key artworks.',
-    'What concept, and what media?',
-    'Why does it matter today?'
-  ],
-  notes: [
-    'Twenty minutes: three students, six minutes each, plus changeover.',
-    'The timer is set to six minutes. Press Reset between speakers.'
-  ]
-},
-{
   type: 'section',
   title: 'Art Quiz',
   zh: '藝術測驗',
@@ -1115,6 +1033,27 @@ const SLIDES = [
   title: 'Key terms',
   zh: '關鍵詞彙',
   terms: ['popart', 'massculture', 'artworld', 'silkscreen', 'bendaydots', 'foundobject', 'assemblage', 'neodada', 'combine', 'softsculpture', 'appropriation', 'institutional'],
-  notes: ['Tap any term to show it large, with the Chinese. Good for the last two minutes of class.']
+  notes: ['Tap any term to show it large, with the Chinese. Good for two minutes before the short presentations, which are the last slide.']
+},
+{
+  type: 'activity',
+  oneClick: true,
+  title: 'Short presentations',
+  zh: '學生報告',
+  minutes: 6,
+  instructions: [
+    'Three students today. Six minutes each, TED-style.',
+    'One artist from the course list of 120.'
+  ],
+  questions: [
+    'Who was the artist? Where and when did they work?',
+    'One or two key artworks.',
+    'What concept, and what media?',
+    'Why does it matter today?'
+  ],
+  notes: [
+    'Twenty minutes: three students, six minutes each, plus changeover.',
+    'The timer is set to six minutes. Press Reset between speakers.'
+  ]
 }
 ];

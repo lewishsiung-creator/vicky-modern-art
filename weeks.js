@@ -29,7 +29,7 @@ const WEEKS = [
     n: 4, dir: 'week05',
     title: 'The Boundary Between Art and Everyday Life',
     q: 'Can anything be art?',
-    meta: '60 slides · Pop Art to Mei Dean-E · the “is this art?” object activity · 6-question quiz'
+    meta: '56 slides · Pop Art to Mei Dean-E · the “is this art?” object activity · 6-question quiz'
   },
   {
     n: 5, dir: 'week06',
