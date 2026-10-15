@@ -575,9 +575,19 @@
   function closeMenu() { menu.classList.remove('on'); }
 
   /* ---------- chip popover ---------- */
+  /* Which chip the open card belongs to, so that clicking the same chip
+     again puts the card away. Tracked by node, not by word: the same term
+     can appear twice on one slide, and each chip should answer for itself. */
+  let chipNode = null;
+
   function openChip(node, key) {
     const g = GLOSSARY[key];
     if (!g) return;
+    if (chipNode === node && chipcard.classList.contains('on')) {
+      closeChip();
+      return;
+    }
+    chipNode = node;
     chipcard.innerHTML = `
       <div class="term">${g.en}</div>
       <div class="term-zh">${g.zh}</div>
@@ -592,7 +602,7 @@
     chipcard.style.left = Math.max(12, Math.min(window.innerWidth - w - 12, x)) + 'px';
     chipcard.style.top = Math.max(12, y) + 'px';
   }
-  function closeChip() { chipcard.classList.remove('on'); }
+  function closeChip() { chipcard.classList.remove('on'); chipNode = null; }
 
   /* ---------- zoom ---------- */
   function openZoom(img) {

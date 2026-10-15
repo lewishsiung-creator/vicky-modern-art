@@ -97,6 +97,8 @@ A UI/UX pass on 7 October 2026 fixed these:
   `:focus-visible` ring now, cream inside the dark jump menu.
 - **Word chips were mouse-only** `<span>`s. They are `role="button"`,
   `tabindex="0"`, and Enter/Space opens the card instead of advancing.
+  The card toggles: the same chip again puts it away, a different chip
+  swaps the word, and clicking off it or changing slide still closes it.
 - **Every picture had `alt=""`.** Alt text now comes from the caption.
 - **Contrast.** The accent greens failed WCAG AA on her slide green:
   `--deep` 2.32, `--ink-faint` 1.90, `--deeper` 3.69. They are 4.52, 4.52 and
