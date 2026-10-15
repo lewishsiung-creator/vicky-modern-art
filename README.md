@@ -270,6 +270,22 @@ content, and each is stated in that question's speaker notes.
 
 ## Unit 5 — videos, and why they are not all hosted
 
+**Link check, 15 October 2026.** Embedded video rots. All 15 embeds across the
+course were checked by asking YouTube for each video's status; four were dead:
+
+| Unit | Page | Film | State | Done |
+|---|---|---|---|---|
+| 5 | 21 | Klein, *Fire Painting* | removed | replaced with the WSJ/Christie's piece |
+| 5 | 39 | Ono, *Cut Piece* | removed | replaced with another upload of the Maysles film |
+| 9 | 37 | Abramović, *Rhythm 0* | age-restricted | still broken |
+| 10 | 21 | Kiefer in the studio | removed | still broken |
+
+Age-restricted is not the same as gone: *Rhythm 0* still exists, but YouTube
+will not play it inside an embed, so the facade's "open on YouTube" link is the
+only route. Worth re-running this check before each semester:
+`curl -s "https://www.youtube.com/watch?v=<id>" | grep -o '"status":"[A-Z_]*"'`
+
+
 Her `.pptx` embeds eight film files totalling about 270 MB — 76 minutes of
 footage. Three of them are over Cloudflare Pages' 25 MB per-file limit, and
 there is no `ffmpeg` on this machine to re-encode them.

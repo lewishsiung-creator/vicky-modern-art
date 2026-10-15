@@ -423,7 +423,7 @@ const SLIDES = [
   oneClick: true,
   title: 'Fire Painting',
   caption: 'Yves Klein, <i>Fire Paintings</i>, 1960 — flame on treated board',
-  yt: '1mJCVM3d7jw',
+  yt: '-D7gj0QiRww',
   poster: 'img/klein-fire-painting.png',
   watchFor: 'Which element — body, colour, or fire — feels most “immaterial” by the end?',
   points: [
@@ -435,7 +435,9 @@ const SLIDES = [
   notes: [
     'The three-part scheme is on his own slide and is worth putting on the board: body, colour, immaterial.',
     'He worked at the French gas board’s testing centre, with their permission, to make these.',
-    'Afterwards, take answers on the “watch for”. Fire is the intended answer, but the argument for the body is good too.'
+    'Afterwards, take answers on the “watch for”. Fire is the intended answer, but the argument for the body is good too.',
+    'LINK REPLACED (Oct 2026): the film originally embedded here was taken down by its uploader. This is the Wall Street Journal’s three-minute piece on a fire painting, with Christie’s footage — it shows the finished work, the body imprints and the burn, rather than Klein at the torch. If you would rather have the torch itself, the note below has an alternative.',
+    'Alternative, 2:32, an archival montage titled “Fire Paintings”: youtube.com/watch?v=GDWSb7kr0oA. I could not vouch for its source, which is why the WSJ clip is the one embedded.'
   ]
 },
 {
@@ -708,7 +710,7 @@ const SLIDES = [
   oneClick: true,
   title: 'Cut Piece',
   caption: 'Yoko Ono (b. 1933), <i>Cut Piece</i>, first performed 1964 — Sogetsu Art Center, Tokyo; New York, 1965',
-  yt: '8Sc47KfJjcI',
+  yt: 'aGMVqbEl-Y0',
   watchFor: 'At what point does watching start to feel uncomfortable — and why?',
   points: [
     'She sits still on a stage with a pair of scissors in front of her.',
@@ -721,7 +723,8 @@ const SLIDES = [
     'Watch three or four minutes. You do not need the end.',
     'The point for today: this is audience participation taken to its limit. Kaprow invited the audience in; Ono hands them the scissors and the responsibility.',
     'Afterwards, take answers to the “watch for”. The discomfort is the content, and naming it is the whole discussion.',
-    'CORRECTED: her slide spelled it “Cut piese”.'
+    'CORRECTED: her slide spelled it “Cut piese”.',
+    'LINK REPLACED (Oct 2026): the original embed was taken down. This is the 1965 Carnegie Recital Hall performance filmed by the Maysles brothers, 8:08 — the same film, a different upload. Tate Britain has a 43-second extract (youtube.com/watch?v=-Y7R7WmdyXI) if you ever need a very short version.'
   ]
 },
 
