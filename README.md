@@ -129,6 +129,24 @@ touched — took care of most of what that list left open:
 - Closing a zoom returns the keyboard to the picture it came from, and the slide
   counter announces itself to screen readers.
 
+### Device pass, 22 October 2026
+
+Checked at 320×568, 375×812, 812×375, 768×1024, 1024×768, 1440×900 and
+1920×1080. Two things were broken and are not any more:
+
+- **A phone held in landscape cut eleven slides off at the bottom** — every
+  video slide lost 73–141px, with no way to reach it, because a slide does not
+  scroll. Two causes. The stacking breakpoint asked only about width, so 812×375
+  got the picture-above-text layout meant for a tall phone; it now asks for
+  height as well. And `fit()` had a floor of 11px, which on 375px of height
+  guarantees an overflow; short viewports may go to 8px. Short viewports also
+  get tighter padding, a compact HUD, and `overflow-y: auto` as a last resort,
+  so a slide that still will not fit scrolls instead of hiding its own bottom.
+- **iPad touch targets were mouse-sized.** The 44px rule was tied to
+  `max-width: 700px`, and an iPad is 768 or 1024 wide, so it never applied.
+  It asks `(pointer: coarse)` now, which is the actual question. Desktop is
+  untouched: the HUD is still 13px type in a 15px row for a cursor.
+
 Still open: `width`/`height` on images, and `apple-touch-icon` (which would mean
 drawing an icon — a design decision, not a fix).
 

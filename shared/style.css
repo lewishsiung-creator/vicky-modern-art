@@ -1154,7 +1154,10 @@ body.vocab { overflow-x: hidden; overflow-y: auto; }
 #menu :focus-visible, .s-end .chip:focus-visible { outline-color: var(--cream); }
 
 /* ---------- Smaller screens / preview ---------- */
-@media (max-width: 900px) {
+/* Narrow AND tall — a phone or tablet held upright. Stacking a picture
+   above its text needs vertical room; doing it on a phone in landscape
+   is what pushed eight video slides off the bottom of the screen. */
+@media (max-width: 900px) and (min-height: 520px) {
   .s-artwork { flex-direction: column; gap: 2vh; }
   .s-gallery { flex-direction: column; gap: 2vh; }
   .s-gallery .gal { height: 46vh; }
@@ -1214,4 +1217,42 @@ body.vocab { overflow-x: hidden; overflow-y: auto; }
    the block above turns this off when the system asks. */
 @media (prefers-reduced-motion: no-preference) {
   body.vocab { scroll-behavior: smooth; }
+}
+
+/* ---------- Touch devices, any size ----------
+   The HUD links were sized for a mouse: 15px tall. That is fine for a
+   cursor and wrong for a finger, and an iPad is 768 or 1024 wide, so a
+   width breakpoint never catches it. Ask about the pointer instead. */
+@media (pointer: coarse) {
+  #hud { font-size: 14px; opacity: 1; }
+  #hud button, #hud a { padding: .8em .5em; }
+  #nav button { min-height: 44px; }
+  /* The vocabulary page's unit numbers were 30px — same problem. */
+  .v-jump a { min-width: 44px; padding: .9em 0; }
+}
+
+/* ---------- Short viewports: a phone on its side ----------
+   Roughly 375pt of height. Everything has to give a little: the slide
+   padding, the chrome, and the type scale (handled in fit()). The last
+   rule is a safety net — if a slide still will not fit, it scrolls
+   rather than silently cutting its own bottom off. */
+@media (max-height: 520px) {
+  .slide { padding: 3vh 5vw 7vh; overflow-y: auto; }
+  #nav { bottom: .8vh; left: 1.5vw; }
+  #nav button { font-size: 13px; padding: .5em .8em; min-height: 36px; }
+  #hud {
+    bottom: .8vh; right: 1.5vw;
+    font-size: 12px; gap: .8em; opacity: 1;
+  }
+  #hud button, #hud a { padding: .45em .35em; }
+  .s-video .vid, .s-artwork .art { height: 62vh; }
+  .s-gallery .gal { height: 62vh; }
+  .compare-pane { height: 58vh; }
+}
+
+/* Portrait phone: the HUD links were 33px tall, under Apple's 44pt
+   minimum. The row has the space, so take it. */
+@media (max-width: 700px) {
+  #hud button, #hud a { padding: .95em .5em; }
+  #hud { bottom: calc(1.2vh + 68px); }
 }

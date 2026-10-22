@@ -164,7 +164,12 @@
   /* Scale the whole deck off the viewport so it reads from the back row. */
   function fit() {
     const base = Math.min(window.innerWidth / 78, window.innerHeight / 46);
-    stage.style.fontSize = Math.max(11, Math.min(26, base)) + 'px';
+    /* The floor is what keeps text readable from the back of a room, but
+       on a phone held in landscape there is no back of the room — there
+       are 375 logical pixels of height, and a floor of 11px guarantees
+       the slide overflows. Short viewports get to go smaller. */
+    const floor = window.innerHeight < 520 ? 8 : 11;
+    stage.style.fontSize = Math.max(floor, Math.min(26, base)) + 'px';
   }
   window.addEventListener('resize', fit);
 
