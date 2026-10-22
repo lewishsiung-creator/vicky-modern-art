@@ -109,8 +109,28 @@ A UI/UX pass on 7 October 2026 fixed these:
 - Chinese runs are tagged `lang="zh-Hant"`, and an open word card closes when
   the slide changes instead of hanging over the next one.
 
-Still open, deliberately: `prefers-reduced-motion`, `width`/`height` on images,
-and `theme-color` / `apple-touch-icon`.
+A second pass on 22 October 2026 — craft only, with no design or content
+touched — took care of most of what that list left open:
+
+- **One easing curve.** All 33 transitions used the browser's generic `ease`.
+  They share `--ease` now, so the motion reads as one system. Durations are
+  unchanged.
+- **`prefers-reduced-motion`** is honoured. macOS and iOS both have the switch,
+  and a deck that cross-fades 56 slides is what it is for. Slides still change;
+  they arrive instead of moving.
+- **Touch behaviour**: no grey flash on tap, no 300ms delay before a tap
+  registers, no rubber-band bounce on the scrolling pages, and no text selection
+  when a button is double-tapped mid-sentence.
+- **`theme-color`** and the Apple web-app meta, so the browser bar matches the
+  deck and an iPad home-screen copy opens clean.
+- Images decode off the main thread. Loading stays **eager** on purpose: a
+  classroom with bad wifi is better served by everything arriving at the start
+  than by a picture that is still loading when she reaches it.
+- Closing a zoom returns the keyboard to the picture it came from, and the slide
+  counter announces itself to screen readers.
+
+Still open: `width`/`height` on images, and `apple-touch-icon` (which would mean
+drawing an icon — a design decision, not a fix).
 
 ## Presenting
 

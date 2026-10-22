@@ -224,7 +224,7 @@
           ${s.ask ? askBlock(s.ask, true) : ''}`;
         if (!s.src) return body;
         return `<div class="q-body">${body}</div>
-          <div class="q-doc"><img src="${s.src}" alt="${plainText(s.caption || s.title || '')}">
+          <div class="q-doc"><img src="${s.src}" decoding="async" alt="${plainText(s.caption || s.title || '')}">
             ${s.srcLabel ? `<div class="doc-lbl">${s.srcLabel}</div>` : ''}</div>`;
       }
 
@@ -233,16 +233,16 @@
           ${s.ask ? askBlock(s.ask, false) : ''}
           <div class="compare-wrap">
             <div class="compare-pane" data-side="left">
-              <img src="${s.left.src}" alt="${plainText(s.left.label || '')}">
+              <img src="${s.left.src}" decoding="async" alt="${plainText(s.left.label || '')}">
               <div class="lbl">${s.left.label}</div></div>
             <div class="compare-pane" data-side="right">
-              <img src="${s.right.src}" alt="${plainText(s.right.label || '')}">
+              <img src="${s.right.src}" decoding="async" alt="${plainText(s.right.label || '')}">
               <div class="lbl">${s.right.label}</div></div>
           </div>
           <div class="compare-note"></div>`;
 
       case 'artwork':
-        return `<div class="art"><img src="${s.src}" alt="${plainText(s.caption || s.title || '')}" data-soft="${!!s.smallSource}"></div>
+        return `<div class="art"><img src="${s.src}" decoding="async" alt="${plainText(s.caption || s.title || '')}" data-soft="${!!s.smallSource}"></div>
           <div class="side">
             <h2>${chips(s.title)}</h2>
             <div class="cap">${s.caption}</div>
@@ -257,7 +257,7 @@
          made of many images at once — a film, a series, a comic. */
       case 'gallery':
         return `<div class="gal">${s.images.map(im =>
-            `<figure><img src="${im.src}" alt="${plainText(im.cap || s.title || '')}">${
+            `<figure><img src="${im.src}" decoding="async" alt="${plainText(im.cap || s.title || '')}">${
               im.cap ? `<figcaption>${chips(im.cap)}</figcaption>` : ''}</figure>`).join('')}</div>
           <div class="side">
             <h2>${chips(s.title)}</h2>
@@ -426,7 +426,7 @@
             <div class="rank-cards">${s.items.map((it, k) => `
               <button class="rank-card" data-card="${k}">
                 <span class="rank-badge"></span>
-                ${it.src ? `<img src="${it.src}" alt="${plainText(it.label || it.head || '')}">`
+                ${it.src ? `<img src="${it.src}" decoding="async" alt="${plainText(it.label || it.head || '')}">`
                          : `<span class="rank-glyph"><span class="g">${it.glyph}</span></span>`}
                 <span class="rank-lbl">${it.label}</span>
               </button>`).join('')}</div>
@@ -510,6 +510,7 @@
     if (s.type === 'match') node.classList.toggle('revealed', step >= 1);
 
     progress.style.width = ((idx + 1) / SLIDES.length * 100) + '%';
+    counter.setAttribute('aria-live', 'polite');
     counter.textContent = (idx + 1) + ' / ' + SLIDES.length;
 
     /* Grey the arrows out at the two ends, so it is obvious there is
@@ -605,6 +606,7 @@
   function closeChip() { chipcard.classList.remove('on'); chipNode = null; }
 
   /* ---------- zoom ---------- */
+  let zoomFrom = null;
   function openZoom(img) {
     lightbox.querySelector('img').src = img.src;
     lightbox.querySelector('img').alt = img.alt || '';
@@ -614,8 +616,15 @@
         ? 'Low-resolution source — shown small so it holds together'
         : 'Click anywhere to close';
     lightbox.classList.add('on');
+    zoomFrom = img;
   }
-  function closeZoom() { lightbox.classList.remove('on'); }
+  function closeZoom() {
+    lightbox.classList.remove('on');
+    /* Put the keyboard back where it was, rather than at the top of the
+       document — closing a zoom should not lose her place. */
+    if (zoomFrom && document.contains(zoomFrom)) zoomFrom.focus?.();
+    zoomFrom = null;
+  }
 
   /* ---------- activity timers ---------- */
   const timers = new WeakMap();

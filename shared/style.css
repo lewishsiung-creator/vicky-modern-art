@@ -16,11 +16,34 @@
   --ink-dim:  #183223;
   --ink-faint:#173b27;
   --rule:     rgba(23,19,18,.18);
+  /* One easing curve for the whole deck. Every transition used the
+     browser's generic `ease`, which starts and ends at slightly
+     different rates in different engines; a named curve makes the
+     motion read as one system rather than nineteen separate guesses. */
+  --ease:     cubic-bezier(.32, .08, .24, 1);
   --serif:    'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, 'Songti TC', serif;
   --sans:     -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ---------- Touch and pointer behaviour ----------
+   Phone and iPad polish that costs nothing on a projector:
+   no grey flash when a control is tapped, no 300ms wait before a tap
+   registers, no rubber-band bounce dragging the page around, and no
+   text selection when she double-taps a button mid-sentence. */
+html {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+}
+#nav, #hud, #progress, #menu .sec-head, .vid-play {
+  -webkit-user-select: none; user-select: none;
+}
+button, a, .chip, .rank-card, .match-card, .vote-opt, summary {
+  touch-action: manipulation;
+}
+body.course { overscroll-behavior-y: contain; }
+img { -webkit-user-drag: none; }
 
 html, body {
   height: 100%;
@@ -45,7 +68,7 @@ html, body {
   padding: 5vh 7vw 9vh;
   opacity: 0;
   pointer-events: none;
-  transition: opacity .28s ease;
+  transition: opacity .28s var(--ease);
 }
 .slide.active { opacity: 1; pointer-events: auto; }
 
@@ -53,7 +76,7 @@ html, body {
 .step {
   opacity: 0;
   transform: translateY(.5em);
-  transition: opacity .35s ease, transform .35s ease;
+  transition: opacity .35s var(--ease), transform .35s var(--ease);
 }
 .step.shown { opacity: 1; transform: none; }
 
@@ -338,7 +361,7 @@ h2 {
   display: flex; align-items: center; justify-content: center;
   background: rgba(20,35,26,.35);
   border: 0; cursor: pointer;
-  transition: background .18s ease;
+  transition: background .18s var(--ease);
 }
 .vid-frame:hover .vid-play { background: rgba(20,35,26,.18); }
 .vid-play span {
@@ -378,7 +401,7 @@ h2 {
   flex: 1 1 50%;
   height: 54vh;
   display: flex; flex-direction: column; align-items: center;
-  transition: opacity .3s ease, filter .3s ease;
+  transition: opacity .3s var(--ease), filter .3s var(--ease);
 }
 /* The image takes whatever the label leaves, rather than a fixed
    subtraction — otherwise a short pane starves it. */
@@ -437,7 +460,7 @@ h2 {
 .s-break .chain span {
   font-size: 1.15em; padding: .3em .6em;
   background: var(--cream); border-radius: .3em;
-  transition: opacity .4s ease, transform .4s ease;
+  transition: opacity .4s var(--ease), transform .4s var(--ease);
 }
 .s-break .chain i {
   color: var(--deeper); font-style: normal; font-size: 1em;
@@ -531,7 +554,7 @@ h2 {
   border: 2px solid transparent; border-radius: .5em;
   padding: 1.1em 1.2em 1.2em;
   box-shadow: 0 .4em 1.3em rgba(23,19,18,.16);
-  transition: transform .12s ease, border-color .15s ease;
+  transition: transform .12s var(--ease), border-color .15s var(--ease);
 }
 .vote-opt:hover { transform: translateY(-.15em); border-color: var(--deeper); }
 .vote-letter {
@@ -550,7 +573,7 @@ h2 {
   display: flex; align-items: center; justify-content: center;
   font-size: 1em; color: var(--deep);
   background: rgba(23,19,18,.07);
-  opacity: 0; transition: opacity .15s ease;
+  opacity: 0; transition: opacity .15s var(--ease);
 }
 .vote-opt:hover .vote-minus { opacity: 1; }
 .vote-minus:hover { background: rgba(23,19,18,.16); }
@@ -598,7 +621,7 @@ h2 {
   padding: .6em 1em .6em 2.6em;
   cursor: pointer;
   box-shadow: 0 .3em 1em rgba(23,19,18,.14);
-  transition: border-color .15s ease, opacity .3s ease, transform .1s ease;
+  transition: border-color .15s var(--ease), opacity .3s var(--ease), transform .1s var(--ease);
 }
 .match-card:hover { transform: translateY(-1px); }
 .match-card.picked { border-color: var(--deeper); }
@@ -608,7 +631,7 @@ h2 {
   background: var(--deeper); color: var(--cream);
   font-size: .92em; font-weight: 700;
   display: flex; align-items: center; justify-content: center;
-  opacity: 0; transition: opacity .2s ease;
+  opacity: 0; transition: opacity .2s var(--ease);
 }
 .match-card.paired .match-badge { opacity: 1; }
 
@@ -689,7 +712,7 @@ h2 {
   width: 9.4em;
   display: flex; flex-direction: column; align-items: center; gap: .6em;
   box-shadow: 0 .5em 1.5em rgba(23,19,18,.16);
-  transition: border-color .2s ease, transform .2s ease;
+  transition: border-color .2s var(--ease), transform .2s var(--ease);
 }
 .rank-card:hover { transform: translateY(-.15em); }
 /* The image box and the emoji box must be the same height, so the four
@@ -708,7 +731,7 @@ h2 {
   font-size: 1.05em; font-weight: 700;
   display: flex; align-items: center; justify-content: center;
   opacity: 0; transform: scale(.6);
-  transition: opacity .2s ease, transform .2s ease;
+  transition: opacity .2s var(--ease), transform .2s var(--ease);
 }
 .rank-card.ranked .rank-badge { opacity: 1; transform: none; }
 .rank-tools { margin-top: 1.2em; display: flex; align-items: center; gap: 1em; }
@@ -736,7 +759,7 @@ h2 {
   font-size: 1.18em; line-height: 1.45;
   padding: .7em .9em; margin-bottom: .45em;
   border: 1px solid var(--rule); border-radius: .4em;
-  transition: opacity .4s ease, border-color .4s ease, background .4s ease;
+  transition: opacity .4s var(--ease), border-color .4s var(--ease), background .4s var(--ease);
 }
 .s-quiz .opts .k { flex: none; color: var(--deeper); font-weight: 700; }
 .s-quiz.revealed .opts li { opacity: .35; }
@@ -752,7 +775,7 @@ h2 {
 .s-quiz .why {
   margin-top: 1.3em; font-size: 1.2em; line-height: 1.5;
   color: var(--deeper); font-weight: 500; max-width: 34em;
-  opacity: 0; transition: opacity .4s ease .15s;
+  opacity: 0; transition: opacity .4s var(--ease) .15s;
 }
 .s-quiz.revealed .why { opacity: 1; }
 .s-quiz .reveal-hint {
@@ -772,7 +795,7 @@ h2 {
   cursor: pointer;
   color: inherit;
   padding: 0 .05em;
-  transition: background .18s ease;
+  transition: background .18s var(--ease);
 }
 .chip:hover { background: rgba(28,74,47,.16); }
 .chip::after {
@@ -830,7 +853,7 @@ h2 {
 #progress {
   position: fixed; top: 0; left: 0; height: 3px;
   background: var(--cream); z-index: 50;
-  transition: width .28s ease;
+  transition: width .28s var(--ease);
 }
 /* ---------- 上一頁 / 下一頁 ----------
    Always visible and finger-sized: these get used on a lecture-hall
@@ -846,7 +869,7 @@ h2 {
   border: none; border-radius: .4em;
   padding: .7em 1.1em; cursor: pointer;
   box-shadow: 0 .3em 1em rgba(23,19,18,.22);
-  transition: background .15s ease, opacity .15s ease, transform .1s ease;
+  transition: background .15s var(--ease), opacity .15s var(--ease), transform .1s var(--ease);
 }
 #nav button:hover:not(:disabled) { background: #fffdf6; transform: translateY(-1px); }
 #nav button:active:not(:disabled) { transform: none; }
@@ -861,7 +884,7 @@ h2 {
   position: fixed; bottom: 1.6vh; right: 2vw; z-index: 50;
   display: flex; align-items: center; gap: 1.1em;
   font-size: 13px; color: var(--deeper);
-  opacity: .75; transition: opacity .2s ease;
+  opacity: .75; transition: opacity .2s var(--ease);
 }
 #hud:hover { opacity: 1; }
 #hud button {
@@ -982,7 +1005,7 @@ body.course { overflow: auto; }
   background: var(--cream); border-radius: .6em;
   padding: 1.5em 1.7em;
   box-shadow: 0 .5em 1.6em rgba(23,19,18,.16);
-  transition: transform .18s ease, box-shadow .18s ease;
+  transition: transform .18s var(--ease), box-shadow .18s var(--ease);
 }
 .weeks a:hover {
   transform: translateY(-.15em);
@@ -1025,7 +1048,7 @@ body.course { overflow: auto; }
   display: block; margin-top: 2.2em; text-decoration: none; color: var(--ink);
   border: 1px solid rgba(23,19,18,.28); border-radius: .6em;
   padding: 1.2em 1.7em;
-  transition: background .18s ease, border-color .18s ease;
+  transition: background .18s var(--ease), border-color .18s var(--ease);
 }
 .vocab-link:hover { background: var(--cream); border-color: transparent; }
 .vl-t { display: block; font-family: var(--serif); font-size: 1.5em; }
@@ -1171,4 +1194,24 @@ body.vocab { overflow-x: hidden; overflow-y: auto; }
     font-size: 14px; opacity: 1;
   }
   #hud button, #hud a { padding: .6em .45em; }
+}
+
+/* ---------- Reduced motion ----------
+   macOS and iOS both have a system switch for this, and a deck that
+   cross-fades 56 slides is exactly what it is meant to catch. Slides
+   and build steps still change — they just arrive instead of moving. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .step { transform: none; }
+}
+
+/* Anchor jumps on the vocabulary page glide instead of teleporting;
+   the block above turns this off when the system asks. */
+@media (prefers-reduced-motion: no-preference) {
+  body.vocab { scroll-behavior: smooth; }
 }
