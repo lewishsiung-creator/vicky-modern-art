@@ -390,7 +390,7 @@ const SLIDES = [
   oneClick: true,
   title: 'Fire Painting',
   caption: 'Yves Klein, <i>Fire Paintings</i>, 1960 — flame on treated board',
-  yt: 'lINJejrGYPU',
+  yt: 'we7d_sE6ieM',
   poster: 'img/klein-fire-painting.png',
   watchFor: 'Which element — body, colour, or fire — feels most “immaterial” by the end?',
   points: [
@@ -403,8 +403,9 @@ const SLIDES = [
     'The three-part scheme is on his own slide and is worth putting on the board: body, colour, immaterial.',
     'He worked at the French gas board’s testing centre, with their permission, to make these.',
     'Afterwards, take answers on the “watch for”. Fire is the intended answer, but the argument for the body is good too.',
-    'LINK (Oct 2026): Sotheby’s, 2:08 — <i>Untitled Fire Colour Painting</i> (FC 28), 1962, sold for £2.6 million in London. The film originally embedded here had been taken down.',
-    'If you would rather show the making of them, there is a 1962 newsreel with Klein at the torch and a fireman standing by, 54 seconds, Spanish narration: youtube.com/watch?v=we7d_sE6ieM'
+    'LINK (Oct 2026): a 1962 newsreel — Noticiero de América #317, from the Museo del Cine Pablo Ducrós Hicken — with Klein burning the boards and a fireman standing by with a hose. 54 seconds, narration in Spanish, so talk over it.',
+    'It is short. Play it twice, or pause it on the flame.',
+    'If you ever want the market angle instead, Sotheby’s has 2:08 on <i>Untitled Fire Colour Painting</i> (FC 28), 1962, which sold for £2.6 million: youtube.com/watch?v=lINJejrGYPU'
   ]
 },
 {
