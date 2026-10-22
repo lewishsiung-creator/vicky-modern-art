@@ -35,7 +35,7 @@ const WEEKS = [
     n: 5, dir: 'week06',
     title: 'Art as Action / Event',
     q: 'If an artwork destroys itself, what are we left with?',
-    meta: '58 slides · Klein to Beuys · eight films with “watch for” prompts · 6-question quiz'
+    meta: '56 slides · Klein to Beuys · eight films with “watch for” prompts · 6-question quiz'
   },
   {
     n: 6, dir: 'week07',

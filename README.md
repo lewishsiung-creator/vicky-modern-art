@@ -12,7 +12,7 @@ vocabulary.
 | 2 | Expression and the Inner Self | 62 slides |
 | 3 | From Representation to Expression | 60 slides |
 | 4 | The Boundary Between Art and Everyday Life | 56 slides |
-| 5 | Art as Action / Event | 58 slides |
+| 5 | Art as Action / Event | 56 slides |
 | 6 | From Object to Concept | 61 slides |
 | 7 | Anti-Form | 49 slides |
 | 8 | Leaving the Museum | 54 slides |
@@ -150,7 +150,7 @@ click instead of one item per click. Vicky asked for this on 15 September
 Her Unit 2 list followed one rule, and the other units were flagged by it:
 every slide that builds a list one item per click — `bullets`, `artwork`
 points, `grid`, `rank`, `activity`, plus the list-shaped types Unit 2 lacks
-(`flow`, `timeline`, `video`, `gallery`). 309 slides across the ten units.
+(`flow`, `timeline`, `video`, `gallery`). 308 slides across the ten units.
 Unit 2's page numbers above are as they were on 15 September; on 17 September
 a missing slide, *André Masson’s Method*, went in as page 43, so everything
 from her old page 43 onward is now one page later.

@@ -90,12 +90,13 @@ const GLOSSARY = {
 
 const SECTIONS = [
   { title: '1 · Review & the Question', zh: '複習與提問',     start: 0 },
-  { title: '2 · Nouveau Réalisme',     zh: '新寫實主義',      start: 3 },
-  { title: '3 · Yves Klein',           zh: '克萊因',          start: 8 },
-  { title: '4 · Arman, Tinguely, Niki', zh: '阿曼、廷格利、妮基', start: 22 },
-  { title: '5 · Happening',            zh: '偶發藝術',        start: 29 },
-  { title: '6 · Fluxus',               zh: '激浪派',          start: 39 },
-  { title: '7 · Wrap-Up & Quiz',       zh: '總結與測驗',      start: 47 }
+  { title: '2 · Nouveau Réalisme',     zh: '新寫實主義',      start: 2 },
+  { title: '3 · Yves Klein',           zh: '克萊因',          start: 7 },
+  { title: '4 · Arman, Tinguely, Niki', zh: '阿曼、廷格利、妮基', start: 20 },
+  { title: '5 · Happening',            zh: '偶發藝術',        start: 27 },
+  { title: '6 · Fluxus',               zh: '激浪派',          start: 37 },
+  { title: '7 · Wrap-Up & Quiz',       zh: '總結與測驗',      start: 45 },
+  { title: '8 · Short Presentations', zh: '學生報告',      start: 55 }
 ];
 
 const SLIDES = [
@@ -127,23 +128,6 @@ const SLIDES = [
     'Recap Unit 4 in one line: the boundary between art and everyday life came down, but the artwork was still an object.',
     'Now the object goes too. Say it plainly.',
     'The last point is the guiding question and the first discussion question at the end. Plant it now.'
-  ]
-},
-{
-  type: 'compare',
-  title: 'Two things that happened in 1960',
-  ask: 'One man jumps out of a window. One machine destroys itself. What is left of either?',
-  left:  { src: 'img/klein-leap-into-the-void.jpg', label: 'Yves Klein, <i>Leap into the Void</i>, 1960', tag: 'Klein' },
-  right: { src: 'img/tinguely-homage-to-new-york.jpg', label: 'Jean Tinguely, <i>Homage to New York</i>, 1960 — in the garden of MoMA', tag: 'Tinguely' },
-  reveal: [
-    { side: 'left',  text: 'Klein really jumped. But the photograph is a darkroom fake — the people who caught him were edited out.' },
-    { side: 'right', text: 'Tinguely’s machine ran for twenty-seven minutes, set itself on fire, and was put out by the fire brigade.' },
-    { side: 'right', text: 'So from both, all we have left is a document. Hold that thought all session.' }
-  ],
-  notes: [
-    'ASK first, then click through the three reveals.',
-    'Do not explain either work fully yet — both come back in detail later. This is the hook.',
-    'The point to leave hanging: in both cases the thing we look at today is not the artwork. It is evidence that the artwork happened.'
   ]
 },
 
@@ -189,18 +173,20 @@ const SLIDES = [
   ]
 },
 {
-  type: 'grid',
+  type: 'artwork',
   oneClick: true,
+  src: 'img/venn-real-objects.webp',
   title: 'A boundary that is hard to draw',
   zh: '難以劃定的邊界',
-  cells: [
-    { label: 'France', head: '{{nouveaurealisme}}', body: 'Real objects, taken from the street and the rubbish, in Paris.' },
-    { label: 'United States', head: '{{neodada}} and Assemblage', body: 'Rauschenberg and Johns — real objects put into painting. Unit 4.' },
-    { label: 'United States', head: 'Pop Art', body: 'Warhol and Lichtenstein — the images of consumer culture. Also Unit 4.' },
-    { label: 'Shared', head: 'All three use real things directly', body: 'They differ in what they take, and in how much irony they bring to it.' }
+  caption: 'Three movements, one shared move: the direct use of real objects',
+  points: [
+    'All three use real things directly. That is the overlap in the middle.',
+    'They differ in what they take, and in how much irony they bring to it.'
   ],
   notes: [
     'The point of this slide: these are not tidy separate boxes. Same years, same problem, different cities.',
+    'France takes the object — real things from the street and the rubbish, in Paris.',
+    'The United States has two: Neo-Dada and Assemblage (Rauschenberg and Johns, real objects put into painting) and Pop Art (Warhol and Lichtenstein, the images of consumer culture). Both were Unit 4.',
     'Ask them to name the difference. A reasonable answer: the Americans take the <i>image</i> of consumer culture; the French take the <i>object</i> itself, often used and thrown away.'
   ]
 },
@@ -377,25 +363,6 @@ const SLIDES = [
 {
   type: 'artwork',
   oneClick: true,
-  src: 'img/klein-anthropometry-3.jpg',
-  title: 'And this is what hangs on the wall',
-  caption: 'An <i>Anthropométrie</i>, as exhibited',
-  ask: 'If the artwork was the evening, what is this?',
-  points: [
-    'Blue marks on paper. Torsos, mostly — no heads, no arms, no legs.',
-    'It is the trace of a body that was there for a moment.',
-    'Klein and {{restany}} both said this is <i>not</i> the work. It is the residue.',
-    'But it is what museums own, insure and hang.'
-  ],
-  notes: [
-    'ASK and hold it. This is the first discussion question at the end of class, arriving early.',
-    'The honest tension: the artist says the object is only a trace, and the entire art economy treats the trace as the asset.',
-    'Do not resolve it. Just make sure they see it.'
-  ]
-},
-{
-  type: 'artwork',
-  oneClick: true,
   src: 'img/klein-ant82.jpg',
   title: 'ANT 82',
   caption: 'Yves Klein, <i>ANT 82</i>, 1960',
@@ -423,7 +390,7 @@ const SLIDES = [
   oneClick: true,
   title: 'Fire Painting',
   caption: 'Yves Klein, <i>Fire Paintings</i>, 1960 — flame on treated board',
-  yt: '-D7gj0QiRww',
+  yt: 'lINJejrGYPU',
   poster: 'img/klein-fire-painting.png',
   watchFor: 'Which element — body, colour, or fire — feels most “immaterial” by the end?',
   points: [
@@ -436,8 +403,8 @@ const SLIDES = [
     'The three-part scheme is on his own slide and is worth putting on the board: body, colour, immaterial.',
     'He worked at the French gas board’s testing centre, with their permission, to make these.',
     'Afterwards, take answers on the “watch for”. Fire is the intended answer, but the argument for the body is good too.',
-    'LINK REPLACED (Oct 2026): the film originally embedded here was taken down by its uploader. This is the Wall Street Journal’s three-minute piece on a fire painting, with Christie’s footage — it shows the finished work, the body imprints and the burn, rather than Klein at the torch. If you would rather have the torch itself, the note below has an alternative.',
-    'Alternative, 2:32, an archival montage titled “Fire Paintings”: youtube.com/watch?v=GDWSb7kr0oA. I could not vouch for its source, which is why the WSJ clip is the one embedded.'
+    'LINK (Oct 2026): Sotheby’s, 2:08 — <i>Untitled Fire Colour Painting</i> (FC 28), 1962, sold for £2.6 million in London. The film originally embedded here had been taken down.',
+    'If you would rather show the making of them, there is a 1962 newsreel with Klein at the torch and a fireman standing by, 54 seconds, Spanish narration: youtube.com/watch?v=we7d_sE6ieM'
   ]
 },
 {
@@ -888,27 +855,6 @@ const SLIDES = [
   ]
 },
 {
-  type: 'activity',
-  oneClick: true,
-  title: 'Short presentations',
-  zh: '學生報告',
-  minutes: 6,
-  instructions: [
-    'Three students today. Six minutes each, TED-style.',
-    'One artist from the course list of 120.'
-  ],
-  questions: [
-    'Who was the artist? Where and when did they work?',
-    'One or two key artworks.',
-    'What concept, and what media?',
-    'Why does it matter today?'
-  ],
-  notes: [
-    'Twenty minutes: three students, six minutes each, plus changeover.',
-    'The timer is set to six minutes. Press Reset between speakers.'
-  ]
-},
-{
   type: 'section',
   title: 'Art Quiz',
   zh: '藝術測驗',
@@ -998,6 +944,27 @@ const SLIDES = [
   title: 'Key terms',
   zh: '關鍵詞彙',
   terms: ['nouveaurealisme', 'actionperformance', 'immateriality', 'ikb', 'anthropometry', 'accumulation', 'kinetic', 'chance', 'happening', 'fluxus', 'expandedart', 'socialsculpture'],
-  notes: ['Tap any term to show it large, with the Chinese. Good for the last two minutes of class.']
+  notes: ['Tap any term to show it large, with the Chinese. Good for two minutes before the short presentations, which are the last slide.']
+},
+{
+  type: 'activity',
+  oneClick: true,
+  title: 'Short presentations',
+  zh: '學生報告',
+  minutes: 6,
+  instructions: [
+    'Three students today. Six minutes each, TED-style.',
+    'One artist from the course list of 120.'
+  ],
+  questions: [
+    'Who was the artist? Where and when did they work?',
+    'One or two key artworks.',
+    'What concept, and what media?',
+    'Why does it matter today?'
+  ],
+  notes: [
+    'Twenty minutes: three students, six minutes each, plus changeover.',
+    'The timer is set to six minutes. Press Reset between speakers.'
+  ]
 }
 ];
