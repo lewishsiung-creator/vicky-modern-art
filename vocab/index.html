@@ -14,13 +14,14 @@
 
 <main class="course-page vocab-page">
   <header>
-    <div class="course-kicker"><a href="../">Contemporary Art History</a></div>
-    <h1>Key Vocabulary <span class="h1-zh" lang="zh-Hant">關鍵詞彙</span></h1>
-    <p class="course-sub">
+    <div class="course-kicker"><a href="../" data-zh="當代藝術史">Contemporary Art History</a></div>
+    <h1 data-zh="關鍵詞彙 <span class='h1-zh' lang='en'>Key Vocabulary</span>">Key Vocabulary <span class="h1-zh" lang="zh-Hant">關鍵詞彙</span></h1>
+    <p class="course-sub" data-zh="課程所有詞彙，依單元排列。這裡的說明比簡報裡的詞彙卡更完整 — 那些是上課時直接讀螢幕用的，這裡是課後複習用的。">
       Every term in the course, by unit. These go further than the word
       chips in the decks — those are for reading off the screen mid-lesson;
       these are for afterwards.
     </p>
+    <button id="btn-lang" class="lang-btn" title="中文 / English" data-zh="EN">中文</button>
 
     <div class="v-tools">
       <input id="q" type="search" placeholder="Search a term, or a name — Greenberg, 靈光, entropy…"
@@ -33,13 +34,14 @@
 
   <div id="list"></div>
 
-  <p class="v-empty" id="empty" hidden>Nothing matches that.</p>
+  <p class="v-empty" id="empty" hidden data-zh="找不到符合的詞彙。">Nothing matches that.</p>
 
   <footer class="course-foot">
-    Compiled from Vicky’s <i>Key Vocabulary</i>, alongside the lecture decks.
+    <span data-zh="整理自 Vicky 的《關鍵詞彙》，與課程簡報並用。">Compiled from Vicky’s <i>Key Vocabulary</i>, alongside the lecture decks.</span>
   </footer>
 </main>
 
+<script src="../shared/lang.js"></script>
 <script src="terms.js"></script>
 <script>
 const list  = document.getElementById('list');
@@ -48,7 +50,9 @@ const q     = document.getElementById('q');
 const count = document.getElementById('count');
 const empty = document.getElementById('empty');
 
+const ZH = !!window.ZHMODE;
 const TOTAL = VOCAB.reduce((n, u) => n + u.terms.length, 0);
+if (ZH) q.placeholder = '搜尋詞彙或人名 — 格林伯格、靈光、entropy…';
 
 /* Escaping matters here: several definitions carry quotation marks and
    ampersands straight out of her document. */
@@ -57,11 +61,11 @@ const esc = s => s.replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c
 list.innerHTML = VOCAB.map(u => `
   <section class="v-unit" id="u${u.n}">
     <h2>
-      <span class="v-n">Unit ${u.n}</span>
+      <span class="v-n">${ZH ? '第 ' + u.n + ' 單元' : 'Unit ' + u.n}</span>
       <span class="v-t">${esc(u.title)}</span>
       <span class="v-zh" lang="zh-Hant">${esc(u.zh)}</span>
     </h2>
-    <a class="v-deck" href="../${u.dir}/">Open the deck →</a>
+    <a class="v-deck" href="../${u.dir}/">${ZH ? '開啟簡報 →' : 'Open the deck →'}</a>
     <dl>
       ${u.terms.map(t => `
         <div class="v-term">
@@ -99,10 +103,12 @@ function filter() {
 
   empty.hidden = shown > 0;
   count.textContent = s
-    ? `${shown} of ${TOTAL} terms`
-    : `${TOTAL} terms across ${VOCAB.length} units`;
+    ? (ZH ? `${shown} / ${TOTAL} 個詞彙` : `${shown} of ${TOTAL} terms`)
+    : (ZH ? `共 ${TOTAL} 個詞彙 · ${VOCAB.length} 個單元` : `${TOTAL} terms across ${VOCAB.length} units`);
 }
 
+applyLang();
+document.getElementById('btn-lang').onclick = () => switchLang();
 q.addEventListener('input', filter);
 /* Escape clears rather than closing the page, which is what a search
    box on a phone keyboard suggests it will do. */

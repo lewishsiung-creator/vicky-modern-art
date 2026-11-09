@@ -16,6 +16,56 @@
   'use strict';
 
   const isPresenter = new URLSearchParams(location.search).has('presenter');
+
+  /* ---------- English / 中文 ----------
+     lang.js decides the mode. In Chinese mode every slide string is looked
+     up in window.ZH (the unit's content.zh.js) by its exact English text;
+     anything not found stays English, so a gap shows rather than breaks.
+     Run `node tools/strings.js weekNN --missing` to list the gaps.
+
+     The GLOSSARY is not in there: it already carries zh and zhDef. */
+  const ZHMODE = !!window.ZHMODE;
+  const ALT = ZHMODE ? 'en' : 'zh-Hant';
+  const UI = ZHMODE ? {
+    ask: '問', watch: '注意看', simple: '簡單來說',
+    zoom: '點圖片放大', zoomSmall: '（原圖解析度低，刻意維持小尺寸）',
+    zoomAny: '點任一張圖片放大',
+    start: '開始', reset: '重來', clear: '清除', clearOrder: '清除排序',
+    record: '記下這一輪', resetCounts: '票數歸零',
+    revealHint: '全班回答後再點一下',
+    question: (n, of) => `第 ${n} 題 · 共 ${of} 題`,
+    netYt: id => `需要網路 · <a href="https://www.youtube.com/watch?v=${id}" target="_blank" rel="noopener">在 YouTube 開啟</a>`,
+    netDm: id => `需要網路 · <a href="https://www.dailymotion.com/video/${id}" target="_blank" rel="noopener">在 Dailymotion 開啟</a>`,
+    local: '影片放在這個網站上，不需要網路',
+    jumpTo: '跳到',
+    menuHint: 'Backspace 回到剛才那一頁 · N = 在這個螢幕看備註 · P = 講者視窗',
+    peek: n => `備註 · 第 ${n} 頁 · 按 N 收起`,
+    say: '要說的話', nextUp: '接下來', endOfDeck: '最後一頁',
+    back: '← 上一頁', fwd: '下一頁 →',
+    pv: (a, b, m) => `步驟 ${a}/${b} · 已過 ${m} 分鐘`,
+    lbClose: '點任一處關閉',
+    lbSoft: '原圖解析度低，縮小顯示才不會糊掉'
+  } : {
+    ask: 'ASK', watch: 'WATCH FOR', simple: 'In simple words',
+    zoom: 'Click the picture to zoom',
+    zoomSmall: ' (small source — stays modest on purpose)',
+    zoomAny: 'Click any picture to zoom',
+    start: 'Start', reset: 'Reset', clear: 'Clear', clearOrder: 'Clear the order',
+    record: 'Record this round', resetCounts: 'Reset counts',
+    revealHint: 'Click when the class has answered',
+    question: (n, of) => `Question ${n} of ${of}`,
+    netYt: id => `Needs internet · <a href="https://www.youtube.com/watch?v=${id}" target="_blank" rel="noopener">open on YouTube</a>`,
+    netDm: id => `Needs internet · <a href="https://www.dailymotion.com/video/${id}" target="_blank" rel="noopener">open on Dailymotion</a>`,
+    local: 'Plays from this site — no internet needed',
+    jumpTo: 'Jump to',
+    menuHint: 'Backspace takes you back to where you jumped from. · N = notes on this screen · P = presenter window',
+    peek: n => `Notes · slide ${n} · press N to hide`,
+    say: 'Say this', nextUp: 'Next up', endOfDeck: 'End of deck',
+    back: '← Back', fwd: 'Next →',
+    pv: (a, b, m) => `step ${a}/${b} · ${m} min elapsed`,
+    lbClose: 'Click anywhere to close',
+    lbSoft: 'Low-resolution source — shown small so it holds together'
+  };
   const CH = 'vicky-modern-art';
 
   /* ---------- helpers ---------- */
@@ -33,7 +83,8 @@
     return String(s).replace(/\{\{(\w+)\}\}/g, (m, key) => {
       const g = GLOSSARY[key];
       if (!g) return m.replace(/[{}]/g, '');
-      return `<span class="chip" data-term="${key}" role="button" tabindex="0">${g.en}</span>`;
+      const label = ZHMODE ? (g.zhChip || g.zh) : g.en;
+      return `<span class="chip" data-term="${key}" role="button" tabindex="0">${label}</span>`;
     });
   }
   /* Same, but strips the markup — for the presenter window and menu. */
@@ -42,6 +93,33 @@
     return String(s)
       .replace(/\{\{(\w+)\}\}/g, (m, k) => (GLOSSARY[k] ? GLOSSARY[k].en : k))
       .replace(/<[^>]+>/g, '');
+  }
+
+  if (ZHMODE) {
+    const ZH = window.ZH || {};
+    /* Keys that are machinery, not language — a video id translated
+       would simply stop playing. */
+    const KEEP = new Set(['type', 'yt', 'dm', 'poster', 'src', 'terms', 'answer',
+                          'n', 'of', 'minutes', 'oneClick', 'zh', 'zhDef', 'zhChip']);
+    const tr = v => {
+      if (typeof v === 'string') return Object.prototype.hasOwnProperty.call(ZH, v) ? ZH[v] : v;
+      if (Array.isArray(v)) return v.map(tr);
+      if (v && typeof v === 'object') {
+        const o = {};
+        for (const k in v) o[k] = KEEP.has(k) ? v[k] : tr(v[k]);
+        return o;
+      }
+      return v;
+    };
+    SLIDES.forEach((s, i) => {
+      const x = tr(s);
+      /* The small line under a title held the Chinese. In Chinese mode
+         it holds the English instead, so the term is still there. */
+      if (s.zh && s.title) x.zh = String(s.title).replace(/\{\{(\w+)\}\}/g,
+        (m, k) => GLOSSARY[k] ? GLOSSARY[k].en : k);
+      SLIDES[i] = x;
+    });
+    SECTIONS.forEach(sec => { const en = sec.title; sec.title = sec.zh || en; sec.zh = en; });
   }
 
   /* ---------- how many click-steps each slide has ---------- */
@@ -105,15 +183,15 @@
       root.innerHTML = `
         <div class="pv-top">
           <div class="where">${idx + 1} / ${SLIDES.length} · ${titleOf(s)}</div>
-          <div class="clock">step ${step}/${stepsFor(s)} · ${mins} min elapsed</div>
+          <div class="clock">${UI.pv(step, stepsFor(s), mins)}</div>
         </div>
-        <h3>Say this</h3>
+        <h3>${UI.say}</h3>
         <div class="notes">${notes || '<p>—</p>'}</div>
-        <div class="next"><div>Next up</div>
-          <div class="n-title">${nx ? titleOf(nx) : 'End of deck'}</div></div>
+        <div class="next"><div>${UI.nextUp}</div>
+          <div class="n-title">${nx ? titleOf(nx) : UI.endOfDeck}</div></div>
         <div class="pv-nav">
-          <button data-go="prev">← Back</button>
-          <button data-go="next">Next →</button>
+          <button data-go="prev">${UI.back}</button>
+          <button data-go="next">${UI.fwd}</button>
         </div>`;
       root.querySelectorAll('[data-go]').forEach(b => {
         b.onclick = () => post({ nav: b.dataset.go });
@@ -184,7 +262,7 @@
 
   function askBlock(text, stepped) {
     return `<div class="ask ${stepped ? 'step' : ''}" ${stepped ? 'data-step="ask"' : ''}>
-      <span class="tag">ASK</span><span class="q">${chips(text)}</span></div>`;
+      <span class="tag">${UI.ask}</span><span class="q">${chips(text)}</span></div>`;
   }
 
   function render(s, i) {
@@ -224,7 +302,7 @@
           <blockquote>${chips(s.quote)}</blockquote>
           <cite>${s.cite}</cite>
           ${s.plain ? `<div class="plain step" data-step="plain">
-            <div class="plain-label">In simple words</div>
+            <div class="plain-label">${UI.simple}</div>
             ${s.plain.map(p => `<p>${chips(p)}</p>`).join('')}</div>` : ''}
           ${s.ask ? askBlock(s.ask, true) : ''}`;
         if (!s.src) return body;
@@ -254,7 +332,7 @@
             ${s.ask ? askBlock(s.ask, false) : ''}
             <ul class="points">${(s.points || []).map((p, k) =>
               `<li class="step" data-step="${k}">${chips(p)}</li>`).join('')}</ul>
-            <div class="zoom-hint">Click the picture to zoom${s.smallSource ? ' (small source — stays modest on purpose)' : ''}</div>
+            <div class="zoom-hint">${UI.zoom}${s.smallSource ? UI.zoomSmall : ''}</div>
           </div>`;
 
       /* Same two-column shape as an artwork slide, but the picture side
@@ -271,7 +349,7 @@
             ${s.ask ? askBlock(s.ask, false) : ''}
             <ul class="points">${(s.points || []).map((p, k) =>
               `<li class="step" data-step="${k}">${chips(p)}</li>`).join('')}</ul>
-            <div class="zoom-hint">Click any picture to zoom</div>
+            <div class="zoom-hint">${UI.zoomAny}</div>
           </div>`;
 
       case 'twocol':
@@ -309,8 +387,8 @@
             ${s.ask ? askBlock(s.ask, false) : ''}
             <div class="timer" data-mins="${s.minutes}">
               <div class="clock">${String(s.minutes).padStart(2, '0')}:00</div>
-              <button data-timer="start">Start</button>
-              <button data-timer="reset">Reset</button>
+              <button data-timer="start">${UI.start}</button>
+              <button data-timer="reset">${UI.reset}</button>
             </div>
           </div>
           <div class="right">${s.timeline ? `<ul class="tl">${s.timeline.map(([y, m]) =>
@@ -325,16 +403,16 @@
                  ${s.poster ? `style="background-image:url(${s.poster})"` : ''}>
               <button class="vid-play" aria-label="Play"><span>▶</span></button>
             </div>
-            ${s.watchFor ? `<div class="vid-watch"><span class="tag">WATCH FOR</span>${chips(s.watchFor)}</div>` : ''}
+            ${s.watchFor ? `<div class="vid-watch"><span class="tag">${UI.watch}</span>${chips(s.watchFor)}</div>` : ''}
           </div>
           <div class="side">
             <h2>${chips(s.title)}</h2>
             <div class="cap">${s.caption}</div>
             <ul class="points">${(s.points || []).map((p, k) =>
               `<li class="step" data-step="${k}">${chips(p)}</li>`).join('')}</ul>
-            ${s.yt ? `<div class="zoom-hint">Needs internet · <a href="https://www.youtube.com/watch?v=${s.yt}" target="_blank" rel="noopener">open on YouTube</a></div>`
-                   : s.dm ? `<div class="zoom-hint">Needs internet · <a href="https://www.dailymotion.com/video/${s.dm}" target="_blank" rel="noopener">open on Dailymotion</a></div>`
-                   : '<div class="zoom-hint">Plays from this site — no internet needed</div>'}
+            ${s.yt ? `<div class="zoom-hint">${UI.netYt(s.yt)}</div>`
+                   : s.dm ? `<div class="zoom-hint">${UI.netDm(s.dm)}</div>`
+                   : `<div class="zoom-hint">${UI.local}</div>`}
           </div>`;
 
       /* A show of hands, tallied on screen. Groups vote, she records the
@@ -354,8 +432,8 @@
             </button>`).join('')}</div>
           <div class="vote-rounds"></div>
           <div class="vote-tools">
-            <button data-vote="record">Record this round</button>
-            <button data-vote="reset">Reset counts</button>
+            <button data-vote="record">${UI.record}</button>
+            <button data-vote="reset">${UI.resetCounts}</button>
             <span class="vote-hint">Click an option to add a vote · the small − takes one away</span>
           </div>`;
 
@@ -382,7 +460,7 @@
                  <span class="match-badge"></span>${chips(s.pairs[k].b)}</button></li>`).join('')}</ul>
           </div>
           <div class="match-tools">
-            <button data-match="clear">Clear</button>
+            <button data-match="clear">${UI.clear}</button>
             <span class="match-hint">Click one from each side to pair them · click a paired card to take it out</span>
           </div>`;
       }
@@ -436,7 +514,7 @@
                 <span class="rank-lbl">${it.label}</span>
               </button>`).join('')}</div>
             <div class="rank-tools">
-              <button data-rank="reset">Clear the order</button>
+              <button data-rank="reset">${UI.clearOrder}</button>
               <span class="rank-hint">Click the cards in order · click a numbered card to take it out</span>
             </div>
           </div>
@@ -445,19 +523,19 @@
               `<li class="step" data-step="${k}">${chips(q)}</li>`).join('')}</ul>
             <div class="timer" data-mins="${s.minutes}">
               <div class="clock">${String(s.minutes).padStart(2, '0')}:00</div>
-              <button data-timer="start">Start</button>
-              <button data-timer="reset">Reset</button>
+              <button data-timer="start">${UI.start}</button>
+              <button data-timer="reset">${UI.reset}</button>
             </div>
           </div>`;
 
       case 'quiz':
-        return `<div class="qnum">Question ${s.n} of ${s.of || 6}</div>
+        return `<div class="qnum">${UI.question(s.n, s.of || 6)}</div>
           <div class="qtext">${chips(s.q)}</div>
           <ul class="opts">${s.options.map((o, k) =>
             `<li class="${k === s.answer ? 'right' : ''}">
               <span class="k">${'ABCD'[k]}</span><span>${chips(o)}</span></li>`).join('')}</ul>
           <div class="why">${chips(s.why)}</div>
-          <div class="reveal-hint">Click when the class has answered</div>`;
+          <div class="reveal-hint">${UI.revealHint}</div>`;
 
       case 'terms':
       case 'end':
@@ -543,7 +621,7 @@
   /* ---------- speaker-note peek on the presenting screen ---------- */
   function drawPeek() {
     const s = SLIDES[idx];
-    peek.innerHTML = `<div class="peek-label">Notes · slide ${idx + 1} · press N to hide</div>` +
+    peek.innerHTML = `<div class="peek-label">${UI.peek(idx + 1)}</div>` +
       (s.notes || []).map(t => {
         const cls = /^(TEACHER|LEWIS|NOTE|CORRECTED)/.test(t) ? 'teach' : '';
         return `<p class="${cls}">${chips(t)}</p>`;
@@ -568,10 +646,10 @@
       box.appendChild(items);
       body.appendChild(box);
     });
-    menu.innerHTML = '<h2>Jump to</h2>';
+    menu.innerHTML = `<h2>${UI.jumpTo}</h2>`;
     menu.appendChild(body);
     menu.appendChild(el('div', 'hint',
-      'Backspace takes you back to where you jumped from. · N = notes on this screen · P = presenter window'));
+      UI.menuHint));
   }
   function openMenu() {
     menu.classList.add('on');
@@ -618,8 +696,8 @@
     lightbox.classList.toggle('soft', img.dataset.soft === 'true');
     lightbox.querySelector('.lb-note').textContent =
       img.dataset.soft === 'true'
-        ? 'Low-resolution source — shown small so it holds together'
-        : 'Click anywhere to close';
+        ? UI.lbSoft
+        : UI.lbClose;
     lightbox.classList.add('on');
     zoomFrom = img;
   }
@@ -881,6 +959,7 @@
     if (lower === 'm') { menu.classList.contains('on') ? closeMenu() : openMenu(); return; }
     if (lower === 'n') { peek.classList.toggle('on'); if (peek.classList.contains('on')) drawPeek(); return; }
     if (lower === 'p') { openPresenter(); return; }
+    if (lower === 'l') { switchLang('#' + (idx + 1)); return; }
     if (lower === 'f') {
       if (document.fullscreenElement) document.exitFullscreen();
       else document.documentElement.requestFullscreen();
@@ -895,6 +974,9 @@
     e.stopPropagation(); peek.classList.toggle('on');
     if (peek.classList.contains('on')) drawPeek();
   };
+  const btnLang = document.getElementById('btn-lang');
+  if (btnLang) btnLang.onclick = e => { e.stopPropagation(); switchLang('#' + (idx + 1)); };
+  if (window.applyLang) applyLang();
   document.getElementById('btn-presenter').onclick = e => { e.stopPropagation(); openPresenter(); };
   menu.addEventListener('click', e => { if (e.target === menu) closeMenu(); });
   lightbox.addEventListener('click', closeZoom);

@@ -20,19 +20,21 @@
 <div id="peek"></div>
 
 <div id="nav">
-  <button id="nav-prev" title="Previous (←)"><span class="ar">‹</span><span lang="zh-Hant">上一頁</span></button>
-  <button id="nav-next" title="Next (→)"><span lang="zh-Hant">下一頁</span><span class="ar">›</span></button>
+  <button id="nav-prev" title="Previous (←)" data-zh-title="上一頁 (←)"><span class="ar">‹</span><span lang="zh-Hant">上一頁</span></button>
+  <button id="nav-next" title="Next (→)" data-zh-title="下一頁 (→)"><span lang="zh-Hant">下一頁</span><span class="ar">›</span></button>
 </div>
 
 <div id="hud">
-  <a href="../" title="All units">units</a>
-  <a href="../vocab/" title="Key vocabulary">vocab</a>
-  <button id="btn-menu" title="Jump to a section (M)">menu</button>
-  <button id="btn-notes" title="Speaker notes on this screen (N)">notes</button>
-  <button id="btn-presenter" title="Presenter window on a second screen (P)">presenter</button>
+  <a href="../" title="All units" data-zh="單元" data-zh-title="所有單元">units</a>
+  <a href="../vocab/" title="Key vocabulary" data-zh="詞彙" data-zh-title="關鍵詞彙">vocab</a>
+  <button id="btn-menu" title="Jump to a section (M)" data-zh="目錄" data-zh-title="跳到某一段 (M)">menu</button>
+  <button id="btn-lang" title="中文 / English (L)" data-zh="EN">中文</button>
+  <button id="btn-notes" title="Speaker notes on this screen (N)" data-zh="備註" data-zh-title="在這個螢幕看備註 (N)">notes</button>
+  <button id="btn-presenter" title="Presenter window on a second screen (P)" data-zh="講者視窗" data-zh-title="另一個螢幕的講者視窗 (P)">presenter</button>
   <span class="count" id="count">1 / 1</span>
 </div>
 
+<script src="../shared/lang.js"></script>
 <script src="content.js"></script>
 <script src="../shared/deck.js"></script>
 </body>

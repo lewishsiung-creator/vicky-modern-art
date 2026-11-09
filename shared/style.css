@@ -798,6 +798,9 @@ h2 {
   transition: background .18s var(--ease);
 }
 .chip:hover { background: rgba(28,74,47,.16); }
+/* In Chinese mode the chip shows the Chinese term, so the small mark
+   points the other way. lang.js sets the document language. */
+html[lang="zh-Hant"] .chip::after { content: 'EN'; font-size: .5em; }
 .chip::after {
   content: '中';
   font-size: .58em; vertical-align: super;
@@ -893,6 +896,7 @@ h2 {
 }
 #hud button:hover { color: var(--ink); }
 #hud .count { font-variant-numeric: tabular-nums; }
+#btn-lang { font-weight: 700; letter-spacing: .04em; }
 
 #menu {
   position: fixed; inset: 0; z-index: 70;
@@ -1038,6 +1042,16 @@ body.course { overflow: auto; }
 }
 .weeks li.soon .wk { display: inline; margin-right: .8em; }
 .weeks li.soon .wk-q { font-size: .95em; margin-top: .3em; }
+
+.lang-btn {
+  margin-top: 1.6em; font: inherit; font-size: .9em; font-weight: 700;
+  letter-spacing: .04em; cursor: pointer;
+  background: transparent; color: var(--ink);
+  border: 1px solid rgba(23,19,18,.3); border-radius: 2em;
+  padding: .5em 1.3em;
+  transition: background .18s var(--ease), border-color .18s var(--ease);
+}
+.lang-btn:hover { background: var(--cream); border-color: transparent; }
 
 .course-foot {
   margin-top: 3em; font-size: .9em; color: var(--deeper);

@@ -14,39 +14,44 @@
 
 <main class="course-page">
   <header>
-    <div class="course-kicker">Lecture decks</div>
-    <h1>Contemporary Art History</h1>
-    <p class="course-sub">
+    <div class="course-kicker" data-zh="課程簡報">Lecture decks</div>
+    <h1 data-zh="當代藝術史">Contemporary Art History</h1>
+    <p class="course-sub" data-zh="英文為 CEFR A2 程度，關鍵詞彙附中文。開啟一個單元後，按 <b>P</b> 叫出講者視窗，按 <b>M</b> 跳到某一段。">
       English at CEFR A2, with Chinese on the key vocabulary.
       Open a unit, then press <b>P</b> for the presenter window and
       <b>M</b> to jump to a section.
     </p>
+    <button id="btn-lang" class="lang-btn" title="中文 / English" data-zh="EN">中文</button>
   </header>
 
   <ul class="weeks" id="weeks"></ul>
 
   <a class="vocab-link" href="vocab/">
-    <span class="vl-t">Key Vocabulary <span class="vl-zh" lang="zh-Hant">關鍵詞彙</span></span>
-    <span class="vl-m">Every term in the course, by unit — English and 中文, searchable</span>
+    <span class="vl-t" data-zh="關鍵詞彙 <span class='vl-zh' lang='en'>Key Vocabulary</span>">Key Vocabulary <span class="vl-zh" lang="zh-Hant">關鍵詞彙</span></span>
+    <span class="vl-m" data-zh="課程所有詞彙，依單元排列 — 中英對照，可搜尋">Every term in the course, by unit — English and 中文, searchable</span>
   </a>
 
   <footer class="course-foot">
-    Built from Vicky’s slides and lesson plans.
+    <span data-zh="依 Vicky 的投影片與教案製作。">Built from Vicky’s slides and lesson plans.</span>
   </footer>
 </main>
 
+<script src="shared/lang.js"></script>
 <script src="weeks.js"></script>
 <script>
+const ZH = !!window.ZHMODE;
 document.getElementById('weeks').innerHTML = WEEKS.map(w => {
   const inner = `
-    <span class="wk">Unit ${w.n}</span>
-    <span class="wk-title">${w.title || 'Not built yet'}</span>
-    ${w.q ? `<span class="wk-q">${w.q}</span>` : ''}
-    ${w.meta ? `<span class="wk-meta">${w.meta}</span>` : ''}`;
+    <span class="wk">${ZH ? '第 ' + w.n + ' 單元' : 'Unit ' + w.n}</span>
+    <span class="wk-title">${(ZH ? w.zhTitle : w.title) || 'Not built yet'}</span>
+    ${w.q ? `<span class="wk-q">${ZH ? w.zhQ : w.q}</span>` : ''}
+    ${w.meta ? `<span class="wk-meta">${ZH ? w.zhMeta : w.meta}</span>` : ''}`;
   return w.dir
     ? `<li><a href="${w.dir}/">${inner}</a></li>`
     : `<li class="soon"><span class="card">${inner}</span></li>`;
 }).join('');
+applyLang();
+document.getElementById('btn-lang').onclick = () => switchLang();
 </script>
 </body>
 </html>
