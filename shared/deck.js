@@ -68,6 +68,8 @@
   };
   const CH = 'vicky-modern-art';
 
+  const chipLabel = g => (ZHMODE ? (g.zhChip || g.zh) : g.en);
+
   /* ---------- helpers ---------- */
   const el = (tag, cls, html) => {
     const n = document.createElement(tag);
@@ -83,7 +85,7 @@
     return String(s).replace(/\{\{(\w+)\}\}/g, (m, key) => {
       const g = GLOSSARY[key];
       if (!g) return m.replace(/[{}]/g, '');
-      const label = ZHMODE ? (g.zhChip || g.zh) : g.en;
+      const label = chipLabel(g);
       return `<span class="chip" data-term="${key}" role="button" tabindex="0">${label}</span>`;
     });
   }
@@ -542,7 +544,7 @@
         return `<h2>${chips(s.title)}</h2>
           ${s.zh ? `<div class="zh-title" lang="zh-Hant">${s.zh}</div>` : ''}
           <div class="termgrid">${s.terms.map(t =>
-            `<span class="chip" data-term="${t}">${GLOSSARY[t].en}</span>`).join('')}</div>`;
+            `<span class="chip" data-term="${t}">${chipLabel(GLOSSARY[t])}</span>`).join('')}</div>`;
 
       default:
         return '<h2>?</h2>';
