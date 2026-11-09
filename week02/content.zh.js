@@ -429,7 +429,7 @@ window.ZH = {
  "Art history is the story we tell about art. Belting says we can no longer tell one story that includes everything.": "藝術史是我們述說藝術的那個故事。貝爾廷說，我們已經無法再講一個涵蓋一切的故事。",
  "The end of art": "藝術的終結",
  "Arthur Danto, 1984": "丹托，1984",
- "He says the end of art. But he means one kind of art — {{modernism}}, art defined by beautiful {{form}}.": "他說藝術終結了。但他指的是某一種藝術 — {{modernism}}，也就是以形式之美定義的藝術。",
+ "He says the end of art. But he means one kind of art — {{modernism}}, art defined by beautiful {{form}}.": "他說藝術終結了。但他指的是某一種藝術 — {{modernism}}，也就是以美的{{form}}來定義的藝術。",
  "Art has asked the question “what is art?” so many times that it has become philosophy.": "藝術把「什麼是藝術」這個問題問了太多次，以致於它變成了哲學。",
  "Hegel, Belting and Danto all say something ends. What is the same in all three?": "黑格爾、貝爾廷、丹托都說有什麼東西結束了。這三者的共同點是什麼？",
  "Arthur Danto was an American philosopher. He wrote this in 1984.": "丹托是美國哲學家，他在 1984 年寫下這個說法。",

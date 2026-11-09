@@ -46,4 +46,13 @@ io.open(path, 'w', encoding='utf-8').write(
    ------------------------------------------------------------------ */
 window.ZH = {body};
 """)
+# Stray-script guard. Generating Chinese occasionally slips a Cyrillic
+# or Hangul word in; it reads as Chinese to a careless eye and is not.
+stray = {en: zh for en, zh in existing.items()
+         if re.search(r'[\u0400-\u04ff\uac00-\ud7af\u0370-\u03ff]', zh)}
+for en, zh in stray.items():
+    print('  STRAY SCRIPT:', zh[:60])
+if stray:
+    print(f'  !! {len(stray)} entries contain non-Chinese scripts')
+
 print(f'{unit}: +{added} new, {len(existing)} total, {len(strings) - len(existing)} still missing')
