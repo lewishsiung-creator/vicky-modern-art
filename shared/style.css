@@ -890,6 +890,9 @@ html[lang="zh-Hant"] .chip::after { content: 'EN'; font-size: .5em; }
   opacity: .75; transition: opacity .2s var(--ease);
 }
 #hud:hover { opacity: 1; }
+/* Chinese labels are wider per character. A label that wraps turns the
+   HUD into two ragged lines, so nothing in it ever wraps. */
+#hud > * { white-space: nowrap; }
 #hud button {
   font: inherit; background: none; border: none; cursor: pointer;
   color: inherit; padding: .2em .3em;
