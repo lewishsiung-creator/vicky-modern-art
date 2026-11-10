@@ -475,5 +475,12 @@ window.ZH = {
  "Point two of the five: a mechanical or semi-mechanical transfer to the canvas.": "五點中的第二點：以機械或半機械方式轉移到畫布上。",
  "Close by reminding them that two of Meisel’s five points were about membership, not about painting at all.": "收尾時提醒他們：邁澤爾那五點裡有兩點談的是會員資格，根本不是在談繪畫。",
  "Key terms": "關鍵詞",
- "Tap any term to show it large, with the Chinese. Good for the last two minutes of class.": "點任一個詞可以放大顯示，並附中文。適合下課前兩分鐘使用。"
+ "Tap any term to show it large, with the Chinese. Good for the last two minutes of class.": "點任一個詞可以放大顯示，並附中文。適合下課前兩分鐘使用。",
+ "<i>MoMA Poll</i>, 1970": "〈MoMA 民調〉，1970",
+ "<i>Shapolsky et al. Manhattan Real Estate Holdings…</i>, 1971": "〈夏波斯基等人的曼哈頓不動產持有……〉，1971",
+ "Shapolsky": "夏波斯基",
+ "A Chuck Close portrait at normal viewing distance": "以正常觀看距離看一幅克羅斯的肖像",
+ "Far": "遠",
+ "The same painting, close up": "同一幅畫，靠近看",
+ "Near": "近"
 };

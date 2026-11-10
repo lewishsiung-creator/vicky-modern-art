@@ -470,5 +470,12 @@ window.ZH = {
  "What concept, and what media?": "什麼觀念？什麼媒材？",
  "Why does it matter today?": "它在今天為什麼重要？",
  "Twenty minutes: three students, six minutes each, plus changeover.": "二十分鐘：三位同學，每人六分鐘，加上換場時間。",
- "The timer is set to six minutes. Press Reset between speakers.": "計時器設定為六分鐘。每位講者之間按一次 Reset。"
+ "The timer is set to six minutes. Press Reset between speakers.": "計時器設定為六分鐘。每位講者之間按一次 Reset。",
+ "Galerie Iris Clert, Paris — 28 April to 12 May 1958": "巴黎，伊莉絲・克雷爾畫廊 — 1958 年 4 月 28 日至 5 月 12 日",
+ "The room": "展場",
+ "The gallery, emptied and painted white": "畫廊被清空，並漆成白色",
+ "The performance, 9 March 1960": "演出，1960 年 3 月 9 日",
+ "The event": "事件",
+ "The performance, with the orchestra": "演出，與樂團一起",
+ "And what we have left.": "以及我們剩下的東西。"
 };

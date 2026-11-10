@@ -575,5 +575,13 @@ window.ZH = {
  "Why does it matter today?": "它在今天為什麼重要？",
  "Twenty minutes: three students, six minutes each, plus changeover.": "二十分鐘：三位同學，每人六分鐘，加上換場時間。",
  "The timer is set to six minutes. Press Reset between speakers.": "計時器設定為六分鐘。每位講者之間按一次 Reset。",
- "Reveal the four questions at the start so the speaker and the room both know the shape.": "一開始就把四個問題顯示出來，讓講者與聽眾都知道形狀。"
+ "Reveal the four questions at the start so the speaker and the room both know the shape.": "一開始就把四個問題顯示出來，讓講者與聽眾都知道形狀。",
+ "Jean Arp, <i>Collage Arranged According to the Laws of Chance</i>, 1916–1917": "阿爾普，〈依機遇法則排列的拼貼〉，1916–1917",
+ "Arp": "阿爾普",
+ "André Masson, <i>The Fish Drawn in the Sand</i>, 1927": "馬松，〈畫在沙上的魚〉，1927",
+ "Attitude": "態度",
+ "Concept": "觀念",
+ "Form": "形式",
+ "Technique": "技術",
+ "And what got lost along the way.": "以及一路上失落的東西。"
 };

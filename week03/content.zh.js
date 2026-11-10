@@ -642,5 +642,14 @@ window.ZH = {
  "Why does it matter today?": "它在今天為什麼重要？",
  "Twenty minutes: three students, six minutes each, plus changeover.": "二十分鐘：三位同學，每人六分鐘，加上換場時間。",
  "The timer on screen is set to six minutes. Press Reset between speakers.": "螢幕上的計時器設定為六分鐘。每位講者之間按一次 Reset。",
- "The four questions on screen are the required structure — reveal them at the start so the speaker and the room both know the shape.": "螢幕上的四個問題是規定的架構 — 一開始就先顯示出來，讓講者與聽眾都知道形狀。"
+ "The four questions on screen are the required structure — reveal them at the start so the speaker and the room both know the shape.": "螢幕上的四個問題是規定的架構 — 一開始就先顯示出來，讓講者與聽眾都知道形狀。",
+ "Attitude": "態度",
+ "Concept": "觀念",
+ "Form": "形式",
+ "Technique": "技術",
+ "A photograph": "一張照片",
+ "An oil painting": "一幅油畫",
+ "An emoji": "一個表情符號",
+ "A company logo": "一個公司商標",
+ "And then the war moved them again.": "然後戰爭又把他們移動了一次。"
 };

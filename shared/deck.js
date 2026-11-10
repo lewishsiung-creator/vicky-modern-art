@@ -97,6 +97,12 @@
       .replace(/<[^>]+>/g, '');
   }
 
+  /* The English of a piece of title text, with its {{chips}} spelled out.
+     In Chinese mode the small line under a heading carries this, so the
+     English term is still met even when the heading itself is Chinese. */
+  const enOf = t => String(t || '').replace(/\{\{(\w+)\}\}/g,
+    (m, k) => GLOSSARY[k] ? GLOSSARY[k].en : k);
+
   if (ZHMODE) {
     const ZH = window.ZH || {};
     /* Keys that are machinery, not language — a video id translated
@@ -117,8 +123,7 @@
       const x = tr(s);
       /* The small line under a title held the Chinese. In Chinese mode
          it holds the English instead, so the term is still there. */
-      if (s.zh && s.title) x.zh = String(s.title).replace(/\{\{(\w+)\}\}/g,
-        (m, k) => GLOSSARY[k] ? GLOSSARY[k].en : k);
+      if (s.zh && s.title) x.zh = enOf(s.title);
       SLIDES[i] = x;
     });
     SECTIONS.forEach(sec => { const en = sec.title; sec.title = sec.zh || en; sec.zh = en; });
@@ -361,7 +366,8 @@
               const c = s[side];
               return `<div class="col step" data-step="${k}">
                 <h3>${chips(c.head)}</h3>
-                <div class="zh" lang="zh-Hant">${c.zh}</div>
+                <div class="zh" lang="${ZHMODE ? 'en' : 'zh-Hant'}">${
+                  ZHMODE ? enOf(c.head) : c.zh}</div>
                 <div class="lead">${chips(c.lead)}</div>
                 <ul>${c.items.map(x => `<li>${chips(x)}</li>`).join('')}</ul>
               </div>`;

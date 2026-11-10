@@ -65,7 +65,7 @@ const WEEKS = [
   },
   {
     n: 9, dir: 'week10',
-    zhTitle: '擴展的媒介', zhQ: '錄像與身體。', zhMeta: '51 頁 · 白南準到阿德里安・派普 · 四支影片 · 紀錄的循環 · 6 題測驗',
+    zhTitle: '擴展的媒介', zhQ: '錄像與身體。', zhMeta: '51 頁 · 白南準到阿德里安・派珀 · 四支影片 · 紀錄的循環 · 6 題測驗',
     title: 'Expanding Media',
     q: 'Video and body.',
     meta: '51 slides · Paik to Adrian Piper · four films · the documentation loop · 6-question quiz'

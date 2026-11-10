@@ -531,5 +531,14 @@ window.ZH = {
  "What concept, and what media?": "什麼觀念？什麼媒材？",
  "Why does it matter today?": "它在今天為什麼重要？",
  "Twenty minutes: three students, six minutes each, plus changeover.": "二十分鐘：三位同學，每人六分鐘，加上換場時間。",
- "The timer is set to six minutes. Press Reset between speakers.": "計時器設定為六分鐘。每位講者之間按一次 Reset。"
+ "The timer is set to six minutes. Press Reset between speakers.": "計時器設定為六分鐘。每位講者之間按一次 Reset。",
+ "The poster: <i>Ray-Gun Mfg. Co. — The Store by Claes Oldenburg</i>, 107 E. 2nd St., December 1961": "海報：〈雷射槍製造公司 — 歐登伯格的商店〉，東二街 107 號，1961 年 12 月",
+ "The poster": "海報",
+ "<i>Pastry Case, I</i>, 1961–62 — painted plaster in a glass display case": "〈糕點櫃 I〉，1961–62 — 上色石膏，放在玻璃展示櫃裡",
+ "The goods": "商品",
+ "Jasper Johns, <i>Numbers in Color</i>, 1958–59": "瓊斯，〈彩色數字〉，1958–59",
+ "Numbers": "數字",
+ "Jasper Johns, <i>Target with Plaster Casts</i>, 1955": "瓊斯，〈帶石膏模的標靶〉，1955",
+ "Target": "標靶",
+ "And the line kept moving.": "而那條線一直在移動。"
 };

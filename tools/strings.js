@@ -8,7 +8,7 @@ const fs = require('fs'), path = require('path');
 const dir = process.argv[2] || 'week02';
 const onlyMissing = process.argv.includes('--missing');
 const SKIP = new Set(['type', 'yt', 'dm', 'poster', 'src', 'terms', 'answer', 'n', 'of',
-                      'minutes', 'oneClick', 'zh', 'zhDef', 'zhChip', 'tag', 'label', 'side', 'cite', 'quote']);
+                      'minutes', 'oneClick', 'zh', 'zhDef', 'zhChip', 'side', 'cite', 'quote']);
 const isZh = s => /[㐀-鿿]/.test(s) && !/[A-Za-z]{3}/.test(s.replace(/<[^>]+>|\{\{\w+\}\}/g, ''));
 
 let ZH = {};

@@ -555,5 +555,10 @@ window.ZH = {
  "You already asked this after the Danto slide, so most of the room should have it.": "你在丹托那一頁之後已經問過這題了，所以大部分學生應該答得出來。",
  "Terms to have on the board by now: Modernism · form · critic · aura · movement · abstract · collage · manifesto · intuition · postmodernism": "此時黑板上該有的詞：現代主義 · 形式 · 評論家 · 靈光 · 藝術運動 · 抽象 · 拼貼 · 宣言 · 直覺 · 後現代主義",
  "Key terms": "關鍵詞",
- "Tap any term to show it large, with the Chinese. Good for the last two minutes of class.": "點任一個詞可以放大顯示，並附中文。適合下課前兩分鐘使用。"
+ "Tap any term to show it large, with the Chinese. Good for the last two minutes of class.": "點任一個詞可以放大顯示，並附中文。適合下課前兩分鐘使用。",
+ "Édouard Manet, <i>Olympia</i>, 1863": "馬內，〈奧林比亞〉，1863",
+ "Manet": "馬內",
+ "Tiziano Vecellio, <i>Venere di Urbino</i>, 1538": "提香，〈烏比諾的維納斯〉，1538",
+ "Titian": "提香",
+ "After 1945, this stops working.": "1945 年之後，這一套不管用了。"
 };
