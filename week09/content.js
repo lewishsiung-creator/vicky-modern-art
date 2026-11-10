@@ -403,9 +403,29 @@ const SLIDES = [
     { head: 'And Agnes Denes turns it toward ecology and money', body: 'Which is the next slide.' }
   ],
   notes: [
-    'NOTE: Nancy Holt is a learning objective in the lesson plan but her deck has no Sun Tunnels image, so she is described rather than shown. Worth finding a picture before class.',
     'Holt was married to Smithson, and it is worth saying that she is usually introduced that way and should not be — Sun Tunnels is a major work in its own right.',
-    'She also filmed Spiral Jetty being built. So much of what we know of his work exists because of her.'
+    'She also filmed Spiral Jetty being built. So much of what we know of his work exists because of her.',
+    'Her own slide follows. It was not in the original deck; the pictures were added so she is shown rather than only described.'
+  ]
+},
+{
+  type: 'compare',
+  title: 'Sun Tunnels',
+  ask: 'Four concrete pipes in an empty desert. What are they pointed at?',
+  left:  { src: 'img/holt-sun-tunnels-1.jpg', label: 'Nancy Holt (1938–2014), <i>Sun Tunnels</i>, 1973–76 — Great Basin Desert, Utah. Four concrete pipes, each 5.5 metres long', tag: 'The object' },
+  right: { src: 'img/holt-sun-tunnels-2.jpg', label: 'The summer solstice sunset, 20 June 2021 — people come out to the site for it', tag: 'The event' },
+  reveal: [
+    { side: 'left',  text: 'The four tunnels are laid in an open X, and each pipe is drilled with holes in the pattern of a constellation.' },
+    { side: 'left',  text: 'Sunlight comes through the holes and moves across the inside of the pipe all day. The sky is printed on the concrete.' },
+    { side: 'right', text: 'On the solstices, the sun rises and sets exactly in line with a pair of tunnels.' },
+    { side: 'right', text: 'So the work is only complete twice a year, and only if you travel there to stand in it.' }
+  ],
+  notes: [
+    'ASK first. The answer is on the right-hand picture: they are aimed at two particular sunrises and two particular sunsets.',
+    'The holes are Draco, Perseus, Columba and Capricorn, drilled to scale. Inside a pipe at midday you stand inside a constellation made of light.',
+    'This is the turn she gives Land Art: Smithson pointed at geology and {{entropy}}; Holt points at astronomy and the calendar.',
+    'And the same Nonsite problem is here in its sharpest form. We are looking at two photographs of a work whose whole argument is that you have to be there at the right hour of the right day.',
+    'NOTE: this slide is not in Vicky’s original deck. She is a learning objective in the lesson plan, so it was built to go with it. Both photographs are freely licensed — see the README.'
   ]
 },
 {

@@ -515,5 +515,21 @@ window.ZH = {
  "<i>Untitled (Structure that Eats)</i>, 1968 — granite, copper wire, fresh lettuce": "〈無題（會吃東西的結構）〉，1968 — 花崗岩、銅線、新鮮生菜",
  "Structure that Eats": "會吃東西的結構",
  "<i>Direzione</i> (Direction), 1978 — stone and a compass": "〈方向〉，1978 — 石頭與一個指南針",
- "Direzione": "方向"
+ "Direzione": "方向",
+ "Her own slide follows. It was not in the original deck; the pictures were added so she is shown rather than only described.": "她自己的那一頁在後面。原本的簡報沒有這一頁；圖是後來補上的，讓她被看見，而不只是被描述。",
+ "Sun Tunnels": "太陽隧道",
+ "Four concrete pipes in an empty desert. What are they pointed at?": "空曠沙漠裡的四根水泥管。它們到底對準了什麼？",
+ "Nancy Holt (1938–2014), <i>Sun Tunnels</i>, 1973–76 — Great Basin Desert, Utah. Four concrete pipes, each 5.5 metres long": "南西・霍爾特（1938–2014），〈太陽隧道〉，1973–76 — 猶他州大盆地沙漠。四根水泥管，每根長 5.5 公尺",
+ "The object": "物件",
+ "The summer solstice sunset, 20 June 2021 — people come out to the site for it": "夏至的日落，2021 年 6 月 20 日 — 人們特地到現場來看",
+ "The event": "事件",
+ "The four tunnels are laid in an open X, and each pipe is drilled with holes in the pattern of a constellation.": "四根隧道排成一個張開的 X 形，每根管子上都鑽了孔，孔的排列是一個星座的圖案。",
+ "Sunlight comes through the holes and moves across the inside of the pipe all day. The sky is printed on the concrete.": "陽光從孔裡透進來，整天在管子內壁上移動。天空被印在水泥上。",
+ "On the solstices, the sun rises and sets exactly in line with a pair of tunnels.": "每逢至日，太陽升起與落下的位置，剛好與其中一對隧道連成一線。",
+ "So the work is only complete twice a year, and only if you travel there to stand in it.": "所以這件作品一年只完整兩次，而且只有當你親自走到那裡、站進去的時候。",
+ "ASK first. The answer is on the right-hand picture: they are aimed at two particular sunrises and two particular sunsets.": "先問。答案就在右邊那張圖裡：它們對準的是兩個特定的日出與兩個特定的日落。",
+ "The holes are Draco, Perseus, Columba and Capricorn, drilled to scale. Inside a pipe at midday you stand inside a constellation made of light.": "那些孔是天龍座、英仙座、天鴿座與摩羯座，按比例鑽出來的。正午時站在管子裡，你就站在一個用光做成的星座裡面。",
+ "This is the turn she gives Land Art: Smithson pointed at geology and {{entropy}}; Holt points at astronomy and the calendar.": "這是她給地景藝術的轉向：史密森指向地質與{{entropy}}；霍爾特指向天文與曆法。",
+ "And the same Nonsite problem is here in its sharpest form. We are looking at two photographs of a work whose whole argument is that you have to be there at the right hour of the right day.": "而同一個非基地的難題在這裡以最尖銳的形式出現。我們正在看兩張照片，而這件作品的整個論點就是：你必須在對的那一天、對的那個時刻，人在那裡。",
+ "NOTE: this slide is not in Vicky’s original deck. She is a learning objective in the lesson plan, so it was built to go with it. Both photographs are freely licensed — see the README.": "注意：這一頁不在 Vicky 原本的簡報裡。她是教案裡的學習目標，所以這一頁是為了配合教案而做的。兩張照片都是自由授權 — 詳見 README。"
 };

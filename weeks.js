@@ -58,17 +58,17 @@ const WEEKS = [
   },
   {
     n: 8, dir: 'week09',
-    zhTitle: '走出美術館', zhQ: '藝術進入世界。', zhMeta: '54 頁 · 史密森到瑪麗莎・梅爾茲 · 《河流與潮汐》 · 6 題測驗',
+    zhTitle: '走出美術館', zhQ: '藝術進入世界。', zhMeta: '55 頁 · 史密森到瑪麗莎・梅爾茲 · 《河流與潮汐》 · 6 題測驗',
     title: 'Leaving the Museum',
     q: 'Art enters the world.',
-    meta: '54 slides · Smithson to Marisa Merz · Rivers and Tides · 6-question quiz'
+    meta: '55 slides · Smithson to Marisa Merz · Rivers and Tides · 6-question quiz'
   },
   {
     n: 9, dir: 'week10',
-    zhTitle: '擴展的媒介', zhQ: '錄像與身體。', zhMeta: '51 頁 · 白南準到阿德里安・派珀 · 四支影片 · 紀錄的循環 · 6 題測驗',
+    zhTitle: '擴展的媒介', zhQ: '錄像與身體。', zhMeta: '53 頁 · 白南準到阿德里安・派珀 · 四支影片 · 紀錄的循環 · 6 題測驗',
     title: 'Expanding Media',
     q: 'Video and body.',
-    meta: '51 slides · Paik to Adrian Piper · four films · the documentation loop · 6-question quiz'
+    meta: '53 slides · Paik to Adrian Piper · four films · the documentation loop · 6-question quiz'
   },
   {
     n: 10, dir: 'week11',

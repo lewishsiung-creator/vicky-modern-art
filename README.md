@@ -15,8 +15,8 @@ vocabulary.
 | 5 | Art as Action / Event | 56 slides |
 | 6 | From Object to Concept | 61 slides |
 | 7 | Anti-Form | 49 slides |
-| 8 | Leaving the Museum | 54 slides |
-| 9 | Expanding Media | 51 slides |
+| 8 | Leaving the Museum | 55 slides |
+| 9 | Expanding Media | 53 slides |
 | 10 | Borrowed Images | 60 slides |
 
 ## Layout
@@ -419,9 +419,10 @@ No factual corrections were needed. Two things worth knowing:
 - **Pistoletto's dates.** Her slide read "Michelangelo Pistoletto (1967~)" — that
   is the date of *Venus of the Rags*. He was born in 1933.
 - **Christo's surname** is spelled Javacheff.
-- **Nancy Holt is a learning objective but has no slide.** *Sun Tunnels* (1976)
-  is described on a slide about the artists usually left out of Land Art's
-  story, but there is no image of it in her deck. Worth finding one.
+- **Nancy Holt was a learning objective with no slide.** *Sun Tunnels* (1976)
+  was described on the slide about the artists left out of Land Art's story,
+  but her deck had no picture of it. A compare slide was built for it, from two
+  freely licensed photographs — see **Added slides** below.
 - **The lesson plan's "Group Discussion Activity Design" section is empty** —
   just the heading. The 100-minute schedule has no activity segment either, so
   the deck has none. But the Arte Povera segment description twice refers back
@@ -447,10 +448,10 @@ one slide comes out.
 
 ## Unit 9 — gaps in the source
 
-- ***Electronic Superhighway*** is a learning objective but has no slide. It is
-  described in the speaker notes instead.
-- **TV Cello and Charlotte Moorman** are in the lesson plan's segment
-  description but have no slide either. Also in the notes.
+- ***Electronic Superhighway*** and ***TV Cello*** were learning objectives
+  with no slides — *TV Cello* and Charlotte Moorman appear only in the lesson
+  plan's segment description. Slides were built for both, from freely licensed
+  photographs — see **Added slides** below.
 - **Abramović and Piper have slides but no time in the schedule.** The
   100-minute plan runs Acconci to 1:10 and then goes to Wrap-Up, yet both
   artists are learning objectives and both are in the Documentation Loop recap.
@@ -480,3 +481,22 @@ one slide comes out.
 Artwork images are extracted from the original PowerPoint and PDF exports and
 live in each unit's `img/`. Many are twentieth-century works still under
 copyright; they are here for classroom teaching.
+
+### Added slides
+
+Three works were learning objectives in the lesson plans with no slide in the
+decks. Slides were built for them, and every photograph used is freely licensed
+from Wikimedia Commons, credited here:
+
+| Slide | File | Photographer | Licence |
+|---|---|---|---|
+| Unit 8 · *Sun Tunnels* | `week09/img/holt-sun-tunnels-1.jpg` | Retis | CC BY 2.0 |
+| Unit 8 · *Sun Tunnels* | `week09/img/holt-sun-tunnels-2.jpg` | Matthew Kowal | CC BY-SA 4.0 |
+| Unit 9 · *TV Cello* | `week10/img/paik-tv-cello.jpg` | Sarah Stierch | CC BY 2.0 |
+| Unit 9 · *Electronic Superhighway* | `week10/img/paik-electronic-superhighway-1.jpg` | APK | CC BY 4.0 |
+| Unit 9 · *Electronic Superhighway* | `week10/img/paik-electronic-superhighway-2.jpg` | APK | CC BY 4.0 |
+
+The licences cover the photographs. The works themselves are still in copyright,
+on the same classroom-teaching footing as every other image here. The last
+speaker note on each added slide says it is not from Vicky's original deck, so
+she knows which pages are hers.

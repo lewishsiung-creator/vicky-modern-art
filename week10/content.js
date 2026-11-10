@@ -307,8 +307,7 @@ const SLIDES = [
   notes: [
     'The trick they are all performing: attacking a medium from inside it.',
     'Compare with Greenberg in Unit 1 — a discipline using its own methods on itself. Same move, new machine.',
-    'NOTE: <i>Electronic Superhighway</i> is a learning objective in her lesson plan, but there is no slide for it in her deck. It is described in these notes instead: from the 1990s, Paik built walls of many screens playing at once — one for each American state in the 1995 version — predicting a world saturated with channels. He coined the phrase “electronic superhighway” in 1974, twenty years before the internet arrived.',
-    'Also missing from the deck: TV Cello and his long collaboration with the cellist Charlotte Moorman, who performed wearing television sets. Worth a sentence if you have time.'
+    'Two works from this stretch follow — <i>TV Cello</i> and <i>Electronic Superhighway</i>. Neither was in the original deck; both are learning objectives in the lesson plan, so slides were built for them.'
   ]
 },
 {
@@ -331,6 +330,48 @@ const SLIDES = [
     'The encounter is the point: an Eastern contemplative tradition meeting Western broadcast technology, and each one absorbing the other.',
     'This is Quiz Question 2: a loop of self-reflexivity and surveillance.',
     'NOTE: low-resolution scan; zoom is limited.'
+  ]
+},
+{
+  type: 'artwork',
+  oneClick: true,
+  src: 'img/paik-tv-cello.jpg',
+  title: 'TV Cello',
+  caption: 'Nam June Paik, <i>TV Cello</i>, 1971 — three television sets, one string, and a bow',
+  ask: 'It is a cello you cannot really play. So what is it for?',
+  points: [
+    'Three television cabinets stacked into the shape of a cello, with a real string and bridge across them.',
+    'The cellist Charlotte Moorman played it — and the screens showed her playing it, live, while she played.',
+    'They worked together for twenty years. She also performed wearing television sets.',
+    'The performer, the instrument and the broadcast all become one object.'
+  ],
+  notes: [
+    'ASK first. The useful answer: it is not a joke instrument, it is a feedback loop you can hold between your knees.',
+    'Moorman is the reason these works exist as performances rather than sculptures, and she is routinely left out of the story. Name her.',
+    'She was arrested in New York in 1967 for performing one of their pieces topless, and became known as the “topless cellist” — which is how a serious avant-garde musician gets remembered for the wrong thing.',
+    'The link to make: this is {{closedcircuit}} again, like <i>TV Buddha</i>, but with a living body inside the loop. That is the bridge to the whole second half of today.',
+    'NOTE: this slide is not in Vicky’s original deck. The photograph is freely licensed — see the README.'
+  ]
+},
+{
+  type: 'compare',
+  title: 'Electronic Superhighway',
+  ask: 'He used the phrase “electronic superhighway” in 1974 — twenty years before the internet arrived. What did he think was coming?',
+  left:  { src: 'img/paik-electronic-superhighway-1.jpg', label: 'Nam June Paik, <i>Electronic Superhighway: Continental U.S., Alaska, Hawaii</i>, 1995 — the Washington, D.C. state, with its closed-circuit camera', tag: 'The camera' },
+  right: { src: 'img/paik-electronic-superhighway-2.jpg', label: 'The same work from behind — scaffolding, cable and the back of the sets', tag: 'The machine' },
+  reveal: [
+    { side: 'left',  text: 'A map of the United States, fifteen metres wide, built from 336 televisions, each state outlined in neon.' },
+    { side: 'left',  text: 'Every state plays its own footage at once. D.C. is a live camera, so you watch yourself arrive.' },
+    { side: 'right', text: 'And from behind it is simply a rack of machines and a tangle of cable.' },
+    { side: 'right', text: 'A country made of channels, all talking at the same time, and nobody listening to any of them.' }
+  ],
+  notes: [
+    'ASK first. He meant the traffic, not the technology: a world saturated with channels, where everywhere is reachable and nowhere is quiet.',
+    'The scale is the argument. 336 screens, 50 states, all playing simultaneously — you cannot watch it, only stand in front of it.',
+    'The D.C. camera is the point to land: it is {{closedcircuit}} once more, so the viewer is inside the map. Same move as <i>TV Buddha</i>, now at the size of a country.',
+    'It is in the Smithsonian American Art Museum, and the museum employs people to keep 336 ageing cathode-ray tubes alive. The work decays — which is Unit 8 arriving inside an electronic artwork.',
+    'This is a wrong-answer option in Quiz Question 4, so they need to have met it.',
+    'NOTE: this slide is not in Vicky’s original deck. Both photographs are freely licensed — see the README.'
   ]
 },
 {
