@@ -24,7 +24,7 @@
     <button id="btn-lang" class="lang-btn" title="中文 / English" data-zh="EN">中文</button>
   </header>
 
-  <ul class="weeks" id="weeks"></ul>
+  <ul class="units" id="units"></ul>
 
   <a class="vocab-link" href="vocab/">
     <span class="vl-t" data-zh="關鍵詞彙 <span class='vl-zh' lang='en'>Key Vocabulary</span>">Key Vocabulary <span class="vl-zh" lang="zh-Hant">關鍵詞彙</span></span>
@@ -37,15 +37,15 @@
 </main>
 
 <script src="shared/lang.js"></script>
-<script src="weeks.js"></script>
+<script src="units.js"></script>
 <script>
 const ZH = !!window.ZHMODE;
-document.getElementById('weeks').innerHTML = WEEKS.map(w => {
+document.getElementById('units').innerHTML = UNITS.map(w => {
   const inner = `
-    <span class="wk">${ZH ? '第 ' + w.n + ' 單元' : 'Unit ' + w.n}</span>
-    <span class="wk-title">${(ZH ? w.zhTitle : w.title) || 'Not built yet'}</span>
-    ${w.q ? `<span class="wk-q">${ZH ? w.zhQ : w.q}</span>` : ''}
-    ${w.meta ? `<span class="wk-meta">${ZH ? w.zhMeta : w.meta}</span>` : ''}`;
+    <span class="unit">${ZH ? '第 ' + w.n + ' 單元' : 'Unit ' + w.n}</span>
+    <span class="unit-title">${(ZH ? w.zhTitle : w.title) || 'Not built yet'}</span>
+    ${w.q ? `<span class="unit-q">${ZH ? w.zhQ : w.q}</span>` : ''}
+    ${w.meta ? `<span class="unit-meta">${ZH ? w.zhMeta : w.meta}</span>` : ''}`;
   return w.dir
     ? `<li><a href="${w.dir}/">${inner}</a></li>`
     : `<li class="soon"><span class="card">${inner}</span></li>`;

@@ -1,9 +1,9 @@
 /* ------------------------------------------------------------------
-   week10 — Chinese, keyed by the exact English on the slide.
+   unit09 — Chinese, keyed by the exact English on the slide.
 
    Anything missing here simply stays English on screen, so a gap shows
    rather than breaks. List what is still missing with:
-       node tools/strings.js week10 --missing
+       node tools/strings.js unit09 --missing
 
    Register: natural Chinese for her students, not a word-for-word
    rendering of the A2 English. Quotations keep their original language

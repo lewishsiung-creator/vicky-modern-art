@@ -1,0 +1,23 @@
+# Old /weekNN/ URLs, kept working after the Unit renumbering.
+# week02 was Unit 1, so weekNN maps to unit(NN-1).
+
+/week02/*  /unit01/:splat  301
+/week02     /unit01/        301
+/week03/*  /unit02/:splat  301
+/week03     /unit02/        301
+/week04/*  /unit03/:splat  301
+/week04     /unit03/        301
+/week05/*  /unit04/:splat  301
+/week05     /unit04/        301
+/week06/*  /unit05/:splat  301
+/week06     /unit05/        301
+/week07/*  /unit06/:splat  301
+/week07     /unit06/        301
+/week08/*  /unit07/:splat  301
+/week08     /unit07/        301
+/week09/*  /unit08/:splat  301
+/week09     /unit08/        301
+/week10/*  /unit09/:splat  301
+/week10     /unit09/        301
+/week11/*  /unit10/:splat  301
+/week11     /unit10/        301

@@ -1,11 +1,11 @@
 /* Every on-screen and speaker-note string in a unit, in the order the
    slides run. With --missing, only the ones that have no Chinese yet.
 
-     node tools/strings.js week06 [--missing]
+     node tools/strings.js unit05 [--missing]
 
-   The pairs live in weekNN/content.zh.js, keyed by the exact English. */
+   The pairs live in unitNN/content.zh.js, keyed by the exact English. */
 const fs = require('fs'), path = require('path');
-const dir = process.argv[2] || 'week02';
+const dir = process.argv[2] || 'unit01';
 const onlyMissing = process.argv.includes('--missing');
 const SKIP = new Set(['type', 'yt', 'dm', 'poster', 'src', 'terms', 'answer', 'n', 'of',
                       'minutes', 'oneClick', 'zh', 'zhDef', 'zhChip', 'side', 'cite', 'quote']);

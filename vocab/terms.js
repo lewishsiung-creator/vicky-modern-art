@@ -15,7 +15,7 @@
 
 const VOCAB = [
   {
-    n: 1, dir: 'week02',
+    n: 1, dir: 'unit01',
     title: 'The Beginning of Modern Art',
     zh: '現代藝術的開端：藝術是如何開始改變的？',
     terms: [
@@ -94,7 +94,7 @@ const VOCAB = [
     ]
   },
   {
-    n: 2, dir: 'week03',
+    n: 2, dir: 'unit02',
     title: 'Expression and the Inner Self',
     zh: '表現與內在自我：藝術如何呈現情感與潛意識？',
     terms: [
@@ -181,7 +181,7 @@ const VOCAB = [
     ]
   },
   {
-    n: 3, dir: 'week04',
+    n: 3, dir: 'unit03',
     title: 'From Representation to Expression',
     zh: '從再現到表現：繪畫如何脫離現實？',
     terms: [
@@ -252,7 +252,7 @@ const VOCAB = [
     ]
   },
   {
-    n: 4, dir: 'week05',
+    n: 4, dir: 'unit04',
     title: 'The Boundary Between Art and Everyday Life',
     zh: '藝術與日常生活的界線：任何東西都能是藝術嗎？',
     terms: [
@@ -315,7 +315,7 @@ const VOCAB = [
     ]
   },
   {
-    n: 5, dir: 'week06',
+    n: 5, dir: 'unit05',
     title: 'Art as Action / Event',
     zh: '藝術作為行動／事件：新現實主義、偶發藝術與福魯克薩斯',
     terms: [
@@ -362,7 +362,7 @@ const VOCAB = [
     ]
   },
   {
-    n: 6, dir: 'week07',
+    n: 6, dir: 'unit06',
     title: 'From Object to Concept',
     zh: '從物件到觀念：藝術還需要以實體存在嗎？',
     terms: [
@@ -441,7 +441,7 @@ const VOCAB = [
     ]
   },
   {
-    n: 7, dir: 'week08',
+    n: 7, dir: 'unit07',
     title: 'Anti-Form',
     zh: '反形式：當過程取代了完成的作品',
     terms: [
@@ -476,7 +476,7 @@ const VOCAB = [
     ]
   },
   {
-    n: 8, dir: 'week09',
+    n: 8, dir: 'unit08',
     title: 'Leaving the Museum',
     zh: '走出美術館：藝術進入世界',
     terms: [
@@ -515,7 +515,7 @@ const VOCAB = [
     ]
   },
   {
-    n: 9, dir: 'week10',
+    n: 9, dir: 'unit09',
     title: 'Expanding Media',
     zh: '擴展的媒介：錄像與身體',
     terms: [
@@ -574,7 +574,7 @@ const VOCAB = [
     ]
   },
   {
-    n: 10, dir: 'week11',
+    n: 10, dir: 'unit10',
     title: 'Borrowed Images',
     zh: '借來的影像：原創性的終結與再現的政治',
     terms: [

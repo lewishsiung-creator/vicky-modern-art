@@ -8,7 +8,7 @@ errors: a stray non-Chinese script inside a Chinese string, and a
 import io, re, json, glob, sys
 
 bad = 0
-for p in sorted(glob.glob('week*/content.zh.js')):
+for p in sorted(glob.glob('unit*/content.zh.js')):
     s = io.open(p, encoding='utf-8').read()
     m = re.search(r'window\.ZH = (\{.*\});', s, re.S)
     d = json.loads(m.group(1)) if m else {}

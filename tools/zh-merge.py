@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Merge {index: Chinese} into weekNN/content.zh.js.
+"""Merge {index: Chinese} into unitNN/content.zh.js.
 
 The keys are taken from tools/strings.js output, so the English side is
 never retyped by hand — only the Chinese is written, against the index
-that `node tools/strings.js weekNN` prints.
+that `node tools/strings.js unitNN` prints.
 
-    python3 tools/zh-merge.py week02 pairs.json
+    python3 tools/zh-merge.py unit01 pairs.json
 """
 import json, subprocess, sys, io, os, re
 

@@ -21,7 +21,7 @@
      lang.js decides the mode. In Chinese mode every slide string is looked
      up in window.ZH (the unit's content.zh.js) by its exact English text;
      anything not found stays English, so a gap shows rather than breaks.
-     Run `node tools/strings.js weekNN --missing` to list the gaps.
+     Run `node tools/strings.js unitNN --missing` to list the gaps.
 
      The GLOSSARY is not in there: it already carries zh and zhDef. */
   const ZHMODE = !!window.ZHMODE;

@@ -22,26 +22,27 @@ vocabulary.
 ## Layout
 
 ```
-index.html      the course index — cards come from weeks.js
-weeks.js        one entry per unit; `dir: null` = not built yet
+index.html      the course index — cards come from units.js
+units.js        one entry per unit; `dir: null` = not built yet
 shared/         deck.js and style.css — every unit uses these
-week02/         Unit 1  — index.html + content.js + img/
-week03/         Unit 2  — index.html + content.js + img/
-week04/         Unit 3  — index.html + content.js + img/
-week05/         Unit 4  — index.html + content.js + img/
-week06/         Unit 5  — index.html + content.js + img/ + vid/
-week07/         Unit 6  — index.html + content.js + img/
-week08/         Unit 7  — index.html + content.js + img/
-week09/         Unit 8  — index.html + content.js + img/
-week10/         Unit 9  — index.html + content.js + img/
-week11/         Unit 10 — index.html + content.js + img/
+unit01/         Unit 1  — index.html + content.js + img/
+unit02/         Unit 2  — index.html + content.js + img/
+unit03/         Unit 3  — index.html + content.js + img/
+unit04/         Unit 4  — index.html + content.js + img/
+unit05/         Unit 5  — index.html + content.js + img/ + vid/
+unit06/         Unit 6  — index.html + content.js + img/
+unit07/         Unit 7  — index.html + content.js + img/
+unit08/         Unit 8  — index.html + content.js + img/
+unit09/         Unit 9  — index.html + content.js + img/
+unit10/         Unit 10 — index.html + content.js + img/
 vocab/          the key-vocabulary reference — index.html + terms.js
 ```
 
-The folder names are the semester week the class falls in; the units are
-numbered 1–10. They are deliberately one apart, because the course starts in
-week 2. Renaming the folders would break every link already shared, so the
-folders stay put and only the labels say "Unit".
+The folders used to be named for the semester week the class fell in
+(`week02`–`week11`, one ahead of the unit number, because the course starts in
+week 2). They were renamed to match the units in November 2026. Every old
+`/weekNN/` URL still works: `_redirects` sends it to the right unit with a 301,
+so links already shared keep opening the right deck.
 
 A fix to `shared/` lands on every unit at once. Each unit owns only its
 `content.js` and its pictures.
@@ -50,11 +51,11 @@ A fix to `shared/` lands on every unit at once. Each unit owns only its
 
 All ten units (1–10) are built. If another is ever added:
 
-1. `cp -r week11 week12 && rm -rf week12/img/* week12/content.js`
-2. Put the new pictures in `week12/img/`.
-3. Write `week12/content.js` — copy the shape from `week11/content.js`.
-4. Change the `<title>` and `<meta name="description">` in `week12/index.html`.
-5. Add a line for it in `weeks.js`.
+1. `cp -r unit10 unit11 && rm -rf unit11/img/* unit11/content.js`
+2. Put the new pictures in `unit11/img/`.
+3. Write `unit11/content.js` — copy the shape from `unit10/content.js`.
+4. Change the `<title>` and `<meta name="description">` in `unit11/index.html`.
+5. Add a line for it in `units.js`.
 
 Nothing else needs editing.
 
@@ -330,7 +331,7 @@ there is no `ffmpeg` on this machine to re-encode them.
 
 Seven of the eight slides already carried a **YouTube source URL**, so those are
 embedded from YouTube. The Anthropométries film carried no link, so it is hosted
-in `week06/vid/` (8.4 MB) and plays with no internet.
+in `unit05/vid/` (8.4 MB) and plays with no internet.
 
 **This means the classroom needs a working connection for seven of the eight
 films.** If that is a risk, her original `.pptx` still has every file embedded
@@ -490,11 +491,11 @@ from Wikimedia Commons, credited here:
 
 | Slide | File | Photographer | Licence |
 |---|---|---|---|
-| Unit 8 · *Sun Tunnels* | `week09/img/holt-sun-tunnels-1.jpg` | Retis | CC BY 2.0 |
-| Unit 8 · *Sun Tunnels* | `week09/img/holt-sun-tunnels-2.jpg` | Matthew Kowal | CC BY-SA 4.0 |
-| Unit 9 · *TV Cello* | `week10/img/paik-tv-cello.jpg` | Sarah Stierch | CC BY 2.0 |
-| Unit 9 · *Electronic Superhighway* | `week10/img/paik-electronic-superhighway-1.jpg` | APK | CC BY 4.0 |
-| Unit 9 · *Electronic Superhighway* | `week10/img/paik-electronic-superhighway-2.jpg` | APK | CC BY 4.0 |
+| Unit 8 · *Sun Tunnels* | `unit08/img/holt-sun-tunnels-1.jpg` | Retis | CC BY 2.0 |
+| Unit 8 · *Sun Tunnels* | `unit08/img/holt-sun-tunnels-2.jpg` | Matthew Kowal | CC BY-SA 4.0 |
+| Unit 9 · *TV Cello* | `unit09/img/paik-tv-cello.jpg` | Sarah Stierch | CC BY 2.0 |
+| Unit 9 · *Electronic Superhighway* | `unit09/img/paik-electronic-superhighway-1.jpg` | APK | CC BY 4.0 |
+| Unit 9 · *Electronic Superhighway* | `unit09/img/paik-electronic-superhighway-2.jpg` | APK | CC BY 4.0 |
 
 The licences cover the photographs. The works themselves are still in copyright,
 on the same classroom-teaching footing as every other image here. The last

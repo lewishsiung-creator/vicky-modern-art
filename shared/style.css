@@ -1005,46 +1005,46 @@ body.course { overflow: auto; }
   font-size: 1.1em; line-height: 1.6; color: var(--ink-dim);
   margin-top: 1em; max-width: 30em;
 }
-.weeks { list-style: none; margin-top: 3em; }
-.weeks li { margin-bottom: 1.1em; }
-.weeks a, .weeks .card {
+.units { list-style: none; margin-top: 3em; }
+.units li { margin-bottom: 1.1em; }
+.units a, .units .card {
   display: block; text-decoration: none; color: var(--ink);
   background: var(--cream); border-radius: .6em;
   padding: 1.5em 1.7em;
   box-shadow: 0 .5em 1.6em rgba(23,19,18,.16);
   transition: transform .18s var(--ease), box-shadow .18s var(--ease);
 }
-.weeks a:hover {
+.units a:hover {
   transform: translateY(-.15em);
   box-shadow: 0 .9em 2.4em rgba(23,19,18,.26);
 }
-.weeks .wk {
+.units .unit {
   display: block; font-size: .78em; letter-spacing: .18em;
   text-transform: uppercase; color: var(--deep); font-weight: 700;
 }
-.weeks .wk-title {
+.units .unit-title {
   display: block; font-family: var(--serif); font-size: 1.9em;
   line-height: 1.15; margin: .25em 0 .1em;
 }
-.weeks .wk-q { display: block; font-size: 1.05em; color: var(--deep); }
-.weeks .wk-meta {
+.units .unit-q { display: block; font-size: 1.05em; color: var(--deep); }
+.units .unit-meta {
   display: block; font-size: .9em; color: #5a6a5f; margin-top: .8em;
 }
 /* Weeks not built yet: present, but plainly not ready. */
-.weeks li.soon { margin-bottom: .5em; }
-.weeks li.soon .card {
+.units li.soon { margin-bottom: .5em; }
+.units li.soon .card {
   background: transparent;
   border: 1px dashed rgba(23,19,18,.28);
   box-shadow: none;
   padding: .9em 1.7em;
   color: var(--deeper);
 }
-.weeks li.soon .wk-title {
+.units li.soon .unit-title {
   font-size: 1.1em; font-family: var(--sans); margin: 0;
   display: inline; color: var(--deeper);
 }
-.weeks li.soon .wk { display: inline; margin-right: .8em; }
-.weeks li.soon .wk-q { font-size: .95em; margin-top: .3em; }
+.units li.soon .unit { display: inline; margin-right: .8em; }
+.units li.soon .unit-q { font-size: .95em; margin-top: .3em; }
 
 .lang-btn {
   margin-top: 1.6em; font: inherit; font-size: .9em; font-weight: 700;
