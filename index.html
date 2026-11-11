@@ -46,8 +46,13 @@ document.getElementById('units').innerHTML = UNITS.map(w => {
     <span class="unit-title">${(ZH ? w.zhTitle : w.title) || 'Not built yet'}</span>
     ${w.q ? `<span class="unit-q">${ZH ? w.zhQ : w.q}</span>` : ''}
     ${w.meta ? `<span class="unit-meta">${ZH ? w.zhMeta : w.meta}</span>` : ''}`;
+  /* The review sheet hangs under the card rather than inside it: the
+     card is one big link already, and a link cannot live inside a link. */
+  const review = ZH
+    ? `<a class="unit-review" href="review/?unit=${w.n}&lang=zh">重點複習 — 可存成 PDF →</a>`
+    : `<a class="unit-review" href="review/?unit=${w.n}">Key review — save it as a PDF →</a>`;
   return w.dir
-    ? `<li><a href="${w.dir}/">${inner}</a></li>`
+    ? `<li><a class="card-link" href="${w.dir}/">${inner}</a>${review}</li>`
     : `<li class="soon"><span class="card">${inner}</span></li>`;
 }).join('');
 applyLang();

@@ -1047,16 +1047,30 @@ body.course { overflow: auto; }
 }
 .units { list-style: none; margin-top: 3em; }
 .units li { margin-bottom: 1.1em; }
-.units a, .units .card {
+.units .card-link, .units .card {
   display: block; text-decoration: none; color: var(--ink);
   background: var(--cream); border-radius: .6em;
   padding: 1.5em 1.7em;
   box-shadow: 0 .5em 1.6em rgba(23,19,18,.16);
   transition: transform .18s var(--ease), box-shadow .18s var(--ease);
 }
-.units a:hover {
+.units .card-link:hover {
   transform: translateY(-.15em);
   box-shadow: 0 .9em 2.4em rgba(23,19,18,.26);
+}
+/* 重點複習, under its unit — quiet, because the deck is the main door
+   and this is the thing she sends afterwards. */
+.unit-review {
+  display: inline-block; margin: .55em 0 0 1.7em;
+  font-size: .88em; font-weight: 600; color: var(--cream);
+  text-decoration: none; opacity: .8;
+  border-bottom: 1px solid rgba(247,240,223,.4);
+  padding-bottom: .1em;
+}
+.unit-review:hover { opacity: 1; border-bottom-color: var(--cream); }
+/* A one-line link is a small thing to hit with a thumb. */
+@media (max-width: 700px) {
+  .unit-review { margin-top: .75em; padding-bottom: .5em; }
 }
 .units .unit {
   display: block; font-size: .78em; letter-spacing: .18em;
