@@ -609,6 +609,11 @@
     navPrev.disabled = (idx === 0 && step === 0);
     navNext.disabled = (idx === SLIDES.length - 1 && step === stepsFor(s));
     if (peek.classList.contains('on')) drawPeek();
+
+    /* Keep the address bar on the current slide, so the language switch
+       and a plain reload both come back to the same place. replaceState,
+       not location.hash, so the back button is not filled with slides. */
+    try { history.replaceState(null, '', here()); } catch (e) {}
     sync();
   }
 
@@ -967,7 +972,7 @@
     if (lower === 'm') { menu.classList.contains('on') ? closeMenu() : openMenu(); return; }
     if (lower === 'n') { peek.classList.toggle('on'); if (peek.classList.contains('on')) drawPeek(); return; }
     if (lower === 'p') { openPresenter(); return; }
-    if (lower === 'l') { switchLang('#' + (idx + 1)); return; }
+    if (lower === 'l') { switchLang(here()); return; }
     if (lower === 'f') {
       if (document.fullscreenElement) document.exitFullscreen();
       else document.documentElement.requestFullscreen();
@@ -983,14 +988,28 @@
     if (peek.classList.contains('on')) drawPeek();
   };
   const btnLang = document.getElementById('btn-lang');
-  if (btnLang) btnLang.onclick = e => { e.stopPropagation(); switchLang('#' + (idx + 1)); };
+  if (btnLang) btnLang.onclick = e => { e.stopPropagation(); switchLang(here()); };
   if (window.applyLang) applyLang();
   document.getElementById('btn-presenter').onclick = e => { e.stopPropagation(); openPresenter(); };
   menu.addEventListener('click', e => { if (e.target === menu) closeMenu(); });
   lightbox.addEventListener('click', closeZoom);
 
   /* ---------- go ---------- */
+  /* #12 or #12.3 — the slide, and how far into its reveals. The language
+     switch reloads the page, so it writes the current position here and
+     the deck opens again on exactly the same slide. */
+  function here() {
+    return '#' + (idx + 1) + (step ? '.' + step : '');
+  }
+
+  function startAt() {
+    const m = /^#(\d+)(?:\.(\d+))?$/.exec(location.hash || '');
+    if (!m) return [0, 0];
+    const i = Math.max(0, Math.min(SLIDES.length - 1, +m[1] - 1));
+    return [i, Math.max(0, Math.min(stepsFor(SLIDES[i]), +(m[2] || 0)))];
+  }
+
   buildMenu();
   fit();
-  show(0, 0);
+  show.apply(null, startAt());
 })();

@@ -10,7 +10,7 @@
    ------------------------------------------------------------------ */
 
 const GLOSSARY = {
-  /* --- the week's foundational concepts --- */
+  /* --- the unit's foundational concepts --- */
   dada: {
     en: 'Dada', zh: '達達主義',
     def: 'An anti-art movement that began in Zurich in 1916, rejecting logic, tradition and beauty after the trauma of the First World War.',
@@ -157,8 +157,8 @@ const SLIDES = [
   sub: 'How does art show emotion and the unconscious?',
   meta: 'Unit 2',
   notes: [
-    'Good morning. Last week we asked one question. This week we ask another.',
-    'Last week: how did art start to change? This week: how does art move from looking outward, to looking inward?',
+    'Good morning. Last unit we asked one question. This unit we ask another.',
+    'Last unit: how did art start to change? This unit: how does art move from looking outward, to looking inward?',
     'TEACHER: five minutes for review and framing, then straight into Dada.'
   ]
 },
@@ -166,19 +166,19 @@ const SLIDES = [
   type: 'bullets',
   oneClick: true,
   title: 'Where we were, and where we go now',
-  zh: '上週與本週',
+  zh: '上個單元與這個單元',
   items: [
-    { head: 'Last week we asked: how did art start to change?', body: 'Artists stopped copying the world. They became interested in {{collage}}, in shape, in colour — in the picture itself.' },
+    { head: 'Last unit we asked: how did art start to change?', body: 'Artists stopped copying the world. They became interested in {{collage}}, in shape, in colour — in the picture itself.' },
     { head: 'We ended with the First World War', body: 'It stopped everything. And after it, two new movements began: {{dada}} and {{surrealism}}.' },
-    { head: 'This week we ask: how does art look inward?', body: 'From the outside world, to the inside of the mind.' },
-    { head: 'And where does it end?', body: 'In New York — which is next week.' }
+    { head: 'This unit we ask: how does art look inward?', body: 'From the outside world, to the inside of the mind.' },
+    { head: 'And where does it end?', body: 'In New York — which is the next unit.' }
   ],
   notes: [
-    'Recap last week’s guiding question: how did art start to change?',
+    'Recap last unit’s guiding question: how did art start to change?',
     'Remind them of the answer in one line: artists stopped copying the world and became interested in form — shape, colour, line.',
-    'Now pose this week’s question, and write it on the board: how does art move from looking outward to looking inward?',
+    'Now pose this unit’s question, and write it on the board: how does art move from looking outward to looking inward?',
     'Say where we are going: Dada first, then a quick look at wartime art in France, America and Mexico, then Surrealism — which is most of today.',
-    'And say why: Surrealism is the bridge to next week, Abstract Expressionism in New York.'
+    'And say why: Surrealism is the bridge to the next unit, Abstract Expressionism in New York.'
   ]
 },
 
@@ -449,8 +449,8 @@ const SLIDES = [
     'Modern distortion — with the human figure still at the centre.'
   ],
   notes: [
-    'Modigliani stretches the body, but he does not break it. Compare that with Picasso last week.',
-    'The faces are borrowed from African masks and from Brancusi, whom they met last week.',
+    'Modigliani stretches the body, but he does not break it. Compare that with Picasso in the last unit.',
+    'The faces are borrowed from African masks and from Brancusi, whom they met in the last unit.',
     'He died at 35, in 1920, the year this style was at its peak.'
   ]
 },
@@ -485,7 +485,7 @@ const SLIDES = [
   ],
   notes: [
     'Léger served in the war and was gassed at Verdun. He came out admiring machines rather than fearing them.',
-    'Compare with the Futurists last week: they loved the machine before the war. Léger loves it after.',
+    'Compare with the Futurists in the last unit: they loved the machine before the war. Léger loves it after.',
     'The bodies are as smooth and repeatable as manufactured objects — this is the “call to order” in its clearest form.'
   ]
 },
@@ -503,7 +503,7 @@ const SLIDES = [
     { head: '1930s — the Federal Art Project', body: '{{americanscene}} painting, during the Depression.' }
   ],
   notes: [
-    'The Armory Show was on last week’s American slide too — this is the link back. Remind them.',
+    'The Armory Show was on last unit’s American slide too — this is the link back. Remind them.',
     'In the United States, the 1930s Depression produced American Scene painting, which expressed a distinctly national mood.',
     'Two directions inside it: Grant Wood’s calm rural scenes, and Edward Hopper’s urban loneliness. We will see both.'
   ]
@@ -543,7 +543,7 @@ const SLIDES = [
   notes: [
     'ASK and wait. They will say lonely — push them for how they know.',
     'The answers are in the picture: no door, no eye contact, empty street, and the harsh electric light of the new fluorescent tube.',
-    'Compare with Kirchner’s Street, Dresden from last week — crowded and alone, versus almost empty and alone. Same feeling, opposite method.'
+    'Compare with Kirchner’s Street, Dresden from the last unit — crowded and alone, versus almost empty and alone. Same feeling, opposite method.'
   ]
 },
 {
@@ -580,7 +580,7 @@ const SLIDES = [
   notes: [
     'The government paid photographers to record the Depression. That is an unusual fact and worth saying plainly.',
     'One hundred and seventy thousand photographs. The scale is the point.',
-    'This is also the answer to a question from last week: what is the painter for, once the machine can copy the world? Here the machine has a job painting cannot do.'
+    'This is also the answer to a question from the last unit: what is the painter for, once the machine can copy the world? Here the machine has a job painting cannot do.'
   ]
 },
 {
@@ -655,7 +655,7 @@ const SLIDES = [
     'In Mexico, after the 1910–1920 Revolution, the government funded muralists such as Diego Rivera to paint scenes of national pride.',
     'Frida Kahlo did the opposite — she turned inward, painting her own physical and emotional pain. Two directions, same country.',
     'The influence on the United States came through two things: the classical fresco technique, and the idea of art as social struggle.',
-    'That second idea matters for next week: several of the Abstract Expressionists worked on mural projects first.'
+    'That second idea matters for the next unit: several of the Abstract Expressionists worked on mural projects first.'
   ]
 },
 {
@@ -704,7 +704,7 @@ const SLIDES = [
   sub: 'From 1924. Dreams, and the mind you cannot see.',
   notes: [
     'Fifteen minutes on Surrealism before the activity, then Magritte after it.',
-    'This is the heart of today, and the bridge to next week.'
+    'This is the heart of today, and the bridge to the next unit.'
   ]
 },
 {
@@ -887,7 +887,7 @@ const SLIDES = [
   notes: [
     'ASK the question — the honest answer is that you cannot tell, and that is the point.',
     'His style is tangled, violent, erotic — the trauma of the trenches is in it. He was wounded at the Chemin des Dames.',
-    'IMPORTANT for next week: this is Quiz Question 6. Masson poured and threw material onto a canvas on the floor. Jackson Pollock saw Masson’s work in New York. Say this now and say it again in the wrap-up.'
+    'IMPORTANT for the next unit: this is Quiz Question 6. Masson poured and threw material onto a canvas on the floor. Jackson Pollock saw Masson’s work in New York. Say this now and say it again in the wrap-up.'
   ]
 },
 {
@@ -1083,14 +1083,14 @@ const SLIDES = [
       'The Second World War drove the European Surrealists out of Paris.',
       'Many of them arrived in New York.',
       'They brought {{automatism}} with them.',
-      'Next week: what young American painters did with it.'
+      'Next unit: what young American painters did with it.'
     ]
   },
   notes: [
     'Ten minutes for wrap-up and preview.',
     'Recap the throughline out loud, following the chain on screen: the war, Dada, the readymade, Paris, Freud, Surrealism, automatism.',
     'Then click, and give them the preview: displaced by the Second World War, the European Surrealists came to New York and brought automatism with them.',
-    'Name Masson and Pollock together one more time. That is the hinge into next week, and it is Quiz Question 6.'
+    'Name Masson and Pollock together one more time. That is the hinge into the next unit, and it is Quiz Question 6.'
   ]
 },
 {
@@ -1202,10 +1202,10 @@ const SLIDES = [
     'Marcel Duchamp’s signature on found objects.',
     'The creation of public murals for the Mexican government.'
   ],
-  why: 'Glue and thrown sand, on a canvas, decided partly by chance. Pollock saw this work in New York — which is where next week begins.',
+  why: 'Glue and thrown sand, on a canvas, decided partly by chance. Pollock saw this work in New York — which is where the next unit begins.',
   notes: [
     'Answer: B. This is the bridge question, so end on it deliberately.',
-    'Say the link one last time: Masson poured and threw material onto the canvas. Pollock saw it in New York. Next week we start there.'
+    'Say the link one last time: Masson poured and threw material onto the canvas. Pollock saw it in New York. Next unit we start there.'
   ]
 },
 {

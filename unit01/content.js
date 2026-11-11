@@ -960,7 +960,7 @@ const SLIDES = [
   notes: [
     'Ten minutes. These are the three discussion questions from the lesson plan, simplified for A2 — the full wording is in the plan if you want it.',
     'Question 2 is revision: it is Quiz Question 6 in conversational form. If the room is quiet, start there, because they can already answer it.',
-    'Question 3 is the hardest and the best. It reaches back to the Futurism slide and forward to next week.',
+    'Question 3 is the hardest and the best. It reaches back to the Futurism slide and forward to the next unit.',
     'A2 support: the sentence starters are on screen. Give ten seconds of silence after each question before you call on anyone.'
   ]
 },

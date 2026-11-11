@@ -4,7 +4,7 @@
 
    Text on screen is written at CEFR A1–A2, simplified from her slides
    and the lesson plan. Her own slides are already unusually plain this
-   week — much of her phrasing is kept.
+   unit — much of her phrasing is kept.
 
    {{term}} renders a tappable word chip from GLOSSARY below.
    ------------------------------------------------------------------ */
@@ -98,7 +98,7 @@ const GLOSSARY = {
   readymade: {
     en: 'readymade', zh: '現成物',
     def: 'Duchamp’s idea from 1917 — an everyday object chosen by an artist and shown as art. Unit 2.',
-    zhDef: '杜象 1917 年提出：由藝術家選定並展出的日常物件。第三週學過。'
+    zhDef: '杜象 1917 年提出：由藝術家選定並展出的日常物件。第 2 單元學過。'
   },
   ontology: {
     en: 'ontology', zh: '存有學',
@@ -132,7 +132,7 @@ const SLIDES = [
   meta: 'Unit 6',
   notes: [
     'Five minutes for the bridge and the hook.',
-    'Start with last week’s last slide: Beuys living in a room with a coyote for three days.',
+    'Start with last unit’s last slide: Beuys living in a room with a coyote for three days.',
     'ASK: was that art? And if it was — what can the material of art actually be?',
     'Then the guiding question, on the board: does art still need to exist as a physical thing?'
   ]
@@ -141,10 +141,10 @@ const SLIDES = [
   type: 'bullets',
   oneClick: true,
   title: 'Where we were, and where we go now',
-  zh: '上週與本週',
+  zh: '上個單元與這個單元',
   items: [
-    { head: 'Last week ended with a man and a coyote', body: 'Three days in a room. No object made. Was that art?' },
-    { head: 'We left the question open', body: 'Today we finish it — Beuys had a whole theory behind that week.' },
+    { head: 'Last unit ended with a man and a coyote', body: 'Three days in a room. No object made. Was that art?' },
+    { head: 'We left the question open', body: 'Today we finish it — Beuys had a whole theory behind that unit.' },
     { head: 'Then the opposite answer', body: '{{minimalism}}: art is <i>only</i> an object, and nothing else.' },
     { head: 'And then the last step', body: '{{conceptualart}}: if the idea is what matters, do we need the object at all?' }
   ],
@@ -161,13 +161,13 @@ const SLIDES = [
   title: 'Joseph Beuys (1921–1986)',
   zh: '波依斯',
   items: [
-    { head: 'His materials: fat, felt, and animals', body: 'Rabbits, deer, bees — and the coyote you met last week.' },
+    { head: 'His materials: fat, felt, and animals', body: 'Rabbits, deer, bees — and the coyote you met in the last unit.' },
     { head: '{{expandedart}}', body: 'The material of art can be any object, or any action. Art comes out of life, and shapes life back.' },
     { head: '{{socialsculpture}}', body: 'His big idea: people, together, can shape society — the way an artist shapes a material.' }
   ],
   notes: [
-    'Ten minutes on Beuys. This completes last week rather than starting fresh.',
-    'The move to make clear: last week they saw the performance. Today they get the theory that explains it.',
+    'Ten minutes on Beuys. This completes the last unit rather than starting fresh.',
+    'The move to make clear: in the last unit they saw the performance. Today they get the theory that explains it.',
     'Do NOT say “everyone is an artist” yet. That is the reveal at the end of the activity, and her lesson plan is explicit about holding it back.'
   ]
 },
@@ -438,7 +438,7 @@ const SLIDES = [
   notes: [
     'This is Quiz Question 3: it rejects symbolic or illusionistic readings.',
     'Six words. Put them on the board.',
-    'Students find this frustrating, and that is the correct reaction. Every previous week trained them to look for meaning. Say so out loud — it makes the refusal legible.'
+    'Students find this frustrating, and that is the correct reaction. Every previous unit trained them to look for meaning. Say so out loud — it makes the refusal legible.'
   ]
 },
 {
@@ -454,7 +454,7 @@ const SLIDES = [
     { head: 'And Minimalism took that further than he wanted', body: 'So far that it broke his own rules. That comes back at the end of this section.' }
   ],
   notes: [
-    'Greenberg has now appeared in four weeks. Remind them: Modernism uses a discipline’s own methods on itself.',
+    'Greenberg has now appeared in four units. Remind them: Modernism uses a discipline’s own methods on itself.',
     'The joke of the section, which you should set up now: Judd follows Greenberg’s logic so faithfully that he ends up making things that are not paintings at all. Greenberg hated it.'
   ]
 },
@@ -572,7 +572,7 @@ const SLIDES = [
     { side: 'right', text: 'So the real artwork is the <b>instructions</b> — and the drawing is only one performance of them.' }
   ],
   notes: [
-    'ASK first, then click. This is the best single demonstration of the week.',
+    'ASK first, then click. This is the best single demonstration of the unit.',
     'Wall drawings are executed by assistants or by the museum’s own staff, following a written certificate.',
     'When the exhibition closes, the wall is painted over. The work survives as a document.',
     'Link back to 7000 Oaks half an hour ago: his son planted the final tree, and it was still Beuys’s work. Same principle, different route.'
@@ -872,7 +872,7 @@ const SLIDES = [
   notes: [
     'The story is true and it is the origin of the Declaration of Intent on the next slide.',
     'The twine got cut because it blocked a path to the football field. Rather than being annoyed, he realised the physical version was optional.',
-    'That realisation is the next slide, and it is the most extreme position in the week.'
+    'That realisation is the next slide, and it is the most extreme position in the unit.'
   ]
 },
 {
@@ -893,7 +893,7 @@ const SLIDES = [
     'Three sentences, and the third one is the whole of Conceptual Art.',
     'ASK the question and take two or three answers.',
     'His reason is worth quoting: “Art that imposes conditions on the receiver for its appreciation in my eyes constitutes aesthetic fascism.” He meant that requiring someone to travel to a museum is itself a barrier.',
-    'That is a political argument, not only a formal one — link it to Maciunas last week: art anyone can have.'
+    'That is a political argument, not only a formal one — link it to Maciunas in the last unit: art anyone can have.'
   ]
 },
 {
@@ -983,7 +983,7 @@ const SLIDES = [
     'Ten minutes for wrap-up and preview.',
     'One click puts up all four. This is the session in four words, and it is the cleanest arc in the course so far.',
     'The honest closing point: this is not a story of progress. These are four rival answers, made at the same time, by people who read each other.',
-    'Preview next week and stop.'
+    'Preview the next unit and stop.'
   ]
 },
 {

@@ -2,7 +2,7 @@
    Unit 10 — Borrowed Images
    The end of originality and the politics of representation
 
-   The last week of the course. The closing slide looks back over the
+   The last unit of the course. The closing slide looks back over the
    whole semester, so it is written to end something.
 
    Text on screen is written at CEFR A1–A2, simplified from her slides
@@ -96,7 +96,7 @@ const GLOSSARY = {
 };
 
 const SECTIONS = [
-  { title: '1 · The Question',        zh: '本週提問',   start: 0 },
+  { title: '1 · The Question',        zh: '本單元提問',   start: 0 },
   { title: '2 · Modern → Postmodern', zh: '現代到後現代', start: 4 },
   { title: '3 · Neo-Expressionism',   zh: '新表現主義', start: 11 },
   { title: '4 · Graffiti Art',        zh: '塗鴉藝術',   start: 23 },
@@ -125,10 +125,10 @@ const SLIDES = [
   type: 'bullets',
   oneClick: true,
   title: 'Where we were, and where we finish',
-  zh: '上週與本週',
+  zh: '上個單元與這個單元',
   items: [
-    { head: 'Last week: the object went, and only the record stayed', body: 'Video, the body, and then documentation — which was how we reached every work in the room.' },
-    { head: 'This week: the images were never new to begin with', body: 'Artists stop pretending to invent, and start openly borrowing.' },
+    { head: 'Last unit: the object went, and only the record stayed', body: 'Video, the body, and then documentation — which was how we reached every work in the room.' },
+    { head: 'This unit: the images were never new to begin with', body: 'Artists stop pretending to invent, and start openly borrowing.' },
     { head: 'And borrowing turns out to be two different things', body: 'A challenge to <i>originality</i>. And a challenge to <i>who gets represented</i>.' },
     { head: 'So the last question of the course', body: 'Whose originality? Whose image?' }
   ],
@@ -624,7 +624,7 @@ const SLIDES = [
   notes: [
     'Four aims, all up with one click.',
     'Point back across the course: Marisa Merz in Unit 8, Eva Hesse and Lynda Benglis in Unit 7, Niki de Saint Phalle in Unit 5, Agnes Denes and Nancy Holt in Unit 8. All of them arrived in the story because of this work.',
-    'That is worth saying out loud in the last week. The reason those artists were in this course at all is that somebody did the recovering.'
+    'That is worth saying out loud in the last unit. The reason those artists were in this course at all is that somebody did the recovering.'
   ]
 },
 {
@@ -894,7 +894,7 @@ const SLIDES = [
   kicker: 'Closing the course',
   items: [
     { head: 'Modernism believed in objective truth, pure order, and originality as the highest virtue', body: 'That is where Unit 1 began.' },
-    { head: 'This semester has unravelled that belief, one week at a time', body: 'The object, the artist’s hand, the museum, the permanent thing, the live moment — each one questioned in turn.' },
+    { head: 'This semester has unravelled that belief, one unit at a time', body: 'The object, the artist’s hand, the museum, the permanent thing, the live moment — each one questioned in turn.' },
     { head: 'And today, appropriation pushes it further', body: 'Even the image was borrowed.' },
     { head: 'This course will not tell you whether originality still matters', body: 'That question is not closed, and nobody in it agrees.' },
     { head: 'But you already live in this world', body: 'Everything you make will be made out of images that already exist. This theory is the language of your own situation.' }

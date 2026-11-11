@@ -10,7 +10,7 @@
    ------------------------------------------------------------------ */
 
 const GLOSSARY = {
-  /* --- the week's foundational concepts --- */
+  /* --- the unit's foundational concepts --- */
   figurative: {
     en: 'figurative', zh: '具象',
     def: 'Art that shows recognisable things from the world you can see.',
@@ -28,8 +28,8 @@ const GLOSSARY = {
   },
   automatism: {
     en: 'automatism', zh: '自動性技法',
-    def: 'Making without conscious control, so the unconscious guides the hand. Taken from the Surrealists — you met it last week.',
-    zhDef: '不經意識控制的創作方式，讓潛意識引導手。承自超現實主義，上週已學過。'
+    def: 'Making without conscious control, so the unconscious guides the hand. Taken from the Surrealists — you met it in the last unit.',
+    zhDef: '不經意識控制的創作方式，讓潛意識引導手。承自超現實主義，上個單元已學過。'
   },
   allover: {
     en: 'all-over technique', zh: '滿幅技法',
@@ -134,8 +134,8 @@ const SLIDES = [
   meta: 'Unit 3',
   notes: [
     'Five minutes for review and framing.',
-    'Last week ended with a question hanging in the air. Today we answer it.',
-    'This week’s question, and write it on the board: how did painting lose reality?',
+    'Last unit ended with a question hanging in the air. Today we answer it.',
+    'This unit’s question, and write it on the board: how did painting lose reality?',
     'Hold the puzzle all session: when the recognisable picture goes, what is left?'
   ]
 },
@@ -143,15 +143,15 @@ const SLIDES = [
   type: 'bullets',
   oneClick: true,
   title: 'Where we were, and where we go now',
-  zh: '上週與本週',
+  zh: '上個單元與這個單元',
   items: [
-    { head: 'Last week: art turned inward', body: 'Dada broke the definition of art. Then {{abex}}’s parent, Surrealism, went into the {{automatism}} of the dreaming mind.' },
+    { head: 'Last unit: art turned inward', body: 'Dada broke the definition of art. Then {{abex}}’s parent, Surrealism, went into the {{automatism}} of the dreaming mind.' },
     { head: 'We ended in Paris, in the 1930s', body: 'And then the Second World War moved everybody.' },
-    { head: 'This week: the picture disappears', body: 'Not the feeling. Not the paint. Only the recognisable image.' },
+    { head: 'This unit: the picture disappears', body: 'Not the feeling. Not the paint. Only the recognisable image.' },
     { head: 'And a new centre', body: 'Paris stops. New York starts.' }
   ],
   notes: [
-    'Recap in one line: last week art moved from looking outward to looking inward.',
+    'Recap in one line: in the last unit art moved from looking outward to looking inward.',
     'Now the guiding question for today — how did painting lose reality?',
     'Frame the shift from figuration to abstraction as a puzzle to hold throughout the session. Do not resolve it yet.',
     'Then straight into the group activity — it is only five minutes in.'
@@ -165,7 +165,7 @@ const SLIDES = [
   sub: 'The genealogy of chance',
   notes: [
     'Fifteen minutes. Groups of five or six.',
-    'Do not explain anything new here. This activity runs on what they already know from last week.'
+    'Do not explain anything new here. This activity runs on what they already know from the last unit.'
   ]
 },
 {
@@ -206,7 +206,7 @@ const SLIDES = [
     'The third one is the whole point — the prediction task. Let them sketch. Wrong guesses are fine and often useful.',
     'STEP 3, three or four minutes: each group gives ONE sentence for the prediction. Respond with “interesting” or “you’re close” and do NOT confirm. Keep the suspense.',
     'STEP 4: do not announce the answer. Say “let’s see what actually happened” and go straight on to the Bridge slides. Those are the reveal.',
-    'LEWIS / TEACHER: a heads-up — last week’s Quiz Question 6 already named Pollock’s drip technique, so some students will arrive knowing the answer. If the room gets it instantly, run this as a recap instead of a mystery: ask them to explain <i>why</i> the drip is the next step after Masson, rather than what it is.'
+    'LEWIS / TEACHER: a heads-up — last unit’s Quiz Question 6 already named Pollock’s drip technique, so some students will arrive knowing the answer. If the room gets it instantly, run this as a recap instead of a mystery: ask them to explain <i>why</i> the drip is the next step after Masson, rather than what it is.'
   ]
 },
 
@@ -364,7 +364,7 @@ const SLIDES = [
   zh: '帕洛克：態度與觀念',
   items: [
     { head: 'Painting is spontaneous, not planned', body: '“The painting has a life of its own; I just let it come through.”' },
-    { head: 'It comes from Surrealism’s {{automatism}} and Freud’s unconscious', body: 'The line you followed in last week’s activity.' },
+    { head: 'It comes from Surrealism’s {{automatism}} and Freud’s unconscious', body: 'The line you followed in last unit’s activity.' },
     { head: 'No rational planning — chance drives it', body: 'An early example is <i>The Moon-Woman</i>.' },
     { head: 'Greenberg called him the pioneer of American avant-garde art', body: 'And said the drip solved painting’s problem of flatness.' },
     { head: 'Working off the easel overturned the old idea of a picture', body: 'There is no correct way up. Every side is abstract.' }
@@ -896,7 +896,7 @@ const SLIDES = [
   title: 'Tàpies — matter, and politics',
   zh: '塔皮埃斯：物質與政治',
   items: [
-    { head: 'Early 1950s: {{artinformel}} and Surrealism', body: 'He was a friend of Joan Miró — whom you met last week.' },
+    { head: 'Early 1950s: {{artinformel}} and Surrealism', body: 'He was a friend of Joan Miró — whom you met in the last unit.' },
     { head: '{{matterpainting}}', body: 'Marble dust, chalk, sand and earth, built into thick surfaces.' },
     { head: 'Art as a meditation on emptiness', body: 'And as alchemy — connecting matter to the spiritual.' },
     { head: 'Catalan culture under Franco', body: 'He was arrested in 1966. Catalan symbols appear openly in his work in the 1970s.' },
@@ -982,14 +982,14 @@ const SLIDES = [
       'The recognisable picture went first.',
       'Then the brush. Then the easel. Then the gesture.',
       'What is left is colour, surface, and the fact of the thing.',
-      'Next week: what happens when artists put the world back in.'
+      'Next unit: what happens when artists put the world back in.'
     ]
   },
   notes: [
     'Ten minutes for wrap-up and preview.',
     'Follow the chain out loud. It is the whole session in nine words.',
     'The summary sentence: painting lost reality one piece at a time, and each loss was somebody’s deliberate decision.',
-    'Preview next week and stop.'
+    'Preview the next unit and stop.'
   ]
 },
 {

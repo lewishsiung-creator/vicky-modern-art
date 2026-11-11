@@ -42,7 +42,7 @@ const GLOSSARY = {
   sitespecific: {
     en: 'site-specific', zh: '場域特定',
     def: 'Made for one particular place, and meaningless anywhere else. Unit 2, and now at the scale of a desert.',
-    zhDef: '為特定地點而作，離開該地便失去意義。第三週學過，如今擴及沙漠的尺度。'
+    zhDef: '為特定地點而作，離開該地便失去意義。第 2 單元學過，如今擴及沙漠的尺度。'
   },
 
   /* --- Arte Povera --- */
@@ -71,17 +71,17 @@ const GLOSSARY = {
   processart: {
     en: 'Process Art', zh: '過程藝術',
     def: 'Unit 7. The making is the work, and material, gravity and time decide the shape.',
-    zhDef: '第八週學過。製作過程即作品，材料、重力與時間決定其形狀。'
+    zhDef: '第 7 單元學過。製作過程即作品，材料、重力與時間決定其形狀。'
   },
   institutional: {
     en: 'institutional critique', zh: '機構批判',
     def: 'Art that turns its questions onto the museum, the gallery or the market itself. Units 6 and 7.',
-    zhDef: '將提問轉向美術館、畫廊或市場本身的藝術。第七、八週學過。'
+    zhDef: '將提問轉向美術館、畫廊或市場本身的藝術。第 6、7 單元學過。'
   }
 };
 
 const SECTIONS = [
-  { title: '1 · The Question',      zh: '本週提問',     start: 0 },
+  { title: '1 · The Question',      zh: '本單元提問',     start: 0 },
   { title: '2 · Land Art',          zh: '地景藝術',     start: 4 },
   { title: '3 · Smithson',          zh: '史密森',       start: 6 },
   { title: '4 · Christo to Long',   zh: '克里斯多到隆恩', start: 11 },
@@ -109,11 +109,11 @@ const SLIDES = [
   type: 'bullets',
   oneClick: true,
   title: 'Where we were, and where we go now',
-  zh: '上週與本週',
+  zh: '上個單元與這個單元',
   items: [
-    { head: 'Last week: {{processart}} — the making became the work', body: 'Morris hung felt on a nail and let gravity decide. Haacke sealed a box and let the weather decide.' },
+    { head: 'Last unit: {{processart}} — the making became the work', body: 'Morris hung felt on a nail and let gravity decide. Haacke sealed a box and let the weather decide.' },
     { head: 'But it all still happened indoors', body: 'In a gallery, in a museum, inside the white walls.' },
-    { head: 'This week the artists walk out', body: 'Into a salt lake, a desert, a Manhattan landfill.' },
+    { head: 'This unit the artists walk out', body: 'Into a salt lake, a desert, a Manhattan landfill.' },
     { head: 'And some of them stay in — and change the walls instead', body: 'That is {{artepovera}}, in the second half.' }
   ],
   notes: [
@@ -813,7 +813,7 @@ const SLIDES = [
   ],
   notes: [
     'ASK and let them answer freely. There is no fixed reading and she never gave one.',
-    'The scale is the argument: after a week of deserts and wrapped parliaments, an artwork you could hold in one hand.',
+    'The scale is the argument: after a unit of deserts and wrapped parliaments, an artwork you could hold in one hand.',
     'Say that contrast out loud — it is the best thing in the second half.'
   ]
 },
@@ -884,7 +884,7 @@ const SLIDES = [
     'Ten minutes for wrap-up and preview.',
     'The summary: both refuse the museum as the sole authority over what counts as art. They just do it in opposite directions.',
     'Then say the guiding question for the third and last time, and leave it open.',
-    'Preview next week and stop.'
+    'Preview the next unit and stop.'
   ]
 },
 {

@@ -501,7 +501,7 @@ window.ZH = {
  "Futurism and Constructivism tied their new forms to politics: nationalism on one side, socialism on the other. Can an {{abstract}} shape ever be politically neutral — or does new form always carry ideology?": "未來主義與構成主義把新的形式綁上政治：一邊是民族主義，一邊是社會主義。一個{{abstract}}的形狀，有可能在政治上是中立的嗎 — 還是新形式一定帶著意識形態？",
  "Ten minutes. These are the three discussion questions from the lesson plan, simplified for A2 — the full wording is in the plan if you want it.": "十分鐘。這是教案裡的三個討論題，為 A2 程度簡化過 — 需要完整版的話，教案裡有。",
  "Question 2 is revision: it is Quiz Question 6 in conversational form. If the room is quiet, start there, because they can already answer it.": "第 2 題其實是複習：它就是測驗第 6 題的口語版。如果教室安靜，就從這題開始，因為他們已經答得出來。",
- "Question 3 is the hardest and the best. It reaches back to the Futurism slide and forward to next week.": "第 3 題最難也最好。它往回扣到未來主義那一頁，往前扣到下一個單元。",
+ "Question 3 is the hardest and the best. It reaches back to the Futurism slide and forward to the next unit.": "第 3 題最難也最好。它往回扣到未來主義那一頁，往前扣到下一個單元。",
  "A2 support: the sentence starters are on screen. Give ten seconds of silence after each question before you call on anyone.": "A2 支援：句型就在螢幕上。每問完一題，先沉默十秒，再點人回答。",
  "Art Quiz": "藝術測驗",
  "Six questions. Nothing is scored, and nothing is saved.": "六題。不計分，也不會留下紀錄。",

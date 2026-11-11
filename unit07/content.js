@@ -38,7 +38,7 @@ const GLOSSARY = {
   institutional: {
     en: 'institutional critique', zh: '機構批判',
     def: 'Art that turns its questions onto the museum, the gallery or the market itself. Unit 6.',
-    zhDef: '將提問轉向美術館、畫廊或市場本身的藝術。第七週學過。'
+    zhDef: '將提問轉向美術館、畫廊或市場本身的藝術。第 6 單元學過。'
   },
 
   /* --- Op Art --- */
@@ -79,12 +79,12 @@ const GLOSSARY = {
   minimalism: {
     en: 'Minimalism', zh: '極簡主義',
     def: 'Unit 6. The fewest possible materials and forms, industrially made, with the artist’s hand removed.',
-    zhDef: '第七週學過。使用最少的材料與形式，以工業方式製作，抹除藝術家的手。'
+    zhDef: '第 6 單元學過。使用最少的材料與形式，以工業方式製作，抹除藝術家的手。'
   },
   specificobject: {
     en: 'specific object', zh: '特定物件',
     def: 'Judd’s term: neither painting nor sculpture, but a literal thing in real space. Unit 6.',
-    zhDef: '賈德的用語：既非繪畫也非雕塑，而是真實空間中的物件。第七週學過。'
+    zhDef: '賈德的用語：既非繪畫也非雕塑，而是真實空間中的物件。第 6 單元學過。'
   }
 };
 
@@ -346,7 +346,7 @@ const SLIDES = [
     ]
   },
   notes: [
-    'This is the clearest single diagram of the week.',
+    'This is the clearest single diagram of the unit.',
     'The honest question, and it is the first discussion question at the end: if a factory already removed the artist’s hand in Minimalism, is letting gravity do it really a rejection — or the same absence by another route?',
     'Do not answer it now.'
   ]
@@ -492,7 +492,7 @@ const SLIDES = [
   points: [
     'Nineteen open cylinders, all meant to be identical.',
     'But they are hand-formed in fibreglass, so every one leans and buckles differently.',
-    'Compare with Judd’s ten identical metal boxes, last week.',
+    'Compare with Judd’s ten identical metal boxes, in the last unit.',
     'Same idea — repetition — and the opposite result.'
   ],
   notes: [
@@ -576,7 +576,7 @@ const SLIDES = [
     'MoMA Poll: the question asked whether Governor Rockefeller’s position on Vietnam was a reason not to vote for him — and a Rockefeller was on MoMA’s board. Visitors dropped ballots into transparent boxes, so the result accumulated in public.',
     'Shapolsky used only public records. Nothing in it was secret. The museum still refused it.',
     'The director called it “an alien substance that had entered the art museum organism”. That sentence is worth reading out.',
-    'You met Haacke last week at the end, with Germania. Now they see how he got there.'
+    'You met Haacke in the last unit at the end, with Germania. Now they see how he got there.'
   ]
 },
 {
@@ -621,7 +621,7 @@ const SLIDES = [
     { head: 'The breakthrough: {{responsiveeye}}, 1965', body: 'At MoMA, curated by William C. Seitz. Over 180,000 people came, and Op Art reached fashion and design.' }
   ],
   notes: [
-    'The exhibition is the making of the movement, again — as with Primary Structures last week and The Art of Assemblage in Unit 4.',
+    'The exhibition is the making of the movement, again — as with Primary Structures in the last unit and The Art of Assemblage in Unit 4.',
     'The fashion detail is worth one line: within months the patterns were on dresses and shop windows. Artists were not consulted and mostly hated it.',
     'This is Quiz Question 5: it works on the physiology of the eye.'
   ]
@@ -807,7 +807,7 @@ const SLIDES = [
     'Ten minutes for wrap-up and preview.',
     'The summary sentence: Process Art puts the value in the making, Op Art in perception, Photorealism in mechanical reproduction.',
     'All three are reacting to the same thing — Minimalism taking the artist’s hand away.',
-    'Preview next week and stop.'
+    'Preview the next unit and stop.'
   ]
 },
 {
@@ -827,7 +827,7 @@ const SLIDES = [
   ],
   notes: [
     'These are the three questions from the lesson plan, simplified for A2.',
-    'Question 1 is the sharpest and connects straight to last week. Use it first.',
+    'Question 1 is the sharpest and connects straight to the last unit. Use it first.',
     'Question 2 is the authorship question that has been running since LeWitt’s wall drawings.',
     'Question 3 is the most provocative — it invites them to be sceptical about both movements, which is fair.'
   ]

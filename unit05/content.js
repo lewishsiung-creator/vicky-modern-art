@@ -13,7 +13,7 @@
    ------------------------------------------------------------------ */
 
 const GLOSSARY = {
-  /* --- the week's foundational concepts --- */
+  /* --- the unit's foundational concepts --- */
   nouveaurealisme: {
     en: 'Nouveau Réalisme', zh: '新寫實主義',
     def: 'A French movement formed around the critic Pierre Restany in 1960. It asked art to stop representing reality and start using it directly.',
@@ -84,7 +84,7 @@ const GLOSSARY = {
   neodada: {
     en: 'Neo-Dada', zh: '新達達',
     def: 'Rauschenberg and Johns, from Unit 4. Nouveau Réalisme is often read as Europe’s answer to it.',
-    zhDef: '第五週學過的勞森伯格與瓊斯。新寫實主義常被視為歐洲對其的回應。'
+    zhDef: '第 4 單元學過的勞森伯格與瓊斯。新寫實主義常被視為歐洲對其的回應。'
   }
 };
 
@@ -110,18 +110,18 @@ const SLIDES = [
   notes: [
     'Five minutes for review and framing.',
     'HOOK: the next slide puts Klein’s Leap into the Void beside Tinguely’s self-destroying machine. Use it.',
-    'This week’s question, and write it on the board: if an artwork destroys itself, or exists only for the moment it happens, what are we actually left with?'
+    'This unit’s question, and write it on the board: if an artwork destroys itself, or exists only for the moment it happens, what are we actually left with?'
   ]
 },
 {
   type: 'bullets',
   oneClick: true,
   title: 'Where we were, and where we go now',
-  zh: '上週與本週',
+  zh: '上個單元與這個單元',
   items: [
-    { head: 'Last week: the object came from the shop', body: 'A soap box, a comic frame, a stuffed goat. Ordinary things became art.' },
+    { head: 'Last unit: the object came from the shop', body: 'A soap box, a comic frame, a stuffed goat. Ordinary things became art.' },
     { head: 'But they were still <i>things</i>', body: 'You could hang them, sell them, put them in a store room.' },
-    { head: 'This week the object disappears', body: 'What is left is an action. An event. A few minutes that happen once.' },
+    { head: 'This unit the object disappears', body: 'What is left is an action. An event. A few minutes that happen once.' },
     { head: 'And then what?', body: 'A photograph. A burnt canvas. A pile of scrap. Are those the artwork — or only the receipt?' }
   ],
   notes: [
@@ -167,7 +167,7 @@ const SLIDES = [
     { head: 'Proposed: go back to the real world', body: 'Show our living environment and our everyday behaviour — not the painter’s inner projection.' }
   ],
   notes: [
-    'The rejection list is last week and the week before: Pollock, Rothko, Newman, Kelly. Say the names — the students met all of them.',
+    'The rejection list is the last unit and the one before: Pollock, Rothko, Newman, Kelly. Say the names — the students met all of them.',
     '“40° Above Dada” means: Dada asked whether this could be art. We are past that question.',
     'This is Quiz Question 1: record sociological reality directly, without expressionist rhetoric.'
   ]
@@ -464,7 +464,7 @@ const SLIDES = [
   notes: [
     'Eighteen metres tall. It is still standing.',
     'Arman’s accumulations are the Nouveau Réaliste method in its purest form: he does not represent consumption, he stacks its remains.',
-    'Compare with Warhol repeating Marilyn fifty times last week. Same logic — repetition until you see the system — but with real objects.'
+    'Compare with Warhol repeating Marilyn fifty times in the last unit. Same logic — repetition until you see the system — but with real objects.'
   ]
 },
 {
@@ -780,7 +780,7 @@ const SLIDES = [
   notes: [
     'Fat and felt come from his own war story: he said Tatars wrapped him in fat and felt after his plane crashed in Crimea. Historians doubt the story. He told it anyway, and the materials carry it.',
     'Whether or not it happened is a good question about myth and authorship — but do not spend long on it.',
-    '“Everyone is an artist” is the strongest form of this week’s final discussion question.'
+    '“Everyone is an artist” is the strongest form of this unit’s final discussion question.'
   ]
 },
 {
@@ -824,14 +824,14 @@ const SLIDES = [
       'Photographs. Scraps. Scores. Reconstructions.',
       'The artwork moved out of the object and into time.',
       'So it is now made by the artist, the audience, and the room together.',
-      'Next week: what happens when artists take that outside altogether.'
+      'Next unit: what happens when artists take that outside altogether.'
     ]
   },
   notes: [
     'Ten minutes for wrap-up and preview.',
     'Read the chain out loud. Nine events, and not one of them still exists.',
-    'The summary sentence: this week the artwork stopped being a thing you keep and became a thing that happens.',
-    'Preview next week and stop.'
+    'The summary sentence: in this unit the artwork stopped being a thing you keep and became a thing that happens.',
+    'Preview the next unit and stop.'
   ]
 },
 {
@@ -852,7 +852,7 @@ const SLIDES = [
   notes: [
     'These are the three questions from the lesson plan, simplified for A2.',
     'Question 1 is the best opener — it has been building since the first slide.',
-    'Question 3 is the hardest and the most rewarding, and it reaches back to Danto and the Brillo Box last week.'
+    'Question 3 is the hardest and the most rewarding, and it reaches back to Danto and the Brillo Box in the last unit.'
   ]
 },
 {
@@ -875,7 +875,7 @@ const SLIDES = [
     'To promote Social Realism as government political propaganda.'
   ],
   why: 'Art stops representing reality and starts using it. Option C is exactly what they rejected — Abstract Expressionism.',
-  notes: ['Answer: B. If anyone picks C, that is last week’s and the week before’s material — a useful confusion to correct.']
+  notes: ['Answer: B. If anyone picks C, that is material from the last two units — a useful confusion to correct.']
 },
 {
   type: 'quiz', n: 2, answer: 0,

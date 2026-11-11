@@ -9,7 +9,7 @@
    ------------------------------------------------------------------ */
 
 const GLOSSARY = {
-  /* --- the week's foundational concepts --- */
+  /* --- the unit's foundational concepts --- */
   popart: {
     en: 'Pop Art', zh: '普普藝術',
     def: 'Art that takes its images straight from popular and mass culture. The critic Lawrence Alloway named it in 1958.',
@@ -90,7 +90,7 @@ const GLOSSARY = {
   readymade: {
     en: 'readymade', zh: '現成物',
     def: 'Duchamp’s idea from 1917 — an everyday object chosen by an artist and shown as art. You met it in Unit 2.',
-    zhDef: '杜象 1917 年提出：由藝術家選定並展出的日常物件。第三週已學過。'
+    zhDef: '杜象 1917 年提出：由藝術家選定並展出的日常物件。第 2 單元已學過。'
   }
 };
 
@@ -117,7 +117,7 @@ const SLIDES = [
   meta: 'Unit 4',
   notes: [
     'Five minutes for review and framing.',
-    'This week’s question, and write it on the board: where is the line between art and everyday life?',
+    'This unit’s question, and write it on the board: where is the line between art and everyday life?',
     'HOOK: if you can, put a real box of soap pads on the desk at the front now, and leave it there. Do not explain it. Students will keep looking at it, and it pays off in about twenty minutes.',
     'Do NOT say the words Warhol or Brillo Box yet — the activity depends on the suspense.'
   ]
@@ -126,16 +126,16 @@ const SLIDES = [
   type: 'bullets',
   oneClick: true,
   title: 'Where we were, and where we go now',
-  zh: '上週與本週',
+  zh: '上個單元與這個單元',
   items: [
-    { head: 'Last week: painting lost the picture', body: 'Pollock, Rothko, Kelly. The recognisable image went, and then the brush and the gesture went too.' },
+    { head: 'Last unit: painting lost the picture', body: 'Pollock, Rothko, Kelly. The recognisable image went, and then the brush and the gesture went too.' },
     { head: 'It ended with almost nothing on the canvas', body: 'Colour, surface, and the fact of the thing.' },
-    { head: 'This week the world comes flooding back', body: 'Soup cans. Comics. Film stars. Soap boxes.' },
+    { head: 'This unit the world comes flooding back', body: 'Soup cans. Comics. Film stars. Soap boxes.' },
     { head: 'And a harder question', body: 'Not “what does art look like?” but “what makes something art at all?”' }
   ],
   notes: [
-    'Recap last week in one line: painting lost reality, one piece at a time.',
-    'Then the reversal: this week, ordinary life comes straight back into the gallery — but as subject matter, not as realism.',
+    'Recap the last unit in one line: painting lost reality, one piece at a time.',
+    'Then the reversal: in this unit, ordinary life comes straight back into the gallery — but as subject matter, not as realism.',
     'Frame the puzzle and leave it open. The Brillo Box will resolve it later.'
   ]
 },
@@ -162,7 +162,7 @@ const SLIDES = [
   ],
   notes: [
     'Pop means popular. Say it plainly, then complicate it.',
-    'The reaction against Abstract Expressionism matters: last week’s artists were serious, heroic, and about deep inner feeling. Pop is flat, cheap, and about surfaces.',
+    'The reaction against Abstract Expressionism matters: last unit’s artists were serious, heroic, and about deep inner feeling. Pop is flat, cheap, and about surfaces.',
     'Greenberg is the same critic from Units 1 and 3. He said high art on one side, kitsch on the other, and never mix them. Pop Art is the answer to that.',
     'This is Quiz Question 1 territory — Alloway, 1958.'
   ]
@@ -234,7 +234,7 @@ const SLIDES = [
     'A jukebox. Optical patterns. A wall of film and advertising images.',
     'No frames, no plinths, no quiet white room.',
     'You did not stand and contemplate. You walked in.',
-    'Compare it with the Rothko room from last week — as different as two rooms can be.'
+    'Compare it with the Rothko room from the last unit — as different as two rooms can be.'
   ],
   notes: [
     'Two views of the Fun House, and one of the exhibition around it. Let them look for a moment.',
@@ -324,7 +324,7 @@ const SLIDES = [
   ],
   notes: [
     'The through-line: every one of these is borrowed from commercial printing, not from fine art.',
-    'Last week, the mark of the artist’s hand was everything. Here, artists are removing it on purpose.',
+    'Last unit, the mark of the artist’s hand was everything. Here, artists are removing it on purpose.',
     'That reversal in ten years is the sharpest thing you can say about this movement.'
   ]
 },
@@ -522,7 +522,7 @@ const SLIDES = [
   ask: 'Is there still a clear line between art and commodity today?',
   notes: [
     'ASK the question on screen and take two or three answers only — the long version is the wrap-up discussion.',
-    'You can point back to Unit 3: Newman’s blue canvas selling for forty-three million dollars. Same question, one week earlier.'
+    'You can point back to Unit 3: Newman’s blue canvas selling for forty-three million dollars. Same question, one unit earlier.'
   ]
 },
 {
@@ -538,7 +538,7 @@ const SLIDES = [
     { head: 'Their claim', body: '“The concept of the art is itself the work.”' }
   ],
   notes: [
-    'Short slide. It is a signpost forward — Conceptual Art is coming in a later week.',
+    'Short slide. It is a signpost forward — Conceptual Art is coming in a later unit.',
     'Link it back to Duchamp in Unit 2: anti-retinal, art for the mind. The line runs 1917 → 1964 → 1968.'
   ]
 },
@@ -555,7 +555,7 @@ const SLIDES = [
   ],
   notes: [
     'This is Unit 3’s “Who gets to write art history?” discussion, arriving as formal theory.',
-    'Say that link — they argued this out loud last week without the vocabulary. Now they have it.',
+    'Say that link — they argued this out loud in the last unit without the vocabulary. Now they have it.',
     'Do not resolve the discomfort. It is a real objection to the theory, not a flaw in your teaching.'
   ]
 },
@@ -633,7 +633,7 @@ const SLIDES = [
   ],
   notes: [
     'The roughness is deliberate: “embracing the messiness and roughness of everyday life”.',
-    'This connects forward to installation and performance work in later weeks.'
+    'This connects forward to installation and performance work in later units.'
   ]
 },
 
@@ -655,7 +655,7 @@ const SLIDES = [
   caption: 'Jean Dubuffet, <i>Portrait d’Homme</i>, 1957',
   smallSource: true,
   points: [
-    'Jean Dubuffet — you met him last week, in Art Informel.',
+    'Jean Dubuffet — you met him in the last unit, in Art Informel.',
     'He coined the word “assemblage” in 1953, for collages made of butterfly wings.',
     'The roots go back further: Picasso and Braque’s <i>Guitar</i>, 1912.',
     'And to Dada readymades, Futurism and Surrealism.',
@@ -706,14 +706,14 @@ const SLIDES = [
   title: 'Rauschenberg — the {{combine}}',
   zh: '勞森伯格：複合繪畫',
   items: [
-    { head: '“Act in the gap between art and life”', body: 'His own statement, 1959. It is the sentence of this whole week.' },
+    { head: '“Act in the gap between art and life”', body: 'His own statement, 1959. It is the sentence of this whole unit.' },
     { head: '{{combine}} — his most important contribution', body: 'Works that are painting and sculpture at once. Key works: <i>Canyon</i> and <i>Monogram</i>.' },
     { head: 'Influenced by Duchamp, Cornell and Schwitters', body: 'And a partner and collaborator of Jasper Johns — both were called {{neodada}}.' },
     { head: '1962 — Warhol taught him {{silkscreen}}', body: 'A direct link between Assemblage and Pop Art.' },
     { head: 'And he worked across art forms', body: 'Stage and dance design with Merce Cunningham and John Cage.' }
   ],
   notes: [
-    'Write “act in the gap between art and life” on the board. It answers this week’s guiding question in seven words.',
+    'Write “act in the gap between art and life” on the board. It answers this unit’s guiding question in seven words.',
     'The Warhol connection in 1962 is worth naming: these movements are not separate boxes. They were friends who taught each other techniques.'
   ]
 },
@@ -751,7 +751,7 @@ const SLIDES = [
   ],
   notes: [
     'ASK and wait. The intended answer: the canvas has become furniture, or ground.',
-    'Link straight back to Pollock last week — he put the canvas on the floor to paint it. Rauschenberg leaves it there and stands a goat on it.',
+    'Link straight back to Pollock in the last unit — he put the canvas on the floor to paint it. Rauschenberg leaves it there and stands a goat on it.',
     'That comparison makes the whole Assemblage idea land in one image.'
   ]
 },
@@ -916,7 +916,7 @@ const SLIDES = [
     'Ten minutes for wrap-up and preview.',
     'Read the chain out loud. It is the whole session in eight objects.',
     'The summary sentence: nothing in the object changed. What changed was where it stood, what was said about it, and who agreed.',
-    'Preview next week and stop.'
+    'Preview the next unit and stop.'
   ]
 },
 {

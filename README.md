@@ -161,8 +161,14 @@ drawing an icon — a design decision, not a fix).
 | `Backspace` | Return to wherever you jumped from |
 | `N` | Speaker notes on the presenting screen |
 | `P` | Presenter window — put this on your laptop, deck on the projector |
+| `L` | English / 中文, without leaving the slide |
 | `F` | Fullscreen |
 | `Esc` | Close menu / notes / zoom |
+
+The address bar always carries the slide you are on — `/unit03/#24`, or
+`#24.1` partway through a build. So switching language mid-class comes back to
+the same slide, a reload picks up where you were, and a link you send someone
+opens on the page you meant.
 
 Click any picture to zoom. Click a <u>word chip</u> for the English definition
 and the Chinese. Quiz answers reveal on click — nothing is scored and nothing

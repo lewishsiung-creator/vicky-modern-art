@@ -554,7 +554,7 @@ const VOCAB = [
       { en: 'The Documentation Loop',
         def: 'The session\'s closing framework: video art begins by asking whether the recording device can itself become the artistic medium; performance art\'s live, disappearing actions survive only through documentation, returning the discussion to that same question by the session\'s end.',
         zh: '紀錄循環',
-        zhDef: '本週課程收尾的框架：錄像藝術一開始便提問，紀錄裝置本身是否能成為藝術媒材；行為藝術現場、稍縱即逝的行動，唯有透過紀錄才得以留存，到了課程尾聲，討論又回到同樣的問題。' },
+        zhDef: '本單元課程收尾的框架：錄像藝術一開始便提問，紀錄裝置本身是否能成為藝術媒材；行為藝術現場、稍縱即逝的行動，唯有透過紀錄才得以留存，到了課程尾聲，討論又回到同樣的問題。' },
       { en: 'Fluxus',
         def: 'An international, loosely organized network of artists active from the early 1960s (including Paik) emphasizing intermedia, chance, and the elevation of everyday actions to the status of art.',
         zh: '福魯克薩斯',

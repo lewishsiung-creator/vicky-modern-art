@@ -84,17 +84,17 @@ const GLOSSARY = {
   fluxus: {
     en: 'Fluxus', zh: '激浪派',
     def: 'Unit 5. A loose international network from the early 1960s. Paik was part of it.',
-    zhDef: '第六週學過。1960 年代初期形成的鬆散國際網絡，白南準亦為成員。'
+    zhDef: '第 5 單元學過。1960 年代初期形成的鬆散國際網絡，白南準亦為成員。'
   },
   landart: {
     en: 'Land Art', zh: '地景藝術',
     def: 'Unit 8. Art built in the landscape — which most of us know only from photographs.',
-    zhDef: '第九週學過。於地景中建造的藝術，而我們多半只能透過照片得知。'
+    zhDef: '第 8 單元學過。於地景中建造的藝術，而我們多半只能透過照片得知。'
   }
 };
 
 const SECTIONS = [
-  { title: '1 · The Question',        zh: '本週提問',   start: 0 },
+  { title: '1 · The Question',        zh: '本單元提問',   start: 0 },
   { title: '2 · Video Art',           zh: '錄像藝術',   start: 5 },
   { title: '3 · Nam June Paik',       zh: '白南準',     start: 12 },
   { title: '4 · Bruce Nauman',        zh: '瑙曼',       start: 15 },
@@ -133,7 +133,7 @@ const SLIDES = [
   foot: 'Four movements, one shared problem: <b>the artwork may disappear, but the image remains.</b>',
   notes: [
     'A fast recap. One click puts up all four, then say the line at the bottom.',
-    'The point: for four weeks now, photographs and film have been doing the surviving.',
+    'The point: for four units now, photographs and film have been doing the surviving.',
     'Today the camera stops being the witness and becomes the material. That is the whole session.'
   ]
 },
@@ -180,7 +180,7 @@ const SLIDES = [
 {
   type: 'section',
   title: 'Can art really escape the museum?',
-  ask: 'Last week they walked out. This week they take the camera with them. Is that escaping — or just moving?',
+  ask: 'Last unit they walked out. This unit they take the camera with them. Is that escaping — or just moving?',
   notes: [
     'A bridge from Unit 8. Thirty seconds.',
     'Then into Video Art.'
