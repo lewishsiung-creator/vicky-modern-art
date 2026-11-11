@@ -195,13 +195,11 @@ window.ZH = {
  "Watch for:": "注意看：",
  "How much of what you are looking at is <i>paint</i> — and how much is just material?": "你看到的東西裡，有多少是<i>顏料</i> — 又有多少只是材料？",
  "Prompt slide. Ten seconds, then play.": "提問頁。十秒，然後播片。",
- "Kiefer in the studio": "基弗在工作室裡",
  "How much of what you are looking at is paint — and how much is just material?": "你看到的東西裡，有多少是顏料 — 又有多少只是材料？",
  "He works at the scale of a hangar, because the paintings are the size of walls.": "他在機棚大小的空間裡工作，因為那些畫就是一面牆的尺寸。",
  "Lead sheets, fire, ash, plants, water — applied, burned, left outside.": "鉛板、火、灰燼、植物、水 — 塗上去、燒過、丟在室外。",
  "He has said he is not making paintings so much as ruins.": "他說過，自己做的不太像畫，更像廢墟。",
  "And the work keeps changing after it leaves him.": "而作品在離開他之後還會繼續改變。",
- "Three or four minutes.": "三到四分鐘。",
  "The connection to make afterwards: this is Unit 7’s Process Art and Unit 8’s entropy, arriving inside a painting.": "之後要建立的連結是：這是第 7 單元的過程藝術與第 8 單元的熵，走進了一幅畫的裡面。",
  "Embedded from the YouTube link on her own slide — it needs internet.": "這部影片是從她自己投影片上的 YouTube 連結嵌入的 — 需要網路。",
  "Kiefer — five threads": "基弗 — 五條線索",
@@ -571,5 +569,9 @@ window.ZH = {
  "<i>Michael Jackson and Bubbles</i>, 1988 — from the <i>Banality</i> series. Porcelain and gold leaf": "〈麥可・傑克森與泡泡〉，1988 — 出自〈平庸〉系列。瓷與金箔",
  "Banality": "平庸",
  "<i>Balloon Dog</i>, from 1994 — mirror-polished stainless steel": "〈氣球狗〉，1994 年起 — 鏡面拋光不鏽鋼",
- "Balloon Dog": "氣球狗"
+ "Balloon Dog": "氣球狗",
+ "Kiefer pouring molten lead, in his studio outside Paris — CBS Sunday Morning": "基弗在巴黎郊外的工作室裡澆鑄熔鉛 — CBS Sunday Morning",
+ "Four minutes.": "四分鐘。",
+ "The lead is poured onto a canvas lying on the floor — say Pollock’s name here. Unit 3 put the canvas on the ground; this is the same move, with molten metal.": "熔鉛是澆在平放地上的畫布上的 — 這裡要說出帕洛克的名字。第 3 單元是把畫布放到地上，這是同一步棋，只是換成熔化的金屬。",
+ "NOTE: the video on her own slide has been taken down from YouTube. This is a replacement — a CBS studio visit, which shows the pouring. If you are short of time, the Art Gallery of New South Wales has a two-minute one on the Barjac studio instead: youtu.be/J5tPFrthUZA. It needs internet.": "注意：她自己投影片上的那支影片已從 YouTube 下架。這是替代影片 — CBS 的工作室探訪，拍到了澆鑄的過程。如果時間不夠，新南威爾斯美術館有一支兩分鐘的，拍的是 Barjac 工作室：youtu.be/J5tPFrthUZA。需要網路。"
 };

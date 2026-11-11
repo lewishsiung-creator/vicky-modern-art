@@ -891,8 +891,21 @@ html[lang="zh-Hant"] .chip::after { content: 'EN'; font-size: .5em; }
 }
 #hud:hover { opacity: 1; }
 /* Chinese labels are wider per character. A label that wraps turns the
-   HUD into two ragged lines, so nothing in it ever wraps. */
-#hud > * { white-space: nowrap; }
+   HUD into two ragged lines, so nothing in it ever wraps.
+
+   The two languages also set different label widths, so the whole row
+   used to slide sideways on every switch — including the button you had
+   just aimed at. Each slot is now held as wide as the wider of its two
+   labels, with the label centred in it, so pressing 中文 leaves every
+   item exactly where it was. */
+#hud > * { white-space: nowrap; text-align: center; }
+#hud > :nth-child(1) { min-width: 2.4em; }   /* units / 單元 */
+#hud > :nth-child(2) { min-width: 2.95em; }  /* vocab / 詞彙 */
+#hud > :nth-child(3) { min-width: 3.3em; }   /* menu / 目錄 */
+#hud > :nth-child(4) { min-width: 2.8em; }   /* 中文 / EN */
+#hud > :nth-child(5) { min-width: 3.3em; }   /* notes / 備註 */
+#hud > :nth-child(6) { min-width: 5.2em; }   /* presenter / 講者 */
+#hud > .count { min-width: 3.5em; text-align: right; }
 #hud button {
   font: inherit; background: none; border: none; cursor: pointer;
   color: inherit; padding: .2em .3em;
@@ -1214,6 +1227,11 @@ body.vocab { overflow-x: hidden; overflow-y: auto; }
     font-size: 14px; opacity: 1;
   }
   #hud button, #hud a { padding: .6em .45em; }
+  /* The fixed slot widths that keep the two languages aligned need
+     about 400px, and the phone HUD is centred rather than pinned to a
+     corner anyway. Below 700px the labels simply take their own width.
+     :nth-child(n) only to match the specificity of the rules above. */
+  #hud > :nth-child(n), #hud > .count { min-width: 0; }
 }
 
 /* ---------- Reduced motion ----------

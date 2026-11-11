@@ -433,8 +433,8 @@ const SLIDES = [
   type: 'video',
   oneClick: true,
   title: 'Anselm Kiefer',
-  caption: 'Kiefer in the studio',
-  yt: 'fsRIXZr6l7s',
+  caption: 'Kiefer pouring molten lead, in his studio outside Paris — CBS Sunday Morning',
+  yt: 'OLHVtrfhCHc',
   poster: 'img/kiefer-video-poster.jpg',
   watchFor: 'How much of what you are looking at is paint — and how much is just material?',
   points: [
@@ -444,9 +444,10 @@ const SLIDES = [
     'And the work keeps changing after it leaves him.'
   ],
   notes: [
-    'Three or four minutes.',
+    'Four minutes.',
+    'The lead is poured onto a canvas lying on the floor — say Pollock’s name here. Unit 3 put the canvas on the ground; this is the same move, with molten metal.',
     'The connection to make afterwards: this is Unit 7’s Process Art and Unit 8’s entropy, arriving inside a painting.',
-    'Embedded from the YouTube link on her own slide — it needs internet.'
+    'NOTE: the video on her own slide has been taken down from YouTube. This is a replacement — a CBS studio visit, which shows the pouring. If you are short of time, the Art Gallery of New South Wales has a two-minute one on the Barjac studio instead: youtu.be/J5tPFrthUZA. It needs internet.'
   ]
 },
 {
