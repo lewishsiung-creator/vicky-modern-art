@@ -36,6 +36,7 @@ unit08/         Unit 8  — index.html + content.js + img/
 unit09/         Unit 9  — index.html + content.js + img/
 unit10/         Unit 10 — index.html + content.js + img/
 vocab/          the key-vocabulary reference — index.html + terms.js
+review/         重點複習 — one unit as a printable sheet, from its content.js
 ```
 
 The folders used to be named for the semester week the class fell in
@@ -176,6 +177,31 @@ is saved.
 
 The presenter window and the deck stay in sync in both directions, so you can
 click Next from either one.
+
+## 重點複習 — the sheet for the students
+
+Press `M` in any deck and the foot of the jump menu holds the review link for
+that unit, with a copy button. It is the page to send the class afterwards:
+
+```
+https://vicky-art.pages.dev/review/?unit=8        English
+https://vicky-art.pages.dev/review/?unit=8&lang=zh 中文
+```
+
+**Download PDF** on that page opens the browser's own print dialogue — Save as
+PDF. That is the whole mechanism: no library, no server, and it works on a
+phone as well as a laptop. The print stylesheet at the end of `shared/style.css`
+is what the PDF actually looks like: ink on white, controls gone, and no work
+allowed to break away from its picture across a page.
+
+The sheet is generated from the same `unitNN/content.js` the deck runs on, so
+it cannot drift out of step with the lecture. It keeps every work, every idea,
+the discussion questions and the glossary. It leaves out the classroom
+machinery — **the speaker notes, the quiz and its answers**, and the voting and
+ranking slides, which mean nothing without a room. The notes in particular are
+hers, not the students'; nothing in `notes:` is ever rendered.
+
+The page is `noindex`. It is a link she hands out, not something to be found.
 
 ## Editing
 

@@ -38,6 +38,9 @@
     netDm: id => `需要網路 · <a href="https://www.dailymotion.com/video/${id}" target="_blank" rel="noopener">在 Dailymotion 開啟</a>`,
     local: '影片放在這個網站上，不需要網路',
     jumpTo: '跳到',
+    review: '重點複習',
+    reviewSub: '這個單元的整理頁，學員可以存成 PDF。把連結傳給他們：',
+    reviewCopy: '複製連結', reviewCopied: '已複製', reviewOpen: '開啟 →',
     menuHint: 'Backspace 回到剛才那一頁 · N = 在這個螢幕看備註 · P = 講者視窗',
     peek: n => `備註 · 第 ${n} 頁 · 按 N 收起`,
     say: '要說的話', nextUp: '接下來', endOfDeck: '最後一頁',
@@ -58,6 +61,9 @@
     netDm: id => `Needs internet · <a href="https://www.dailymotion.com/video/${id}" target="_blank" rel="noopener">open on Dailymotion</a>`,
     local: 'Plays from this site — no internet needed',
     jumpTo: 'Jump to',
+    review: 'Key review',
+    reviewSub: 'A review sheet for this unit, which students can save as a PDF. Send them the link:',
+    reviewCopy: 'Copy link', reviewCopied: 'Copied', reviewOpen: 'Open →',
     menuHint: 'Backspace takes you back to where you jumped from. · N = notes on this screen · P = presenter window',
     peek: n => `Notes · slide ${n} · press N to hide`,
     say: 'Say this', nextUp: 'Next up', endOfDeck: 'End of deck',
@@ -661,8 +667,50 @@
     });
     menu.innerHTML = `<h2>${UI.jumpTo}</h2>`;
     menu.appendChild(body);
+    menu.appendChild(reviewBox());
     menu.appendChild(el('div', 'hint',
       UI.menuHint));
+  }
+
+  /* 重點複習 — the sheet she hands the students afterwards. The link is
+     worked out from where the deck is actually running, so it is right
+     for this unit and carries the language she is teaching in; nothing
+     has to be written down anywhere. The box holds the URL in a field
+     rather than only a copy button, because a clipboard write is
+     refused on some phones and over plain http, and a link you can see
+     can always be copied by hand. */
+  function reviewBox() {
+    const m = location.pathname.match(/unit(\d+)\//);
+    const box = el('div', 'menu-review');
+    if (!m) return box;
+    const url = location.origin +
+                location.pathname.slice(0, location.pathname.indexOf(m[0])) +
+                'review/?unit=' + parseInt(m[1], 10) + (ZHMODE ? '&lang=zh' : '');
+    box.appendChild(el('div', 'mr-head', UI.review));
+    box.appendChild(el('div', 'mr-sub', UI.reviewSub));
+    const row = el('div', 'mr-row');
+    const field = document.createElement('input');
+    field.type = 'text'; field.readOnly = true; field.value = url;
+    field.className = 'mr-url';
+    field.onclick = e => { e.stopPropagation(); field.select(); };
+    const copy = el('button', 'mr-copy', UI.reviewCopy);
+    copy.onclick = e => {
+      e.stopPropagation();
+      field.select();
+      const done = () => {
+        copy.textContent = UI.reviewCopied;
+        setTimeout(() => { copy.textContent = UI.reviewCopy; }, 1800);
+      };
+      if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, () => {});
+      else { try { document.execCommand('copy'); done(); } catch (err) {} }
+    };
+    const open = document.createElement('a');
+    open.className = 'mr-open'; open.href = url; open.target = '_blank';
+    open.rel = 'noopener'; open.textContent = UI.reviewOpen;
+    open.onclick = e => e.stopPropagation();
+    row.appendChild(field); row.appendChild(copy); row.appendChild(open);
+    box.appendChild(row);
+    return box;
   }
   function openMenu() {
     menu.classList.add('on');
