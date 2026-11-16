@@ -213,11 +213,19 @@ once, from a 120px copy, and picks:
 | 70–220 (four in five) | `--mat` | the ordinary mount |
 | over 220 | deeper warm grey `--mat-deep` | a work already on white paper floats off a board it can be told apart from. Kruger vs Supreme was the case that forced this. |
 
-Across the course that comes out as 21 dark, 163 middle, 23 deep. The
-measurement is only run the first time the board is switched on, so a deck that
-never uses it never reads a pixel, and anything unreadable keeps the middle
-board. The base rule is wrapped in `:where()` so the per-picture board can
-override its colour without repeating all five selectors.
+**A compare or a gallery is graded as one object**, on the average of its
+pictures, not picture by picture. Those works are there to be read against each
+other, and two different boards would put a thumb on the scale in exactly the
+way the green does — the *Wrapped Reichstag* pair is one building from two
+angles, and it cannot be hung half on cream and half on charcoal. Four slides
+in Unit 8 alone split that way before the rule existed.
+
+Across the course that comes out as 16 dark, 173 middle, 18 deep, and no slide
+mixes two boards. The measurement is only run the first time the board is
+switched on, so a deck that never uses it never reads a pixel, and anything
+unreadable keeps the middle board. The base rule is wrapped in `:where()` so
+the per-picture board can override its colour without repeating all five
+selectors.
 
 Below 700px the presenter button is hidden: eight controls do not fit across a
 phone, and a second screen is the one thing a phone does not have.

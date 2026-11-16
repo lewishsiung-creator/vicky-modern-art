@@ -1062,7 +1062,7 @@
      measured, once, from a 120px copy of it, and decides which board it
      gets. Anything unreadable keeps the middle board, which is the one
      four pictures in five want. */
-  const MAT_SEL = '.s-artwork .art img, .compare-pane img, .s-gallery .gal img, .s-quote .q-doc img';
+  const MAT_IN = '.art img, .compare-pane img, .gal img, .q-doc img';
   function edgeLuma(img) {
     const W = 120, H = Math.max(8, Math.round(120 * img.naturalHeight / img.naturalWidth));
     const c = document.createElement('canvas');
@@ -1080,19 +1080,37 @@
     }
     return n ? sum / n : 128;
   }
-  function gradeMat(img) {
-    if (img.dataset.mat) return;
-    if (!img.complete || !img.naturalWidth) {
-      img.addEventListener('load', () => gradeMat(img), { once: true });
+  /* A compare and a gallery are graded as one object, not picture by
+     picture. The works on those slides are there to be read against
+     each other, and giving them different boards would put a thumb on
+     the scale in exactly the way the green does — the Wrapped Reichstag
+     is one building from two angles, and it cannot be hung half on
+     cream and half on charcoal. */
+  function gradeGroup(imgs) {
+    if (imgs.every(i => i.dataset.mat)) return;
+    const pending = imgs.filter(i => !i.complete || !i.naturalWidth);
+    if (pending.length) {
+      pending[0].addEventListener('load', () => gradeGroup(imgs), { once: true });
       return;
     }
-    let v;
-    try { v = edgeLuma(img); } catch (e) { img.dataset.mat = 'mid'; return; }
-    img.dataset.mat = v < 70 ? 'dark' : v > 220 ? 'deep' : 'mid';
+    let sum = 0, n = 0;
+    for (const i of imgs) {
+      try { sum += edgeLuma(i); n++; } catch (e) {}
+    }
+    const v = n ? sum / n : 128;
+    const grade = v < 70 ? 'dark' : v > 220 ? 'deep' : 'mid';
+    imgs.forEach(i => { i.dataset.mat = grade; });
   }
   /* Only when the board is actually asked for, so a deck that never uses
      it never reads a pixel. */
-  function gradeMats() { document.querySelectorAll(MAT_SEL).forEach(gradeMat); }
+  function gradeMats() {
+    nodes.forEach(s => {
+      const imgs = [...s.querySelectorAll(MAT_IN)];
+      if (!imgs.length) return;
+      if (s.classList.contains('s-compare') || s.classList.contains('s-gallery')) gradeGroup(imgs);
+      else imgs.forEach(i => gradeGroup([i]));
+    });
+  }
   const btnMat = el('button', '', UI.mat);
   btnMat.id = 'btn-mat';
   btnMat.title = UI.matTitle;
