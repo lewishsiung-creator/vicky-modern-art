@@ -37,6 +37,8 @@ unit09/         Unit 9  — index.html + content.js + img/
 unit10/         Unit 10 — index.html + content.js + img/
 vocab/          the key-vocabulary reference — index.html + terms.js
 review/         重點複習 — one unit as a printable sheet, from its content.js
+style-study/    Nov 2026: four grounds and three layouts, side by side — why
+                the deck still has Vicky's green. Not linked from anywhere.
 ```
 
 The folders used to be named for the semester week the class fell in
@@ -229,6 +231,21 @@ selectors.
 
 Below 700px the presenter button is hidden: eight controls do not fit across a
 phone, and a second screen is the one thing a phone does not have.
+
+### Why the ground is still green
+
+`style-study/` keeps the comparison that decided it, from November 2026: the
+same Rothko slide on her green, on a warm grey gallery wall, on white and on
+near-black, then three layouts — a compare, a text slide and a quiz — in each
+of the three candidate styles. Open `style-study/index.html`; it is linked from
+nowhere and carries `noindex`.
+
+The study is kept because the question will come round again. Its answer: the
+problem was real but it was a *colour* problem, not a style problem, and the
+mount board fixes it on the slides that have it while leaving the rest — and
+the green, which is hers — alone. The step that was considered and not taken
+was pulling the two dozen hard-coded colours into tokens so the whole ground
+could be themed.
 
 ## 重點複習 — the sheet for the students
 

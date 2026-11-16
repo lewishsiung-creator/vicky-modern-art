@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>三種版型 × 三種風格 · 樣張</title>
+<style>
+:root {
+  --page: #1b1d1c;
+  --page-ink: #e9e7e2;
+  --serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, 'Songti TC', serif;
+  --sans: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+  /* the three grounds */
+  --green: #53ae6e;
+  --mat:   #e9e7e2;
+  --night: #121213;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--page); color: var(--page-ink); font-family: var(--sans);
+       line-height: 1.6; padding: 4vh 4vw 14vh; }
+.wrap { max-width: 1180px; margin: 0 auto; }
+h1 { font-family: var(--serif); font-size: 2.3rem; font-weight: 600; }
+.lede { margin-top: .8em; max-width: 44em; opacity: .75; font-size: 1rem; }
+.lede b { color: #fff; font-weight: 600; }
+
+nav { position: sticky; top: 0; z-index: 10; margin: 2rem 0 0;
+      background: rgba(27,29,28,.93); backdrop-filter: blur(8px);
+      padding: .9rem 0; border-bottom: 1px solid rgba(233,231,226,.15); }
+nav a { color: var(--page-ink); opacity: .7; text-decoration: none; margin-right: 1.6rem;
+        font-size: .9rem; border-bottom: 1px solid transparent; padding-bottom: .15rem; }
+nav a:hover { opacity: 1; border-bottom-color: currentColor; }
+
+.layout { margin-top: 4rem; padding-top: 1rem; }
+.layout > h2 { font-family: var(--serif); font-size: 1.9rem; font-weight: 600; }
+.layout > .why { margin-top: .5em; font-size: .98rem; opacity: .72; max-width: 46em; }
+.layout > .why b { color: #fff; font-weight: 600; }
+
+.one { margin-top: 2.2rem; }
+.one > h3 { font-size: .78rem; letter-spacing: .2em; text-transform: uppercase;
+            opacity: .6; font-weight: 700; margin-bottom: .7rem; }
+.one > .note { margin-top: .8rem; font-size: .92rem; opacity: .7; max-width: 48em; }
+.one > .note b { color: #fff; font-weight: 600; }
+.same { display: inline-block; margin-left: .6rem; font-size: .68rem; letter-spacing: .1em;
+        background: #2f6b45; color: #d7efdf; padding: .2em .6em; border-radius: 1em;
+        vertical-align: .15em; }
+
+/* Every slide is a true 16:9, and every size inside is a share of the
+   frame's width — so this is the projector, only smaller. */
+.slide { container-type: inline-size; position: relative; width: 100%;
+         aspect-ratio: 16 / 9; overflow: hidden; font-size: 1.45cqi; }
+
+/* ================= shared slide furniture ================= */
+.pad   { position: absolute; inset: 0; padding: 5% 7% 9%;
+         display: flex; flex-direction: column; justify-content: center; }
+.hud   { position: absolute; right: 2.2%; bottom: 1.8%; display: flex; gap: 1.1em;
+         font-size: .8em; align-items: center; }
+.dot   { width: .5em; height: .5em; border-radius: 50%; background: var(--green); }
+.bar   { position: absolute; left: 0; bottom: 0; height: .32%; width: 52%; }
+
+/* ================= 1 · GREEN + MAT ================= */
+.g { background: var(--green); color: #171312; }
+.g .hud { color: #10291a; opacity: .75; }
+.g .bar { background: rgba(23,19,18,.3); }
+.g h2 { font-family: var(--serif); font-size: 2.5em; font-weight: 400; line-height: 1.12; }
+.g .zh-title { font-size: 1.05em; color: #10291a; letter-spacing: .16em; margin-bottom: 1.3em; }
+.g .ask { margin-top: 1.3em; display: flex; align-items: baseline; gap: .7em; max-width: 32em; }
+.g .ask .tag { flex: none; font-size: .78em; letter-spacing: .18em; font-weight: 700;
+               color: #f7f0df; background: #10291a; padding: .25em .6em; border-radius: .25em; }
+.g .ask .q { font-size: 1.3em; line-height: 1.38; color: #10291a; font-weight: 500; }
+/* The mat. A work is matted and framed precisely because the wall is
+   never neutral — this is that, and nothing else changes. */
+.g .mat { background: var(--mat); padding: 1.5em; border-radius: 2px;
+          box-shadow: 0 1.2em 3em rgba(23,19,18,.42);
+          display: flex; align-items: center; justify-content: center; }
+
+/* ================= 2 · WHITE CUBE ================= */
+.c { background: var(--mat); color: #1a1a18; }
+.c .hud { color: #6d6b64; }
+.c .bar { background: var(--green); }
+.c h2 { font-family: var(--serif); font-size: 2.2em; font-weight: 400; line-height: 1.15; }
+.c .zh-title { font-size: .98em; color: #6d6b64; letter-spacing: .16em; margin-bottom: 1.3em; }
+.c .ask { margin-top: 1.3em; display: flex; align-items: baseline; gap: .7em; max-width: 32em; }
+.c .ask .tag { flex: none; font-size: .74em; letter-spacing: .18em; font-weight: 700;
+               color: #1a1a18; background: none; border: 1px solid #1a1a18;
+               padding: .22em .6em; border-radius: .25em; }
+.c .ask .q { font-size: 1.22em; line-height: 1.4; color: #3a3a36; font-weight: 500; }
+
+/* ================= 3 · DARK ROOM ================= */
+.d { background: var(--night); color: #e8e4dc; }
+.d .hud { color: #6b665f; }
+.d .bar { background: #3f8c57; }
+.d h2 { font-family: var(--serif); font-size: 2.2em; font-weight: 400; line-height: 1.15; color: #fff; }
+.d .zh-title { font-size: .98em; color: #8b867e; letter-spacing: .16em; margin-bottom: 1.3em; }
+.d .ask { margin-top: 1.3em; display: flex; align-items: baseline; gap: .7em; max-width: 32em; }
+.d .ask .tag { flex: none; font-size: .74em; letter-spacing: .18em; font-weight: 700;
+               color: #e8e4dc; background: none; border: 1px solid rgba(232,228,220,.5);
+               padding: .22em .6em; border-radius: .25em; }
+.d .ask .q { font-size: 1.22em; line-height: 1.4; color: #cfcac1; font-weight: 500; }
+
+/* ================= layout A — compare ================= */
+.cmp .pad { padding: 4% 5% 9%; justify-content: flex-start; }
+.cmp h2 { text-align: center; margin-bottom: .5em; font-size: 2.1em; }
+.cmp .ask { margin: 0 auto .9em; }
+.cmp .wrap2 { flex: 1; display: flex; gap: 2.4cqi; align-items: center;
+              justify-content: center; min-height: 0; }
+.cmp .pane { flex: 1 1 50%; height: 100%; display: flex; flex-direction: column;
+             align-items: center; min-height: 0; }
+.cmp .shot { flex: 1 1 auto; min-height: 0; display: flex; align-items: center; justify-content: center; }
+.cmp .shot img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.cmp .lbl { flex: none; font-size: .9em; margin-top: .8em; text-align: center; line-height: 1.4; }
+.g  .lbl { color: #183223; }
+.c  .lbl { color: #5d5c57; }
+.d  .lbl { color: #8b867e; }
+/* green: the mat wraps the picture and takes the shadow */
+.g.cmp .shot { background: var(--mat); padding: 1.1em; border-radius: 2px;
+               box-shadow: 0 .9em 2.4em rgba(23,19,18,.4); }
+.c.cmp .shot img { box-shadow: 0 .5em 1.6em rgba(0,0,0,.14); }
+
+/* ================= layout B — bullets ================= */
+.bul ul { list-style: none; margin-top: 1.5em; }
+.bul li { margin-bottom: 1.05em; max-width: 40em; }
+.bul .head { font-size: 1.45em; line-height: 1.32; font-weight: 500; }
+.bul .body { font-size: 1.1em; line-height: 1.5; margin-top: .22em; max-width: 36em; }
+.g .bul-body, .g.bul .body { color: #183223; }
+.c.bul .body { color: #5d5c57; }
+.d.bul .body { color: #a8a39a; }
+
+/* ================= layout C — quiz (revealed) ================= */
+.qz .pad { justify-content: center; }
+.qz .qnum { font-size: .88em; letter-spacing: .2em; text-transform: uppercase;
+            font-weight: 700; margin-bottom: .9em; }
+.qz .qtext { font-family: var(--serif); font-size: 2em; line-height: 1.25;
+             max-width: 22em; margin-bottom: 1.1em; }
+.qz .opts { list-style: none; max-width: 46em; }
+.qz .opts li { display: flex; gap: .9em; align-items: baseline;
+               font-size: 1.08em; line-height: 1.45; padding: .62em .85em;
+               margin-bottom: .4em; border: 1px solid; border-radius: .4em; opacity: .35; }
+.qz .opts .k { flex: none; font-weight: 700; }
+.qz .why { margin-top: 1.1em; font-size: 1.1em; line-height: 1.5;
+           font-weight: 500; max-width: 34em; }
+/* green — unchanged from the deck: the right answer becomes a cream card */
+.g.qz .qnum, .g.qz .why { color: #10291a; }
+.g.qz .opts li { border-color: rgba(23,19,18,.18); }
+.g.qz .opts .k { color: #10291a; }
+.g.qz .opts li.right { opacity: 1; background: #f7f0df; border-color: #10291a;
+                       box-shadow: 0 .5em 1.5em rgba(23,19,18,.2); }
+/* white cube — a cream card cannot read on a warm grey wall, so the
+   right answer is marked with the green instead: a filled rule and ink. */
+.c.qz .qnum, .c.qz .why { color: #5d5c57; }
+.c.qz .opts li { border-color: rgba(26,26,24,.18); }
+.c.qz .opts .k { color: #6d6b64; }
+.c.qz .opts li.right { opacity: 1; background: #fff; border-color: transparent;
+                       border-left: .35em solid var(--green);
+                       box-shadow: 0 .5em 1.6em rgba(0,0,0,.1); }
+.c.qz .opts li.right .k { color: #2f6b45; }
+/* dark — the right answer is the one that gets light */
+.d.qz .qnum, .d.qz .why { color: #a8a39a; }
+.d.qz .opts li { border-color: rgba(232,228,220,.2); opacity: .32; }
+.d.qz .opts .k { color: #8b867e; }
+.d.qz .opts li.right { opacity: 1; background: rgba(232,228,220,.09);
+                       border-color: transparent; border-left: .35em solid var(--green);
+                       color: #fff; }
+.d.qz .opts li.right .k { color: #7fd09a; }
+
+/* chips */
+.chip { display: inline-block; border-bottom: 2px dotted currentColor; padding: 0 .05em; }
+.g .chip { border-bottom-color: #10291a; }
+.c .chip { border-bottom-color: #8e8a82; }
+.d .chip { border-bottom-color: #6b665f; }
+
+/* The decision this study led to, kept with the study. */
+.verdict {
+  margin-top: 1.6rem; padding: 1.1rem 1.3rem;
+  border-left: 3px solid #6fae84; background: rgba(233,231,226,.07);
+  font-size: .95rem; line-height: 1.65; max-width: 46em;
+}
+.verdict b { color: #fff; }
+.verdict .when { display: block; font-size: .8rem; letter-spacing: .14em;
+                 text-transform: uppercase; opacity: .55; margin-bottom: .5em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>三種版型 × 三種風格</h1>
+<p class="lede">
+  單一頁好看不難，六十頁都撐得住才是真的。這裡挑了三種最容易露破綻的版型：
+  <b>兩張圖並排</b>、<b>純文字</b>、<b>測驗（已公布答案）</b>。
+  內容全部取自真實的簡報頁。<b>現有簡報一行都沒有動。</b>
+</p>
+
+  <div class="verdict">
+    <span class="when">2026-11-17 · 結論</span>
+    <b>沒有換風格。</b>這份研究真正找到的問題是：底色 <code>#53ae6e</code> 是橘與紅的補色，
+    而這門課有一半的作品是橘與紅的——學生看到的顏色關係，不是作品本身的顏色關係。
+    解法不是換掉整個底色，而是<b>在圖片與背景之間加一塊襯紙</b>（簡報裡按 <b>B</b>，預設關閉）：
+    它修好了有圖的那 ~180 頁，沒圖的 ~390 頁一個像素都不用動，
+    而且綠色是 Vicky 自己的顏色，留著。
+    下一步（把寫死的色票收成 token、做成可切換主題）當時沒有做。
+  </div>
+
+
+<nav>
+  <a href="index.html">← 四種風格</a>
+  <a href="#cmp">A · 兩張圖並排</a>
+  <a href="#bul">B · 純文字</a>
+  <a href="#qz">C · 測驗</a>
+</nav>
+
+<!-- ===================== LAYOUT A ===================== -->
+<section class="layout" id="cmp">
+  <h2>版型 A · 兩張圖並排 compare</h2>
+  <p class="why">
+    第 3 單元 · 阿爾普 vs 馬松。這個版型最吃底色，因為<b>兩張畫要互相比較</b>——
+    底色如果偏袒其中一張，整個比較就歪了。全課有 37 頁是這個版型。
+  </p>
+
+  <div class="one">
+    <h3>襯底版 — 綠底不動，圖片加一塊卡紙 <span class="same">只改有圖的頁</span></h3>
+    <div class="slide g cmp">
+      <div class="pad">
+        <h2>What do these two have in common?</h2>
+        <div class="ask"><span class="tag">ASK</span><span class="q">Both artists gave up control. But what took control’s place in each one?</span></div>
+        <div class="wrap2">
+          <div class="pane">
+            <div class="shot"><img src="../unit03/img/arp-laws-of-chance.jpg" alt=""></div>
+            <div class="lbl">Jean Arp, <i>Collage Arranged According to the Laws of Chance</i>, 1916–1917</div>
+          </div>
+          <div class="pane">
+            <div class="shot"><img src="../unit03/img/masson-fish-in-sand.jpg" alt=""></div>
+            <div class="lbl">André Masson, <i>The Fish Drawn in the Sand</i>, 1927</div>
+          </div>
+        </div>
+      </div>
+      <div class="hud"><span>units</span><span>vocab</span><span>menu</span><span>中文</span><span>notes</span><span>18 / 60</span></div>
+      <div class="bar"></div>
+    </div>
+    <p class="note">卡紙把兩張畫都放在同一塊中性底上，所以它們是<b>跟彼此比較，不是跟綠色比較</b>。Vicky 的綠還在外圍，身分沒變。</p>
+  </div>
+
+  <div class="one">
+    <h3>A · 白盒子</h3>
+    <div class="slide c cmp">
+      <div class="pad">
+        <h2>What do these two have in common?</h2>
+        <div class="ask"><span class="tag">ASK</span><span class="q">Both artists gave up control. But what took control’s place in each one?</span></div>
+        <div class="wrap2">
+          <div class="pane">
+            <div class="shot"><img src="../unit03/img/arp-laws-of-chance.jpg" alt=""></div>
+            <div class="lbl">Jean Arp, <i>Collage Arranged According to the Laws of Chance</i>, 1916–1917</div>
+          </div>
+          <div class="pane">
+            <div class="shot"><img src="../unit03/img/masson-fish-in-sand.jpg" alt=""></div>
+            <div class="lbl">André Masson, <i>The Fish Drawn in the Sand</i>, 1927</div>
+          </div>
+        </div>
+      </div>
+      <div class="hud"><span class="dot"></span><span>units</span><span>vocab</span><span>menu</span><span>中文</span><span>notes</span><span>18 / 60</span></div>
+      <div class="bar"></div>
+    </div>
+    <p class="note">最乾淨的版本。兩張畫之間沒有任何東西，連卡紙的邊都沒有。</p>
+  </div>
+
+  <div class="one">
+    <h3>A · 夜 暗房</h3>
+    <div class="slide d cmp">
+      <div class="pad">
+        <h2>What do these two have in common?</h2>
+        <div class="ask"><span class="tag">ASK</span><span class="q">Both artists gave up control. But what took control’s place in each one?</span></div>
+        <div class="wrap2">
+          <div class="pane">
+            <div class="shot"><img src="../unit03/img/arp-laws-of-chance.jpg" alt=""></div>
+            <div class="lbl">Jean Arp, <i>Collage Arranged According to the Laws of Chance</i>, 1916–1917</div>
+          </div>
+          <div class="pane">
+            <div class="shot"><img src="../unit03/img/masson-fish-in-sand.jpg" alt=""></div>
+            <div class="lbl">André Masson, <i>The Fish Drawn in the Sand</i>, 1927</div>
+          </div>
+        </div>
+      </div>
+      <div class="hud"><span class="dot"></span><span>units</span><span>vocab</span><span>menu</span><span>中文</span><span>notes</span><span>18 / 60</span></div>
+      <div class="bar"></div>
+    </div>
+    <p class="note">
+      注意這兩張畫本身的紙是米白的——<b>在暗底上，畫的紙色變成了光源</b>。
+      這是暗房模式最漂亮、也最危險的地方：淺色作品會發亮，深色作品會沉進背景裡。
+    </p>
+  </div>
+</section>
+
+<!-- ===================== LAYOUT B ===================== -->
+<section class="layout" id="bul">
+  <h2>版型 B · 純文字 bullets</h2>
+  <p class="why">
+    第 10 單元 · 新表現主義。<b>全課 565 頁裡有 388 頁沒有圖片</b>，這個版型是最大宗（123 頁）。
+    這裡要看的是：底色換掉之後，<b>讀起來是變好還是變差</b>。
+  </p>
+
+  <div class="one">
+    <h3>襯底版 — 沒有圖片，所以完全不變 <span class="same">一個像素都沒動</span></h3>
+    <div class="slide g bul">
+      <div class="pad">
+        <h2>Return to painting</h2>
+        <div class="zh-title">回到繪畫</div>
+        <ul>
+          <li><div class="head">Popular in the United States, Italy and Germany</div><div class="body">Late 1970s to the mid-1980s.</div></li>
+          <li><div class="head">Rough texture, strong feeling</div><div class="body">Shapes twisted. Brushstrokes wild.</div></li>
+          <li><div class="head">The paintings feel violent and unfinished</div><div class="body">And they do not tell a clear story.</div></li>
+          <li><div class="head">It is a reaction</div><div class="body">Against <span class="chip">Minimalism</span> and <span class="chip">Conceptual Art</span> — Unit 6. Against art that had become an idea on a wall label.</div></li>
+        </ul>
+      </div>
+      <div class="hud"><span>units</span><span>vocab</span><span>menu</span><span>中文</span><span>notes</span><span>12 / 62</span></div>
+      <div class="bar"></div>
+    </div>
+    <p class="note">這就是現在的樣子，而且<b>襯底版不會碰它</b>。那 388 頁一頁都不用改——這是這個方案最大的好處。</p>
+  </div>
+
+  <div class="one">
+    <h3>A · 白盒子</h3>
+    <div class="slide c bul">
+      <div class="pad">
+        <h2>Return to painting</h2>
+        <div class="zh-title">回到繪畫</div>
+        <ul>
+          <li><div class="head">Popular in the United States, Italy and Germany</div><div class="body">Late 1970s to the mid-1980s.</div></li>
+          <li><div class="head">Rough texture, strong feeling</div><div class="body">Shapes twisted. Brushstrokes wild.</div></li>
+          <li><div class="head">The paintings feel violent and unfinished</div><div class="body">And they do not tell a clear story.</div></li>
+          <li><div class="head">It is a reaction</div><div class="body">Against <span class="chip">Minimalism</span> and <span class="chip">Conceptual Art</span> — Unit 6. Against art that had become an idea on a wall label.</div></li>
+        </ul>
+      </div>
+      <div class="hud"><span class="dot"></span><span>units</span><span>vocab</span><span>menu</span><span>中文</span><span>notes</span><span>12 / 62</span></div>
+      <div class="bar"></div>
+    </div>
+    <p class="note">
+      文字本身更好讀（灰底的對比比綠底高），但<b>整頁也更像一份文件，而不是一堂課</b>。
+      綠色在這裡原本是有功能的——它讓純文字頁不無聊。
+    </p>
+  </div>
+
+  <div class="one">
+    <h3>A · 夜 暗房</h3>
+    <div class="slide d bul">
+      <div class="pad">
+        <h2>Return to painting</h2>
+        <div class="zh-title">回到繪畫</div>
+        <ul>
+          <li><div class="head">Popular in the United States, Italy and Germany</div><div class="body">Late 1970s to the mid-1980s.</div></li>
+          <li><div class="head">Rough texture, strong feeling</div><div class="body">Shapes twisted. Brushstrokes wild.</div></li>
+          <li><div class="head">The paintings feel violent and unfinished</div><div class="body">And they do not tell a clear story.</div></li>
+          <li><div class="head">It is a reaction</div><div class="body">Against <span class="chip">Minimalism</span> and <span class="chip">Conceptual Art</span> — Unit 6. Against art that had become an idea on a wall label.</div></li>
+        </ul>
+      </div>
+      <div class="hud"><span class="dot"></span><span>units</span><span>vocab</span><span>menu</span><span>中文</span><span>notes</span><span>12 / 62</span></div>
+      <div class="bar"></div>
+    </div>
+    <p class="note">
+      這是暗房模式<b>最弱的一頁</b>。亮字暗底連續讀四行會累，而這種頁一堂課有十幾頁。
+      在暗的教室裡還可以，教室只要有一點光就會開始吃力。
+    </p>
+  </div>
+</section>
+
+<!-- ===================== LAYOUT C ===================== -->
+<section class="layout" id="qz">
+  <h2>版型 C · 測驗，已公布答案 quiz</h2>
+  <p class="why">
+    第 3 單元 · 第 1 題。選這個版型是因為它<b>藏著一個換色後一定會壞掉的東西</b>：
+    現在正確答案是用「米白卡片」標示的——而米白正是白盒子的牆色。全課 60 頁測驗。
+  </p>
+
+  <div class="one">
+    <h3>襯底版 — 沒有圖片，完全不變 <span class="same">一個像素都沒動</span></h3>
+    <div class="slide g qz">
+      <div class="pad">
+        <div class="qnum">Question 1 of 6</div>
+        <div class="qtext">Which event moved the centre of the art world from Paris to New York in the 1940s?</div>
+        <ul class="opts">
+          <li><span class="k">A</span><span>Robert Coates publishing the article that coined the term “Abstract Expressionism”.</span></li>
+          <li><span class="k">B</span><span>The founding of the Museum of Modern Art in 1929.</span></li>
+          <li><span class="k">C</span><span>The first exhibition of the <span class="chip">COBRA</span> group in Amsterdam in 1949.</span></li>
+          <li class="right"><span class="k">D</span><span>The exile of the European Surrealists to New York during the Second World War.</span></li>
+        </ul>
+        <div class="why">The war moved the artists, and the artists moved the idea. MoMA already existed; the naming came afterwards.</div>
+      </div>
+      <div class="hud"><span>units</span><span>vocab</span><span>menu</span><span>中文</span><span>notes</span><span>55 / 60</span></div>
+      <div class="bar"></div>
+    </div>
+    <p class="note">米白卡片在綠底上非常清楚——這是現在的設計，而且它是對的。</p>
+  </div>
+
+  <div class="one">
+    <h3>A · 白盒子 — 這裡必須重新設計</h3>
+    <div class="slide c qz">
+      <div class="pad">
+        <div class="qnum">Question 1 of 6</div>
+        <div class="qtext">Which event moved the centre of the art world from Paris to New York in the 1940s?</div>
+        <ul class="opts">
+          <li><span class="k">A</span><span>Robert Coates publishing the article that coined the term “Abstract Expressionism”.</span></li>
+          <li><span class="k">B</span><span>The founding of the Museum of Modern Art in 1929.</span></li>
+          <li><span class="k">C</span><span>The first exhibition of the <span class="chip">COBRA</span> group in Amsterdam in 1949.</span></li>
+          <li class="right"><span class="k">D</span><span>The exile of the European Surrealists to New York during the Second World War.</span></li>
+        </ul>
+        <div class="why">The war moved the artists, and the artists moved the idea. MoMA already existed; the naming came afterwards.</div>
+      </div>
+      <div class="hud"><span class="dot"></span><span>units</span><span>vocab</span><span>menu</span><span>中文</span><span>notes</span><span>55 / 60</span></div>
+      <div class="bar"></div>
+    </div>
+    <p class="note">
+      米白卡片在米白牆上會消失，所以正確答案改成<b>純白卡片 + 一道綠色的粗邊</b>。
+      這是換主題時第一個真正要重畫的元件，<b>也是提醒：換底色不只是換底色。</b>
+    </p>
+  </div>
+
+  <div class="one">
+    <h3>A · 夜 暗房 — 答案是那個被打亮的</h3>
+    <div class="slide d qz">
+      <div class="pad">
+        <div class="qnum">Question 1 of 6</div>
+        <div class="qtext">Which event moved the centre of the art world from Paris to New York in the 1940s?</div>
+        <ul class="opts">
+          <li><span class="k">A</span><span>Robert Coates publishing the article that coined the term “Abstract Expressionism”.</span></li>
+          <li><span class="k">B</span><span>The founding of the Museum of Modern Art in 1929.</span></li>
+          <li><span class="k">C</span><span>The first exhibition of the <span class="chip">COBRA</span> group in Amsterdam in 1949.</span></li>
+          <li class="right"><span class="k">D</span><span>The exile of the European Surrealists to New York during the Second World War.</span></li>
+        </ul>
+        <div class="why">The war moved the artists, and the artists moved the idea. MoMA already existed; the naming came afterwards.</div>
+      </div>
+      <div class="hud"><span class="dot"></span><span>units</span><span>vocab</span><span>menu</span><span>中文</span><span>notes</span><span>55 / 60</span></div>
+      <div class="bar"></div>
+    </div>
+    <p class="note">
+      暗底反而讓這一頁最好做：其他選項退到暗處，<b>正確答案是唯一被打亮的</b>。
+      這個版型是暗房模式表現最好的一個。
+    </p>
+  </div>
+</section>
+
+</div>
+</body>
+</html>

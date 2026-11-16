@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>風格對照樣張 · 羅斯科那一頁</title>
+<style>
+:root {
+  --page: #1b1d1c;
+  --page-ink: #e9e7e2;
+  --serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, 'Songti TC', serif;
+  --sans: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+  --grotesk: 'Helvetica Neue', 'Inter', -apple-system, 'PingFang TC', Arial, sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--page); color: var(--page-ink);
+  font-family: var(--sans); line-height: 1.6;
+  padding: 5vh 4vw 12vh;
+}
+.wrap { max-width: 1180px; margin: 0 auto; }
+h1 { font-family: var(--serif); font-size: 2.4rem; font-weight: 600; }
+.lede { margin-top: .8em; max-width: 42em; opacity: .75; font-size: 1.02rem; }
+.lede b { color: #fff; font-weight: 600; }
+
+/* ---------- the colour check strip ---------- */
+.check { margin-top: 3.5rem; }
+.check h2, .panel-head h2 {
+  font-size: .78rem; letter-spacing: .2em; text-transform: uppercase;
+  opacity: .6; font-weight: 700;
+}
+.swatches { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 1rem; }
+.sw { padding: 2.2rem; display: flex; align-items: center; justify-content: center; }
+.sw img { width: 62%; height: auto; display: block; }
+.sw-green { background: #53ae6e; }
+.sw-grey  { background: #e9e7e2; }
+.sw-white { background: #fff; }
+.sw-dark  { background: #121213; }
+.sw-label { margin-top: .5rem; font-size: .82rem; opacity: .65; text-align: center; }
+.check-note { margin-top: 1rem; font-size: .95rem; opacity: .7; max-width: 44em; }
+.check-note b { color: #fff; font-weight: 600; }
+
+/* ---------- panels ---------- */
+.panel { margin-top: 4.5rem; }
+.panel-head { display: flex; align-items: baseline; gap: 1rem; margin-bottom: .9rem; }
+.panel-head .name { font-family: var(--serif); font-size: 1.5rem; }
+.panel-note { font-size: .93rem; opacity: .7; margin-top: .9rem; max-width: 46em; }
+.panel-note b { color: #fff; font-weight: 600; }
+
+/* Each slide is a true 16:9 frame, and every size inside it is a share
+   of that frame's width — so what you see here is what a projector
+   gets, only smaller. */
+.slide {
+  container-type: inline-size;
+  position: relative; width: 100%; aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+.slide .body { position: absolute; inset: 0; font-size: 1.45cqi; }
+
+/* ===================================================================
+   1. 現在 — Vicky's green
+   =================================================================== */
+.now { background: #53ae6e; color: #171312; font-family: var(--sans); }
+.now .body { display: flex; flex-direction: row; align-items: center;
+             gap: 4cqi; padding: 4% 5% 9%; }
+.now .art { flex: 1 1 58%; height: 76%; display: flex; align-items: center; justify-content: center; }
+.now .art img { max-width: 100%; max-height: 100%; object-fit: contain;
+                border-radius: 2px; box-shadow: 0 1.2em 3em rgba(23,19,18,.42); }
+.now .side { flex: 1 1 42%; max-width: 26em; }
+.now h2 { font-family: var(--serif); font-size: 2em; font-weight: 600; line-height: 1.15; }
+.now .cap { font-size: .98em; color: #10291a; line-height: 1.45; margin-top: .5em; margin-bottom: 1.4em; }
+.now .points { list-style: none; }
+.now .points li { font-size: 1.14em; line-height: 1.5; margin-bottom: .85em;
+                  padding-left: 1em; border-left: 2px solid rgba(23,19,18,.18); }
+.now .hud { position: absolute; right: 2%; bottom: 1.6%; display: flex; gap: 1.1em;
+            font-size: .82em; color: #10291a; opacity: .75; }
+
+/* ===================================================================
+   2. 白盒子 White Cube
+   =================================================================== */
+.cube { background: #e9e7e2; color: #1a1a18; font-family: var(--sans); }
+.cube .body { display: flex; align-items: center; gap: 5cqi; padding: 6% 6% 8%; }
+.cube .art { flex: 1 1 60%; height: 74%; display: flex; align-items: center; justify-content: center; }
+.cube .art img { max-width: 100%; max-height: 100%; object-fit: contain;
+                 box-shadow: 0 .5em 1.6em rgba(0,0,0,.14); }
+.cube .side { flex: 1 1 40%; max-width: 24em; }
+/* The wall label: the format they read on a gallery wall every week. */
+.cube .label { border-top: 1px solid #1a1a18; padding-top: 1.1em; }
+.cube .artist { font-size: .86em; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; }
+.cube h2 { font-family: var(--serif); font-size: 1.85em; font-weight: 400;
+           font-style: italic; line-height: 1.15; margin-top: .35em; }
+.cube .meta { font-size: .92em; color: #5d5c57; margin-top: .5em; line-height: 1.5; }
+.cube .points { list-style: none; margin-top: 2.1em; }
+.cube .points li { font-size: 1.08em; line-height: 1.55; margin-bottom: .9em;
+                   color: #3a3a36; position: relative; padding-left: 1.2em; }
+.cube .points li::before { content: '—'; position: absolute; left: 0; color: #a8a49b; }
+.cube .hud { position: absolute; right: 2.4%; bottom: 2%; display: flex; gap: 1.2em;
+             font-size: .8em; color: #6d6b64; align-items: center; }
+/* Vicky's green does not vanish; it stops being the room and becomes
+   the accent — the chip underline, the progress bar, the HUD mark. */
+.cube .dot { width: .55em; height: .55em; border-radius: 50%; background: #53ae6e; }
+.cube .bar { position: absolute; left: 0; bottom: 0; height: .32%; width: 34%; background: #53ae6e; }
+
+/* ===================================================================
+   2b. 暗房 Dark Room — the white cube with the lights off
+   Same layout, same wall label, inverted ground. Which is the point:
+   if the tokens are ever pulled apart, this one is nearly free.
+   =================================================================== */
+.dark { background: #121213; color: #e8e4dc; font-family: var(--sans); }
+.dark .body { display: flex; align-items: center; gap: 5cqi; padding: 5% 6% 8%; }
+/* In a dark room the picture is the only lit thing, so it gets more of
+   the frame and the text steps back. */
+.dark .art { flex: 1 1 64%; height: 80%; display: flex; align-items: center; justify-content: center; }
+.dark .art img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.dark .side { flex: 1 1 36%; max-width: 22em; }
+.dark .label { border-top: 1px solid rgba(232,228,220,.32); padding-top: 1.1em; }
+.dark .artist { font-size: .84em; letter-spacing: .14em; text-transform: uppercase;
+                font-weight: 700; color: #cfcac1; }
+.dark h2 { font-family: var(--serif); font-size: 1.75em; font-weight: 400;
+           font-style: italic; line-height: 1.15; margin-top: .35em; color: #fff; }
+.dark .meta { font-size: .9em; color: #8b867e; margin-top: .5em; line-height: 1.5; }
+.dark .points { list-style: none; margin-top: 1.9em; }
+.dark .points li { font-size: 1.02em; line-height: 1.55; margin-bottom: .85em;
+                   color: #b6b1a8; position: relative; padding-left: 1.2em; }
+.dark .points li::before { content: '—'; position: absolute; left: 0; color: #56524b; }
+.dark .hud { position: absolute; right: 2.4%; bottom: 2%; display: flex; gap: 1.2em;
+             font-size: .8em; color: #6b665f; align-items: center; }
+.dark .dot { width: .55em; height: .55em; border-radius: 50%; background: #53ae6e; }
+.dark .bar { position: absolute; left: 0; bottom: 0; height: .32%; width: 34%; background: #3f8c57; }
+
+/* ===================================================================
+   3. 瑞士／圖錄 Swiss grid
+   =================================================================== */
+.swiss { background: #fff; color: #111; font-family: var(--grotesk); }
+.swiss .body { padding: 6.5% 6% 7%; }
+/* The grid, faintly visible — the discipline is the decoration. */
+.swiss .grid { position: absolute; inset: 0; display: grid;
+               grid-template-columns: repeat(12, 1fr); padding: 0 6%; pointer-events: none; }
+.swiss .grid i { border-left: 1px solid rgba(17,17,17,.055); }
+.swiss .rule { position: absolute; left: 6%; right: 6%; top: 11%; border-top: 2px solid #111; }
+.swiss .slug { position: absolute; left: 6%; top: 6.5%; font-size: .82em;
+               letter-spacing: .16em; text-transform: uppercase; font-weight: 700; }
+.swiss .num  { position: absolute; right: 6%; top: 6.5%; font-size: .82em;
+               letter-spacing: .16em; font-weight: 700; color: #e2231a; }
+.swiss .cols { position: absolute; left: 6%; right: 6%; top: 15.5%; bottom: 12.5%;
+               display: flex; gap: 4cqi; }
+.swiss .art { flex: 0 0 44%; height: 100%; display: flex; align-items: flex-start; justify-content: flex-start; }
+.swiss .art img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.swiss .side { flex: 1 1 auto; }
+.swiss h2 { font-size: 1.95em; font-weight: 700; letter-spacing: -.02em; line-height: 1.05; }
+.swiss .cap { font-size: .82em; line-height: 1.45; color: #555; margin-top: .8em;
+              max-width: 24em; }
+.swiss .points { list-style: none; margin-top: 1.3em; counter-reset: p; }
+.swiss .points li { font-size: .9em; line-height: 1.4; margin-bottom: .62em;
+                    display: flex; gap: .9em; }
+.swiss .points li::before { counter-increment: p; content: counter(p, decimal-leading-zero);
+                            color: #e2231a; font-weight: 700; font-size: .78em;
+                            padding-top: .25em; }
+.swiss .foot { position: absolute; left: 6%; bottom: 3.4%; font-size: .78em;
+               letter-spacing: .14em; text-transform: uppercase; color: #777; }
+
+/* The three grounds only make their point side by side, so they stay in
+   one row and shrink instead of stacking. */
+@media (max-width: 820px) {
+  .sw { padding: 1rem; }
+  .sw img { width: 80%; }
+  .swatches { gap: .5rem; }
+  .sw-label { font-size: .72rem; }
+}
+
+/* The decision this study led to, kept with the study. */
+.verdict {
+  margin-top: 1.6rem; padding: 1.1rem 1.3rem;
+  border-left: 3px solid #6fae84; background: rgba(233,231,226,.07);
+  font-size: .95rem; line-height: 1.65; max-width: 46em;
+}
+.verdict b { color: #fff; }
+.verdict .when { display: block; font-size: .8rem; letter-spacing: .14em;
+                 text-transform: uppercase; opacity: .55; margin-bottom: .5em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>風格對照樣張</h1>
+  <p class="lede">
+    同一頁投影片（第 3 單元 · 羅斯科〈Orange and Yellow〉），四種處理。
+    內容、文字、圖片完全相同，只有視覺語言不同。
+    <b>這是樣張，現有簡報一行都沒有動。</b>
+  </p>
+  <p class="lede" style="margin-top:1.2em">→ <a href="layouts.html" style="color:#fff">三種版型 × 三種風格（compare／純文字／測驗）</a></p>
+
+  <div class="verdict">
+    <span class="when">2026-11-17 · 結論</span>
+    <b>沒有換風格。</b>這份研究真正找到的問題是：底色 <code>#53ae6e</code> 是橘與紅的補色，
+    而這門課有一半的作品是橘與紅的——學生看到的顏色關係，不是作品本身的顏色關係。
+    解法不是換掉整個底色，而是<b>在圖片與背景之間加一塊襯紙</b>（簡報裡按 <b>B</b>，預設關閉）：
+    它修好了有圖的那 ~180 頁，沒圖的 ~390 頁一個像素都不用動，
+    而且綠色是 Vicky 自己的顏色，留著。
+    下一步（把寫死的色票收成 token、做成可切換主題）當時沒有做。
+  </div>
+
+
+  <section class="check">
+    <h2>先看這個：同一張畫，四種底色</h2>
+    <div class="swatches">
+      <div>
+        <div class="sw sw-green"><img src="../unit03/img/rothko-orange-and-yellow.jpg" alt=""></div>
+        <div class="sw-label">現在的綠 #53ae6e</div>
+      </div>
+      <div>
+        <div class="sw sw-grey"><img src="../unit03/img/rothko-orange-and-yellow.jpg" alt=""></div>
+        <div class="sw-label">暖灰 #e9e7e2</div>
+      </div>
+      <div>
+        <div class="sw sw-white"><img src="../unit03/img/rothko-orange-and-yellow.jpg" alt=""></div>
+        <div class="sw-label">純白 #ffffff</div>
+      </div>
+      <div>
+        <div class="sw sw-dark"><img src="../unit03/img/rothko-orange-and-yellow.jpg" alt=""></div>
+        <div class="sw-label">暗房 #121213</div>
+      </div>
+    </div>
+    <p class="check-note">
+      綠色是橘色的補色，所以綠底會把這張畫的橘推到最亮、最跳——學生看到的對比，
+      比羅斯科畫的更強。暖灰最接近美術館牆面。純白則反過來，會讓畫面稍微顯暗，
+      而且投影時白底本身會刺眼。暗底則讓畫自己發光，<b>這是傳統藝術史幻燈片
+      演講廳的條件</b>——但它要一間暗的教室才成立。
+    </p>
+  </section>
+
+  <!-- ============ 1 ============ -->
+  <section class="panel">
+    <div class="panel-head"><span class="name">現在</span><h2>Vicky 的綠</h2></div>
+    <div class="slide now">
+      <div class="body">
+        <div class="art"><img src="../unit03/img/rothko-orange-and-yellow.jpg" alt=""></div>
+        <div class="side">
+          <h2>Orange and Yellow</h2>
+          <p class="cap">Mark Rothko (1903–1970), <i>Orange and Yellow</i>, 1956</p>
+          <ul class="points">
+            <li>Two blocks of colour. Soft edges. Nothing else.</li>
+            <li>The edges are not sharp — the colour seems to breathe.</li>
+            <li>He wanted huge canvases so you feel <i>inside</i> the painting, not in front of it.</li>
+            <li>“I want to be intimate and human.”</li>
+          </ul>
+        </div>
+      </div>
+      <div class="hud"><span>units</span><span>vocab</span><span>menu</span><span>中文</span><span>notes</span><span>presenter</span><span>31 / 60</span></div>
+    </div>
+    <p class="panel-note">
+      溫暖、好親近、是她自己的顏色。代價是：<b>每一件作品都掛在一面彩度很高的牆上。</b>
+    </p>
+  </section>
+
+  <!-- ============ 2 ============ -->
+  <section class="panel">
+    <div class="panel-head"><span class="name">A</span><h2>白盒子 White Cube</h2></div>
+    <div class="slide cube">
+      <div class="body">
+        <div class="art"><img src="../unit03/img/rothko-orange-and-yellow.jpg" alt=""></div>
+        <div class="side">
+          <div class="label">
+            <div class="artist">Mark Rothko</div>
+            <h2>Orange and Yellow</h2>
+            <p class="meta">1956 · Oil on canvas<br>American, 1903–1970</p>
+          </div>
+          <ul class="points">
+            <li>Two blocks of colour. Soft edges. Nothing else.</li>
+            <li>The edges are not sharp — the colour seems to breathe.</li>
+            <li>He wanted huge canvases so you feel <i>inside</i> the painting, not in front of it.</li>
+            <li>“I want to be intimate and human.”</li>
+          </ul>
+        </div>
+      </div>
+      <div class="hud"><span class="dot"></span><span>units</span><span>vocab</span><span>menu</span><span>中文</span><span>notes</span><span>31 / 60</span></div>
+      <div class="bar"></div>
+    </div>
+    <p class="panel-note">
+      暖灰牆、作品不加圓角、說明文字改成<b>展場牆標</b>的格式（藝術家／作品名／年代媒材）。
+      綠色沒有消失，降級成重點色：進度條、HUD 的那個點、詞彙 chip 的底線。
+      安靜，但安靜比大聲難做。
+    </p>
+  </section>
+
+  <!-- ============ 2b ============ -->
+  <section class="panel">
+    <div class="panel-head"><span class="name">A · 夜</span><h2>暗房模式 Dark Room</h2></div>
+    <div class="slide dark">
+      <div class="body">
+        <div class="art"><img src="../unit03/img/rothko-orange-and-yellow.jpg" alt=""></div>
+        <div class="side">
+          <div class="label">
+            <div class="artist">Mark Rothko</div>
+            <h2>Orange and Yellow</h2>
+            <p class="meta">1956 · Oil on canvas<br>American, 1903–1970</p>
+          </div>
+          <ul class="points">
+            <li>Two blocks of colour. Soft edges. Nothing else.</li>
+            <li>The edges are not sharp — the colour seems to breathe.</li>
+            <li>He wanted huge canvases so you feel <i>inside</i> the painting, not in front of it.</li>
+            <li>“I want to be intimate and human.”</li>
+          </ul>
+        </div>
+      </div>
+      <div class="hud"><span class="dot"></span><span>units</span><span>vocab</span><span>menu</span><span>中文</span><span>notes</span><span>31 / 60</span></div>
+      <div class="bar"></div>
+    </div>
+    <p class="panel-note">
+      <b>這不是第四種風格，是 A 的夜間版</b>——同一套版面、同一個牆標，只是把牆關掉。
+      畫變大了，文字退後，因為在暗的教室裡只有一個東西是亮的。
+      這也正是<b>藝術史這門學科原本的樣子</b>：一間拉上窗簾的演講廳，一台幻燈機。
+      第 9 單元講投影與錄像時，這個形式本身就是內容。
+      代價很實際：複習頁要印成 PDF 時一定得用亮色版，學生在白天的手機上看也會吃力。
+    </p>
+  </section>
+
+  <!-- ============ 3 ============ -->
+  <section class="panel">
+    <div class="panel-head"><span class="name">B</span><h2>瑞士／圖錄 Swiss Grid</h2></div>
+    <div class="slide swiss">
+      <div class="grid"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="slug">Unit 3 — From Representation to Expression</div>
+      <div class="num">31 / 60</div>
+      <div class="rule"></div>
+      <div class="cols">
+        <div class="art"><img src="../unit03/img/rothko-orange-and-yellow.jpg" alt=""></div>
+        <div class="side">
+          <h2>Orange and Yellow</h2>
+          <p class="cap">Mark Rothko (1903–1970), <i>Orange and Yellow</i>, 1956. Oil on canvas, 231 × 180 cm.</p>
+          <ul class="points">
+            <li><span>Two blocks of colour. Soft edges. Nothing else.</span></li>
+            <li><span>The edges are not sharp — the colour seems to breathe.</span></li>
+            <li><span>He wanted huge canvases so you feel <i>inside</i> the painting, not in front of it.</span></li>
+            <li><span>“I want to be intimate and human.”</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">3 · Abstract Expressionism</div>
+    </div>
+    <p class="panel-note">
+      白底、grotesk、看得見的網格、一個紅色。編號固定在同一個位置，每一頁都不動。
+      <b>這是這門課那個年代的印刷語言</b>——Müller-Brockmann、Judd 的圖錄、Weiner 的字體。
+      美術系學生會讀出這個玩笑。風險也在這裡：它有個性，所以它會跟作品搶話。
+    </p>
+  </section>
+
+</div>
+</body>
+</html>
