@@ -16,6 +16,13 @@
   --ink-dim:  #183223;
   --ink-faint:#173b27;
   --rule:     rgba(23,19,18,.18);
+  /* Mount board. A work is matted and framed precisely because a wall is
+     never neutral, and hers is a saturated green — the complement of
+     half the paintings in the course. Off by default; the 襯底 button
+     turns it on. Warm, barely off-white: lighter than her cream so it
+     does not tint what it surrounds, warmer than a grey so it still
+     belongs to this deck. */
+  --mat:      #eceae4;
   /* One easing curve for the whole deck. Every transition used the
      browser's generic `ease`, which starts and ends at slightly
      different rates in different engines; a named curve makes the
@@ -837,6 +844,37 @@ html[lang="zh-Hant"] .chip::after { content: 'EN'; font-size: .5em; }
   margin-top: .6em; padding-top: .6em; border-top: 1px solid rgba(23,19,18,.15);
 }
 
+/* ---------- 襯底 — the mount board ----------
+   One button, and every picture in the deck gets a mat between it and
+   the green. Nothing else moves: the layout, the type and the 388 pages
+   that carry no picture are untouched, which is the whole point of
+   doing it this way rather than changing the ground.
+
+   It is padding on the picture itself, so the mat is always exactly the
+   shape of what it holds, it scales with the deck's own type scale, and
+   a transparent PNG lands on the board instead of on the green. */
+body.mat .s-artwork .art img,
+body.mat .compare-pane img,
+body.mat .s-gallery .gal img,
+body.mat .s-quote .q-doc img {
+  background: var(--mat);
+  padding: 1.1em;
+  /* The bevel. A work on pale paper would otherwise dissolve into the
+     board, so a hairline marks where the picture actually ends — an
+     outline with a negative offset lands exactly on the content edge
+     and, unlike a background, paints above the picture. */
+  outline: 1px solid rgba(23,19,18,.22);
+  outline-offset: -1.1em;
+}
+/* A small picture gets a proportionally narrower mount. */
+body.mat .s-gallery .gal img { padding: .8em; outline-offset: -.8em; }
+/* Zoomed, the picture is on its own against the dark overlay, so the
+   board comes with it. */
+body.mat #lightbox img {
+  background: var(--mat); padding: 1.6em;
+  outline: 1px solid rgba(23,19,18,.22); outline-offset: -1.6em;
+}
+
 /* ---------- Lightbox (zoom) ---------- */
 #lightbox {
   position: fixed; inset: 0; z-index: 80;
@@ -904,8 +942,16 @@ html[lang="zh-Hant"] .chip::after { content: 'EN'; font-size: .5em; }
 #hud > :nth-child(3) { min-width: 3.3em; }   /* menu / 目錄 */
 #hud > :nth-child(4) { min-width: 2.8em; }   /* 中文 / EN */
 #hud > :nth-child(5) { min-width: 3.3em; }   /* notes / 備註 */
-#hud > :nth-child(6) { min-width: 5.2em; }   /* presenter / 講者 */
+#hud > :nth-child(6) { min-width: 2.8em; }   /* mat / 襯底 — built by deck.js */
+#hud > :nth-child(7) { min-width: 5.2em; }   /* presenter / 講者 */
 #hud > .count { min-width: 3.5em; text-align: right; }
+/* The one HUD control that holds a state, so it is the one that has to
+   show it. */
+#btn-mat[aria-pressed="true"] {
+  color: var(--ink);
+  text-decoration: underline; text-underline-offset: .35em;
+  text-decoration-thickness: 2px;
+}
 #hud button {
   font: inherit; background: none; border: none; cursor: pointer;
   color: inherit; padding: .2em .3em;
@@ -1410,7 +1456,9 @@ body.vocab { overflow-x: hidden; overflow-y: auto; }
   #nav button { font-size: 14px; padding: .85em 1.1em; min-height: 44px; }
   #hud {
     left: 0; right: 0; bottom: calc(1.2vh + 58px);
-    justify-content: center; gap: .9em;
+    justify-content: center;
+    /* Eight controls at 375px: the gap is what gives 襯底 its room. */
+    gap: .62em;
     font-size: 14px; opacity: 1;
   }
   #hud button, #hud a { padding: .6em .45em; }
@@ -1419,6 +1467,10 @@ body.vocab { overflow-x: hidden; overflow-y: auto; }
      corner anyway. Below 700px the labels simply take their own width.
      :nth-child(n) only to match the specificity of the rules above. */
   #hud > :nth-child(n), #hud > .count { min-width: 0; }
+  /* Eight controls do not fit across a phone, and the presenter window
+     is the one that cannot do anything there — a second screen is not
+     something a phone has. It comes back at tablet width. */
+  #hud #btn-presenter { display: none; }
 }
 
 /* ---------- Reduced motion ----------

@@ -38,10 +38,12 @@
     netDm: id => `需要網路 · <a href="https://www.dailymotion.com/video/${id}" target="_blank" rel="noopener">在 Dailymotion 開啟</a>`,
     local: '影片放在這個網站上，不需要網路',
     jumpTo: '跳到',
+    mat: '襯底', matOn: '襯底：開', matOff: '襯底：關',
+    matTitle: '在圖片與背景之間加一塊中性襯紙 (B)',
     review: '重點複習',
     reviewSub: '這個單元的整理頁，學員可以存成 PDF。把連結傳給他們：',
     reviewCopy: '複製連結', reviewCopied: '已複製', reviewOpen: '開啟 →',
-    menuHint: 'Backspace 回到剛才那一頁 · N = 在這個螢幕看備註 · P = 講者視窗',
+    menuHint: 'Backspace 回到剛才那一頁 · N = 在這個螢幕看備註 · P = 講者視窗 · B = 襯底',
     peek: n => `備註 · 第 ${n} 頁 · 按 N 收起`,
     say: '要說的話', nextUp: '接下來', endOfDeck: '最後一頁',
     back: '← 上一頁', fwd: '下一頁 →',
@@ -61,10 +63,12 @@
     netDm: id => `Needs internet · <a href="https://www.dailymotion.com/video/${id}" target="_blank" rel="noopener">open on Dailymotion</a>`,
     local: 'Plays from this site — no internet needed',
     jumpTo: 'Jump to',
+    mat: 'mat', matOn: 'mat: on', matOff: 'mat: off',
+    matTitle: 'Put a neutral mount board between the pictures and the ground (B)',
     review: 'Key review',
     reviewSub: 'A review sheet for this unit, which students can save as a PDF. Send them the link:',
     reviewCopy: 'Copy link', reviewCopied: 'Copied', reviewOpen: 'Open →',
-    menuHint: 'Backspace takes you back to where you jumped from. · N = notes on this screen · P = presenter window',
+    menuHint: 'Backspace takes you back to where you jumped from. · N = notes on this screen · P = presenter window · B = mount board',
     peek: n => `Notes · slide ${n} · press N to hide`,
     say: 'Say this', nextUp: 'Next up', endOfDeck: 'End of deck',
     back: '← Back', fwd: 'Next →',
@@ -1021,6 +1025,7 @@
     if (lower === 'n') { peek.classList.toggle('on'); if (peek.classList.contains('on')) drawPeek(); return; }
     if (lower === 'p') { openPresenter(); return; }
     if (lower === 'l') { switchLang(here()); return; }
+    if (lower === 'b') { toggleMat(); return; }
     if (lower === 'f') {
       if (document.fullscreenElement) document.exitFullscreen();
       else document.documentElement.requestFullscreen();
@@ -1037,8 +1042,34 @@
   };
   const btnLang = document.getElementById('btn-lang');
   if (btnLang) btnLang.onclick = e => { e.stopPropagation(); switchLang(here()); };
+
+  /* ---------- 襯底 ----------
+     Off by default: the deck she designed is the deck that opens. The
+     button is built here rather than written into all ten index.html
+     files, and the choice is remembered in this browser like the
+     language, so once she has decided she never presses it again. */
+  const MATKEY = 'vicky-mat';
+  let matOn = false;
+  try { matOn = localStorage.getItem(MATKEY) === 'on'; } catch (e) {}
+  const btnMat = el('button', '', UI.mat);
+  btnMat.id = 'btn-mat';
+  btnMat.title = UI.matTitle;
+  function drawMat() {
+    document.body.classList.toggle('mat', matOn);
+    btnMat.setAttribute('aria-pressed', matOn ? 'true' : 'false');
+    btnMat.title = (matOn ? UI.matOn : UI.matOff) + ' · ' + UI.matTitle;
+  }
+  function toggleMat() {
+    matOn = !matOn;
+    try { localStorage.setItem(MATKEY, matOn ? 'on' : 'off'); } catch (e) {}
+    drawMat();
+  }
+  btnMat.onclick = e => { e.stopPropagation(); toggleMat(); };
+  const btnPresenter = document.getElementById('btn-presenter');
+  btnPresenter.parentNode.insertBefore(btnMat, btnPresenter);
+  drawMat();
   if (window.applyLang) applyLang();
-  document.getElementById('btn-presenter').onclick = e => { e.stopPropagation(); openPresenter(); };
+  btnPresenter.onclick = e => { e.stopPropagation(); openPresenter(); };
   menu.addEventListener('click', e => { if (e.target === menu) closeMenu(); });
   lightbox.addEventListener('click', closeZoom);
 

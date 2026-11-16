@@ -163,6 +163,7 @@ drawing an icon — a design decision, not a fix).
 | `N` | Speaker notes on the presenting screen |
 | `P` | Presenter window — put this on your laptop, deck on the projector |
 | `L` | English / 中文, without leaving the slide |
+| `B` | 襯底 — a mount board behind every picture (see below) |
 | `F` | Fullscreen |
 | `Esc` | Close menu / notes / zoom |
 
@@ -177,6 +178,33 @@ is saved.
 
 The presenter window and the deck stay in sync in both directions, so you can
 click Next from either one.
+
+## 襯底 — the mount board
+
+`B`, or the **襯底 / mat** button in the HUD, puts a neutral board between every
+picture and the green. Press it again and the deck is exactly as she designed
+it. **It is off by default**, and the choice is remembered in that browser.
+
+Why it exists: the ground is `#53ae6e`, a saturated green, and green is the
+complement of the orange and red that half this course is painted in. A work
+shown on it is not being judged on its own colour — which is the one thing an
+art-history class is for. A gallery solves this by matting and framing; this is
+that, and nothing else changes.
+
+What it touches: `artwork`, `compare`, `gallery`, the document image on a
+`quote` slide, and the zoom. **The 388 slides that carry no picture are not
+affected at all**, which is the whole reason for doing it this way instead of
+changing the ground.
+
+How: `body.mat` plus padding and a background on the picture itself, so the
+board is always exactly the shape of what it holds, it scales with the deck's
+own type scale, and a transparent PNG lands on the board instead of on the
+green. The hairline at the picture's edge is an `outline` with a negative
+offset — the one thing that paints *above* a replaced element, so a work on
+pale paper does not dissolve into the board.
+
+Below 700px the presenter button is hidden: eight controls do not fit across a
+phone, and a second screen is the one thing a phone does not have.
 
 ## 重點複習 — the sheet for the students
 
