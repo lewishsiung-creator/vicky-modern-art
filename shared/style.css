@@ -23,6 +23,10 @@
      does not tint what it surrounds, warmer than a grey so it still
      belongs to this deck. */
   --mat:      #eceae4;
+  /* Two more boards, for the two ends the middle one fails. deck.js
+     measures each picture's own outer edge and picks. */
+  --mat-dark: #2a2926;   /* a night photograph keeps its night */
+  --mat-deep: #dcd8cd;   /* a work already on white paper floats off it */
   /* One easing curve for the whole deck. Every transition used the
      browser's generic `ease`, which starts and ends at slightly
      different rates in different engines; a named curve makes the
@@ -852,11 +856,14 @@ html[lang="zh-Hant"] .chip::after { content: 'EN'; font-size: .5em; }
 
    It is padding on the picture itself, so the mat is always exactly the
    shape of what it holds, it scales with the deck's own type scale, and
-   a transparent PNG lands on the board instead of on the green. */
-body.mat .s-artwork .art img,
-body.mat .compare-pane img,
-body.mat .s-gallery .gal img,
-body.mat .s-quote .q-doc img {
+   a transparent PNG lands on the board instead of on the green.
+
+   The zoom is in the list too, because a picture takes its board with
+   it. :where() keeps this rule at one class of specificity on purpose,
+   so the per-picture board further down can override the colour without
+   repeating all five selectors. */
+body.mat :where(.s-artwork .art, .compare-pane, .s-gallery .gal,
+                .s-quote .q-doc, #lightbox) img {
   background: var(--mat);
   padding: 1.1em;
   /* The bevel. A work on pale paper would otherwise dissolve into the
@@ -866,14 +873,17 @@ body.mat .s-quote .q-doc img {
   outline: 1px solid rgba(23,19,18,.22);
   outline-offset: -1.1em;
 }
-/* A small picture gets a proportionally narrower mount. */
+/* How wide the board is cut, per place. A small picture gets a
+   proportionally narrower mount; a zoomed one, a wider one. */
 body.mat .s-gallery .gal img { padding: .8em; outline-offset: -.8em; }
-/* Zoomed, the picture is on its own against the dark overlay, so the
-   board comes with it. */
-body.mat #lightbox img {
-  background: var(--mat); padding: 1.6em;
-  outline: 1px solid rgba(23,19,18,.22); outline-offset: -1.6em;
+body.mat #lightbox img { padding: 1.6em; outline-offset: -1.6em; }
+/* The two other boards, chosen per picture by deck.js. On the dark one
+   the bevel has to be a light line, or it is invisible. */
+body.mat img[data-mat="dark"] {
+  background: var(--mat-dark);
+  outline-color: rgba(247,240,223,.3);
 }
+body.mat img[data-mat="deep"] { background: var(--mat-deep); }
 
 /* ---------- Lightbox (zoom) ---------- */
 #lightbox {

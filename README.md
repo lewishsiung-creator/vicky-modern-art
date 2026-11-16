@@ -203,6 +203,22 @@ green. The hairline at the picture's edge is an `outline` with a negative
 offset — the one thing that paints *above* a replaced element, so a work on
 pale paper does not dissolve into the board.
 
+**Three boards, and the picture chooses.** A framer does not cut one mount for
+every work, and nor does this. `deck.js` measures each picture's own outer edge
+once, from a 120px copy, and picks:
+
+| the picture's edge | board | why |
+|---|---|---|
+| under 70 | charcoal `--mat-dark` | a night photograph inside a bright board loses its own darkness — the eye adapts to the border and the shadows close up. *The Lightning Field* was the case that forced this. |
+| 70–220 (four in five) | `--mat` | the ordinary mount |
+| over 220 | deeper warm grey `--mat-deep` | a work already on white paper floats off a board it can be told apart from. Kruger vs Supreme was the case that forced this. |
+
+Across the course that comes out as 21 dark, 163 middle, 23 deep. The
+measurement is only run the first time the board is switched on, so a deck that
+never uses it never reads a pixel, and anything unreadable keeps the middle
+board. The base rule is wrapped in `:where()` so the per-picture board can
+override its colour without repeating all five selectors.
+
 Below 700px the presenter button is hidden: eight controls do not fit across a
 phone, and a second screen is the one thing a phone does not have.
 

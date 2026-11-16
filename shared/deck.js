@@ -758,6 +758,8 @@
   function openZoom(img) {
     lightbox.querySelector('img').src = img.src;
     lightbox.querySelector('img').alt = img.alt || '';
+    /* The picture takes its board into the zoom with it. */
+    lightbox.querySelector('img').dataset.mat = img.dataset.mat || 'mid';
     lightbox.classList.toggle('soft', img.dataset.soft === 'true');
     lightbox.querySelector('.lb-note').textContent =
       img.dataset.soft === 'true'
@@ -1051,10 +1053,51 @@
   const MATKEY = 'vicky-mat';
   let matOn = false;
   try { matOn = localStorage.getItem(MATKEY) === 'on'; } catch (e) {}
+
+  /* Three boards, and the picture chooses. A framer does not cut one
+     mount for every work, and nor can this: a night photograph inside a
+     bright board loses its own darkness — the eye adapts to the border
+     and the shadows close up — while a work already on white paper
+     disappears into a white one. So the picture's own outer edge is
+     measured, once, from a 120px copy of it, and decides which board it
+     gets. Anything unreadable keeps the middle board, which is the one
+     four pictures in five want. */
+  const MAT_SEL = '.s-artwork .art img, .compare-pane img, .s-gallery .gal img, .s-quote .q-doc img';
+  function edgeLuma(img) {
+    const W = 120, H = Math.max(8, Math.round(120 * img.naturalHeight / img.naturalWidth));
+    const c = document.createElement('canvas');
+    c.width = W; c.height = H;
+    const cx = c.getContext('2d', { willReadFrequently: true });
+    cx.drawImage(img, 0, 0, W, H);
+    const d = cx.getImageData(0, 0, W, H).data;
+    let sum = 0, n = 0;
+    const band = 3;
+    for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
+      if (y >= band && y < H - band && x >= band && x < W - band) continue;
+      const i = (y * W + x) * 4;
+      sum += 0.2126 * d[i] + 0.7152 * d[i + 1] + 0.0722 * d[i + 2];
+      n++;
+    }
+    return n ? sum / n : 128;
+  }
+  function gradeMat(img) {
+    if (img.dataset.mat) return;
+    if (!img.complete || !img.naturalWidth) {
+      img.addEventListener('load', () => gradeMat(img), { once: true });
+      return;
+    }
+    let v;
+    try { v = edgeLuma(img); } catch (e) { img.dataset.mat = 'mid'; return; }
+    img.dataset.mat = v < 70 ? 'dark' : v > 220 ? 'deep' : 'mid';
+  }
+  /* Only when the board is actually asked for, so a deck that never uses
+     it never reads a pixel. */
+  function gradeMats() { document.querySelectorAll(MAT_SEL).forEach(gradeMat); }
   const btnMat = el('button', '', UI.mat);
   btnMat.id = 'btn-mat';
   btnMat.title = UI.matTitle;
   function drawMat() {
+    if (matOn) gradeMats();
     document.body.classList.toggle('mat', matOn);
     btnMat.setAttribute('aria-pressed', matOn ? 'true' : 'false');
     btnMat.title = (matOn ? UI.matOn : UI.matOff) + ' · ' + UI.matTitle;
