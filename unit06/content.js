@@ -1009,6 +1009,16 @@ const SLIDES = [
   ]
 },
 {
+  type: 'end',
+  title: 'Key terms',
+  zh: '關鍵詞彙',
+  terms: ['expandedart', 'socialsculpture', 'minimalism', 'specificobject', 'reduction', 'deaesth', 'seriality', 'fabrication', 'conceptart', 'conceptualart', 'dematerialization', 'proposition', 'tautology', 'declaration', 'institutional'],
+  notes: [
+    'Tap any term to show it large, with the Chinese. Two or three minutes.',
+    'This is the revision slide before the quiz, not the end of the lesson — the quiz follows, and the student presentations close the class.'
+  ]
+},
+{
   type: 'section',
   title: 'Art Quiz',
   zh: '藝術測驗',
@@ -1092,13 +1102,6 @@ const SLIDES = [
     'Answer: D.',
     'Close by linking to the last discussion question — and to Unit 3’s forty-three-million-dollar Newman.'
   ]
-},
-{
-  type: 'end',
-  title: 'Key terms',
-  zh: '關鍵詞彙',
-  terms: ['expandedart', 'socialsculpture', 'minimalism', 'specificobject', 'reduction', 'deaesth', 'seriality', 'fabrication', 'conceptart', 'conceptualart', 'dematerialization', 'proposition', 'tautology', 'declaration', 'institutional'],
-  notes: ['Tap any term to show it large, with the Chinese. Good for the last two minutes of class.']
 },
 {
   type: 'activity',
