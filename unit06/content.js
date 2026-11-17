@@ -115,7 +115,7 @@ const GLOSSARY = {
 const SECTIONS = [
   { title: '1 · Bridge & Hook',       zh: '銜接與提問',   start: 0 },
   { title: '2 · Completing Beuys',    zh: '完成波依斯',   start: 2 },
-  { title: '3 · Where Is the Line?',  zh: '藝術的界線',   start: 10 },
+  { title: '3 · Where Is the Line?',  zh: '藝術的界線',   start: 9 },
   { title: '4 · Minimalism',          zh: '極簡主義',     start: 14 },
   { title: '5 · Conceptual Art',      zh: '觀念藝術',     start: 39 },
   { title: '6 · Institutional Critique', zh: '機構批判',  start: 47 },
@@ -275,6 +275,40 @@ const SLIDES = [
     'ASK, if you have time: if his son planted the last tree, whose artwork is it? That is a genuine question and it points straight at LeWitt later today.'
   ]
 },
+/* ===== PART 3 — WHERE IS THE LINE? ===== */
+{
+  type: 'section',
+  title: 'Where is the line of art?',
+  sub: 'From social sculpture to everyday action.',
+  notes: [
+    'Ten minutes on the timer, plus about six more for the group presentations. Groups of four or five.',
+    'IMPORTANT: do not reveal “everyone is an artist” until the end. Her lesson plan is explicit — let them argue their own position first, so the quote lands as a challenge to what they just decided.'
+  ]
+},
+{
+  type: 'activity',
+  oneClick: true,
+  title: 'Your own action',
+  zh: '你自己的行動',
+  minutes: 10,
+  instructions: [
+    '<b>Step 1</b> — On your own, one minute. Think of one ordinary thing you did recently that affected other people. Organising a study group. Settling an argument. Cleaning a shared space.',
+    '<b>Step 2</b> — In your group, two minutes. Share your examples and choose <b>one</b> to discuss properly.',
+    '<b>Step 3</b> — Six minutes. Discuss the three questions below, in order. Q3 is the most open one, so give it the most time — about four minutes.',
+    '<b>Step 4</b> — One minute. Agree on one sentence: is it art, not art, or somewhere in between?'
+  ],
+  questions: [
+    '<b>Q1 · Effect.</b> How does this action affect other people? What does it change about the relationships around you?',
+    '<b>Q2 · Is it art?</b> Using Beuys’s {{socialsculpture}}, can this action be called art? Why, or why not?',
+    '<b>Q3 · The line.</b> If <i>every</i> action that changes society can be called art, is there still a line between art and an ordinary action? — Give this one the most time. There is no fixed answer.'
+  ],
+  notes: [
+    'One click puts all three questions up. Take them in order. Q3 should get about four of Step 3’s six minutes.',
+    'After Step 4, six more minutes outside the timer: each group presents its example and its one-sentence position, in under a minute each.',
+    'ONLY AFTER every group has spoken, go on — the next slide recaps Beuys, and the one after it reveals his claim. Then ask them to reconsider.',
+    'The timer is set to ten minutes, which covers Steps 1–4 only.'
+  ]
+},
 {
   type: 'flow',
   oneClick: true,
@@ -289,41 +323,8 @@ const SLIDES = [
   foot: 'Beuys’s theory, traced from raw material to a city-wide social practice.',
   notes: [
     'Four steps, all up with one click — walk through them in order. This is the summary of the Beuys section.',
-    'Then straight into the activity — do not add anything after this slide.'
-  ]
-},
-
-/* ===== PART 3 — WHERE IS THE LINE? ===== */
-{
-  type: 'section',
-  title: 'Where is the line of art?',
-  sub: 'From social sculpture to everyday action.',
-  notes: [
-    'Fifteen minutes. Groups of four or five.',
-    'IMPORTANT: do not reveal “everyone is an artist” until the end. Her lesson plan is explicit — let them argue their own position first, so the quote lands as a challenge to what they just decided.'
-  ]
-},
-{
-  type: 'activity',
-  oneClick: true,
-  title: 'Your own action',
-  zh: '你自己的行動',
-  minutes: 15,
-  instructions: [
-    '<b>Step 1</b> — On your own, one minute. Think of one ordinary thing you did recently that affected other people. Organising a study group. Settling an argument. Cleaning a shared space.',
-    '<b>Step 2</b> — In your group, two minutes. Share your examples and choose <b>one</b> to discuss properly.',
-    '<b>Step 4</b> — One minute. Agree on one sentence: is it art, not art, or somewhere in between?'
-  ],
-  questions: [
-    '<b>Q1 · Effect.</b> How does this action affect other people? What does it change about the relationships around you?',
-    '<b>Q2 · Is it art?</b> Using Beuys’s {{socialsculpture}}, can this action be called art? Why, or why not?',
-    '<b>Q3 · The line.</b> If <i>every</i> action that changes society can be called art, is there still a line between art and an ordinary action? — Give this one the most time. There is no fixed answer.'
-  ],
-  notes: [
-    'One click puts all three questions up. Take them in order. Q3 should get about four of the five minutes.',
-    'Step 5, six minutes: each group presents its example and its one-sentence position, in under a minute each.',
-    'ONLY AFTER every group has spoken, go to the next slide and reveal Beuys’s claim. Then ask them to reconsider.',
-    'The timer is set to fifteen minutes for the whole activity.'
+    'It now sits AFTER the activity, on purpose: they have just argued about their own ordinary actions, so read the four steps back as the theory behind what they said.',
+    'Then go straight on to the reveal. Still do not add anything between this slide and the next.'
   ]
 },
 {
@@ -1008,27 +1009,6 @@ const SLIDES = [
   ]
 },
 {
-  type: 'activity',
-  oneClick: true,
-  title: 'Short presentations',
-  zh: '學生報告',
-  minutes: 6,
-  instructions: [
-    'Three students today. Six minutes each, TED-style.',
-    'One artist from the course list of 120.'
-  ],
-  questions: [
-    'Who was the artist? Where and when did they work?',
-    'One or two key artworks.',
-    'What concept, and what media?',
-    'Why does it matter today?'
-  ],
-  notes: [
-    'Twenty minutes: three students, six minutes each, plus changeover.',
-    'The timer is set to six minutes. Press Reset between speakers.'
-  ]
-},
-{
   type: 'section',
   title: 'Art Quiz',
   zh: '藝術測驗',
@@ -1119,5 +1099,26 @@ const SLIDES = [
   zh: '關鍵詞彙',
   terms: ['expandedart', 'socialsculpture', 'minimalism', 'specificobject', 'reduction', 'deaesth', 'seriality', 'fabrication', 'conceptart', 'conceptualart', 'dematerialization', 'proposition', 'tautology', 'declaration', 'institutional'],
   notes: ['Tap any term to show it large, with the Chinese. Good for the last two minutes of class.']
+},
+{
+  type: 'activity',
+  oneClick: true,
+  title: 'Short presentations',
+  zh: '學生報告',
+  minutes: 6,
+  instructions: [
+    'Three students today. Six minutes each, TED-style.',
+    'One artist from the course list of 120.'
+  ],
+  questions: [
+    'Who was the artist? Where and when did they work?',
+    'One or two key artworks.',
+    'What concept, and what media?',
+    'Why does it matter today?'
+  ],
+  notes: [
+    'Twenty minutes: three students, six minutes each, plus changeover.',
+    'The timer is set to six minutes. Press Reset between speakers.'
+  ]
 }
 ];

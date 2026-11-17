@@ -114,6 +114,7 @@ window.ZH = {
  "Your own action": "你自己的行動",
  "<b>Step 1</b> — On your own, one minute. Think of one ordinary thing you did recently that affected other people. Organising a study group. Settling an argument. Cleaning a shared space.": "<b>第 1 步</b> — 自己想，一分鐘。想一件你最近做過、而且影響到別人的平常事。辦一個讀書會。調停一場爭執。打掃共用空間。",
  "<b>Step 2</b> — In your group, two minutes. Share your examples and choose <b>one</b> to discuss properly.": "<b>第 2 步</b> — 小組內，兩分鐘。分享各自的例子，選<b>一個</b>來好好討論。",
+ "<b>Step 3</b> — Six minutes. Discuss the three questions below, in order. Q3 is the most open one, so give it the most time — about four minutes.": "<b>第 3 步</b> — 六分鐘。依順序討論下面三個問題。Q3 最開放，所以給它最多時間——大約四分鐘。",
  "<b>Step 4</b> — One minute. Agree on one sentence: is it art, not art, or somewhere in between?": "<b>第 4 步</b> — 一分鐘。全組同意一句話：它是藝術、不是藝術，還是介於兩者之間？",
  "<b>Q1 · Effect.</b> How does this action affect other people? What does it change about the relationships around you?": "<b>Q1 · 影響。</b>這個行動如何影響別人？它改變了你周圍的哪些關係？",
  "<b>Q2 · Is it art?</b> Using Beuys’s {{socialsculpture}}, can this action be called art? Why, or why not?": "<b>Q2 · 它是藝術嗎？</b>用波依斯的{{socialsculpture}}來看，這個行動可以被稱為藝術嗎？為什麼？",
