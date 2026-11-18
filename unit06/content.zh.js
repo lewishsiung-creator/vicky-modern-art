@@ -571,5 +571,14 @@ window.ZH = {
  "<i>A Series of Stakes Set in the Ground at Regular Intervals to Form a Rectangle…</i>, 1968 — Windham College, Putney, Vermont": "〈一系列以固定間距插入地面、構成一個長方形的木樁……〉，1968 — 佛蒙特州普特尼，溫德姆學院",
  "Built": "做出來的",
  "<i>Turf, Stake and String</i>, from S.M.S. No. 5, 1968": "〈草皮、木樁與繩子〉，收於 S.M.S. 第 5 號，1968",
- "Published": "印出來的"
+ "Published": "印出來的",
+ "Ten minutes on the timer, plus about six more for the group presentations. Groups of four or five.": "計時十分鐘，再加大約六分鐘讓各組報告。四到五人一組。",
+ "One click puts all three questions up. Take them in order. Q3 should get about four of Step 3’s six minutes.": "點一下，三個問題全部出現。依序討論。Q3 要佔掉第 3 步六分鐘裡的大約四分鐘。",
+ "After Step 4, six more minutes outside the timer: each group presents its example and its one-sentence position, in under a minute each.": "第 4 步之後，計時之外再六分鐘：每組報告自己的例子和那句結論，每組不超過一分鐘。",
+ "ONLY AFTER every group has spoken, go on — the next slide recaps Beuys, and the one after it reveals his claim. Then ask them to reconsider.": "一定要等每一組都講完才往下——下一張是波依斯的理論回顧，再下一張才揭曉他的主張。然後請他們重新想一次。",
+ "The timer is set to ten minutes, which covers Steps 1–4 only.": "計時設為十分鐘，只涵蓋第 1 到第 4 步。",
+ "It now sits AFTER the activity, on purpose: they have just argued about their own ordinary actions, so read the four steps back as the theory behind what they said.": "它現在刻意放在活動「之後」：他們剛爭論完自己的日常行動，所以把這四步當成他們剛才那些話背後的理論來講。",
+ "Then go straight on to the reveal. Still do not add anything between this slide and the next.": "然後直接進入揭曉。這張和下一張之間一樣不要加任何東西。",
+ "Tap any term to show it large, with the Chinese. Two or three minutes.": "點任何一個詞都會放大顯示，附中文。兩到三分鐘。",
+ "This is the revision slide before the quiz, not the end of the lesson — the quiz follows, and the student presentations close the class.": "這是測驗前的複習頁，不是下課——後面還有測驗，由學生報告收尾。"
 };
