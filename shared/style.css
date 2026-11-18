@@ -1537,6 +1537,35 @@ body.vocab { overflow-x: hidden; overflow-y: auto; }
 /* Portrait phone: the HUD links were 33px tall, under Apple's 44pt
    minimum. The row has the space, so take it. */
 @media (max-width: 700px) {
-  #hud button, #hud a { padding: .95em .5em; }
-  #hud { bottom: calc(1.2vh + 68px); }
+  /* 44pt tall for a finger, and narrow enough that the seven English
+     labels plus the count come to 375px with room at both ends. They
+     measured 376px before this — the count was clipped by the bezel. */
+  #hud button, #hud a { padding: .95em .34em; }
+  #hud { bottom: calc(1.2vh + 68px); gap: .5em; }
+
+  /* ...and once the HUD has two full rows of chrome under it, 9vh of
+     bottom padding is no longer the strip they sit in. On a 812px phone
+     the chrome reaches 124px up the screen and 9vh is 73px, so the last
+     line of a slide — the compare note, the final bullet — was printed
+     straight through the HUD labels.
+
+     Stated the way the chrome itself is: nav row, HUD row, and a little
+     air. It has to come after .s-compare and friends, which set their
+     own padding at the same specificity. */
+  .slide { padding-bottom: calc(1.2vh + 128px); }
+
+  /* The panes were a fixed 32vh each, so they could not give the note
+     that room back — the wrap would simply overflow instead. Let them
+     share whatever the wrap has. */
+  .compare-wrap { gap: 1.6vh; }
+  .compare-pane { height: auto; flex: 1 1 0; min-height: 0; }
+
+  /* Same fix, same reason, for the stacked artwork and gallery slides.
+     At 375px the type is already at its 11px floor, so a five-point
+     list wraps to twelve lines and a fixed-height picture above it
+     pushed the last point 40px into the HUD (unit04 p.9 was the worst).
+     A picture that can give up height is the only thing that fits here:
+     the text keeps its size, the image loses a little. */
+  .s-artwork .art,
+  .s-gallery .gal { height: auto; flex: 0 1 42vh; min-height: 22vh; }
 }
