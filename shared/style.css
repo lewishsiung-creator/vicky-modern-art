@@ -1521,7 +1521,16 @@ body.vocab { overflow-x: hidden; overflow-y: auto; }
    rule is a safety net — if a slide still will not fit, it scrolls
    rather than silently cutting its own bottom off. */
 @media (max-height: 520px) {
-  .slide { padding: 3vh 5vw 7vh; overflow-y: auto; }
+  /* 7vh is 26px here and the chrome reaches 39px, so the same collision
+     as in portrait happened on its side — a quote's last line through
+     the 清除 button, the ASK tag through the HUD. Stated as the chrome
+     is: button row plus air. `safe center` keeps a slide that fits
+     centred and top-aligns one that does not, so the scroll that was
+     already allowed here can actually reach the first line. */
+  .slide {
+    padding: 3vh 5vw calc(.8vh + 48px);
+    overflow-y: auto; justify-content: safe center;
+  }
   #nav { bottom: .8vh; left: 1.5vw; }
   #nav button { font-size: 13px; padding: .5em .8em; min-height: 36px; }
   #hud {
@@ -1529,8 +1538,15 @@ body.vocab { overflow-x: hidden; overflow-y: auto; }
     font-size: 12px; gap: .8em; opacity: 1;
   }
   #hud button, #hud a { padding: .45em .35em; }
-  .s-video .vid, .s-artwork .art { height: 62vh; }
+  .s-artwork .art { height: 62vh; }
   .s-gallery .gal { height: 62vh; }
+  /* The video column was 62vh with a 16:9 frame inside it sized from its
+     own width, so on a phone on its side the frame was 283px inside a
+     233px box and the WATCH FOR line underneath it landed on the 上一頁
+     button. Cap the frame by its width instead — aspect-ratio then
+     holds the height — and let the column take what it needs. */
+  .s-video .vid { height: auto; }
+  .s-video .vid-frame { max-width: calc(44vh * 16 / 9); margin-inline: auto; }
   .compare-pane { height: 58vh; }
 }
 
@@ -1568,4 +1584,36 @@ body.vocab { overflow-x: hidden; overflow-y: auto; }
      the text keeps its size, the image loses a little. */
   .s-artwork .art,
   .s-gallery .gal { height: auto; flex: 0 1 42vh; min-height: 22vh; }
+
+  /* The safety net, for the phones that are short as well as narrow.
+     A 667px iPhone gives the chrome 20% of its screen, and the type is
+     already at the 11px floor in fit() — it cannot shrink to meet it.
+     An activity slide with five instructions and three questions does
+     not fit at any size, and until now the overflow was simply hidden
+     under the HUD.
+
+     `safe center` is what makes this work: a slide that fits stays
+     centred, exactly as before, and one that does not falls back to
+     top-aligned so the first line is reachable instead of cut off
+     above the viewport. Then it scrolls, and the bottom padding above
+     keeps the last line clear of the chrome at the end of the scroll. */
+  .slide { overflow-y: auto; justify-content: safe center; overscroll-behavior: contain; }
+
+  /* A scrolling slide passes *under* the chrome, which is fixed, so
+     mid-scroll a line of text and the HUD labels briefly occupy the
+     same pixels. A band of her own green, fading upward, lets the text
+     dissolve before it gets there. Under the nav (55) and the HUD (50),
+     over the slide, and never in the way of a tap.
+
+     Only on a deck. The course index, the vocabulary page and the
+     review sheet are ordinary scrolling pages with no chrome down
+     there — they all carry .course, and a band would just cover their
+     last paragraph. */
+  body:not(.course):not(.presenter)::after {
+    content: ''; position: fixed; left: 0; right: 0; bottom: 0; z-index: 45;
+    height: calc(1.2vh + 124px); pointer-events: none;
+    background: linear-gradient(to top, var(--bg) 62%, rgba(83, 174, 110, 0));
+  }
 }
+
+@media print { body::after { display: none !important; } }
