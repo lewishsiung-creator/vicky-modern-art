@@ -813,6 +813,16 @@ const SLIDES = [
   ]
 },
 {
+  type: 'end',
+  title: 'Key terms',
+  zh: '關鍵詞彙',
+  terms: ['antiform', 'processart', 'postminimalism', 'systemsart', 'pours', 'opart', 'retinalart', 'perceptualabstraction', 'responsiveeye', 'photorealism', 'airbrush'],
+  notes: [
+    'Tap any term to show it large, with the Chinese. Two or three minutes.',
+    'This is the revision slide before the quiz, not the end of the lesson — the quiz follows, and the student presentations close the class.'
+  ]
+},
+{
   type: 'section',
   title: 'Art Quiz',
   zh: '藝術測驗',
@@ -891,13 +901,6 @@ const SLIDES = [
     'Answer: A.',
     'Close by reminding them that two of Meisel’s five points were about membership, not about painting at all.'
   ]
-},
-{
-  type: 'end',
-  title: 'Key terms',
-  zh: '關鍵詞彙',
-  terms: ['antiform', 'processart', 'postminimalism', 'systemsart', 'pours', 'opart', 'retinalart', 'perceptualabstraction', 'responsiveeye', 'photorealism', 'airbrush'],
-  notes: ['Tap any term to show it large, with the Chinese. Good for the last two minutes of class.']
 },
 {
   type: 'activity',

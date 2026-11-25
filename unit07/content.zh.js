@@ -452,7 +452,6 @@ window.ZH = {
  "Point two of the five: a mechanical or semi-mechanical transfer to the canvas.": "五點中的第二點：以機械或半機械方式轉移到畫布上。",
  "Close by reminding them that two of Meisel’s five points were about membership, not about painting at all.": "收尾時提醒他們：邁澤爾那五點裡有兩點談的是會員資格，根本不是在談繪畫。",
  "Key terms": "關鍵詞",
- "Tap any term to show it large, with the Chinese. Good for the last two minutes of class.": "點任一個詞可以放大顯示，並附中文。適合下課前兩分鐘使用。",
  "<i>MoMA Poll</i>, 1970": "〈MoMA 民調〉，1970",
  "<i>Shapolsky et al. Manhattan Real Estate Holdings…</i>, 1971": "〈夏波斯基等人的曼哈頓不動產持有……〉，1971",
  "Shapolsky": "夏波斯基",
@@ -471,5 +470,7 @@ window.ZH = {
  "They have just tried to recall these unaided in the matching and the timeline. This is where they find out what they got, and it feeds straight into Step 4.": "他們剛才在配對和時間軸裡已經試著自己回想過一遍。這裡才讓他們知道自己想到了哪些，然後直接接到第 4 步。",
  "Leave it on screen for Step 4 — “all nine turns are on the board” on the next slide means this one.": "第 4 步時讓這一頁留在螢幕上——下一頁說的「九次轉向都在板上」指的就是這一頁。",
  "Photograph, or painting? Decide before anyone says it out loud.": "照片，還是畫？在有人說出來之前，先自己決定。",
- "Ask it cold, take a show of hands, and only then answer. It needs no set-up earlier in the lesson.": "直接問，先舉手表決，然後才公布答案。這一題不需要前面鋪陳。"
+ "Ask it cold, take a show of hands, and only then answer. It needs no set-up earlier in the lesson.": "直接問，先舉手表決，然後才公布答案。這一題不需要前面鋪陳。",
+ "Tap any term to show it large, with the Chinese. Two or three minutes.": "點任何一個詞都會放大顯示，附中文。兩到三分鐘。",
+ "This is the revision slide before the quiz, not the end of the lesson — the quiz follows, and the student presentations close the class.": "這是測驗前的複習頁，不是下課——後面還有測驗，由學生報告收尾。"
 };
