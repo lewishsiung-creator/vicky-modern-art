@@ -90,12 +90,12 @@ const GLOSSARY = {
 
 const SECTIONS = [
   { title: '1 · Review & Activity',  zh: '複習與活動',   start: 0 },
-  { title: '2 · Process Art',        zh: '過程藝術',     start: 10 },
-  { title: '3 · Morris & Benglis',   zh: '莫里斯與班格利斯', start: 16 },
-  { title: '4 · Hesse & Haacke',     zh: '黑塞與哈克',   start: 21 },
-  { title: '5 · Op Art',             zh: '歐普藝術',     start: 27 },
-  { title: '6 · Photorealism',       zh: '照相寫實主義', start: 32 },
-  { title: '7 · Wrap-Up & Quiz',     zh: '總結與測驗',   start: 38 }
+  { title: '2 · Process Art',        zh: '過程藝術',     start: 9 },
+  { title: '3 · Morris & Benglis',   zh: '莫里斯與班格利斯', start: 15 },
+  { title: '4 · Hesse & Haacke',     zh: '黑塞與哈克',   start: 20 },
+  { title: '5 · Op Art',             zh: '歐普藝術',     start: 26 },
+  { title: '6 · Photorealism',       zh: '照相寫實主義', start: 31 },
+  { title: '7 · Wrap-Up & Quiz',     zh: '總結與測驗',   start: 37 }
 ];
 
 const SLIDES = [
@@ -107,29 +107,64 @@ const SLIDES = [
   sub: 'When process replaces the finished work.',
   meta: 'Unit 7',
   notes: [
-    'The first THIRTY minutes are review and the group activity. Do not start lecturing.',
-    'HOOK, optional but good: the next slide shows a picture and asks whether it is a photograph. Do not answer. It pays off at 1:00, in the Photorealism section — her lesson plan calls this “the mystery image”.',
-    'Then the visual recap, then the matching activity.'
+    'The first TWENTY-FIVE minutes are the group activity and the recap. Do not start lecturing.',
+    'Straight into the group activity. The nine-turn recap now comes AFTER it, not before — they have to recall the movements unaided first.'
   ]
 },
 {
-  type: 'artwork',
-  oneClick: true,
-  src: 'img/estes-telephone-booths.jpg',
-  title: 'Before we start',
-  caption: 'What is this?',
-  ask: 'Photograph, or painting? Don’t answer out loud — just decide.',
-  points: [
-    'Look at the reflections in the glass.',
-    'Look at how sharp the far distance is.',
-    'Keep your answer to yourself.',
-    'We will come back to this at the end.'
+  type: 'section',
+  title: 'Group discussion',
+  sub: 'What changed in art?',
+  notes: [
+    'About twenty minutes now that Steps 2 and 3 run on a six-minute clock. Groups of five or six.',
+    'IMPORTANT: do not say the words “Process Art” at any point until the very end of Step 4. The whole design is that the class arrives at the word “process” themselves.'
+  ]
+},
+{
+  type: 'match',
+  title: 'Step 1 — Concept matching',
+  zh: '步驟一：概念配對',
+  instructions: 'Six minutes. Match each movement to the question it raised. Not the style — the <b>question</b>.',
+  pairs: [
+    { a: 'Cubist Collage',             b: 'How do we know what we know?' },
+    { a: 'Dada · the Readymade',       b: 'What is real?' },
+    { a: 'Surrealism',                 b: 'What is inside our unconscious mind?' },
+    { a: 'Abstract Expressionism',     b: 'What is the role of the artist?' },
+    { a: 'Pop Art',                    b: 'Can everyday culture become art?' },
+    { a: 'Happenings & Fluxus',        b: 'Where is the boundary between art and life?' },
+    { a: '{{minimalism}}',             b: 'How little material does art need?' },
+    { a: 'Beuys & Social Sculpture',   b: 'What can art include?' },
+    { a: 'Conceptual Art',             b: 'Does art need a physical object?' }
   ],
   notes: [
-    'ADDED SLIDE: her lesson plan says “reveal the mystery image” in the Photorealism segment, but her deck had no earlier mystery slide. This is it, using her own Estes image.',
-    'Do NOT name the artist and do NOT confirm anything. Say “keep your answer” and move on.',
-    'If you would rather skip the hook, jump straight past this slide — the Photorealism section still works without it.',
-    'It is a painting. Richard Estes, Telephone Booths, 1967. The reveal is slide 43.'
+    'Six minutes. Groups match on paper first — this board is for the share-out.',
+    'Then let one group come to the screen and click their pairing. Clicking one card from each side pairs them and numbers them. Clicking a numbered card takes it back out.',
+    'Nothing is judged while they work. When you press the arrow, the pairs that belong together stay bright and the rest fade — no marks, no score.',
+    'TEACHER: the point is not the answers. It is that matching forces them to recall what each movement CHANGED, not what it looked like.'
+  ]
+},
+{
+  type: 'activity',
+  oneClick: true,
+  title: 'Steps 2 and 3',
+  zh: '步驟二與三',
+  minutes: 6,
+  instructions: [
+    '<b>Step 2</b> — five minutes. Your group picks the ONE movement that changed the idea of art the most.',
+    'Complete this: “Before ______, art was mainly ______. After ______, art could become ______.”',
+    'Example: “Before Duchamp, artists usually <i>made</i> artworks. After Duchamp, artists could <i>choose</i> an everyday object.”'
+  ],
+  questions: [
+    '<b>Step 3 — six minutes.</b> On the board: ART → ? → ? → ? → CONTEMPORARY ART. Each group puts its turning point on the line.',
+    'Then, together: which came first? Which idea made the <b>next</b> idea possible?',
+    'You are building a chain of causes, not a list of dates. For example: collage lets everyday <i>materials</i> in → Duchamp lets an everyday <i>object</i> in → Fluxus lets an everyday <i>action</i> in → Beuys lets <i>social life</i> in → Conceptual Art lets the object <i>go</i>.'
+  ],
+  notes: [
+    'The sentence frame in Step 2 keeps the English simple while still demanding real reasoning. That is deliberate, and it suits an EMI class.',
+    'Step 3 is the important one. Push them off chronology and onto causation: what made the next idea POSSIBLE?',
+    'Write the chain on the board as they build it. You need it on the board for Step 4.',
+    'TIMER: six minutes, as asked. The steps printed on the slide still read five plus six — run the clock on Step 3 alone, or say at the start that the two steps share the six minutes. Tell me which and I will change the printed times to match.',
+    'The nine-turn recap comes after this, then Step 4.'
   ]
 },
 {
@@ -145,9 +180,9 @@ const SLIDES = [
     { head: 'Assemblage, Neo-Dada and Pop Art', body: 'Real objects, then commercial images. It asks: can everyday culture become art?' }
   ],
   notes: [
-    'A quick visual recap before the activity — five minutes for this and the next slide together.',
-    'Do not teach any of it again. You are only reminding them what question each movement raised.',
-    'The activity that follows depends on them remembering the QUESTIONS, not the styles.'
+    'A quick visual recap AFTER the activity — five minutes for this and the next slide together.',
+    'Do not teach any of it again. You are only naming the question each movement raised.',
+    'They have just tried to recall these unaided in the matching and the timeline. This is where they find out what they got, and it feeds straight into Step 4.'
   ]
 },
 {
@@ -186,61 +221,7 @@ const SLIDES = [
   ],
   notes: [
     'The whole course so far, in nine words. One click puts all nine up at once.',
-    'Leave it on screen during the activity if you can — it is the raw material for the timeline in Step 3.'
-  ]
-},
-{
-  type: 'section',
-  title: 'Group discussion',
-  sub: 'What changed in art?',
-  notes: [
-    'About twenty-five minutes. Groups of five or six.',
-    'IMPORTANT: do not say the words “Process Art” at any point until the very end of Step 4. The whole design is that the class arrives at the word “process” themselves.'
-  ]
-},
-{
-  type: 'match',
-  title: 'Step 1 — Concept matching',
-  zh: '步驟一：概念配對',
-  instructions: 'Six minutes. Match each movement to the question it raised. Not the style — the <b>question</b>.',
-  pairs: [
-    { a: 'Cubist Collage',             b: 'How do we know what we know?' },
-    { a: 'Dada · the Readymade',       b: 'What is real?' },
-    { a: 'Surrealism',                 b: 'What is inside our unconscious mind?' },
-    { a: 'Abstract Expressionism',     b: 'What is the role of the artist?' },
-    { a: 'Pop Art',                    b: 'Can everyday culture become art?' },
-    { a: 'Happenings & Fluxus',        b: 'Where is the boundary between art and life?' },
-    { a: '{{minimalism}}',             b: 'How little material does art need?' },
-    { a: 'Beuys & Social Sculpture',   b: 'What can art include?' },
-    { a: 'Conceptual Art',             b: 'Does art need a physical object?' }
-  ],
-  notes: [
-    'Six minutes. Groups match on paper first — this board is for the share-out.',
-    'Then let one group come to the screen and click their pairing. Clicking one card from each side pairs them and numbers them. Clicking a numbered card takes it back out.',
-    'Nothing is judged while they work. When you press the arrow, the pairs that belong together stay bright and the rest fade — no marks, no score.',
-    'TEACHER: the point is not the answers. It is that matching forces them to recall what each movement CHANGED, not what it looked like.'
-  ]
-},
-{
-  type: 'activity',
-  oneClick: true,
-  title: 'Steps 2 and 3',
-  zh: '步驟二與三',
-  minutes: 11,
-  instructions: [
-    '<b>Step 2</b> — five minutes. Your group picks the ONE movement that changed the idea of art the most.',
-    'Complete this: “Before ______, art was mainly ______. After ______, art could become ______.”',
-    'Example: “Before Duchamp, artists usually <i>made</i> artworks. After Duchamp, artists could <i>choose</i> an everyday object.”'
-  ],
-  questions: [
-    '<b>Step 3 — six minutes.</b> On the board: ART → ? → ? → ? → CONTEMPORARY ART. Each group puts its turning point on the line.',
-    'Then, together: which came first? Which idea made the <b>next</b> idea possible?',
-    'You are building a chain of causes, not a list of dates. For example: collage lets everyday <i>materials</i> in → Duchamp lets an everyday <i>object</i> in → Fluxus lets an everyday <i>action</i> in → Beuys lets <i>social life</i> in → Conceptual Art lets the object <i>go</i>.'
-  ],
-  notes: [
-    'The sentence frame in Step 2 keeps the English simple while still demanding real reasoning. That is deliberate, and it suits an EMI class.',
-    'Step 3 is the important one. Push them off chronology and onto causation: what made the next idea POSSIBLE?',
-    'Write the chain on the board as they build it. You need it on the board for the next slide.'
+    'Leave it on screen for Step 4 — “all nine turns are on the board” on the next slide means this one.'
   ]
 },
 {
@@ -691,8 +672,7 @@ const SLIDES = [
   title: 'Trick the eye, or copy the eye?',
   sub: 'Illusion challenges perception — realism surrenders to the camera.',
   notes: [
-    'Ten minutes for Photorealism.',
-    'And this is where the mystery image from the start of class pays off.'
+    'Ten minutes for Photorealism.'
   ]
 },
 {
@@ -775,7 +755,7 @@ const SLIDES = [
   src: 'img/estes-telephone-booths.jpg',
   title: 'Telephone Booths',
   caption: 'Richard Estes (b. 1932), <i>Telephone Booths</i>, 1967',
-  ask: 'Now — the picture from the start of class. Photograph, or painting?',
+  ask: 'Photograph, or painting? Decide before anyone says it out loud.',
   points: [
     'It is a painting.',
     'Glass, chrome and reflections — surfaces that reflect other surfaces.',
@@ -783,7 +763,7 @@ const SLIDES = [
     'Estes argued that only the camera can capture how much visual information a modern city contains.'
   ],
   notes: [
-    'THE REVEAL. Go back to the start-of-class question and take a show of hands before you answer.',
+    'Ask it cold, take a show of hands, and only then answer. It needs no set-up earlier in the lesson.',
     'The tell is the depth of field: every part is equally sharp. A real photograph would blur something.',
     'He also combines several photographs of the same site, and removes people. So it is not one moment — it is a construction.',
     'The movement had a cool reception at documenta 5 in 1972; European critics thought it was merely technical.'
@@ -830,27 +810,6 @@ const SLIDES = [
     'Question 1 is the sharpest and connects straight to the last unit. Use it first.',
     'Question 2 is the authorship question that has been running since LeWitt’s wall drawings.',
     'Question 3 is the most provocative — it invites them to be sceptical about both movements, which is fair.'
-  ]
-},
-{
-  type: 'activity',
-  oneClick: true,
-  title: 'Short presentations',
-  zh: '學生報告',
-  minutes: 6,
-  instructions: [
-    'Three students today. Six minutes each, TED-style.',
-    'One artist from the course list of 120.'
-  ],
-  questions: [
-    'Who was the artist? Where and when did they work?',
-    'One or two key artworks.',
-    'What concept, and what media?',
-    'Why does it matter today?'
-  ],
-  notes: [
-    'Twenty minutes: three students, six minutes each, plus changeover.',
-    'The timer is set to six minutes. Press Reset between speakers.'
   ]
 },
 {
@@ -939,5 +898,26 @@ const SLIDES = [
   zh: '關鍵詞彙',
   terms: ['antiform', 'processart', 'postminimalism', 'systemsart', 'pours', 'opart', 'retinalart', 'perceptualabstraction', 'responsiveeye', 'photorealism', 'airbrush'],
   notes: ['Tap any term to show it large, with the Chinese. Good for the last two minutes of class.']
+},
+{
+  type: 'activity',
+  oneClick: true,
+  title: 'Short presentations',
+  zh: '學生報告',
+  minutes: 6,
+  instructions: [
+    'Three students today. Six minutes each, TED-style.',
+    'One artist from the course list of 120.'
+  ],
+  questions: [
+    'Who was the artist? Where and when did they work?',
+    'One or two key artworks.',
+    'What concept, and what media?',
+    'Why does it matter today?'
+  ],
+  notes: [
+    'Twenty minutes: three students, six minutes each, plus changeover.',
+    'The timer is set to six minutes. Press Reset between speakers.'
+  ]
 }
 ];
